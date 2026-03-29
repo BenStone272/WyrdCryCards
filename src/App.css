@@ -9,6 +9,13 @@
   --fighter-card-web-height: 27.5rem;
   --card-heading-top-gap: 0.4rem;
   --card-heading-content-gap: 0.18rem;
+  --card-back-list-gap: 0.16rem;
+  --card-back-item-pad: 0.14rem;
+  --card-back-name-size: 0.63rem;
+  --card-back-cost-size: 0.5rem;
+  --card-back-dice-size: 0.56rem;
+  --card-back-desc-size: 0.5rem;
+  --card-back-desc-lines: 4;
 }
 
 .app-shell {
@@ -230,14 +237,14 @@
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 0.16rem;
+  gap: var(--card-back-list-gap);
   min-height: 0;
   overflow: hidden;
 }
 
 .card-back-ability-item {
   border-top: 1px dotted #8f8a7c;
-  padding-top: 0.14rem;
+  padding-top: var(--card-back-item-pad);
 }
 
 .card-back-ability-list > :first-child {
@@ -254,7 +261,7 @@
 }
 
 .card-back-ability-name {
-  font-size: 0.63rem;
+  font-size: var(--card-back-name-size);
   font-weight: 700;
   line-height: 1.1;
   color: #172f38;
@@ -275,11 +282,11 @@
 }
 
 .card-back-dice-icon {
-  font-size: 0.56rem;
+  font-size: var(--card-back-dice-size);
 }
 
 .card-back-cost-text {
-  font-size: 0.5rem;
+  font-size: var(--card-back-cost-size);
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.03em;
@@ -303,11 +310,11 @@
 
 .card-back-ability-description {
   margin: 0.08rem 0 0;
-  font-size: 0.5rem;
+  font-size: var(--card-back-desc-size);
   line-height: 1.22;
   color: #22353c;
   display: -webkit-box;
-  -webkit-line-clamp: 4;
+  -webkit-line-clamp: var(--card-back-desc-lines);
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
@@ -822,23 +829,23 @@
 
   .card-back-ability-list {
     padding: 0;
-    gap: 0.45mm;
+    gap: var(--card-back-list-gap);
   }
 
   .card-back-ability-item {
-    padding-top: 0.35mm;
+    padding-top: var(--card-back-item-pad);
   }
 
   .card-back-ability-name {
-    font-size: 5.5pt;
+    font-size: var(--card-back-name-size);
   }
 
   .card-back-cost-text {
-    font-size: 4.8pt;
+    font-size: var(--card-back-cost-size);
   }
 
   .card-back-dice-icon {
-    font-size: 5.2pt;
+    font-size: var(--card-back-dice-size);
   }
 
   .card-back-passive-badge {
@@ -848,9 +855,9 @@
 
   .card-back-ability-description {
     margin-top: 0.2mm;
-    font-size: 4.5pt;
+    font-size: var(--card-back-desc-size);
     line-height: 1.18;
-    -webkit-line-clamp: 2;
+    -webkit-line-clamp: var(--card-back-desc-lines);
   }
 
   .fighter-card,
