@@ -7,6 +7,8 @@
   --ability-cost-justify: flex-end;
   --ability-dice-x-offset: 3px;
   --fighter-card-web-height: 27.5rem;
+  --card-heading-top-gap: 0.5rem;
+  --card-heading-content-gap: 0.25rem;
 }
 
 .app-shell {
@@ -183,7 +185,7 @@
 }
 
 .stats-grid {
-  margin: var(--space-2) 0 0;
+  margin: var(--card-heading-content-gap) 0 0;
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 0.3rem;
@@ -225,7 +227,7 @@
 }
 
 .fighter-card section {
-  margin-top: var(--space-2);
+  margin-top: var(--card-heading-top-gap);
 }
 
 .fighter-card-body {
@@ -259,8 +261,16 @@
   color: #30444d;
 }
 
+.fighter-card-body > h3 {
+  margin-top: var(--card-heading-top-gap);
+}
+
+.fighter-card section > h3 {
+  margin-top: 0;
+}
+
 .weapons-showcase-list {
-  margin: var(--space-1) 0 0;
+  margin: var(--card-heading-content-gap) 0 0;
   padding-left: 0;
   list-style: none;
   display: flex;
@@ -371,7 +381,7 @@
 }
 
 .abilities-list {
-  margin: var(--space-1) 0 0;
+  margin: var(--card-heading-content-gap) 0 0;
   padding-left: 0;
   list-style: none;
   font-size: 0.9rem;
@@ -447,6 +457,8 @@
 @media print {
   :root {
     --ability-dice-x-offset: 2px;
+    --card-heading-top-gap: 1.1mm;
+    --card-heading-content-gap: 0.55mm;
   }
 
   @page {
@@ -507,10 +519,6 @@
     letter-spacing: 0.05em;
   }
 
-  .fighter-card section {
-    margin-top: 1.1mm;
-  }
-
   .runemarks-under-name {
     margin-top: 0.35mm;
   }
@@ -520,7 +528,6 @@
   }
 
   .stats-grid {
-    margin-top: 1mm;
     gap: 0.6mm;
   }
 
@@ -540,7 +547,6 @@
   }
 
   .weapons-showcase-list {
-    margin-top: 0.35mm;
     min-height: 16.2mm;
     gap: 0.5mm;
     max-height: none;
@@ -573,7 +579,7 @@
   }
 
   .runemarks-list {
-    margin-top: 0.35mm;
+    margin-top: var(--card-heading-content-gap);
     gap: 0.45mm;
   }
 
