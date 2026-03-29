@@ -17,7 +17,7 @@ export type ImportedRoster = {
 
 const SUMMARY_LINE_REGEX = /^(\d+)\s*pts\s*\|\s*(\d+)\s*fighters\s*\|\s*valid\s*(✓)?\s*$/i
 
-function extractDelimitedContent(input: string): string {
+export function extractDelimitedContent(input: string): string {
   const lines = input.split(/\r?\n/)
   const delimiterIndexes: number[] = []
 

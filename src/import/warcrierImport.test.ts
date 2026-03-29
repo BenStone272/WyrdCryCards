@@ -1,5 +1,32 @@
 import { describe, expect, it } from 'vitest'
-import { parseWarcrierRoster } from './warcrierImport'
+import { extractDelimitedContent, parseWarcrierRoster } from './warcrierImport'
+
+describe('extractDelimitedContent', () => {
+  it('extracts only text between delimiter lines', () => {
+    const input = `----------
+"My Warband"
+Skaven
+800pts | 4 fighters | Valid ✓  
+
+- Clawlord on Gnaw-Beast (230pts, Hero)
+- Stormfiend with Doomflayer gauntlets (270pts)
+- Warplock Jezzail (150pts)
+- Warplock Jezzail (150pts)
+----------
+Generated on Warcrier.net`
+
+    const expected = `"My Warband"
+Skaven
+800pts | 4 fighters | Valid ✓  
+
+- Clawlord on Gnaw-Beast (230pts, Hero)
+- Stormfiend with Doomflayer gauntlets (270pts)
+- Warplock Jezzail (150pts)
+- Warplock Jezzail (150pts)`
+
+    expect(extractDelimitedContent(input)).toBe(expected)
+  })
+})
 
 describe('parseWarcrierRoster', () => {
   it('parses the provided Warcrier export including duplicate fighters', () => {
