@@ -479,12 +479,16 @@
   }
 
   .fighter-card {
+    box-sizing: border-box;
     width: 63.5mm;
+    height: 89mm;
     min-height: 89mm;
+    max-height: 89mm;
     max-width: 63.5mm;
     padding: 1.7mm;
     border-radius: 2.5mm;
     gap: 0;
+    overflow: hidden;
   }
 
   .fighter-card-header {
