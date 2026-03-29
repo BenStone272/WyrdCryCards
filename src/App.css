@@ -293,10 +293,22 @@
 }
 
 .ability-line {
+  display: grid;
+  grid-template-columns: 4.2rem minmax(0, 1fr);
+  align-items: center;
+  gap: 0.35rem;
+  line-height: 1.25;
+}
+
+.ability-cost-slot {
   display: inline-flex;
   align-items: center;
-  gap: 0.4rem;
-  line-height: 1.25;
+  justify-content: flex-end;
+  min-height: 1.15rem;
+}
+
+.ability-name {
+  min-width: 0;
 }
 
 .dice-group {

@@ -599,19 +599,21 @@ function App() {
                           const costVisual = getAbilityCostVisual(ability.cost)
                           return (
                             <li key={ability._id} className="ability-line">
-                              {costVisual && !costVisual.isPassive && (
-                                <span className="dice-group" aria-label={costVisual.label} title={costVisual.label}>
-                                  {Array.from({ length: costVisual.diceCount }).map((_, index) => (
-                                    <FontAwesomeIcon key={index} icon={faDiceD6} className="dice-icon" />
-                                  ))}
-                                </span>
-                              )}
-                              {costVisual?.isPassive && (
-                                <span className="passive-badge" aria-label="Passive" title="Passive">
-                                  <FontAwesomeIcon icon={faStar} className="passive-icon" />
-                                </span>
-                              )}
-                              <span>{ability.name}</span>
+                              <span className="ability-cost-slot">
+                                {costVisual && !costVisual.isPassive && (
+                                  <span className="dice-group" aria-label={costVisual.label} title={costVisual.label}>
+                                    {Array.from({ length: costVisual.diceCount }).map((_, index) => (
+                                      <FontAwesomeIcon key={index} icon={faDiceD6} className="dice-icon" />
+                                    ))}
+                                  </span>
+                                )}
+                                {costVisual?.isPassive && (
+                                  <span className="passive-badge" aria-label="Passive" title="Passive">
+                                    <FontAwesomeIcon icon={faStar} className="passive-icon" />
+                                  </span>
+                                )}
+                              </span>
+                              <span className="ability-name">{ability.name}</span>
                             </li>
                           )
                         })
