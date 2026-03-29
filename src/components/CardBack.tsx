@@ -20,7 +20,6 @@ export function CardBack({ card }: CardBackProps) {
     '--card-back-cost-size': abilityCount >= 6 ? '0.4rem' : abilityCount >= 4 ? '0.43rem' : '0.46rem',
     '--card-back-dice-size': abilityCount >= 6 ? '0.44rem' : abilityCount >= 4 ? '0.48rem' : '0.52rem',
     '--card-back-desc-size': abilityCount >= 6 ? '0.4rem' : abilityCount >= 4 ? '0.42rem' : '0.45rem',
-    '--card-back-desc-lines': abilityCount >= 6 ? '1' : abilityCount >= 4 ? '2' : '3',
   } as CSSProperties
 
   function renderAbilityCost(cost: string) {

@@ -15,7 +15,6 @@
   --card-back-cost-size: 0.5rem;
   --card-back-dice-size: 0.56rem;
   --card-back-desc-size: 0.5rem;
-  --card-back-desc-lines: 4;
 }
 
 .app-shell {
@@ -239,7 +238,8 @@
   flex-direction: column;
   gap: var(--card-back-list-gap);
   min-height: 0;
-  overflow: hidden;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 .card-back-ability-item {
@@ -313,10 +313,6 @@
   font-size: var(--card-back-desc-size);
   line-height: 1.22;
   color: #22353c;
-  display: -webkit-box;
-  -webkit-line-clamp: var(--card-back-desc-lines);
-  -webkit-box-orient: vertical;
-  overflow: hidden;
 }
 
 .fighter-card-header {
@@ -830,6 +826,7 @@
   .card-back-ability-list {
     padding: 0;
     gap: var(--card-back-list-gap);
+    overflow: hidden;
   }
 
   .card-back-ability-item {
@@ -857,7 +854,6 @@
     margin-top: 0.2mm;
     font-size: var(--card-back-desc-size);
     line-height: 1.18;
-    -webkit-line-clamp: var(--card-back-desc-lines);
   }
 
   .fighter-card,
