@@ -2,6 +2,8 @@
   --space-1: 0.25rem;
   --space-2: 0.5rem;
   --space-3: 0.75rem;
+  --icon-card-sm: 0.82rem;
+  --icon-card-md: 0.9rem;
 }
 
 .app-shell {
@@ -188,10 +190,11 @@
 }
 
 .stat-icon {
-  width: 0.78rem;
-  height: 0.78rem;
+  width: var(--icon-card-sm);
+  height: var(--icon-card-sm);
   object-fit: contain;
   opacity: 0.9;
+  display: block;
 }
 
 .fighter-card section {
@@ -275,9 +278,10 @@
 }
 
 .weapon-type-icon {
-  width: 1rem;
-  height: 1rem;
+  width: var(--icon-card-md);
+  height: var(--icon-card-md);
   object-fit: contain;
+  display: block;
 }
 
 .weapon-type-label {
@@ -288,9 +292,10 @@
 }
 
 .weapon-stat-icon {
-  width: 0.95rem;
-  height: 0.95rem;
+  width: var(--icon-card-md);
+  height: var(--icon-card-md);
   object-fit: contain;
+  display: block;
 }
 
 .weapon-stat-value {
@@ -323,10 +328,11 @@
 }
 
 .fighter-runemark-icon {
-  width: 0.95rem;
-  height: 0.95rem;
+  width: var(--icon-card-md);
+  height: var(--icon-card-md);
   object-fit: contain;
   flex: 0 0 auto;
+  display: block;
 }
 
 .abilities-list {

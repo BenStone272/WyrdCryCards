@@ -142,7 +142,16 @@ export function buildWeaponRunemarkCandidates(runemark: string): string[] {
   if (!token) {
     return []
   }
-  return [`/warcry_assets/runemarks/black/weapons-${token}.svg`]
+
+  const candidates = new Set<string>()
+  candidates.add(`/warcry_assets/runemarks/black/weapons-${token}.svg`)
+
+  // Some files are named with a "-weapon" suffix (e.g. ranged/reach).
+  if (token === 'ranged' || token === 'reach') {
+    candidates.add(`/warcry_assets/runemarks/black/weapons-${token}-weapon.svg`)
+  }
+
+  return [...candidates]
 }
 
 export function characteristicIconPath(name: string): string {
