@@ -417,7 +417,7 @@
 }
 
 .dice-icon {
-  font-size: 0.72rem;
+  font-size: 0.64rem;
   filter: drop-shadow(0 0 0.02rem #0f2a35);
 }
 
@@ -466,15 +466,15 @@
   }
 
   .cards-grid {
-    grid-template-columns: repeat(auto-fill, 63mm);
+    grid-template-columns: repeat(auto-fill, 63.5mm);
     gap: 3mm;
     justify-content: start;
   }
 
   .fighter-card {
-    width: 63mm;
-    min-height: 88mm;
-    max-width: 63mm;
+    width: 63.5mm;
+    min-height: 89mm;
+    max-width: 63.5mm;
     padding: 2.2mm;
   }
 
