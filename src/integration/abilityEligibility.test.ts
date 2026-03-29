@@ -8,7 +8,7 @@ const fighter: WarcryFighter = {
   _id: 'f1',
   name: 'Sample Fighter',
   warband: 'Skaven',
-  subfaction: '',
+  subfaction: 'Skittershank\'s Clawpack',
   grand_alliance: 'chaos',
   movement: 5,
   toughness: 4,
@@ -39,6 +39,11 @@ describe('isAbilityEligibleForFighter', () => {
   it('synthetic: returns false when warband does not match', () => {
     const ability = makeAbility({ warband: 'Stormcast' })
     expect(isAbilityEligibleForFighter(ability, fighter)).toBe(false)
+  })
+
+  it('synthetic: returns true when ability matches fighter subfaction', () => {
+    const ability = makeAbility({ warband: "Skittershank's Clawpack" })
+    expect(isAbilityEligibleForFighter(ability, fighter)).toBe(true)
   })
 
   it('synthetic: returns false when any required runemark is missing', () => {
