@@ -162,6 +162,33 @@
   color: #30444d;
 }
 
+.weapons-list {
+  margin: 0.35rem 0 0;
+  padding-left: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.weapon-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  border: 1px solid #c3baa6;
+  border-radius: 8px;
+  padding: 0.3rem 0.45rem;
+  font-size: 0.8rem;
+  color: #24353c;
+}
+
+.weapon-meta {
+  font-weight: 700;
+  color: #163f4f;
+  white-space: nowrap;
+}
+
 .abilities-list {
   margin: 0.35rem 0 0;
   padding-left: 0;

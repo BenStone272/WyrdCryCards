@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faDiceD6, faStar } from '@fortawesome/free-solid-svg-icons'
 import { parseWarcrierRoster } from './import/warcrierImport'
 import { isAbilityEligibleForFighter } from './integration/abilityEligibility'
-import type { WarcryAbility, WarcryFighter } from './types/warcry'
+import type { WarcryAbility, WarcryFighter, WarcryWeaponProfile } from './types/warcry'
 import './App.css'
 
 type WarbandManifest = {
@@ -128,6 +128,22 @@ function sortAbilitiesByDice(abilities: WarcryAbility[]): WarcryAbility[] {
     }
     return a.name.localeCompare(b.name)
   })
+}
+
+function formatWeaponRange(weapon: WarcryWeaponProfile): string {
+  const min = Math.max(weapon.min_range, 0)
+  const max = Math.max(weapon.max_range, 0)
+  if (min <= 1 && max <= 1) {
+    return '1"'
+  }
+  if (min <= 0) {
+    return `${max}"`
+  }
+  return `${min}-${max}"`
+}
+
+function formatWeaponDamage(weapon: WarcryWeaponProfile): string {
+  return `${weapon.dmg_hit}/${weapon.dmg_crit}`
 }
 
 function App() {
@@ -309,6 +325,24 @@ function App() {
                       <dd>{card.fighter.wounds}</dd>
                     </div>
                   </dl>
+
+                  <section>
+                    <h3>Weapons</h3>
+                    <ul className="weapons-list">
+                      {card.fighter.weapons.length === 0 ? (
+                        <li className="weapon-row">No weapon profiles</li>
+                      ) : (
+                        card.fighter.weapons.map((weapon, idx) => (
+                          <li key={`${card.fighter?._id}-weapon-${idx}`} className="weapon-row">
+                            <span className="weapon-meta">{formatWeaponRange(weapon)}</span>
+                            <span>
+                              A{weapon.attacks} S{weapon.strength} D{formatWeaponDamage(weapon)}
+                            </span>
+                          </li>
+                        ))
+                      )}
+                    </ul>
+                  </section>
 
                   <section>
                     <h3>Abilities</h3>
