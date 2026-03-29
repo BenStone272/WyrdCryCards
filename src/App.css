@@ -178,13 +178,32 @@
   gap: 0.5rem;
 }
 
-.cost-icon {
-  width: 1.5rem;
-  text-align: center;
-  color: #163f4f;
-  font-weight: 700;
-  font-size: 1.25rem;
-  line-height: 1;
+.dice-group {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.2rem;
+  color: #17465a;
+}
+
+.dice-icon {
+  font-size: 0.95rem;
+  filter: drop-shadow(0 0 0.02rem #0f2a35);
+}
+
+.passive-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.25rem;
+  height: 1.25rem;
+  border-radius: 999px;
+  border: 1px solid #36515b;
+  background: #e7eef0;
+}
+
+.passive-icon {
+  font-size: 0.68rem;
+  color: #36515b;
 }
 
 .unmatched {

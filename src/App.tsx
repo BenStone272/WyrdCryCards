@@ -1,4 +1,6 @@
 import { useRef, useState } from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faDiceD6, faStar } from '@fortawesome/free-solid-svg-icons'
 import { parseWarcrierRoster } from './import/warcrierImport'
 import { isAbilityEligibleForFighter } from './integration/abilityEligibility'
 import type { WarcryAbility, WarcryFighter } from './types/warcry'
@@ -85,16 +87,19 @@ function findBestFighterMatch(fighters: WarcryFighter[], importedName: string): 
   return looseMatches[0]
 }
 
-function getAbilityCostIcon(cost: string): { icon: string; label: string } | null {
+function getAbilityCostVisual(cost: string):
+  | { diceCount: number; label: string; isPassive?: false }
+  | { diceCount: 0; label: string; isPassive: true }
+  | null {
   switch (cost.trim().toLowerCase()) {
     case 'double':
-      return { icon: '⚁', label: 'Double' }
+      return { diceCount: 2, label: 'Double' }
     case 'triple':
-      return { icon: '⚂', label: 'Triple' }
+      return { diceCount: 3, label: 'Triple' }
     case 'quad':
-      return { icon: '⚃', label: 'Quad' }
+      return { diceCount: 4, label: 'Quad' }
     case 'passive':
-      return { icon: '◌', label: 'Passive' }
+      return { diceCount: 0, label: 'Passive', isPassive: true }
     default:
       return null
   }
@@ -312,12 +317,19 @@ function App() {
                         <li>No matching abilities</li>
                       ) : (
                         card.abilities.map((ability) => {
-                          const costIcon = getAbilityCostIcon(ability.cost)
+                          const costVisual = getAbilityCostVisual(ability.cost)
                           return (
                             <li key={ability._id} className="ability-line">
-                              {costIcon && (
-                                <span className="cost-icon" aria-label={costIcon.label} title={costIcon.label}>
-                                  {costIcon.icon}
+                              {costVisual && !costVisual.isPassive && (
+                                <span className="dice-group" aria-label={costVisual.label} title={costVisual.label}>
+                                  {Array.from({ length: costVisual.diceCount }).map((_, index) => (
+                                    <FontAwesomeIcon key={index} icon={faDiceD6} className="dice-icon" />
+                                  ))}
+                                </span>
+                              )}
+                              {costVisual?.isPassive && (
+                                <span className="passive-badge" aria-label="Passive" title="Passive">
+                                  <FontAwesomeIcon icon={faStar} className="passive-icon" />
                                 </span>
                               )}
                               <span>{ability.name}</span>
