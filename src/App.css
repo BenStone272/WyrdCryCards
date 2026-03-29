@@ -303,7 +303,7 @@
 
 .card-back-ability-description {
   margin: 0.08rem 0 0;
-  font-size: 0.56rem;
+  font-size: 0.5rem;
   line-height: 1.22;
   color: #22353c;
   display: -webkit-box;
@@ -848,7 +848,7 @@
 
   .card-back-ability-description {
     margin-top: 0.2mm;
-    font-size: 4.9pt;
+    font-size: 4.5pt;
     line-height: 1.18;
     -webkit-line-clamp: 2;
   }
