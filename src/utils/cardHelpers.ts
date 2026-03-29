@@ -1,6 +1,11 @@
 import type { WarcryAbility, WarcryFighter, WarcryWeaponProfile } from '../types/warcry'
 import type { Manifest, WarbandHeaderInfo, WarbandManifest } from '../types/cards'
 
+function withBasePath(resourcePath: string): string {
+  const base = import.meta.env.BASE_URL ?? '/'
+  return `${base}${resourcePath.replace(/^\/+/, '')}`
+}
+
 export function normalizeText(value: string): string {
   return value
     .normalize('NFKD')
@@ -107,12 +112,12 @@ export function buildFactionRunemarkCandidates(warbandInfo: WarbandHeaderInfo): 
 
   for (const baseName of baseNames) {
     for (const variant of buildWarbandNameVariants(baseName)) {
-      candidates.add(`/warcry_assets/runemarks/black/factions-${faction}-${variant}.svg`)
-      candidates.add(`/warcry_assets/runemarks/black/bladeborn-${variant}.svg`)
+      candidates.add(withBasePath(`warcry_assets/runemarks/black/factions-${faction}-${variant}.svg`))
+      candidates.add(withBasePath(`warcry_assets/runemarks/black/bladeborn-${variant}.svg`))
     }
   }
 
-  candidates.add(`/warcry_assets/runemarks/black/grand-alliance-${faction}.svg`)
+  candidates.add(withBasePath(`warcry_assets/runemarks/black/grand-alliance-${faction}.svg`))
   return [...candidates]
 }
 
@@ -131,7 +136,7 @@ export function buildFighterRunemarkCandidates(runemark: string): string[] {
   const candidates = new Set<string>()
 
   for (const token of tokens) {
-    candidates.add(`/warcry_assets/runemarks/black/fighters-${token}.svg`)
+    candidates.add(withBasePath(`warcry_assets/runemarks/black/fighters-${token}.svg`))
   }
 
   return [...candidates]
@@ -144,18 +149,18 @@ export function buildWeaponRunemarkCandidates(runemark: string): string[] {
   }
 
   const candidates = new Set<string>()
-  candidates.add(`/warcry_assets/runemarks/black/weapons-${token}.svg`)
+  candidates.add(withBasePath(`warcry_assets/runemarks/black/weapons-${token}.svg`))
 
   // Some files are named with a "-weapon" suffix (e.g. ranged/reach).
   if (token === 'ranged' || token === 'reach') {
-    candidates.add(`/warcry_assets/runemarks/black/weapons-${token}-weapon.svg`)
+    candidates.add(withBasePath(`warcry_assets/runemarks/black/weapons-${token}-weapon.svg`))
   }
 
   return [...candidates]
 }
 
 export function characteristicIconPath(name: string): string {
-  return `/warcry_assets/runemarks/black/characteristic-${name}.svg`
+  return withBasePath(`warcry_assets/runemarks/black/characteristic-${name}.svg`)
 }
 
 export function formatRunemarkLabel(runemark: string): string {

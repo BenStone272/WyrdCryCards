@@ -8,6 +8,11 @@ import type { ImportedCard, Manifest, WarbandHeaderInfo } from './types/cards'
 import { findBestFighterMatch, findWarbandEntry, sortAbilitiesByDice } from './utils/cardHelpers'
 import './App.css'
 
+function withBasePath(resourcePath: string): string {
+  const base = import.meta.env.BASE_URL ?? '/'
+  return `${base}${resourcePath.replace(/^\/+/, '')}`
+}
+
 function App() {
   const [rosterText, setRosterText] = useState('')
   const [rosterName, setRosterName] = useState<string | null>(null)
@@ -32,7 +37,7 @@ function App() {
     setBattleTraits([])
 
     try {
-      const manifestResponse = await fetch('/warcry_data/manifest.json')
+      const manifestResponse = await fetch(withBasePath('warcry_data/manifest.json'))
       if (!manifestResponse.ok) {
         throw new Error('Failed to load warband manifest')
       }
@@ -66,8 +71,8 @@ function App() {
         abilities = cached.abilities
       } else {
         const [fightersResponse, abilitiesResponse] = await Promise.all([
-          fetch(warbandEntry.fightersPath),
-          fetch(warbandEntry.abilitiesPath),
+          fetch(withBasePath(warbandEntry.fightersPath)),
+          fetch(withBasePath(warbandEntry.abilitiesPath)),
         ])
 
         if (!fightersResponse.ok || !abilitiesResponse.ok) {
