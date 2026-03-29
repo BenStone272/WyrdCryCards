@@ -208,7 +208,7 @@
   margin-top: var(--space-2);
 }
 
-.reactions-section {
+.fighter-card .reactions-section {
   margin-top: auto;
   padding-top: var(--space-2);
 }
@@ -470,7 +470,7 @@
     page-break-inside: avoid;
   }
 
-  .reactions-section {
+  .fighter-card .reactions-section {
     margin-top: var(--space-2);
     padding-top: 0;
   }
