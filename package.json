@@ -7,6 +7,7 @@
     "sync-data": "tsx scripts/sync-warcry-data.ts",
     "dev": "npm run sync-data && vite",
     "build": "npm run sync-data && tsc -b && vite build",
+    "test": "vitest run",
     "lint": "eslint .",
     "preview": "vite preview"
   },
@@ -27,6 +28,7 @@
     "typescript": "~5.9.3",
     "typescript-eslint": "^8.57.0",
     "tsx": "^4.20.6",
+    "vitest": "^3.2.4",
     "vite": "^8.0.1"
   }
 }
