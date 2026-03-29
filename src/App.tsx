@@ -153,24 +153,10 @@ function App() {
       </section>
 
       {importedCards.length > 0 && (
-        <section className="compare-layout">
-          <section className="compare-column">
-            <h2 className="compare-title">Version A: Runemarks Under Name</h2>
-            <section className="cards-grid cards-grid-compare">
-              {importedCards.map((card, index) => (
-                <FighterCard key={`under-name-${card.importedName}-${index}`} card={card} runemarkPlacement="under-name" />
-              ))}
-            </section>
-          </section>
-
-          <section className="compare-column">
-            <h2 className="compare-title">Version B: Runemarks At Bottom</h2>
-            <section className="cards-grid cards-grid-compare">
-              {importedCards.map((card, index) => (
-                <FighterCard key={`bottom-${card.importedName}-${index}`} card={card} runemarkPlacement="bottom" />
-              ))}
-            </section>
-          </section>
+        <section className="cards-grid">
+          {importedCards.map((card, index) => (
+            <FighterCard key={`${card.importedName}-${index}`} card={card} runemarkPlacement="under-name" />
+          ))}
         </section>
       )}
     </main>
