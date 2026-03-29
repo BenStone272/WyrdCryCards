@@ -21,6 +21,11 @@ type RosterMatchResult = {
   unmatched: string[]
 }
 
+type PendingRosterImport = {
+  roster: ImportedRoster
+  targetWarbandKey: string | null
+}
+
 function normalizeCost(cost: string): string {
   const value = cost.trim().toLowerCase()
   if (!value) {
@@ -136,7 +141,7 @@ function App() {
   const [selectedFighterCounts, setSelectedFighterCounts] = useState<Record<string, number>>({})
   const [nameFilter, setNameFilter] = useState('')
   const [rosterText, setRosterText] = useState('')
-  const [pendingRosterImport, setPendingRosterImport] = useState<ImportedRoster | null>(null)
+  const [pendingRosterImport, setPendingRosterImport] = useState<PendingRosterImport | null>(null)
   const [importStatus, setImportStatus] = useState('')
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState('')
@@ -266,6 +271,14 @@ function App() {
     if (!pendingRosterImport) {
       return
     }
+
+    if (
+      pendingRosterImport.targetWarbandKey &&
+      selectedWarbandKey !== pendingRosterImport.targetWarbandKey
+    ) {
+      return
+    }
+
     if (loading) {
       return
     }
@@ -273,7 +286,7 @@ function App() {
       return
     }
 
-    const importedFighterNames = pendingRosterImport.fighters.map((fighter) => fighter.name)
+    const importedFighterNames = pendingRosterImport.roster.fighters.map((fighter) => fighter.name)
     const result = buildRosterMatch(fighters, importedFighterNames)
     setSelectedFighterCounts(result.counts)
     setPendingRosterImport(null)
@@ -285,7 +298,7 @@ function App() {
     }
 
     setImportStatus(base)
-  }, [fighters, pendingRosterImport, loading])
+  }, [fighters, pendingRosterImport, loading, selectedWarbandKey])
 
   function setFighterCount(fighterId: string, nextCount: number) {
     setSelectedFighterCounts((current) => {
@@ -327,7 +340,10 @@ function App() {
     }
 
     const rosterWarbandKey = findWarbandKey(manifest, parsed.warband)
-    setPendingRosterImport(parsed)
+    setPendingRosterImport({
+      roster: parsed,
+      targetWarbandKey: rosterWarbandKey,
+    })
 
     if (rosterWarbandKey && rosterWarbandKey !== selectedWarbandKey) {
       setSelectedWarbandKey(rosterWarbandKey)
@@ -335,23 +351,7 @@ function App() {
       return
     }
 
-    if (loading || fighters.length === 0) {
-      setPendingRosterImport(parsed)
-      setImportStatus('Roster queued. Applying as soon as fighter data is loaded.')
-      return
-    }
-
-    const result = buildRosterMatch(fighters, importedFighterNames)
-    setSelectedFighterCounts(result.counts)
-    setPendingRosterImport(null)
-
-    const base = `Roster imported: matched ${result.matched}/${importedFighterNames.length}`
-    if (result.unmatched.length > 0) {
-      setImportStatus(`${base}. Unmatched: ${result.unmatched.join(', ')}`)
-      return
-    }
-
-    setImportStatus(base)
+    setImportStatus('Roster queued. Applying as soon as fighter data is loaded.')
   }
 
   return (
