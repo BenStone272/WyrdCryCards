@@ -164,7 +164,8 @@
 
 .abilities-list {
   margin: 0.35rem 0 0;
-  padding-left: 1rem;
+  padding-left: 0;
+  list-style: none;
   font-size: 0.82rem;
   display: flex;
   flex-direction: column;
