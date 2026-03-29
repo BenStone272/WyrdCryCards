@@ -20,6 +20,12 @@ type ImportedCard = {
   importedName: string
   fighter: WarcryFighter | null
   abilities: WarcryAbility[]
+  reactions: WarcryAbility[]
+}
+
+type WarbandHeaderInfo = {
+  warband: string
+  faction: string
 }
 
 function normalizeText(value: string): string {
@@ -84,13 +90,48 @@ function normalizeCost(cost: string): string {
   if (!value) {
     return '-'
   }
+
+  if (value === 'battletrait') {
+    return 'Battle Trait'
+  }
+
+  if (value === 'reaction') {
+    return 'Reaction'
+  }
+
   return value.charAt(0).toUpperCase() + value.slice(1)
+}
+
+function abilityDiceOrder(cost: string): number {
+  switch (cost.trim().toLowerCase()) {
+    case 'double':
+      return 2
+    case 'triple':
+      return 3
+    case 'quad':
+      return 4
+    case 'passive':
+      return 1
+    default:
+      return 99
+  }
+}
+
+function sortAbilitiesByDice(abilities: WarcryAbility[]): WarcryAbility[] {
+  return [...abilities].sort((a, b) => {
+    const byDice = abilityDiceOrder(a.cost) - abilityDiceOrder(b.cost)
+    if (byDice !== 0) {
+      return byDice
+    }
+    return a.name.localeCompare(b.name)
+  })
 }
 
 function App() {
   const [rosterText, setRosterText] = useState('')
   const [rosterName, setRosterName] = useState<string | null>(null)
-  const [warband, setWarband] = useState<string | null>(null)
+  const [warbandInfo, setWarbandInfo] = useState<WarbandHeaderInfo | null>(null)
+  const [battleTraits, setBattleTraits] = useState<WarcryAbility[]>([])
   const [importedCards, setImportedCards] = useState<ImportedCard[]>([])
   const [importStatus, setImportStatus] = useState('')
   const warbandDataCache = useRef<Record<string, { fighters: WarcryFighter[]; abilities: WarcryAbility[] }>>({})
@@ -106,7 +147,8 @@ function App() {
     }
 
     setRosterName(parsed.rosterName)
-    setWarband(parsed.warband)
+    setWarbandInfo(null)
+    setBattleTraits([])
 
     try {
       const manifestResponse = await fetch('/warcry_data/manifest.json')
@@ -121,11 +163,14 @@ function App() {
           importedName: name,
           fighter: null,
           abilities: [],
+          reactions: [],
         }))
         setImportedCards(unmatchedCards)
         setImportStatus('Roster imported, but warband data was not found in local dataset.')
         return
       }
+
+      setWarbandInfo({ warband: warbandEntry.warbandSlug, faction: warbandEntry.grandAlliance })
 
       let fighters: WarcryFighter[]
       let abilities: WarcryAbility[]
@@ -149,6 +194,8 @@ function App() {
         warbandDataCache.current[warbandEntry.key] = { fighters, abilities }
       }
 
+      setBattleTraits(sortAbilitiesByDice(abilities.filter((ability) => ability.cost === 'battletrait')))
+
       const cards: ImportedCard[] = fighterNames.map((name) => {
         const fighter = findBestFighterMatch(fighters, name)
         if (!fighter) {
@@ -156,13 +203,26 @@ function App() {
             importedName: name,
             fighter: null,
             abilities: [],
+            reactions: [],
           }
         }
+
+        const eligible = abilities.filter((ability) => isAbilityEligibleForFighter(ability, fighter))
+        const reactions = sortAbilitiesByDice(
+          eligible.filter((ability) => ability.cost.trim().toLowerCase() === 'reaction'),
+        )
+        const fighterAbilities = sortAbilitiesByDice(
+          eligible.filter((ability) => {
+            const cost = ability.cost.trim().toLowerCase()
+            return cost !== 'reaction' && cost !== 'battletrait'
+          }),
+        )
 
         return {
           importedName: name,
           fighter,
-          abilities: abilities.filter((ability) => isAbilityEligibleForFighter(ability, fighter)),
+          abilities: fighterAbilities,
+          reactions,
         }
       })
 
@@ -171,6 +231,8 @@ function App() {
       setImportStatus(`Roster imported: matched ${matchedCount}/${cards.length}`)
     } catch (error) {
       setImportedCards([])
+      setWarbandInfo(null)
+      setBattleTraits([])
       setImportStatus(error instanceof Error ? error.message : 'Import failed')
     }
   }
@@ -197,15 +259,40 @@ function App() {
       </section>
 
       <section className="cards-grid">
+        {(rosterName || warbandInfo) && (
+          <article className="warband-header-card">
+            <h2>{rosterName || 'Imported Roster'}</h2>
+            {warbandInfo && (
+              <p>
+                {warbandInfo.warband} | {warbandInfo.faction}
+              </p>
+            )}
+
+            <section className="warband-traits">
+              <h3>Battle Traits</h3>
+              <ul className="abilities-list">
+                {battleTraits.length === 0 ? (
+                  <li>No battle traits</li>
+                ) : (
+                  battleTraits.map((ability) => (
+                    <li key={ability._id}>
+                      {ability.name} ({normalizeCost(ability.cost)})
+                    </li>
+                  ))
+                )}
+              </ul>
+            </section>
+          </article>
+        )}
+
         {importedCards.map((card, index) => {
           const fighterName = card.fighter?.name ?? card.importedName
           return (
             <article key={`${fighterName}-${index}`} className="fighter-card">
-              <h2>{fighterName}</h2>
-              <p>
-                {rosterName || 'Imported Roster'}
-                {warband ? ` | ${warband}` : ''}
-              </p>
+              <div className="fighter-card-header">
+                <h2>{fighterName}</h2>
+                {card.fighter && <span className="points-pill">{card.fighter.points} pts</span>}
+              </div>
 
               {card.fighter ? (
                 <>
@@ -235,6 +322,21 @@ function App() {
                         <li>No matching abilities</li>
                       ) : (
                         card.abilities.map((ability) => (
+                          <li key={ability._id}>
+                            {ability.name} ({normalizeCost(ability.cost)})
+                          </li>
+                        ))
+                      )}
+                    </ul>
+                  </section>
+
+                  <section>
+                    <h3>Reactions</h3>
+                    <ul className="abilities-list">
+                      {card.reactions.length === 0 ? (
+                        <li>No matching reactions</li>
+                      ) : (
+                        card.reactions.map((ability) => (
                           <li key={ability._id}>
                             {ability.name} ({normalizeCost(ability.cost)})
                           </li>

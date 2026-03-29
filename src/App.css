@@ -68,6 +68,29 @@
   gap: 0.75rem;
 }
 
+.warband-header-card {
+  grid-column: 1 / -1;
+  border: 1px solid #2f3f45;
+  border-radius: 12px;
+  background: linear-gradient(180deg, #e8f0eb 0%, #dbe8e0 100%);
+  padding: 0.85rem;
+}
+
+.warband-header-card h2 {
+  margin: 0;
+  font-size: 1.05rem;
+}
+
+.warband-header-card p {
+  margin: 0.25rem 0 0;
+  color: #30444d;
+  font-size: 0.9rem;
+}
+
+.warband-traits {
+  margin-top: 0.55rem;
+}
+
 .fighter-card {
   border: 1px solid #2f3f45;
   border-radius: 12px;
@@ -75,9 +98,27 @@
   padding: 0.75rem;
 }
 
+.fighter-card-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
 .fighter-card h2 {
   margin: 0;
   font-size: 1rem;
+}
+
+.points-pill {
+  border: 1px solid #25353b;
+  border-radius: 999px;
+  background: #163f4f;
+  color: #fff;
+  font-size: 0.75rem;
+  line-height: 1;
+  padding: 0.3rem 0.55rem;
+  white-space: nowrap;
 }
 
 .fighter-card p {
