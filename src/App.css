@@ -5,6 +5,7 @@
   --icon-card-sm: 0.82rem;
   --icon-card-md: 0.9rem;
   --ability-cost-justify: flex-end;
+  --ability-dice-x-offset: 3px;
 }
 
 .app-shell {
@@ -412,8 +413,9 @@
   align-items: center;
   flex-wrap: nowrap;
   white-space: nowrap;
-  gap: 0.04rem;
+  gap: 0rem;
   color: #17465a;
+  transform: translateX(var(--ability-dice-x-offset));
 }
 
 .dice-icon {
@@ -442,6 +444,10 @@
 }
 
 @media print {
+  :root {
+    --ability-dice-x-offset: 2px;
+  }
+
   @page {
     size: auto;
     margin: 8mm;
