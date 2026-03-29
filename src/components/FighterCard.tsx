@@ -15,7 +15,6 @@ export function FighterCard({ card, runemarkPlacement }: FighterCardProps) {
   function renderRunemarksSection(extraClassName?: string) {
     return (
       <section className={extraClassName}>
-        <h3>Runemarks</h3>
         <ul className="runemarks-list">
           {card.fighter?.runemarks.length === 0 ? (
             <li>No runemarks</li>
