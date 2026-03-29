@@ -192,6 +192,11 @@
   flex-direction: column;
   gap: var(--space-1);
   max-width: 100%;
+  min-height: 5.15rem;
+  max-height: 5.15rem;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding-right: 0.1rem;
 }
 
 .weapon-showcase-row {
@@ -387,6 +392,13 @@
   .cards-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 0.45rem;
+  }
+
+  .weapons-showcase-list {
+    min-height: 0;
+    max-height: none;
+    overflow: visible;
+    padding-right: 0;
   }
 
   .warband-header-card,
