@@ -20,7 +20,7 @@ const assetsRepoDir = path.join(root, '_warcry_card_creator_source')
 const assetsTargetRootDir = path.join(root, 'public', 'warcry_assets')
 const assetsRepoUrl =
   process.env.WARCRY_CARD_CREATOR_REPO_URL ?? 'https://github.com/barrysheppard/warcry-card-creator.git'
-const assetsSubdirs = ['assets', 'runemarks']
+const assetsSubdirs = ['runemarks']
 
 async function exists(targetPath: string): Promise<boolean> {
   try {
