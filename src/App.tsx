@@ -46,6 +46,17 @@ type Manifest = {
   warbands: WarbandManifest[]
 }
 
+type ParsedRoster = {
+  warbandName: string | null
+  fighterNames: string[]
+}
+
+type RosterMatchResult = {
+  counts: Record<string, number>
+  matched: number
+  unmatched: string[]
+}
+
 function normalizeCost(cost: string): string {
   const value = cost.trim().toLowerCase()
   if (!value) {
@@ -69,13 +80,134 @@ function formatWarbandLabel(entry: WarbandManifest): string {
     .join(' ')
 }
 
+function normalizeText(value: string): string {
+  return value
+    .toLowerCase()
+    .replace(/['".,]/g, '')
+    .replace(/\s+/g, ' ')
+    .trim()
+}
+
+function makeDefaultCounts(fighters: Fighter[], value: number): Record<string, number> {
+  const counts: Record<string, number> = {}
+  for (const fighter of fighters) {
+    counts[fighter._id] = value
+  }
+  return counts
+}
+
+function parseRosterText(input: string): ParsedRoster {
+  const rawLines = input
+    .split(/\r?\n/)
+    .map((line) => line.trim())
+    .filter((line) => line.length > 0)
+    .filter((line) => !/^[-]{4,}$/.test(line))
+
+  const fighterNames = rawLines
+    .filter((line) => line.startsWith('- '))
+    .map((line) => line.replace(/^[-]\s+/, ''))
+    .map((line) => line.replace(/\s*\([^)]*\)\s*$/, ''))
+
+  let warbandName: string | null = null
+  for (const line of rawLines) {
+    if (line.startsWith('- ')) {
+      continue
+    }
+    if (/^generated on/i.test(line)) {
+      continue
+    }
+    if (/pts\s*\|/i.test(line)) {
+      continue
+    }
+    if (/^".*"$/.test(line)) {
+      continue
+    }
+
+    warbandName = line
+    break
+  }
+
+  return { warbandName, fighterNames }
+}
+
+function findWarbandKey(manifest: Manifest | null, warbandName: string | null): string | null {
+  if (!manifest || !warbandName) {
+    return null
+  }
+
+  const normalizedTarget = normalizeText(warbandName).replace(/\s+/g, '_')
+
+  const exact = manifest.warbands.find(
+    (entry) => normalizeText(entry.warbandSlug) === normalizeText(normalizedTarget),
+  )
+  if (exact) {
+    return exact.key
+  }
+
+  const loose = manifest.warbands.find(
+    (entry) =>
+      normalizeText(entry.warbandSlug).includes(normalizeText(warbandName)) ||
+      normalizeText(warbandName).includes(normalizeText(entry.warbandSlug)),
+  )
+  return loose?.key ?? null
+}
+
+function buildRosterMatch(fighters: Fighter[], rosterFighterNames: string[]): RosterMatchResult {
+  const counts = makeDefaultCounts(fighters, 0)
+  const normalizedToFighter = new Map<string, Fighter>()
+
+  for (const fighter of fighters) {
+    normalizedToFighter.set(normalizeText(fighter.name), fighter)
+  }
+
+  const unmatched: string[] = []
+  let matched = 0
+
+  for (const rosterName of rosterFighterNames) {
+    const normalizedRosterName = normalizeText(rosterName)
+    const exactMatch = normalizedToFighter.get(normalizedRosterName)
+
+    if (exactMatch) {
+      counts[exactMatch._id] += 1
+      matched += 1
+      continue
+    }
+
+    const looseMatches = fighters.filter((fighter) => {
+      const normalizedFighterName = normalizeText(fighter.name)
+      return (
+        normalizedFighterName.includes(normalizedRosterName) ||
+        normalizedRosterName.includes(normalizedFighterName)
+      )
+    })
+
+    if (looseMatches.length > 0) {
+      looseMatches.sort((a, b) => {
+        const aLengthDiff = Math.abs(a.name.length - rosterName.length)
+        const bLengthDiff = Math.abs(b.name.length - rosterName.length)
+        return aLengthDiff - bLengthDiff
+      })
+      counts[looseMatches[0]._id] += 1
+      matched += 1
+      continue
+    }
+
+    unmatched.push(rosterName)
+  }
+
+  return { counts, matched, unmatched }
+}
+
 function App() {
   const [manifest, setManifest] = useState<Manifest | null>(null)
   const [selectedWarbandKey, setSelectedWarbandKey] = useState('')
   const [fighters, setFighters] = useState<Fighter[]>([])
   const [abilities, setAbilities] = useState<Ability[]>([])
-  const [selectedFighterIds, setSelectedFighterIds] = useState<Set<string>>(new Set())
+  const [selectedFighterCounts, setSelectedFighterCounts] = useState<Record<string, number>>({})
   const [nameFilter, setNameFilter] = useState('')
+  const [rosterText, setRosterText] = useState('')
+  const [pendingRosterImport, setPendingRosterImport] = useState<ParsedRoster | null>(null)
+  const [importStatus, setImportStatus] = useState('')
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState('')
 
@@ -157,7 +289,7 @@ function App() {
 
         setFighters(fightersData)
         setAbilities(abilitiesData)
-        setSelectedFighterIds(new Set(fightersData.map((fighter) => fighter._id)))
+        setSelectedFighterCounts(makeDefaultCounts(fightersData, 1))
       } catch (loadError) {
         if (!active) {
           return
@@ -187,44 +319,97 @@ function App() {
     return fighters.filter((fighter) => fighter.name.toLowerCase().includes(query))
   }, [fighters, nameFilter])
 
-  const printableFighters = useMemo(
-    () => filteredFighters.filter((fighter) => selectedFighterIds.has(fighter._id)),
-    [filteredFighters, selectedFighterIds],
-  )
+  const printableCards = useMemo(() => {
+    const cards: Array<{ fighter: Fighter; copy: number }> = []
 
-  function toggleFighterSelection(fighterId: string) {
-    setSelectedFighterIds((current) => {
-      const next = new Set(current)
-      if (next.has(fighterId)) {
-        next.delete(fighterId)
-      } else {
-        next.add(fighterId)
+    for (const fighter of fighters) {
+      const count = Math.max(0, selectedFighterCounts[fighter._id] ?? 0)
+      for (let copy = 1; copy <= count; copy += 1) {
+        cards.push({ fighter, copy })
       }
-      return next
+    }
+
+    return cards
+  }, [fighters, selectedFighterCounts])
+
+  useEffect(() => {
+    if (!pendingRosterImport) {
+      return
+    }
+    if (fighters.length === 0) {
+      return
+    }
+
+    const result = buildRosterMatch(fighters, pendingRosterImport.fighterNames)
+    setSelectedFighterCounts(result.counts)
+    setPendingRosterImport(null)
+
+    const base = `Roster imported: matched ${result.matched}/${pendingRosterImport.fighterNames.length}`
+    if (result.unmatched.length > 0) {
+      setImportStatus(`${base}. Unmatched: ${result.unmatched.join(', ')}`)
+      return
+    }
+
+    setImportStatus(base)
+  }, [fighters, pendingRosterImport])
+
+  function setFighterCount(fighterId: string, nextCount: number) {
+    setSelectedFighterCounts((current) => {
+      const bounded = Number.isNaN(nextCount) ? 0 : Math.max(0, Math.floor(nextCount))
+      return {
+        ...current,
+        [fighterId]: bounded,
+      }
     })
   }
 
   function selectAllFiltered() {
-    setSelectedFighterIds((current) => {
-      const next = new Set(current)
+    setSelectedFighterCounts((current) => {
+      const next = { ...current }
       for (const fighter of filteredFighters) {
-        next.add(fighter._id)
+        next[fighter._id] = Math.max(1, next[fighter._id] ?? 0)
       }
       return next
     })
   }
 
   function clearAllFiltered() {
-    const filteredIds = new Set(filteredFighters.map((fighter) => fighter._id))
-    setSelectedFighterIds((current) => {
-      const next = new Set<string>()
-      for (const id of current) {
-        if (!filteredIds.has(id)) {
-          next.add(id)
-        }
+    setSelectedFighterCounts((current) => {
+      const next = { ...current }
+      for (const fighter of filteredFighters) {
+        next[fighter._id] = 0
       }
       return next
     })
+  }
+
+  function importRoster() {
+    const parsed = parseRosterText(rosterText)
+    if (parsed.fighterNames.length === 0) {
+      setImportStatus('No fighter lines found. Paste the full Warcrier export block.')
+      return
+    }
+
+    const rosterWarbandKey = findWarbandKey(manifest, parsed.warbandName)
+    setPendingRosterImport(parsed)
+
+    if (rosterWarbandKey && rosterWarbandKey !== selectedWarbandKey) {
+      setSelectedWarbandKey(rosterWarbandKey)
+      setImportStatus(`Detected ${parsed.warbandName ?? 'warband'} and switched warband before import.`)
+      return
+    }
+
+    const result = buildRosterMatch(fighters, parsed.fighterNames)
+    setSelectedFighterCounts(result.counts)
+    setPendingRosterImport(null)
+
+    const base = `Roster imported: matched ${result.matched}/${parsed.fighterNames.length}`
+    if (result.unmatched.length > 0) {
+      setImportStatus(`${base}. Unmatched: ${result.unmatched.join(', ')}`)
+      return
+    }
+
+    setImportStatus(base)
   }
 
   return (
@@ -236,7 +421,7 @@ function App() {
           <p>Uses local static JSON from the source repository with no server runtime.</p>
         </div>
         <div className="print-summary">
-          <strong>{printableFighters.length}</strong>
+          <strong>{printableCards.length}</strong>
           <span>cards selected</span>
         </div>
       </header>
@@ -280,18 +465,35 @@ function App() {
         </div>
       </section>
 
+      <section className="roster-import no-print">
+        <p className="roster-title">Import Warcrier Roster Text</p>
+        <textarea
+          rows={8}
+          value={rosterText}
+          onChange={(event) => setRosterText(event.target.value)}
+          placeholder="Paste the full Warcrier export text here"
+        />
+        <div className="button-row">
+          <button type="button" onClick={importRoster}>
+            Import roster
+          </button>
+        </div>
+        {importStatus && <p className="status">{importStatus}</p>}
+      </section>
+
       {error && <p className="status error no-print">{error}</p>}
       {loading && <p className="status no-print">Loading warband data...</p>}
 
       <section className="picker no-print">
         {filteredFighters.map((fighter) => {
-          const checked = selectedFighterIds.has(fighter._id)
+          const count = selectedFighterCounts[fighter._id] ?? 0
           return (
             <label key={fighter._id} className="fighter-toggle">
               <input
-                type="checkbox"
-                checked={checked}
-                onChange={() => toggleFighterSelection(fighter._id)}
+                type="number"
+                min={0}
+                value={count}
+                onChange={(event) => setFighterCount(fighter._id, Number(event.target.value))}
               />
               <span>{fighter.name}</span>
             </label>
@@ -300,17 +502,20 @@ function App() {
       </section>
 
       <section className="cards-grid">
-        {printableFighters.map((fighter) => {
+        {printableCards.map(({ fighter, copy }) => {
           const fighterAbilities = abilities.filter((ability) =>
             abilityAppliesToFighter(ability, fighter),
           )
 
+          const totalCopies = selectedFighterCounts[fighter._id] ?? 0
+
           return (
-            <article key={fighter._id} className="fighter-card">
+            <article key={`${fighter._id}-${copy}`} className="fighter-card">
               <header className="card-header">
                 <h2>{fighter.name}</h2>
                 <p>
                   {fighter.warband} | {fighter.points} pts
+                  {totalCopies > 1 ? ` | Copy ${copy}/${totalCopies}` : ''}
                 </p>
               </header>
 

@@ -92,6 +92,35 @@
   color: #87181f;
 }
 
+.roster-import {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+  padding: 0.9rem;
+  border: 1px solid #d7ccb3;
+  border-radius: 12px;
+  background: #f8f5ed;
+  text-align: left;
+}
+
+.roster-title {
+  margin: 0;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #30444d;
+}
+
+.roster-import textarea {
+  width: 100%;
+  resize: vertical;
+  border: 1px solid #beb7a2;
+  border-radius: 8px;
+  padding: 0.6rem;
+  font-size: 0.9rem;
+  font-family: Consolas, 'Courier New', monospace;
+  background: #fff;
+}
+
 .picker {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
@@ -107,6 +136,13 @@
   align-items: center;
   gap: 0.45rem;
   font-size: 0.9rem;
+}
+
+.fighter-toggle input[type='number'] {
+  width: 4rem;
+  border: 1px solid #beb7a2;
+  border-radius: 6px;
+  padding: 0.25rem 0.35rem;
 }
 
 .cards-grid {
