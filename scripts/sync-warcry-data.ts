@@ -1,5 +1,6 @@
 import fs from 'node:fs/promises'
 import path from 'node:path'
+import { spawn } from 'node:child_process'
 
 type WarbandEntry = {
   key: string
@@ -10,9 +11,11 @@ type WarbandEntry = {
 }
 
 const root = process.cwd()
-const sourceDataDir = path.join(root, '_warcry_data_source', 'data')
+const sourceRepoDir = path.join(root, '_warcry_data_source')
+const sourceDataDir = path.join(sourceRepoDir, 'data')
 const targetRootDir = path.join(root, 'public', 'warcry_data')
 const targetDataDir = path.join(targetRootDir, 'data')
+const sourceRepoUrl = process.env.WARCRY_DATA_REPO_URL ?? 'https://github.com/krisling049/warcry_data.git'
 
 async function exists(targetPath: string): Promise<boolean> {
   try {
@@ -21,6 +24,46 @@ async function exists(targetPath: string): Promise<boolean> {
   } catch {
     return false
   }
+}
+
+async function runCommand(command: string, args: string[], cwd: string): Promise<void> {
+  await new Promise<void>((resolve, reject) => {
+    const proc = spawn(command, args, {
+      cwd,
+      stdio: 'inherit',
+      shell: false,
+    })
+
+    proc.on('error', reject)
+    proc.on('exit', (code) => {
+      if (code === 0) {
+        resolve()
+        return
+      }
+      reject(new Error(`Command failed: ${command} ${args.join(' ')} (exit ${code ?? 'unknown'})`))
+    })
+  })
+}
+
+async function hasGitRepoMetadata(repoDir: string): Promise<boolean> {
+  return exists(path.join(repoDir, '.git'))
+}
+
+async function ensureSourceRepoUpToDate(): Promise<void> {
+  if (!(await exists(sourceRepoDir))) {
+    console.log(`Cloning warcry data repository into ${sourceRepoDir}`)
+    await runCommand('git', ['clone', '--depth', '1', sourceRepoUrl, sourceRepoDir], root)
+    return
+  }
+
+  if (!(await hasGitRepoMetadata(sourceRepoDir))) {
+    throw new Error(
+      `Expected ${sourceRepoDir} to be a git repository. Remove it and rerun sync-data to re-clone.`,
+    )
+  }
+
+  console.log(`Pulling latest warcry data in ${sourceRepoDir}`)
+  await runCommand('git', ['-C', sourceRepoDir, 'pull', '--ff-only'], root)
 }
 
 async function copyDirectory(sourceDir: string, destinationDir: string): Promise<void> {
@@ -81,6 +124,8 @@ async function collectWarbandEntries(currentDir: string): Promise<WarbandEntry[]
 }
 
 async function main(): Promise<void> {
+  await ensureSourceRepoUpToDate()
+
   if (!(await exists(sourceDataDir))) {
     throw new Error(`Source data directory not found: ${sourceDataDir}`)
   }
