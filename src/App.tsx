@@ -40,6 +40,12 @@ type FighterRunemarkBadgeProps = {
   runemark: string
 }
 
+type IconWithFallbackProps = {
+  candidates: string[]
+  alt: string
+  className: string
+}
+
 function normalizeText(value: string): string {
   return value
     .normalize('NFKD')
@@ -176,6 +182,18 @@ function buildFighterRunemarkCandidates(runemark: string): string[] {
   return [...candidates]
 }
 
+function buildWeaponRunemarkCandidates(runemark: string): string[] {
+  const token = normalizeSlug(runemark)
+  if (!token) {
+    return []
+  }
+  return [`/warcry_assets/runemarks/black/weapons-${token}.svg`]
+}
+
+function characteristicIconPath(name: string): string {
+  return `/warcry_assets/runemarks/black/characteristic-${name}.svg`
+}
+
 function FactionRunemark({ candidates, alt }: FactionRunemarkProps) {
   const [candidateIndex, setCandidateIndex] = useState(0)
 
@@ -188,6 +206,23 @@ function FactionRunemark({ candidates, alt }: FactionRunemarkProps) {
     <img
       className="faction-runemark"
       src={src}
+      alt={alt}
+      onError={() => setCandidateIndex((prev) => prev + 1)}
+    />
+  )
+}
+
+function IconWithFallback({ candidates, alt, className }: IconWithFallbackProps) {
+  const [candidateIndex, setCandidateIndex] = useState(0)
+
+  if (candidateIndex >= candidates.length) {
+    return null
+  }
+
+  return (
+    <img
+      className={className}
+      src={candidates[candidateIndex]}
       alt={alt}
       onError={() => setCandidateIndex((prev) => prev + 1)}
     />
@@ -497,16 +532,57 @@ function App() {
 
                   <section>
                     <h3>Weapons</h3>
-                    <ul className="weapons-list">
+                    <ul className="weapons-showcase-list">
                       {card.fighter.weapons.length === 0 ? (
-                        <li className="weapon-row">No weapon profiles</li>
+                        <li className="weapon-showcase-empty">No weapon profiles</li>
                       ) : (
                         card.fighter.weapons.map((weapon, idx) => (
-                          <li key={`${card.fighter?._id}-weapon-${idx}`} className="weapon-row">
-                            <span className="weapon-meta">{formatWeaponRange(weapon)}</span>
-                            <span>
-                              A{weapon.attacks} S{weapon.strength} D{formatWeaponDamage(weapon)}
-                            </span>
+                          <li key={`${card.fighter?._id}-weapon-${idx}`} className="weapon-showcase-row">
+                            <div className="weapon-cell weapon-cell-type">
+                              <IconWithFallback
+                                key={buildWeaponRunemarkCandidates(weapon.runemark).join('|')}
+                                candidates={buildWeaponRunemarkCandidates(weapon.runemark)}
+                                alt={`${weapon.runemark} weapon`}
+                                className="weapon-type-icon"
+                              />
+                              <span className="weapon-type-label">{formatRunemarkLabel(weapon.runemark)}</span>
+                            </div>
+
+                            <div className="weapon-cell">
+                              <img
+                                className="weapon-stat-icon"
+                                src={characteristicIconPath('range')}
+                                alt="Range"
+                              />
+                              <span className="weapon-stat-value">{formatWeaponRange(weapon)}</span>
+                            </div>
+
+                            <div className="weapon-cell">
+                              <img
+                                className="weapon-stat-icon"
+                                src={characteristicIconPath('attacks')}
+                                alt="Attacks"
+                              />
+                              <span className="weapon-stat-value">{weapon.attacks}</span>
+                            </div>
+
+                            <div className="weapon-cell">
+                              <img
+                                className="weapon-stat-icon"
+                                src={characteristicIconPath('strength')}
+                                alt="Strength"
+                              />
+                              <span className="weapon-stat-value">{weapon.strength}</span>
+                            </div>
+
+                            <div className="weapon-cell">
+                              <img
+                                className="weapon-stat-icon"
+                                src={characteristicIconPath('damage')}
+                                alt="Damage"
+                              />
+                              <span className="weapon-stat-value">{formatWeaponDamage(weapon)}</span>
+                            </div>
                           </li>
                         ))
                       )}
