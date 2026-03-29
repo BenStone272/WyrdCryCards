@@ -6,6 +6,7 @@
   --icon-card-md: 0.9rem;
   --ability-cost-justify: flex-end;
   --ability-dice-x-offset: 3px;
+  --fighter-card-web-height: 31rem;
 }
 
 .app-shell {
@@ -124,7 +125,7 @@
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  height: 100%;
+  height: var(--fighter-card-web-height);
 }
 
 .fighter-card-header {
@@ -559,7 +560,7 @@
 
   .ability-line {
     grid-template-columns: 12.2mm minmax(0, 1fr);
-    gap: 0.8mm;
+    gap: 1.2mm;
     line-height: 1.16;
   }
 
