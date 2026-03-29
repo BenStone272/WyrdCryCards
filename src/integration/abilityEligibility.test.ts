@@ -2,6 +2,8 @@ import { describe, expect, it } from 'vitest'
 import { isAbilityEligibleForFighter } from './abilityEligibility'
 import type { WarcryAbility, WarcryFighter } from '../types/warcry'
 
+// NOTE: These are synthetic unit tests that validate rule logic in isolation.
+// They intentionally do not load fighters/abilities from JSON data files.
 const fighter: WarcryFighter = {
   _id: 'f1',
   name: 'Sample Fighter',
@@ -29,17 +31,17 @@ function makeAbility(overrides: Partial<WarcryAbility>): WarcryAbility {
 }
 
 describe('isAbilityEligibleForFighter', () => {
-  it('returns true when warband matches and all runemarks are present', () => {
+  it('synthetic: returns true when warband matches and all runemarks are present', () => {
     const ability = makeAbility({ runemarks: ['hero'] })
     expect(isAbilityEligibleForFighter(ability, fighter)).toBe(true)
   })
 
-  it('returns false when warband does not match', () => {
+  it('synthetic: returns false when warband does not match', () => {
     const ability = makeAbility({ warband: 'Stormcast' })
     expect(isAbilityEligibleForFighter(ability, fighter)).toBe(false)
   })
 
-  it('returns false when any required runemark is missing', () => {
+  it('synthetic: returns false when any required runemark is missing', () => {
     const ability = makeAbility({ runemarks: ['hero', 'destroyer'] })
     expect(isAbilityEligibleForFighter(ability, fighter)).toBe(false)
   })
