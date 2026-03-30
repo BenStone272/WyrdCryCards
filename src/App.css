@@ -682,7 +682,7 @@
   }
 
   @page {
-    size: A4 portrait;
+    size: auto;
     margin: 5mm;
   }
 
@@ -708,7 +708,7 @@
   .cards-grid {
     grid-template-columns: repeat(3, 63.5mm);
     grid-auto-rows: 89mm;
-    gap: 1.5mm;
+    gap: 1.2mm;
     justify-content: initial;
     align-content: start;
     width: max-content;
