@@ -896,7 +896,19 @@
   }
 
   .card-back-ability-item {
-    border-top-color: #000 !important;
+    border-top: 0.18mm solid #6f6f6f !important;
+  }
+
+  .stats-grid div,
+  .weapon-showcase-row,
+  .weapon-showcase-empty,
+  .fighter-runemark-badge {
+    border-width: 0.18mm !important;
+  }
+
+  .weapon-cell {
+    border-right-width: 0.15mm !important;
+    border-right-color: #5f5f5f !important;
   }
 
   .card-back-frame {
