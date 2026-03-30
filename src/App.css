@@ -899,6 +899,10 @@
     border-top: 0.18mm solid #6f6f6f !important;
   }
 
+  .card-back-ability-list > :first-child {
+    border-top: none !important;
+  }
+
   .stats-grid div,
   .weapon-showcase-row,
   .weapon-showcase-empty,
