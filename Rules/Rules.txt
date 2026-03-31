@@ -1,0 +1,38 @@
+What the Game is About
+Warcry is a miniatures skirmish game played between two or more players, where each game is referred to as a "battle". 
+Players collect and control groups of Citadel Miniatures called "warbands", which they build by picking fighters from specific factions.
+Battles are fought according to a "battleplan," which determines the battlefield terrain, deployment, the victory condition required to win, and special twists in play. 
+The game is played in a series of battle rounds where players take turns activating their fighters. 
+The setting of the core rules takes place in the blood-soaked depths of the Gnarlwood.
+
+**Fighter Profiles and Characteristics**
+* [cite_start]Each fighter has a profile detailing their characteristics, which include Move, Toughness, and Wounds[cite: 18].
+* [cite_start]The profile also details the weapons the fighter is armed with[cite: 18]. 
+* [cite_start]A fighter's card indicates their points value[cite: 20].
+* [cite_start]Fighters possess runemarks, including a faction runemark to indicate which faction they belong to[cite: 21].
+* [cite_start]A fighter can have up to 3 other runemarks to determine the abilities they can use and other rules that apply to them[cite: 21].
+* [cite_start]Specific runemarks mentioned in the rules include the Hero runemark, the Mount runemark, and the Fly runemark[cite: 59, 170, 171].
+
+**Weapon Characteristics**
+* [cite_start]Each weapon has 4 characteristics: Range, Attacks, Strength, and Damage[cite: 202].
+* [cite_start]Melee attack actions are made with weapons that have a Range characteristic of 3 or less[cite: 213].
+* [cite_start]Missile attack actions are made with weapons that have a Range characteristic greater than 3[cite: 214].
+* [cite_start]The Range characteristic of some weapons includes both a minimum and a maximum range[cite: 208].
+* [cite_start]The Damage characteristic consists of two values separated by a slash[cite: 234].
+* [cite_start]The first Damage value represents the number of damage points allocated for each standard hit[cite: 236].
+* [cite_start]The second Damage value represents the number of damage points allocated for each critical hit[cite: 237].
+
+**Combat Mechanics (To Hit)**
+* [cite_start]When making an attack, you roll a number of dice equal to the weapon's Attacks characteristic[cite: 215].
+* [cite_start]The hit rolls are determined by comparing the weapon's Strength characteristic against the target's Toughness characteristic[cite: 218]:
+* [cite_start]If Strength is greater than Toughness: 1-2 is a miss, 3-5 is a hit, and 6 is a critical hit[cite: 218].
+* [cite_start]If Strength is equal to Toughness: 1-3 is a miss, 4-5 is a hit, and 6 is a critical hit[cite: 218].
+* [cite_start]If Strength is lower than Toughness: 1-4 is a miss, 5 is a hit, and 6 is a critical hit[cite: 218].
+
+**Actions and Abilities**
+* [cite_start]During an activation, a fighter can make 2 actions chosen from the following list: Move, Attack, Disengage, or Wait[cite: 144, 147].
+* [cite_start]In addition to their 2 actions, a fighter can use 1 ability per activation[cite: 150].
+* [cite_start]Each ability requires a specific combination of ability dice to be used: either a [double], a [triple], or a [quad][cite: 243].
+* [cite_start]If a rule refers to the "value" of an ability, this refers to the score shown on the ability dice used to activate it[cite: 246].
+
+You can copy this structured text and provide it to your translation AI as context to ensure it uses the correct specialized Warcry terminology (e.g., distinguishing between "Toughness" and "Wounds", translating "Range/Attacks/Strength/Damage" accurately, and understanding the bracketed ability dice formats like "[double]").
