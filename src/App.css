@@ -899,7 +899,7 @@
 
   .cards-grid {
     grid-template-columns: repeat(3, 63.5mm);
-    grid-auto-rows: 89mm;
+    grid-auto-rows: 88mm;
     gap: 1.2mm;
     justify-content: initial;
     align-content: start;
@@ -910,20 +910,20 @@
   .fighter-card {
     box-sizing: border-box;
     width: 63.5mm;
-    height: 89mm;
-    min-height: 89mm;
-    max-height: 89mm;
+    height: 88mm;
+    min-height: 88mm;
+    max-height: 88mm;
     max-width: 63.5mm;
-    padding: 1.7mm;
+    padding: 0.7mm 1.7mm;
     border-radius: 2.5mm;
     gap: 0;
     overflow: hidden;
   }
 
   .cards-grid-backs .fighter-card {
-    height: 89mm;
-    min-height: 89mm;
-    max-height: 89mm;
+    height: 88mm;
+    min-height: 88mm;
+    max-height: 88mm;
   }
 
   .fighter-card-back {

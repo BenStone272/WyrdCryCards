@@ -2,7 +2,7 @@
 
 Generate printable Warcry fighter cards from a Warcrier roster.
 Paste your roster text, import it, then print fronts or backs directly from the app.
-
+((Poker/Trading Cards: 2.5" x 3.5" (63.5 x 88.9 mm)))
 Working version: https://wfc.cydn.dev/
 
 ## How to use
