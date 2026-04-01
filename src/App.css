@@ -2,6 +2,8 @@
   --space-1: 0.25rem;
   --space-2: 0.5rem;
   --space-3: 0.75rem;
+  --print-card-font-family: 'Aptos Narrow', 'Bahnschrift SemiCondensed', 'Arial Narrow', 'Roboto Condensed',
+    'Liberation Sans Narrow', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   --icon-card-sm: 0.82rem;
   --icon-card-md: 0.9rem;
   --ability-cost-justify: flex-end;
@@ -878,12 +880,13 @@
 
   .fighter-card h2 {
     font-size: 8.4pt;
-    line-height: 1.08;
+    line-height: 1.02;
+    letter-spacing: -0.01em;
   }
 
   .fighter-card h3 {
-    font-size: 6pt;
-    letter-spacing: 0.05em;
+    font-size: 5.8pt;
+    letter-spacing: 0.04em;
   }
 
   .runemarks-under-name {
@@ -927,18 +930,18 @@
   }
 
   .weapon-stat-value {
-    font-size: 7.4pt;
+    font-size: 7.15pt;
   }
 
   .abilities-list {
-    font-size: 7pt;
+    font-size: 6.7pt;
     gap: 0.45mm;
   }
 
   .ability-line {
     grid-template-columns: 12.2mm minmax(0, 1fr);
-    gap: 1.2mm;
-    line-height: 1.16;
+    gap: 0.95mm;
+    line-height: 1.08;
   }
 
   .dice-icon {
@@ -973,6 +976,16 @@
     color: #000 !important;
     border-color: #000 !important;
     box-shadow: none !important;
+  }
+
+  .warband-header-card,
+  .fighter-card,
+  .weapon-showcase-empty,
+  .fighter-runemark-badge,
+  .points-pill,
+  .card-back-frame {
+    font-family: var(--print-card-font-family) !important;
+    letter-spacing: -0.01em;
   }
 
   .faction-runemark,
@@ -1050,7 +1063,7 @@
   .card-back-ability-description {
     margin-top: 0.2mm;
     font-size: var(--card-back-desc-size);
-    line-height: 1.18;
+    line-height: 1.1;
   }
 
   .fighter-card,
