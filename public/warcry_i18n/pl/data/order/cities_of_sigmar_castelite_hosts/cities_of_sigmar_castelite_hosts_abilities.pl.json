@@ -1,0 +1,197 @@
+[
+  {
+    "_id": "387652bc",
+    "name": "Ostateczny opór",
+    "warband": "Brethren of the Bolt",
+    "cost": "reaction",
+    "description": "Wojownik może wykonać tę reakcję, gdy staje się celem akcji ataku wręcz, ale zanim wykonane zostaną rzuty na trafienie. Odejmij 1 od punktów obrażeń przydzielanych temu wojownikowi przez każde trafienie z tej akcji ataku (do minimum 1).",
+    "runemarks": [],
+    "sourceName": "Ultimate Resistor",
+    "sourceDescription": "A fighter can make this reaction when they are targeted by a melee attack action but before the hit rolls are made. Subtract 1 from the damage points allocated to this fighter by each hit from that attack action (to a minimum of 1)."
+  },
+  {
+    "_id": "2239ee7f",
+    "name": "Gromowy wybuch",
+    "warband": "Brethren of the Bolt",
+    "cost": "double",
+    "description": "Wybierz widocznego wrogiego wojownika w odległości 3\" od tego wojownika i rzuć 3 kośćmi. Za każdy wynik 3+ przydziel temu wojownikowi liczbę punktów obrażeń równą połowie wartości tej zdolności (zaokrąglając w górę). Możesz wybrać wrogiego wojownika w odległości 3\" od innego widocznego sojuszniczego wojownika z runemarkiem Brethren of the Bolt, jeśli ten sojuszniczy wojownik znajduje się w odległości 6\" od tego wojownika.",
+    "runemarks": [],
+    "sourceName": "Thunderous Blast",
+    "sourceDescription": "Pick a visible enemy fighter within 3\" of this fighter and roll 3 dice. For each roll of 3+, allocate a number of damage points to that fighter equal to half the value of this ability (rounding up). You can pick an enemy fighter within 3\" of another visible friendly fighter with the Brethren of the Bolt runemark if that friendly fighter is within 6\" of this fighter."
+  },
+  {
+    "_id": "f44687c7",
+    "name": "Wściekły zryw",
+    "warband": "Brethren of the Bolt",
+    "cost": "triple",
+    "description": "Ten wojownik może wykonać dodatkową akcję ruchu do liczby cali równej wartości tej zdolności. Następnie może wykonać dodatkową akcję ataku.",
+    "runemarks": [],
+    "sourceName": "Furious Abandon",
+    "sourceDescription": "This fighter can make a bonus move action up to a number of inches equal to the value of this ability. Then, they can make a bonus attack action."
+  },
+  {
+    "_id": "5f9ed484",
+    "name": "Uwolniona furia",
+    "warband": "Brethren of the Bolt",
+    "cost": "quad",
+    "description": "Ten wojownik wykonuje dodatkową akcję ataku strzeleckiego. Gdy ta akcja ataku jest wykonywana, możesz wybrać innego sojuszniczego wojownika, który jest widoczny dla atakującego, aby stał się częścią łańcucha. Następnie możesz wybrać trzeciego sojuszniczego wojownika, który znajduje się w odległości 6\" od drugiego wojownika i jest dla niego widoczny, aby stał się następną częścią łańcucha, i tak dalej. Gdy ostatni wojownik w łańcuchu zostanie wybrany, możesz mierzyć zasięg tej dodatkowej akcji ataku od ostatniego wojownika w łańcuchu. Dodaj 1 do cech Ataki, Siła i Obrażenia tej broni za każdego wojownika w łańcuchu. Każdy wojownik w łańcuchu musi mieć runemark Brethren of the Bolt.",
+    "runemarks": [],
+    "sourceName": "Unleashing His Fury",
+    "sourceDescription": "This fighter makes a bonus missile attack action. When that attack action is made, you can pick another friendly fighter that is visible to the attacker to be part of a chain. Then, you can pick a third friendly fighter that is within 6\" of and visible to the second fighter to be the next part of the chain, and so on. Once the last fighter in the chain is picked, you can measure the range of that bonus attack action from the last fighter in the chain. Add 1 to the Attacks, Strength and Damage characteristics of that weapon for each fighter in the chain. Each fighter in the chain must have the Brethren of the Bolt runemark."
+  },
+  {
+    "_id": "be7e8fe2",
+    "name": "Mur Castelite",
+    "warband": "Cities of Sigmar: Castelite Hosts",
+    "cost": "reaction",
+    "description": "Wojownik może wykonać tę reakcję po tym, jak stał się celem akcji ataku, ale zanim wykonane zostaną rzuty na trafienie, jeśli znajduje się w odległości 3\" od innego sojuszniczego wojownika z runemarkiem Bulwark i/lub Elite. Jeśli tamten sojuszniczy wojownik ma runemark Bulwark, dodaj 1 do cechy Wytrzymałość tego wojownika do końca aktywacji. Jeśli tamten sojuszniczy wojownik ma runemark Elite, za każdy nieudany rzut na trafienie z tej akcji ataku przydziel atakującemu wojownikowi 2 punkty obrażeń. Jeśli tamten sojuszniczy wojownik ma zarówno runemark Bulwark, jak i Elite, zastosuj oba efekty.",
+    "runemarks": [],
+    "sourceName": "Castelite Wall",
+    "sourceDescription": "A fighter can make this reaction after they are targeted by an attack action but before the hit rolls are made if they are within 3\" of another friendly fighter with the Bulwark and/or Elite runemark. If the other friendly fighter has the Bulwark runemark, add 1 to this fighter's Toughness characteristic until the end of the activation. If the other friendly fighter has the Elite runemark, for each hit roll from that attack action that misses, allocate 2 damage points to the attacking fighter. If the other friendly fighter has both the Bulwark and Elite runemarks, apply both effects."
+  },
+  {
+    "_id": "fbfb0c43",
+    "name": "Za Sigmara, szarża!",
+    "warband": "Cities of Sigmar: Castelite Hosts",
+    "cost": "double",
+    "description": "Wybierz widocznego sojuszniczego wojownika z runemarkiem frakcji Cities of Sigmar: Castelite Hosts oraz runemarkiem Mount, który znajduje się w odległości 6\" od tego wojownika i jeszcze nie aktywował się w tej rundzie bitwy. Możesz aktywować tego wojownika natychmiast po zakończeniu aktywacji tego wojownika.",
+    "runemarks": [
+      "hero",
+      "mount"
+    ],
+    "sourceName": "For Sigmar, Charge!",
+    "sourceDescription": "Pick a visible friendly fighter with both the Cities of Sigmar: Castelite Hosts faction runemark and the Mount runemark that is within 6\" of this fighter and that has not activated yet this battle round. You can activate that fighter immediately after this fighter's activation ends."
+  },
+  {
+    "_id": "64779ea3",
+    "name": "Formacja Castelite",
+    "warband": "Cities of Sigmar: Castelite Hosts",
+    "cost": "double",
+    "description": "Do końca rundy bitwy dodaj 2 do cechy Wytrzymałość sojuszniczych wojowników z runemarkiem frakcji Cities of Sigmar: Castelite Hosts, gdy znajdują się w odległości 3\" od tego wojownika.",
+    "runemarks": [
+      "hero",
+      "bulwark"
+    ],
+    "sourceName": "Castelite Formation",
+    "sourceDescription": "Until the end of the battle round, add 2 to the Toughness characteristic of friendly fighters with the Cities of Sigmar: Castelite Hosts faction runemark while they are within 3\" of this fighter."
+  },
+  {
+    "_id": "d58adaf5",
+    "name": "Płomienne przemówienie",
+    "warband": "Cities of Sigmar: Castelite Hosts",
+    "cost": "double",
+    "description": "Do końca rundy bitwy dodaj 1 do cechy Ataki akcji ataku wręcz wykonywanych przez innych sojuszniczych wojowników z runemarkiem frakcji Cities of Sigmar: Castelite Hosts, gdy znajdują się w odległości 6\" od tego wojownika.",
+    "runemarks": [
+      "destroyer"
+    ],
+    "sourceName": "Rousing Speech",
+    "sourceDescription": "Until the end of the battle round, add 1 to the Attacks characteristic of melee attack actions made by other friendly fighters with the Cities of Sigmar: Castelite Hosts faction runemark while they are within 6\" of this fighter."
+  },
+  {
+    "_id": "ccfc40cf",
+    "name": "Nawet tego nie odczujesz",
+    "warband": "Cities of Sigmar: Castelite Hosts",
+    "cost": "double",
+    "description": "Wybierz widocznego sojuszniczego wojownika w odległości 3\" od tego wojownika. Usuń do D6 punktów obrażeń przydzielonych temu wojownikowi.",
+    "runemarks": [
+      "sentience"
+    ],
+    "sourceName": "You Won't Even Miss It",
+    "sourceDescription": "Pick a visible friendly fighter within 3\" of this fighter. Remove up to D6 damage points allocated to that fighter."
+  },
+  {
+    "_id": "7e4b2898",
+    "name": "Celuj!",
+    "warband": "Cities of Sigmar: Castelite Hosts",
+    "cost": "triple",
+    "description": "Do końca rundy bitwy dodaj 1 do punktów obrażeń przydzielanych przez każde trafienie krytyczne z akcji ataku strzeleckiego wykonywanych przez sojuszniczych wojowników z runemarkiem frakcji Cities of Sigmar: Castelite Hosts i runemarkiem Elite, gdy znajdują się w odległości 6\" od tego wojownika.",
+    "runemarks": [
+      "hero",
+      "elite"
+    ],
+    "sourceName": "Take Aim!",
+    "sourceDescription": "Until the end of the battle round, add 1 to the damage points allocated by each critical hit from missile attack actions made by friendly fighters with both the Cities of Sigmar: Castelite Hosts faction runemark and the Elite runemark while they are within 6\" of this fighter."
+  },
+  {
+    "_id": "f6eb6f6a",
+    "name": "Do mnie, wojownicy!",
+    "warband": "Cities of Sigmar: Castelite Hosts",
+    "cost": "triple",
+    "description": "Każdy sojuszniczy wojownik z runemarkiem frakcji Cities of Sigmar: Castelite Hosts w odległości 6\" od tego wojownika może wykonać dodatkową akcję ruchu. Ta akcja ruchu musi zakończyć się bliżej tego wojownika.",
+    "runemarks": [
+      "icon-bearer"
+    ],
+    "sourceName": "To Me, Warriors!",
+    "sourceDescription": "Each friendly fighter with the Cities of Sigmar: Castelite Hosts faction runemark within 6\" of this fighter can make a bonus move action. That move action must end closer to this fighter."
+  },
+  {
+    "_id": "0484e57b",
+    "name": "Melodia Corpus Somni",
+    "warband": "Cities of Sigmar: Castelite Hosts",
+    "cost": "triple",
+    "description": "Rzuć liczbą kości równą liczbie sojuszniczych wojowników z runemarkiem frakcji Cities of Sigmar: Castelite Hosts, którzy zostali wyeliminowani i/lub mają przydzielony 1 lub więcej punktów obrażeń. Za każdy wynik 4+ dodaj jedną dziką kość do swoich zachowanych dzikich kości.",
+    "runemarks": [
+      "priest"
+    ],
+    "sourceName": "Tune of the Corpus Somni",
+    "sourceDescription": "Roll a number of dice equal to the number of friendly fighters with the Cities of Sigmar: Castelite Hosts faction runemark that have been taken down and/ or have 1 or more damage points allocated to them. For each roll of 4+, add one wild dice to your saved wild dice."
+  },
+  {
+    "_id": "7189a938",
+    "name": "Płonące bronie",
+    "warband": "Cities of Sigmar: Castelite Hosts",
+    "cost": "triple",
+    "description": "Wybierz sojuszniczego wojownika z runemarkiem frakcji Cities of Sigmar: Castelite Hosts w odległości 6\" od tego wojownika. Za każde trafienie krytyczne z następnej akcji ataku wręcz wykonanej przez tego wojownika w tej rundzie bitwy przydziel wojownikowi będącemu celem 2 dodatkowe punkty obrażeń.",
+    "runemarks": [
+      "hero",
+      "warrior"
+    ],
+    "sourceName": "Blazing Weapons",
+    "sourceDescription": "Pick a friendly fighter with the Cities of Sigmar: Castelite Hosts faction runemark within 6\" of this fighter. For each critical hit from the next melee attack action made by that fighter this battle round, allocate 2 additional damage points to the target fighter."
+  },
+  {
+    "_id": "4b27ad43",
+    "name": "Złowrogi mistrz szpiegów",
+    "warband": "Cities of Sigmar: Castelite Hosts",
+    "cost": "quad",
+    "description": "Rzuć 3 kośćmi. Za każdy wynik 4+ twój przeciwnik musi odrzucić jedną dziką kość ze swoich zachowanych dzikich kości.",
+    "runemarks": [
+      "agile"
+    ],
+    "sourceName": "Sinister Spymaster",
+    "sourceDescription": "Roll 3 dice. For each roll of 4+, your opponent must discard one wild dice from their saved wild dice."
+  },
+  {
+    "_id": "fac70527",
+    "name": "Za świt!",
+    "warband": "Cities of Sigmar: Castelite Hosts",
+    "cost": "quad",
+    "description": "Do końca aktywacji tego wojownika dodaj 2 do cechy Ruch tego wojownika oraz do cechy Ataki akcji ataku wykonywanych przez tego wojownika. Tej zdolności nie mogą używać wojownicy z runemarkiem Hero.",
+    "runemarks": [],
+    "sourceName": "For the Dawn!",
+    "sourceDescription": "Until the end of this fighter's activation, add 2 to this fighter's Move characteristic and the Attacks characteristic of attack actions made by this fighter. This ability cannot be used by fighters with the Hero runemark."
+  },
+  {
+    "_id": "9a705dd1",
+    "name": "Zaklinanie broni",
+    "warband": "Cities of Sigmar: Castelite Hosts",
+    "cost": "quad",
+    "description": "Do końca rundy bitwy dodaj 1 do cechy Ataki akcji ataku wykonywanych przez sojuszniczych wojowników, gdy znajdują się w odległości 6\" od tego wojownika.",
+    "runemarks": [
+      "hero",
+      "mystic"
+    ],
+    "sourceName": "Enchant Weapons",
+    "sourceDescription": "Until the end of the battle round, add 1 to the Attacks characteristic of attack actions made by friendly fighters while they are within 6\" of this fighter."
+  },
+  {
+    "_id": "1586d745",
+    "name": "Dawnbringer Zealots",
+    "warband": "Cities of Sigmar: Castelite Hosts",
+    "cost": "battletrait",
+    "description": "Na końcu każdej rundy bitwy wybierz sojuszniczego wojownika z tą cechą bitewną, który znajduje się na polu bitwy. Możesz usunąć do D3 punktów obrażeń przydzielonych temu wojownikowi. Usuń 1 dodatkowy punkt obrażeń, jeśli ten wojownik znajduje się w odległości 3\" od celu, niesie skarb i/lub znajduje się w odległości 1\" od przeszkody.",
+    "runemarks": [],
+    "sourceName": "Dawnbringer Zealots",
+    "sourceDescription": "At the end of each battle round, pick a friendly fighter with this battle trait that is on the battlefield. You can remove up to D3 damage points allocated to that fighter. Remove 1 additional damage point if that fighter is within 3\" of an objective, carrying treasure and/or within 1\" of an obstacle."
+  }
+]

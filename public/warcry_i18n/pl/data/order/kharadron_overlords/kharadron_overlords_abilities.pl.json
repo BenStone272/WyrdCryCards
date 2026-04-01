@@ -1,0 +1,202 @@
+[
+  {
+    "_id": "500bda45",
+    "name": "Pradawna wytrzymałość",
+    "warband": "Kharadron Overlords",
+    "cost": "double",
+    "description": "Do końca rundy bitwy dodaj 1 do cechy Wytrzymałość tego wojownika.",
+    "runemarks": [],
+    "sourceName": "Ancestral Fortitude",
+    "sourceDescription": "Until the end of the battle round, add 1 to the Toughness characteristic of this fighter."
+  },
+  {
+    "_id": "01f45dea",
+    "name": "Wyrzutnia haka",
+    "warband": "Kharadron Overlords",
+    "cost": "triple",
+    "description": "Wojownik może użyć tej zdolności tylko wtedy, gdy znajduje się dalej niż 3\" od wszelkich wrogich wojowników. Wybierz punkt znajdujący się na przeszkodzie i w odległości 20\" od tego wojownika. Usuń tego wojownika z pola bitwy, a następnie wystaw go na platformie lub podłodze pola bitwy, w całości w odległości 3\" od wybranego punktu.",
+    "runemarks": [
+      "agile"
+    ],
+    "sourceName": "Grapnel Launcher",
+    "sourceDescription": "A fighter can only use this ability if they are more than 3\" from any enemy fighters. Pick a point that is on an obstacle and is within 20\" of this fighter. Remove this fighter from the battlefield, then set that fighter up on a platform or the battlefield floor, wholly within 3\" of the point picked."
+  },
+  {
+    "_id": "49638f8a",
+    "name": "Nękający Drillbill",
+    "warband": "Kharadron Overlords",
+    "cost": "double",
+    "description": "Wybierz wrogiego wojownika w odległości 20\" od tego wojownika. Do końca rundy bitwy tamten wojownik nie może wykonywać akcji wycofania.",
+    "runemarks": [
+      "scout"
+    ],
+    "sourceName": "Harrying Drillbill",
+    "sourceDescription": "Pick an enemy fighter within 20\" of this fighter. Until the end of the battle round, that fighter cannot make disengage actions."
+  },
+  {
+    "_id": "98131dd5",
+    "name": "Supernaładowana uprząż endrinowa",
+    "warband": "Kharadron Overlords",
+    "cost": "double",
+    "description": "Do końca aktywacji tego wojownika dodaj 1 do cech Siła i Ataki akcji ataku wręcz wykonywanych przez tego wojownika.",
+    "runemarks": [
+      "hero",
+      "brute"
+    ],
+    "sourceName": "Supercharged Endrinharness",
+    "sourceDescription": "Until the end of this fighter's activation, add 1 to the Strength and Attacks characteristics of melee attack actions made by this fighter."
+  },
+  {
+    "_id": "76fc95e1",
+    "name": "Izolacja atmosferyczna",
+    "warband": "Kharadron Overlords",
+    "cost": "triple",
+    "description": "Do końca rundy bitwy odejmij 1 od cechy Ataki (do minimum 1) akcji ataku wykonywanych przez wrogich wojowników, gdy znajdują się w odległości 6\" od tego wojownika.",
+    "runemarks": [
+      "hero",
+      "destroyer"
+    ],
+    "sourceName": "Atmospheric Isolation",
+    "sourceDescription": "Until the end of the battle round, subtract 1 from the Attacks characteristic (to a minimum of 1) of attack actions made by enemy fighters while they are within 6\" of this fighter."
+  },
+  {
+    "_id": "48c586d4",
+    "name": "Walka dla zysku",
+    "warband": "Kharadron Overlords",
+    "cost": "triple",
+    "description": "Do końca rundy bitwy dodaj 1 do cechy Ataki akcji ataku wręcz wykonywanych przez sojuszniczych wojowników, gdy znajdują się w odległości 3\" od tego wojownika. Jeśli ten wojownik niesie skarb albo znajduje się w odległości 3\" od celu, zamiast tego dodaj 1 do cechy Ataki wszystkich akcji ataku wykonywanych przez tamtych wojowników.",
+    "runemarks": [
+      "hero"
+    ],
+    "sourceName": "Fight for Profit",
+    "sourceDescription": "Until the end of the battle round, add 1 to the Attacks characteristic of melee attack actions made by friendly fighters while they are within 3\" of this fighter. If this fighter is carrying treasure or is within 3\" of an objective, add 1 to the Attacks characteristic of all attack actions made by those fighters instead."
+  },
+  {
+    "_id": "c434229e",
+    "name": "Trzymaj dystans",
+    "warband": "Kharadron Overlords",
+    "cost": "triple",
+    "description": "Wojownik może użyć tej zdolności tylko wtedy, gdy znajduje się w odległości 3\" od wrogiego wojownika. Ten wojownik wykonuje dodatkową akcję wycofania.",
+    "runemarks": [
+      "elite"
+    ],
+    "sourceName": "Keep Your Distance",
+    "sourceDescription": "A fighter can only use this ability if they are within 3\" of an enemy fighter. This fighter makes a bonus disengage action."
+  },
+  {
+    "_id": "1637d730",
+    "name": "Opanuj przestworza",
+    "warband": "Kharadron Overlords",
+    "cost": "double",
+    "description": "Do końca aktywacji tego wojownika dodaj 1 do punktów obrażeń przydzielanych wrogim wojownikom z runemarkiem Fly przez każde trafienie i trafienie krytyczne z akcji ataku wykonywanych przez tego wojownika.",
+    "runemarks": [
+      "fly"
+    ],
+    "sourceName": "Master the Skies",
+    "sourceDescription": "Until the end of this fighter's activation, add 1 to the damage points allocated to enemy fighters with the Fly runemark by each hit and critical hit from attack actions made by this fighter."
+  },
+  {
+    "_id": "4a3d1c1b",
+    "name": "Burza eteru",
+    "warband": "Kharadron Overlords",
+    "cost": "quad",
+    "description": "Wybierz widocznego wrogiego wojownika i rzuć liczbą kości równą wartości tej zdolności. Za każdy wynik 3+ przydziel temu wojownikowi 3 punkty obrażeń.",
+    "runemarks": [
+      "hero",
+      "mystic"
+    ],
+    "sourceName": "Aetherstorm",
+    "sourceDescription": "Pick a visible enemy fighter and roll a number of dice equal to the value of this ability. For each roll of 3+, allocate 3 damage points to that fighter."
+  },
+  {
+    "_id": "70d72c9d",
+    "name": "Ładunki z zapalnikiem",
+    "warband": "Kharadron Overlords",
+    "cost": "quad",
+    "description": "Wojownik może użyć tej zdolności tylko wtedy, gdy znajduje się w odległości 3\" od wrogiego wojownika. Przydziel wrogim wojownikom w odległości 1\" od tego wojownika liczbę punktów obrażeń równą wartości tej zdolności. Następnie ten wojownik wykonuje dodatkową akcję wycofania albo dodatkową akcję ruchu.",
+    "runemarks": [
+      "trapper"
+    ],
+    "sourceName": "Timed Charges",
+    "sourceDescription": "A fighter can only use this ability if they are within 3\" of an enemy fighter. Allocate a number of damage points equal to the value of this ability to enemy fighters within 1\" of this fighter. Then, this fighter makes a bonus disengage action or a bonus move action."
+  },
+  {
+    "_id": "11442553",
+    "name": "Ogień zwrotny",
+    "warband": "Kharadron Overlords",
+    "cost": "reaction",
+    "description": "Wojownik może wykonać tę reakcję po tym, jak stał się celem akcji ataku, ale zanim wykonane zostaną rzuty na trafienie, jeśli atakujący znajduje się w zasięgu przynajmniej jednej z broni celu. Za każdy nieudany rzut na trafienie z tej akcji ataku przydziel atakującemu wojownikowi 1 punkt obrażeń. Za każdy rzut na trafienie o wyniku 1 przydziel zamiast tego atakującemu wojownikowi 2 punkty obrażeń.",
+    "runemarks": [],
+    "sourceName": "Return Fire",
+    "sourceDescription": "A fighter can make this reaction after they are targeted by an attack action but before the hit rolls are made if the attacker is within range of at least one of the target's weapons. For each hit roll from that attack action that misses, allocate 1 damage point to the attacking fighter. For each hit roll of 1, allocate 2 damage points to the attacking fighter instead."
+  },
+  {
+    "_id": "9c64c8f5",
+    "name": "Myślę, że się przekonasz...",
+    "warband": "Kharadron Overlords",
+    "cost": "double",
+    "description": "Wrodzy wojownicy nie mogą używać zdolności ani reakcji aż do następnego razu, gdy sojuszniczy wojownik aktywuje się w tej rundzie bitwy, albo do końca rundy bitwy, zależnie od tego, co nastąpi wcześniej.",
+    "runemarks": [
+      "icon-bearer"
+    ],
+    "sourceName": "I Think You'll Find...",
+    "sourceDescription": "Enemy fighters cannot use abilities or reactions until the next time a friendly fighter activates this battle round or until the end of the battle round, whichever comes first."
+  },
+  {
+    "_id": "274b8b3a",
+    "name": "Dobry interes",
+    "warband": "Kharadron Overlords",
+    "cost": "battletrait",
+    "description": "Raz na rundę bitwy, po tym jak sojuszniczy wojownik z tą cechą bitewną stanie się celem akcji ataku, ale zanim wykonane zostaną rzuty na trafienie, możesz zawrzeć układ. Jeśli to zrobisz, dodaj jedną dziką kość do zachowanych dzikich kości przeciwnika. Następnie odejmij 2 od punktów obrażeń przydzielanych temu wojownikowi przez każde trafienie i każde trafienie krytyczne z tej akcji ataku (do minimum 1).",
+    "runemarks": [],
+    "sourceName": "A Good Deal",
+    "sourceDescription": "Once per battle round, after a friendly fighter with this battle trait is targeted by an attack action but before the hit rolls are made, you can make a deal. If you do so, add one wild dice to your opponent's saved wild dice. Then subtract 2 from the damage points allocated to that fighter by each hit and each critical hit from that attack action (to a minimum of 1).."
+  },
+  {
+    "_id": "cce1c9d6",
+    "name": "Zdobądź uznanie",
+    "warband": "Thundrik's Profiteers",
+    "cost": "triple",
+    "description": "Wojownik może użyć tej zdolności tylko wtedy, gdy znajduje się w odległości 6\" od widocznego sojuszniczego Bjorgena Thundrika i trwa trzecia runda bitwy albo późniejsza. Ten wojownik może wykonać dodatkową akcję ataku.",
+    "runemarks": [],
+    "sourceName": "Win Recognition",
+    "sourceDescription": "A fighter can use this ability only if they are within 6\" of a visible friendly Bjorgen Thundrik and it is the third battle round or later.  This fighter can make a bonus attack action."
+  },
+  {
+    "_id": "f4be9af4",
+    "name": "Lekki endrinpak",
+    "warband": "Kharadron Overlords",
+    "cost": "double",
+    "description": "Ten wojownik wykonuje dodatkową akcję ruchu o 3\". Jeśli znajduje się w odległości 1\" od jakichkolwiek wrogich wojowników, zamiast tego wykonuje dodatkową akcję ruchu o 10\" i może przy tym przechodzić przez wrogich wojowników.",
+    "runemarks": [
+      "bulwark"
+    ],
+    "sourceName": "Light Endrinpack",
+    "sourceDescription": "This fighter makes a bonus move action of 3\". If they are within 1\" of any enemy fighters, they instead make a bonus move action of 10\" and can pass through enemy fighters when they do so."
+  },
+  {
+    "_id": "5e082dc1",
+    "name": "Pistolet sygnałowy zwiadowcy",
+    "warband": "Kharadron Overlords",
+    "cost": "double",
+    "description": "Wybierz jako cel wrogiego wojownika albo cel w odległości 6\" od tego wojownika. Przez resztę rundy bitwy odejmij 1 od cechy Wytrzymałość wrogich wojowników, gdy znajdują się w odległości 3\" od celu i są dla niego widoczni.",
+    "runemarks": [
+      "warrior"
+    ],
+    "sourceName": "Spotter's Flaregun",
+    "sourceDescription": "Pick an enemy fighter or objective within 6\" of this fighter to be the target. For the rest of the battle round, subtract 1 from the Toughness of enemy fighters while they are within 3\" of and visible to the target."
+  },
+  {
+    "_id": "e138c8de",
+    "name": "Ochrona Pustki",
+    "warband": "Kharadron Overlords",
+    "cost": "triple",
+    "description": "Ten wojownik nie może być objęty działaniem wrogich zdolności aż do początku swojej następnej aktywacji. Dodatkowo przez resztę rundy bitwy dodaj 2 do cech Obrażenia akcji ataku tego wojownika, jeśli cel ma runemark Mystic i/lub Priest.",
+    "runemarks": [
+      "hero",
+      "champion"
+    ],
+    "sourceName": "Protection of the Void",
+    "sourceDescription": "This unit cannot be affected by enemy abilities until the start of their next activation. In addition, for the rest of the battle round, add 2 to the Damage characteristics of this unit's attack actions if the target has the Mystic and/or Priest runemarks."
+  }
+]
