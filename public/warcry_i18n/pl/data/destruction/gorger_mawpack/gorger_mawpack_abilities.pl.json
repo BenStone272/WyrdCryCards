@@ -1,0 +1,90 @@
+[
+  {
+    "_id": "e3ae1ed5",
+    "name": "Rozszarpujące ugryzienie",
+    "warband": "Gorger Mawpack",
+    "cost": "reaction",
+    "description": "Wojownik może wykonać tę reakcję po tym, jak stanie się celem akcji ataku wręcz, ale przed wykonaniem rzutów na trafienie. Jeśli żaden z rzutów na trafienie z tej akcji ataku nie zakończy się trafieniem krytycznym, przydziel atakującemu wojownikowi 6 punktów obrażeń.",
+    "runemarks": [],
+    "sourceName": "Rending Bite",
+    "sourceDescription": "A fighter can make this reaction after they are targeted by a melee attack action but before the hit rolls are made. If none of the hit rolls from that attack action result in a critical hit, allocate 6 damage points to the attacking fighter."
+  },
+  {
+    "_id": "cab60322",
+    "name": "Dalekie susy",
+    "warband": "Gorger Mawpack",
+    "cost": "double",
+    "description": "Wojownik może użyć tej zdolności tylko wtedy, gdy w odległości 6\" od niego znajduje się widoczny wrogi wojownik. Ten wojownik wykonuje dodatkową akcję ruchu i musi zakończyć ją bliżej najbliższego widocznego wrogiego wojownika niż znajdował się na początku tej akcji ruchu.",
+    "runemarks": [],
+    "sourceName": "Bounding Leaps",
+    "sourceDescription": "A fighter can only use this ability if there is a visible enemy fighter within 6\" of them. This fighter makes a bonus move action and must finish closer to the closest visible enemy fighter than they were at the start of that move action."
+  },
+  {
+    "_id": "6a45bb85",
+    "name": "Przebłysk świadomości",
+    "warband": "Gorger Mawpack",
+    "cost": "double",
+    "description": "Do początku następnej rundy bitwy ten wojownik nie jest liczony jako mający runemark Beast. Jeśli ten wojownik niesie skarb na początku następnej rundy bitwy, upuszcza ten skarb.",
+    "runemarks": [
+      "beast"
+    ],
+    "sourceName": "Glimmer of Consciousness",
+    "sourceDescription": "Until the start of the next battle round, this fighter is not considered to have the Beast  runemark. If this fighter is carrying treasure at the start of the next battle round, it drops that treasure."
+  },
+  {
+    "_id": "bfae953f",
+    "name": "Nadnaturalna siła",
+    "warband": "Gorger Mawpack",
+    "cost": "double",
+    "description": "Do końca aktywacji tego wojownika dodaj 1 do punktów obrażeń przydzielanych wrogim wojownikom przez każde trafienie i trafienie krytyczne z akcji ataku wręcz wykonywanych przez tego wojownika.",
+    "runemarks": [
+      "hero"
+    ],
+    "sourceName": "Unnatural Force",
+    "sourceDescription": "Until the end of this fighter's activation, add 1 to the damage points allocated to enemy fighters by each hit and critical hit from melee attack actions made by this fighter."
+  },
+  {
+    "_id": "bebbf0d1",
+    "name": "Bolesny ryk",
+    "warband": "Gorger Mawpack",
+    "cost": "triple",
+    "description": "Rzuć kością za każdego wrogiego wojownika w odległości 6\" od tego wojownika. Przy wyniku 4+ do końca rundy bitwy wojownik, za którego wykonywany jest rzut, nie może wykonywać akcji wycofania.",
+    "runemarks": [
+      "berserker"
+    ],
+    "sourceName": "Agonising Roar",
+    "sourceDescription": "Roll a dice for each enemy fighter within 6\" of this fighter. On a roll of 4+, until the end of the battle round, the fighter being rolled for cannot make disengage actions."
+  },
+  {
+    "_id": "2cedb53d",
+    "name": "Obłąkane ciosy",
+    "warband": "Gorger Mawpack",
+    "cost": "triple",
+    "description": "Do końca aktywacji tego wojownika rzuty na trafienie dla akcji ataku wykonywanych przez tego wojownika zadają trafienie krytyczne przy wyniku 5+.",
+    "runemarks": [
+      "destroyer"
+    ],
+    "sourceName": "Maddened Blows",
+    "sourceDescription": "Until the end of this fighter's activation, hit rolls for attack actions made by this fighter score a critical hit on a roll of 5+."
+  },
+  {
+    "_id": "1d3da6e3",
+    "name": "Wygłodniały szał",
+    "warband": "Gorger Mawpack",
+    "cost": "quad",
+    "description": "Do końca rundy bitwy ten wojownik jest liczony jako mający runemark Beast. Jeśli ten wojownik niesie skarb, upuszcza ten skarb. Ten wojownik może wykonać 1 dodatkową akcję ataku wręcz za każdego widocznego wrogiego wojownika w odległości 1\" od niego. Każda z tych akcji ataku musi mieć innego wojownika jako cel.",
+    "runemarks": [],
+    "sourceName": "Starving Rampage",
+    "sourceDescription": "Until the end of the battle round, this fighter is considered to have the Beast runemark. If this fighter is carrying treasure, they drop that treasure. This fighter can make 1 bonus melee attack action for each visible enemy fighter within 1\" of them. Each of these attack actions must target a different fighter."
+  },
+  {
+    "_id": "2e2fb526",
+    "name": "Żarłoczne obżeranie",
+    "warband": "Gorger Mawpack",
+    "cost": "battletrait",
+    "description": "Po tym, jak wrogi wojownik zostanie wyeliminowany przez akcję ataku wręcz wykonaną przez sojuszniczego wojownika z tą cechą bitewną, usuń D3 punkty obrażeń przydzielone tamtemu sojuszniczemu wojownikowi.",
+    "runemarks": [],
+    "sourceName": "Ravenous Gorging",
+    "sourceDescription": "After an enemy fighter has been taken down by a melee attack action made by a friendly fighter with this battle trait, remove D3 damage points allocated to that friendly fighter."
+  }
+]

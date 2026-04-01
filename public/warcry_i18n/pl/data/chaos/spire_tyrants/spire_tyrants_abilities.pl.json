@@ -1,0 +1,92 @@
+[
+  {
+    "_id": "73945e60",
+    "name": "Sieć gladiatora",
+    "warband": "Spire Tyrants",
+    "cost": "double",
+    "description": "Wybierz widocznego wrogiego wojownika w odległości 3\" od tego wojownika i rzuć kością. Przy wyniku 3+ do końca rundy bitwy tamten wrogi wojownik nie może wykonywać akcji ruchu ani akcji wycofania.",
+    "runemarks": [
+      "trapper"
+    ],
+    "sourceName": "Gladiator's Net",
+    "sourceDescription": "Pick a visible enemy fighter within 3\" of this fighter and roll a dice. On a roll of 3+, until the end of the battle round, that enemy fighter cannot make move actions or disengage actions."
+  },
+  {
+    "_id": "a0c80fdf",
+    "name": "Wojownik areny",
+    "warband": "Spire Tyrants",
+    "cost": "double",
+    "description": "Wojownik może użyć tej zdolności tylko wtedy, gdy wrogi wojownik został wyeliminowany przez akcję ataku wykonaną przez niego podczas tej aktywacji. Ten wojownik może wykonać dodatkową akcję ruchu albo dodatkową akcję ataku.",
+    "runemarks": [],
+    "sourceName": "Pit Fighter",
+    "sourceDescription": "A fighter can use this ability only if an enemy fighter has been taken down by an attack action made by them this activation. This fighter can make a bonus move action or a bonus attack action."
+  },
+  {
+    "_id": "27158e20",
+    "name": "Uderzenie tarczą",
+    "warband": "Spire Tyrants",
+    "cost": "double",
+    "description": "Do końca aktywacji tego wojownika, następnym razem gdy ten wojownik zakończy akcję ruchu w odległości 1\" od wrogiego wojownika, wybierz widocznego wrogiego wojownika w odległości 1\" od tego wojownika i rzuć kością. Przy wyniku 2-5 przydziel tamtemu wojownikowi 2 punkty obrażeń. Przy wyniku 6 przydziel tamtemu wojownikowi liczbę punktów obrażeń równą wartości tej zdolności.",
+    "runemarks": [
+      "bulwark"
+    ],
+    "sourceName": "Shield Ram",
+    "sourceDescription": "Until the end of this fighter's activation, the next time this fighter finishes a move action within 1\" of an enemy fighter, pick a visible enemy fighter within 1\" of this fighter and roll a dice. On a roll of 2-5, allocate 2 damage points to that fighter. On a roll of 6, allocate a number of damage points to that fighter equal to the value of this ability."
+  },
+  {
+    "_id": "4fd15d12",
+    "name": "Czempion dołów walki",
+    "warband": "Spire Tyrants",
+    "cost": "triple",
+    "description": "Wojownik może użyć tej zdolności tylko wtedy, gdy wrogi wojownik został wyeliminowany przez akcję ataku wykonaną przez niego podczas tej aktywacji. Do końca rundy bitwy dodaj 1 do cechy Ataki akcji ataku wykonywanych przez widocznych sojuszniczych wojowników, gdy znajdują się oni w odległości 6\" od tego wojownika.",
+    "runemarks": [
+      "hero"
+    ],
+    "sourceName": "Champion of the Warpits",
+    "sourceDescription": "A fighter can only use this ability if an enemy fighter has been taken down by an attack action made by them this activation. Until the end of the battle round, add 1 to the Attacks characteristic of attack actions made by visible friendly fighters while they are within 6\" of this fighter."
+  },
+  {
+    "_id": "8a79eeb6",
+    "name": "Gotowa postawa",
+    "warband": "Spire Tyrants",
+    "cost": "triple",
+    "description": "Do końca rundy bitwy dodaj połowę wartości tej zdolności (zaokrąglając w górę) do cechy Wytrzymałość tego wojownika.",
+    "runemarks": [
+      "warrior"
+    ],
+    "sourceName": "Readied Stance",
+    "sourceDescription": "Until the end of the battle round, add half the value of this ability (rounding up) to the Toughness characteristic of this fighter."
+  },
+  {
+    "_id": "c1ba4e23",
+    "name": "Brutalny cios",
+    "warband": "Spire Tyrants",
+    "cost": "quad",
+    "description": "Wybierz widocznego wrogiego wojownika w odległości 1\" od tego wojownika i rzuć kością. Przy wyniku 2+ przydziel tamtemu wojownikowi 8 punktów obrażeń.",
+    "runemarks": [
+      "brute"
+    ],
+    "sourceName": "Brutal Strike",
+    "sourceDescription": "Pick a visible enemy fighter within 1\" of this fighter and roll a dice. On a roll of 2+, allocate 8 damage points to that fighter."
+  },
+  {
+    "_id": "632890a8",
+    "name": "Gladiatorski pokaz",
+    "warband": "Spire Tyrants",
+    "cost": "reaction",
+    "description": "Wojownik może wykonać tę reakcję po tym, jak stanie się celem akcji ataku wręcz, ale przed wykonaniem rzutów na trafienie. Jeśli żaden z rzutów na trafienie z tej akcji ataku nie zakończy się trafieniem krytycznym, przydziel atakującemu wojownikowi 4 punkty obrażeń.",
+    "runemarks": [],
+    "sourceName": "Gladiatorial Display",
+    "sourceDescription": "A fighter can make this reaction after they are targeted by a melee attack action but before the hit rolls are made. If none of the hit rolls from that attack action result in a critical hit, allocate 4 damage points to the attacking fighter."
+  },
+  {
+    "_id": "3636986f",
+    "name": "Zabaw mnie!",
+    "warband": "Spire Tyrants",
+    "cost": "battletrait",
+    "description": "Raz na rundę bitwy sojuszniczy wojownik z tą cechą bitewną, znajdujący się w odległości 1\" od co najmniej jednego wrogiego wojownika, może wybrać jednego z tych wrogich wojowników do pojedynku. Gdy to zrobi, za każdym razem gdy ten sojuszniczy wojownik wykonuje akcję ataku, której celem jest tamten wrogi wojownik, możesz zmienić cechę Siła tej akcji ataku tak, aby była równa cesze Wytrzymałość tamtego wrogiego wojownika.",
+    "runemarks": [],
+    "sourceName": "Entertain Me!",
+    "sourceDescription": "Once per battle round, a friendly fighter with this battle trait within 1\" of one or more enemy fighters can pick one of those enemy fighter to duel. When they do so, each time that friendly fighter makes an attack action that targets that enemy fighter, you can change the Strength characteristic of that attack action to equal the Toughness characteristic of that enemy fighter. "
+  }
+]
