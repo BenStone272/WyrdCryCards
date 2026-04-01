@@ -34,6 +34,7 @@ Skaven
 Generated on Warcrier.net`
 
 const LOCALE_STORAGE_KEY = 'warcryfightercards.locale'
+const WARCRIER_WARBANDS_URL = 'https://www.warcrier.net/docs/warbands'
 
 function getInitialLocale(): AppLocale {
   if (typeof window === 'undefined') {
@@ -252,6 +253,14 @@ function App() {
           <div className="app-header-copy">
             <h1>{ui.appTitle}</h1>
             <p>{ui.appDescription}</p>
+            <a
+              className="app-header-link"
+              href={WARCRIER_WARBANDS_URL}
+              target="_blank"
+              rel="noreferrer"
+            >
+              {ui.appWarcrierLinkLabel}
+            </a>
           </div>
 
           <LanguagePicker locale={locale} onSelect={setLocale} ui={ui} />

@@ -27,6 +27,7 @@ export const LOCALE_OPTIONS: LocaleOption[] = [
 export type UiText = {
   appTitle: string
   appDescription: string
+  appWarcrierLinkLabel: string
   languageLabel: string
   languagePickerAriaLabel: string
   languageHelpText: string
@@ -83,8 +84,9 @@ export type UiText = {
 
 const uiText: Record<AppLocale, UiText> = {
   en: {
-    appTitle: 'Roster Import',
-    appDescription: 'Paste roster text. One card is generated for each imported fighter entry.',
+    appTitle: 'Warcry Fighter Cards',
+    appDescription: 'Paste a Warcrier roster export to generate printable fighter cards.',
+    appWarcrierLinkLabel: 'Create a band on Warcrier',
     languageLabel: 'Language',
     languagePickerAriaLabel: 'Language picker',
     languageHelpText: 'Changes the interface and ability text.',
@@ -139,8 +141,9 @@ const uiText: Record<AppLocale, UiText> = {
     cardBackAriaLabel: (fighterName) => `Back of ${fighterName}`,
   },
   pl: {
-    appTitle: 'Import rozpiski',
-    appDescription: 'Wklej tekst rozpiski. Dla każdego zaimportowanego wpisu wojownika zostanie utworzona jedna karta.',
+    appTitle: 'Warcry Fighter Cards',
+    appDescription: 'Wklej eksport rozpiski z Warcrier, aby wygenerować karty wojowników do druku.',
+    appWarcrierLinkLabel: 'Utwórz bandę w Warcrier',
     languageLabel: 'Język',
     languagePickerAriaLabel: 'Wybór języka',
     languageHelpText: 'Zmienia interfejs i tekst zdolności.',
