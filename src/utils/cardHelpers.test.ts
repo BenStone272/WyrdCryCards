@@ -14,11 +14,11 @@ function makeAbility(name: string, cost: string, id: string): WarcryAbility {
 }
 
 describe('sortAbilitiesByDice', () => {
-  it('sorts by dice value and then by name', () => {
+  it('sorts by dice value and keeps original order within each dice band', () => {
     const abilities = [
       makeAbility('Warped Frenzy', 'triple', 'a'),
-      makeAbility('Ambush', 'double', 'b'),
-      makeAbility('Bellow', 'double', 'c'),
+      makeAbility('Bellow', 'double', 'b'),
+      makeAbility('Ambush', 'double', 'c'),
       makeAbility('Overpower', 'quad', 'd'),
       makeAbility('Always On', 'passive', 'e'),
     ]
@@ -27,14 +27,14 @@ describe('sortAbilitiesByDice', () => {
 
     expect(sorted.map((ability) => `${ability.cost}:${ability.name}`)).toEqual([
       'passive:Always On',
-      'double:Ambush',
       'double:Bellow',
+      'double:Ambush',
       'triple:Warped Frenzy',
       'quad:Overpower',
     ])
   })
 
-  it('handles mixed casing/whitespace and keeps unknown costs last', () => {
+  it('handles mixed casing/whitespace and keeps unknown costs last without alphabetizing localized names', () => {
     const abilities = [
       makeAbility('Zeta', ' reaction ', 'a'),
       makeAbility('Alpha', '  DOUBLE', 'b'),
@@ -45,7 +45,7 @@ describe('sortAbilitiesByDice', () => {
 
     const sorted = sortAbilitiesByDice(abilities)
 
-    expect(sorted.map((ability) => ability.name)).toEqual(['Alpha', 'Beta', 'Gamma', 'Omega', 'Zeta'])
+    expect(sorted.map((ability) => ability.name)).toEqual(['Alpha', 'Beta', 'Zeta', 'Gamma', 'Omega'])
     expect(sorted[0].cost).toBe('  DOUBLE')
     expect(sorted[1].cost).toBe('Double ')
   })

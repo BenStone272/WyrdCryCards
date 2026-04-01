@@ -227,13 +227,18 @@ function abilityDiceOrder(cost: string): number {
 }
 
 export function sortAbilitiesByDice(abilities: WarcryAbility[]): WarcryAbility[] {
-  return [...abilities].sort((a, b) => {
-    const byDice = abilityDiceOrder(a.cost) - abilityDiceOrder(b.cost)
-    if (byDice !== 0) {
-      return byDice
-    }
-    return a.name.localeCompare(b.name)
-  })
+  return abilities
+    .map((ability, index) => ({ ability, index }))
+    .sort((left, right) => {
+      const byDice = abilityDiceOrder(left.ability.cost) - abilityDiceOrder(right.ability.cost)
+      if (byDice !== 0) {
+        return byDice
+      }
+
+      // Keep source file order stable so localized names do not reshuffle abilities.
+      return left.index - right.index
+    })
+    .map(({ ability }) => ability)
 }
 
 export function formatWeaponRange(weapon: WarcryWeaponProfile): string {
