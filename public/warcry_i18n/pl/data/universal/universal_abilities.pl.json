@@ -140,7 +140,7 @@
     "name": "Niszczycielski szał",
     "warband": "universal",
     "cost": "quad",
-    "description": "Wybierz element terenu w odległości 1\" od tego potwora. W wybranej przez siebie kolejności umieść każdy cel, znacznik skarbu i każdego wojownika, który znajduje się na tym elemencie terenu oraz na każdym innym elemencie terenu znajdującym się na tamtym elemencie terenu, na podłodze pola bitwy w wybranym przez siebie miejscu możliwie najbliżej w poziomie ich obecnego położenia. Następnie, w wybranej przez siebie kolejności, każdy wojownik umieszczony w ten sposób na polu bitwy otrzymuje obrażenia od uderzenia. Następnie usuń element lub elementy terenu.",
+    "description": "Wybierz element terenu w odległości 1\" od tego potwora. W wybranej kolejności umieść każdy cel, znacznik skarbu i każdego wojownika znajdujących się na tym elemencie terenu oraz na każdym innym elemencie terenu znajdującym się na nim na podłodze pola bitwy, w wybranym przez siebie miejscu, możliwie najbliżej w poziomie ich obecnego położenia. Następnie, w wybranej kolejności, każdy wojownik umieszczony w ten sposób otrzymuje obrażenia od uderzenia. Na końcu usuń ten element lub elementy terenu.",
     "runemarks": [
       "monster"
     ],

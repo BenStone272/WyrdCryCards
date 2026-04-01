@@ -220,7 +220,7 @@
     "name": "Wydarcie oka",
     "warband": "Flesh-eater Courts",
     "cost": "triple",
-    "description": "Wybierz jako cel widocznego wrogiego wojownika, któremu podczas tej aktywacji jakakolwiek akcja ataku strzeleckiego tego wojownika przydzieliła jakiekolwiek punkty obrażeń. Daj temu celowi znacznik Grype. Ten cel nie może zadawać trafień krytycznych, dopóki ma ten znacznik (rzuty na trafienie, które byłyby trafieniami krytycznymi, zadają zamiast tego zwykłe trafienia). Jeśli jakiekolwiek punkty obrażeń przydzielone wojownikowi ze znacznikiem Grype miałyby zostać usunięte, usuń zamiast tego ten znacznik Grype. Na polu bitwy nie może znajdować się więcej niż jeden wrogi wojownik z sojuszniczym znacznikiem Grype.",
+    "description": "Wybierz widocznego wrogiego wojownika, któremu ten wojownik przydzielił w tej aktywacji jakiekolwiek obrażenia akcją ataku strzeleckiego, i daj mu znacznik Grype. Wojownik z tym znacznikiem nie może zadawać trafień krytycznych (rzuty, które byłyby trafieniami krytycznymi, liczą się jako zwykłe trafienia). Jeśli jakiekolwiek obrażenia przydzielone wojownikowi z tym znacznikiem miałyby zostać usunięte, usuń zamiast tego znacznik Grype. Na polu bitwy nie może znajdować się więcej niż jeden wrogi wojownik z sojuszniczym znacznikiem Grype.",
     "runemarks": [
       "hero",
       "trapper"

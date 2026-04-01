@@ -72,7 +72,7 @@
     "name": "Oko Mrocznego Patrona",
     "warband": "Darkoath",
     "cost": "quad",
-    "description": "Możesz wybrać widocznego sojuszniczego wojownika z runemarkiem Darkoath w odległości 6\" od tego wojownika, który jeszcze nie aktywował się w tej rundzie bitwy. Możesz aktywować tego wojownika natychmiast po zakończeniu aktywacji tego wojownika. Następnie możesz wybrać widocznego wrogiego wojownika w odległości 6\" od tego wojownika i rzucić 6 kośćmi. Za każde 4+ przydziel temu wojownikowi liczbę punktów obrażeń równą połowie wartości tej zdolności (zaokrąglając w górę). Dodatkowo dodaj 2 do cechy Ataki akcji ataku wręcz wykonywanych przez tego wojownika do końca jego aktywacji.",
+    "description": "Możesz wybrać widocznego sojuszniczego wojownika z runemarkiem Darkoath w odległości 6\", który jeszcze nie aktywował się w tej rundzie bitwy. Możesz aktywować go natychmiast po zakończeniu aktywacji tego wojownika. Następnie możesz wybrać widocznego wrogiego wojownika w odległości 6\" i rzucić 6 kośćmi. Za każde 4+ przydziel mu liczbę punktów obrażeń równą połowie wartości tej zdolności (zaokrąglając w górę). Dodatkowo do końca aktywacji tego wojownika dodaj 2 do cechy Ataki akcji ataku wręcz wykonywanych przez niego.",
     "runemarks": [
       "beast"
     ],
@@ -108,7 +108,7 @@
     "name": "Furia Królowej Wojny",
     "warband": "Darkoath",
     "cost": "triple",
-    "description": "Ten wojownik wykonuje liczbę dodatkowych akcji ataku wręcz równą liczbie wrogich wojowników w odległości 1\" od niego. Jeśli ten wojownik jest faworytem, zamiast tego wykonuje liczbę dodatkowych akcji ataku wręcz równą liczbie wrogich wojowników w odległości 3\" od niego, a cecha Zasięg tych dodatkowych akcji ataku wzrasta do 3. W obu przypadkach każda dodatkowa akcja ataku musi mieć za cel innego wrogiego wojownika, nawet jeśli ten wrogi wojownik znajduje się dalej niż 1\" od tego wojownika, o ile każdy wrogi wojownik w odległości 1\" od tego wojownika został wybrany jako cel w pierwszej kolejności.",
+    "description": "Ten wojownik wykonuje liczbę bonusowych akcji ataku wręcz równą liczbie wrogich wojowników w odległości 1\" od niego. Jeśli jest faworytem, zamiast tego wykonuje liczbę bonusowych akcji ataku wręcz równą liczbie wrogich wojowników w odległości 3\", a cecha Zasięg tych ataków wzrasta do 3. W obu przypadkach każda bonusowa akcja ataku musi mieć za cel innego wrogiego wojownika, nawet jeśli znajduje się dalej niż 1\", o ile najpierw wybrano jako cele wszystkich wrogich wojowników w odległości 1\".",
     "runemarks": [
       "elite"
     ],

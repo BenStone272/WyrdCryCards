@@ -278,7 +278,7 @@
     "name": "Naprzód, Sługusy!",
     "warband": "Skaven",
     "cost": "triple",
-    "description": "Wybierz widocznego przyjaznego wojownika z runemarkiem Skaven, który nie ma runemarku Hero ani Monster i znajduje się w całości w zasięgu 6\" od tego wojownika. Tamten wojownik może wykonać bonusową akcję ataku oraz bonusową akcję ruchu na odległość w calach równą wartości tej zdolności. Jeśli wrogi wojownik nie zostanie wyeliminowany przez punkty obrażeń przydzielone przez tamtą akcję ataku albo jeśli ta akcja ruchu nie zakończy się w odległości do 1\" od wrogiego wojownika, przydziel temu przyjaznemu wojownikowi D6 punktów obrażeń.",
+    "description": "Wybierz widocznego sojuszniczego wojownika z runemarkiem Skaven, bez runemarku Hero ani Monster, który w całości znajduje się w zasięgu 6\". Tamten wojownik może wykonać bonusową akcję ataku i bonusową akcję ruchu na odległość do wartości tej zdolności. Jeśli wrogi wojownik nie zostanie wyeliminowany przez obrażenia z tej akcji ataku albo jeśli ta akcja ruchu nie zakończy się w odległości 1\" od wrogiego wojownika, przydziel temu sojuszniczemu wojownikowi D6 punktów obrażeń.",
     "runemarks": [
       "hero",
       "mount"
@@ -291,7 +291,7 @@
     "name": "Celowniki z Warpkamienia",
     "warband": "Skaven",
     "cost": "triple",
-    "description": "Wybierz widocznego wrogiego wojownika w zasięgu 18\" od tego wojownika. Przez resztę aktywacji tego wojownika odejmij wartość tej zdolności od cechy Wytrzymałość tamtego wrogiego wojownika (do minimum 1). Jeśli ten wojownik nie poruszył się w tej aktywacji i wartość tej zdolności jest równa albo wyższa od niemodyfikowanej cechy Wytrzymałość tamtego wrogiego wojownika, traktuj każde trafienie uzyskane z następnej akcji ataku strzeleckiego wykonanej przez tego wojownika jako trafienie krytyczne. Przed krokiem Total Damage każdej akcji ataku strzeleckiego tego wojownika w tej aktywacji ten wojownik wykonuje bonusową akcję ruchu na odległość w calach równą połowie wartości tej zdolności, bezpośrednio od celu tamtego ataku strzeleckiego i tak jakby skakał.",
+    "description": "Wybierz widocznego wrogiego wojownika w zasięgu 18\". Do końca aktywacji tego wojownika odejmij od cechy Wytrzymałość tamtego wojownika wartość tej zdolności (do minimum 1). Jeśli ten wojownik nie poruszył się w tej aktywacji, a wartość tej zdolności jest równa lub wyższa od niemodyfikowanej cechy Wytrzymałość tamtego wojownika, każde trafienie z następnej akcji ataku strzeleckiego wykonanej przez tego wojownika licz jako trafienie krytyczne. Przed krokiem Total Damage każdej jego akcji ataku strzeleckiego w tej aktywacji wykonuje on bonusową akcję ruchu na odległość do połowy wartości tej zdolności, bezpośrednio od celu tego ataku i jakby skakał.",
     "runemarks": [
       "hero",
       "destroyer"

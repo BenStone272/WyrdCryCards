@@ -216,7 +216,7 @@
     "name": "Precyzyjna salwa",
     "warband": "Heralds of Kurnoth",
     "cost": "double",
-    "description": "Inny sojuszniczy wojownik z runemarkiem Heralds of Kurnoth może wykonać dodatkową akcję ruchu o 3\". Następnie dodaj 1 do cechy Ataki następnej akcji ataku strzeleckiego wykonanej przez tego wojownika podczas tej aktywacji, a ta akcja ataku może wybierać jako cel wrogich wojowników znajdujących się w odległości 1\" od dowolnych sojuszniczych wojowników. Jeśli sojuszniczy wojownik z runemarkami Hero i Heralds of Kurnoth znajduje się w odległości 1\" od tego wrogiego wojownika, ta akcja ataku zadaje trafienia krytyczne przy wyniku 5+.",
+    "description": "Inny sojuszniczy wojownik z runemarkiem Heralds of Kurnoth może wykonać bonusową akcję ruchu o 3\". Następnie dodaj 1 do cechy Ataki następnej akcji ataku strzeleckiego wykonanej przez tego wojownika w tej aktywacji; ta akcja może też wybierać jako cel wrogich wojowników w odległości 1\" od dowolnych sojuszniczych wojowników. Jeśli sojuszniczy wojownik z runemarkami Hero i Heralds of Kurnoth znajduje się w odległości 1\" od tego wrogiego wojownika, ta akcja zadaje trafienia krytyczne przy wyniku 5+.",
     "runemarks": [
       "scout"
     ],

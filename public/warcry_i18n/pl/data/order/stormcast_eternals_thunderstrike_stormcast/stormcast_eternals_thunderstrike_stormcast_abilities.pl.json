@@ -253,7 +253,7 @@
     "name": "Święta Misja",
     "warband": "Stormcast Eternals Thunderstrike Stormcast",
     "cost": "double",
-    "description": "Wybierz wrogiego wojownika albo cel. Wcześniejsze użycia tej zdolności przez dowolnego przyjaznego wojownika przestają działać i tej zdolności nie można użyć ponownie, dopóki wybrany przez ciebie wrogi wojownik nie zostanie wyeliminowany albo dopóki nie kontrolujesz wybranego przez siebie celu. Jeśli wybrałeś wrogiego wojownika, przez resztę bitwy dodaj 1 do cechy Ataki akcji ataku wręcz wykonywanych przez tego wojownika oraz przyjaznych wojowników z runemarkiem Questor Soulsworn, które mają za cel tego wrogiego wojownika. Jeśli wybrałeś cel, przez resztę bitwy ten wojownik oraz przyjaźni wojownicy z runemarkiem Questor Soulsworn liczą się każdy jako 1 dodatkowy wojownik przy ustalaniu, który gracz kontroluje ten cel.",
+    "description": "Wybierz wrogiego wojownika albo cel. Poprzednie użycia tej zdolności przez dowolnego sojuszniczego wojownika przestają działać, a tej zdolności nie można użyć ponownie, dopóki wybrany wojownik nie zostanie wyeliminowany albo nie kontrolujesz wybranego celu. Jeśli wybrałeś wojownika, do końca bitwy dodaj 1 do cechy Ataki akcji ataku wręcz wykonywanych przez tego wojownika i sojuszniczych wojowników z runemarkiem Questor Soulsworn, które mają go za cel. Jeśli wybrałeś cel, do końca bitwy ten wojownik i sojuszniczy wojownicy z runemarkiem Questor Soulsworn liczą się każdy jako 1 dodatkowy wojownik przy ustalaniu, który gracz kontroluje ten cel.",
     "runemarks": [
       "ferocious"
     ],
@@ -349,7 +349,7 @@
     "name": "Iskra Wynalazku",
     "warband": "Gladitorium",
     "cost": "triple",
-    "description": "Wybierz liczbę przyjaznych wojowników równą połowie wartości tej zdolności, zaokrąglonej w górę, którzy znajdują się w zasięgu 6\" od tego wojownika i mają runemark Thunderstrike Stormcasts. Do końca rundy bitwy za każdym razem, gdy jeden z tych wojowników wykonuje akcję ataku, możesz wybrać jeden z następujących efektów:\nDodaj 1 do cechy Siła broni tego wojownika dla tej akcji ataku.\nDodaj 1 do punktów obrażeń przydzielanych przez każde trafienie krytyczne z tej akcji ataku.\nTen wojownik nie może wpływać na przyjaznych wojowników z runemarkiem Beast.",
+    "description": "Wybierz liczbę sojuszniczych wojowników z runemarkiem Thunderstrike Stormcasts w zasięgu 6\" od tego wojownika równą połowie wartości tej zdolności (zaokrąglając w górę). Do końca rundy bitwy za każdym razem, gdy jeden z nich wykonuje akcję ataku, możesz wybrać 1 z poniższych efektów:\n• Dodaj 1 do cechy Siła jego broni dla tej akcji ataku.\n• Dodaj 1 do obrażeń zadawanych przez każde trafienie krytyczne z tej akcji ataku.\nTa zdolność nie może wpływać na sojuszniczych wojowników z runemarkiem Beast.",
     "runemarks": [
       "scout"
     ],

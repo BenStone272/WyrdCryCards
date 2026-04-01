@@ -411,7 +411,7 @@
     "name": "Przynęta",
     "warband": "Borgit's Beastgrabbaz",
     "cost": "triple",
-    "description": "Wybierz przyjaznego wojownika z runemarkiem Borgit's Beastgrabbaz, który znajduje się w całości w zasięgu 6\" od przyjaznego wojownika z runemarkami Borgit's Beastgrabbaz oraz Hero i jest dla niego widoczny, aby stał się przynętą do końca rundy bitwy. Wrodzy wojownicy widoczni dla przynęty i znajdujący się w odległości w calach od przynęty równej najwyższej cesze Zasięg którejkolwiek z posiadanych przez nich broni do walki wręcz muszą wybierać przynętę jako cel wszystkich wykonywanych przez siebie akcji ataku wręcz.",
+    "description": "Wybierz przyjaznego wojownika z runemarkiem Borgit's Beastgrabbaz, który jest widoczny dla przyjaznego wojownika z runemarkami Borgit's Beastgrabbaz i Hero i w całości znajduje się w zasięgu 6\" od niego; do końca rundy bitwy staje się on przynętą. Wrodzy wojownicy widoczni dla przynęty i znajdujący się od niej w odległości w calach równej najwyższej cesze Zasięg którejkolwiek z ich broni do walki wręcz muszą wybierać przynętę jako cel wszystkich swoich akcji ataku wręcz.",
     "runemarks": [],
     "sourceName": "Da Bait",
     "sourceDescription": "Pick a friendly fighter with the Borgit’s Beastgrabbaz runemark wholly within 6\" of and visible to a friendly fighter with the Borgit’s Beastgrabbaz and Hero runemarks to be da bait for the rest of the battle round. Enemy fighters visible to and within a number of inches of da bait equal to the highest Range characteristic of any melee weapons they have must target da bait with all melee attack actions they make."

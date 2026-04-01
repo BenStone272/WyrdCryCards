@@ -262,7 +262,7 @@
     "name": "Rytuał Proroctwa",
     "warband": "Knives of the Crone",
     "cost": "triple",
-    "description": "Wybierz 1 z następujących efektów do zastosowania do tego wojownika, a następnie zresetuj swoje punkty proroctwa do 0:\n\n• Dodaj swoje punkty proroctwa do cechy Ruch tego wojownika przez resztę aktywacji.\n\n• Dodaj swoje punkty proroctwa do cechy Wytrzymałość tego wojownika przez resztę rundy bitwy.\n\n• Natychmiast rozdziel swoje punkty proroctwa możliwie jak najbardziej równo pomiędzy cechę Ataki, cechę Siła oraz obie wartości cechy Obrażenia jego broni do walki wręcz. Dodaj 1 do każdej z nich za każdy przydzielony do niej punkt proroctwa przez resztę aktywacji.",
+    "description": "Wybierz 1 z poniższych efektów dla tego wojownika, a następnie zresetuj swoje punkty proroctwa do 0:\n\n• Dodaj swoje punkty proroctwa do cechy Ruch tego wojownika do końca aktywacji.\n\n• Dodaj swoje punkty proroctwa do cechy Wytrzymałość tego wojownika do końca rundy bitwy.\n\n• Natychmiast rozdziel swoje punkty proroctwa możliwie równo między cechę Ataki, cechę Siła oraz obie wartości cechy Obrażenia broni do walki wręcz tego wojownika. Do końca aktywacji dodaj 1 do każdej z tych cech za każdy przydzielony jej punkt proroctwa.",
     "runemarks": [
       "hero"
     ],

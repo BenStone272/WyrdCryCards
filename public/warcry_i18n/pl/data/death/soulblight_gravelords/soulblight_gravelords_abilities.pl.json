@@ -127,7 +127,7 @@
     "name": "Przyzwij Nieumarłych Sługusów",
     "warband": "Soulblight Gravelords",
     "cost": "triple",
-    "description": "Wybierz przyjaznego wojownika z runemarkiem frakcji Soulblight Gravelords oraz runemarkiem Minion, który został wyeliminowany. Ustaw tamtego wojownika na platformie albo na podłodze pola bitwy, w całości w odległości do 3\" od tego wojownika. Jeśli tamten wojownik ma runemark Elite, usuń temu wojownikowi liczbę przydzielonych punktów obrażeń równą wartości tej zdolności. W przeciwnym razie tamten wojownik nie ma przydzielonych żadnych punktów obrażeń. Tamten wojownik nie jest już liczony jako wyeliminowany i nie ma przydzielonych żadnych punktów obrażeń.",
+    "description": "Wybierz sojuszniczego wojownika z runemarkiem frakcji Soulblight Gravelords i runemarkiem Minion, który został wyeliminowany. Ustaw go na platformie albo na podłodze pola bitwy, w całości w odległości do 3\" od tego wojownika. Jeśli ma runemark Elite, usuń mu liczbę przydzielonych punktów obrażeń równą wartości tej zdolności; w przeciwnym razie nie ma przydzielonych żadnych punktów obrażeń. Ten wojownik przestaje być liczony jako wyeliminowany i nie ma przydzielonych żadnych punktów obrażeń.",
     "runemarks": [
       "hero"
     ],
