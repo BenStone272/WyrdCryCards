@@ -1,0 +1,180 @@
+[
+  {
+    "_id": "76da2eab",
+    "name": "Uderzenie kata",
+    "warband": "Kainan's Reapers",
+    "cost": "quad",
+    "description": "Ten wojownik wykonuje dodatkową akcję ataku. Dodatkowo dodaj 1 do cech Ataki i Siła tej akcji ataku.",
+    "runemarks": [
+      "hero"
+    ],
+    "sourceName": "Executioner's Strike",
+    "sourceDescription": "This fighter makes a bonus attack action.  In addition, add 1 to the Attacks and Strength characteristics of that attack action."
+  },
+  {
+    "_id": "8fdbd27a",
+    "name": "Niekończący się obowiązek",
+    "warband": "Ossiarch Bonereapers",
+    "cost": "double",
+    "description": "Wojownik może użyć tej zdolności tylko wtedy, gdy wrogi wojownik został wyeliminowany przez akcję ataku wykonaną przez niego podczas tej aktywacji. Ten wojownik wykonuje dodatkową akcję ruchu albo dodatkową akcję ataku.",
+    "runemarks": [
+      "hero",
+      "champion"
+    ],
+    "sourceName": "Endless Duty",
+    "sourceDescription": "A fighter can only use this ability if an enemy fighter has been taken down by an attack action made by them this activation. This fighter makes a bonus move action or a bonus attack action."
+  },
+  {
+    "_id": "da3f058b",
+    "name": "Uformuj mur tarcz",
+    "warband": "Ossiarch Bonereapers",
+    "cost": "double",
+    "description": "Do końca rundy bitwy dodaj 1 do cechy Wytrzymałość sojuszniczych wojowników z runemarkiem frakcji Ossiarch Bonereapers i runemarkiem Bulwark, gdy znajdują się w odległości 3\" od tego wojownika.",
+    "runemarks": [
+      "bulwark"
+    ],
+    "sourceName": "Form Shieldwall",
+    "sourceDescription": "Until the end of the battle round, add 1 to the Toughness characteristic of friendly fighters with the Ossiarch Bonereapers faction runemark and the Bulwark runemark while they are within 3\" of this fighter."
+  },
+  {
+    "_id": "945dc908",
+    "name": "Poluj i zabij",
+    "warband": "Ossiarch Bonereapers",
+    "cost": "double",
+    "description": "Wojownik może użyć tej zdolności tylko wtedy, gdy w odległości 6\" od niego znajduje się widoczny wrogi wojownik. Ten wojownik wykonuje dodatkową akcję ruchu i musi zakończyć ją bliżej najbliższego widocznego wrogiego wojownika niż znajdował się na początku tej akcji ruchu.",
+    "runemarks": [
+      "destroyer"
+    ],
+    "sourceName": "Hunt and Kill",
+    "sourceDescription": "A fighter can only use this ability if there is a visible enemy fighter within 6\" of them. This fighter makes a bonus move action and must finish closer to the closest visible enemy fighter than they were at the start of that move action."
+  },
+  {
+    "_id": "adad4b92",
+    "name": "Broń z nadirytu",
+    "warband": "Ossiarch Bonereapers",
+    "cost": "double",
+    "description": "Do końca aktywacji tego wojownika dodaj 1 do punktów obrażeń przydzielanych wrogim wojownikom przez każde trafienie i trafienie krytyczne z akcji ataku wręcz wykonywanych przez tego wojownika.",
+    "runemarks": [],
+    "sourceName": "Nadirite Weapon",
+    "sourceDescription": "Until the end of this fighter's activation, add 1 to the damage points allocated to enemy fighters by each hit and critical hit from melee attack actions made by this fighter."
+  },
+  {
+    "_id": "96120f68",
+    "name": "Szarża Deathridera",
+    "warband": "Ossiarch Bonereapers",
+    "cost": "triple",
+    "description": "Do końca aktywacji tego wojownika, następnym razem gdy ten wojownik zakończy akcję ruchu w odległości 1\" od wrogiego wojownika, wybierz widocznego wrogiego wojownika w odległości 1\" od tego wojownika. Przydziel temu wojownikowi liczbę punktów obrażeń równą wartości tej zdolności.",
+    "runemarks": [
+      "warrior"
+    ],
+    "sourceName": "Deathrider Charge",
+    "sourceDescription": "Until the end of this fighter's activation, the next time this fighter finishes a move action within 1\" of an enemy fighter, pick a visible enemy fighter within 1\" of this fighter. Allocate a number of damage points to that fighter equal to the value of this ability."
+  },
+  {
+    "_id": "96c6da56",
+    "name": "Przewodnik dusz",
+    "warband": "Ossiarch Bonereapers",
+    "cost": "triple",
+    "description": "Do końca rundy bitwy dodaj 1 do cechy Ataki akcji ataku wręcz wykonywanych przez widocznych sojuszniczych wojowników, gdy znajdują się w odległości 6\" od tego wojownika.",
+    "runemarks": [
+      "hero",
+      "mystic"
+    ],
+    "sourceName": "Soul-guide",
+    "sourceDescription": "Until the end of the battle round, add 1 to the Attacks characteristic of melee attack actions made by visible friendly fighters while they are within 6\" of this fighter."
+  },
+  {
+    "_id": "6d4a1974",
+    "name": "Sztuka Boneshapera",
+    "warband": "Ossiarch Bonereapers",
+    "cost": "triple",
+    "description": "Usuń do D3 punktów obrażeń przydzielonych każdemu sojuszniczemu wojownikowi w odległości 6\" od tego wojownika (rzucaj za każdego z nich).",
+    "runemarks": [
+      "hero",
+      "trapper"
+    ],
+    "sourceName": "The Boneshaper's Art",
+    "sourceDescription": "Remove up to D3 damage points allocated to each friendly fighter within 6\" of this fighter (roll for each)."
+  },
+  {
+    "_id": "f74dc829",
+    "name": "Nieokiełznana dzikość",
+    "warband": "Ossiarch Bonereapers",
+    "cost": "triple",
+    "description": "Ten wojownik wykonuje dodatkową akcję ruchu.",
+    "runemarks": [
+      "berserker"
+    ],
+    "sourceName": "Unbridled Ferocity",
+    "sourceDescription": "This fighter makes a bonus move action."
+  },
+  {
+    "_id": "43124d95",
+    "name": "Niepowstrzymany marsz",
+    "warband": "Ossiarch Bonereapers",
+    "cost": "triple",
+    "description": "Do końca rundy bitwy dodaj połowę wartości tej zdolności (zaokrąglając w górę) do cechy Ruch sojuszniczych wojowników, którzy znajdują się w tej samej grupie bitewnej co ten wojownik.",
+    "runemarks": [
+      "hero"
+    ],
+    "sourceName": "Unstoppable Advance",
+    "sourceDescription": "Until the end of the battle round, add half the value of this ability (rounding up) to the Move characteristic of friendly fighters that are in the same battle group as this fighter."
+  },
+  {
+    "_id": "21166137",
+    "name": "Aspekt ciosu ostrzem",
+    "warband": "Ossiarch Bonereapers",
+    "cost": "quad",
+    "description": "Do końca aktywacji tego wojownika dodaj 3 do cechy Ataki akcji ataku wykonywanych przez tego wojownika.",
+    "runemarks": [
+      "destroyer"
+    ],
+    "sourceName": "Blade-strike Aspect",
+    "sourceDescription": "Until the end of this fighter's activation, add 3 to the Attacks characteristic of attack actions made by this fighter."
+  },
+  {
+    "_id": "3026ca6f",
+    "name": "Kosa żniwiarza dusz",
+    "warband": "Ossiarch Bonereapers",
+    "cost": "quad",
+    "description": "Przydziel wszystkim widocznym wrogim wojownikom w odległości 3\" od tego wojownika liczbę punktów obrażeń równą wartości tej zdolności.",
+    "runemarks": [
+      "hero",
+      "terrifying"
+    ],
+    "sourceName": "Soulreaper Scythe",
+    "sourceDescription": "Allocate a number of damage points equal to the value of this ability to all visible enemy fighters within 3\" of this fighter."
+  },
+  {
+    "_id": "cb23e335",
+    "name": "Śmiercionośna sprawność",
+    "warband": "Ossiarch Bonereapers",
+    "cost": "reaction",
+    "description": "Wojownik może wykonać tę reakcję po tym, jak stał się celem akcji ataku wręcz, ale zanim wykonane zostaną rzuty na trafienie. Jeśli każdy rzut na trafienie z tej akcji ataku okaże się pudłem, przydziel atakującemu wojownikowi 5 punktów obrażeń.",
+    "runemarks": [],
+    "sourceName": "Deathly Prowess",
+    "sourceDescription": "A fighter can make this reaction after they are targeted by a melee attack action but before the hit rolls are made.  If each hit roll from that attack action results in a miss, allocate 5 damage points to the attacking fighter."
+  },
+  {
+    "_id": "c6ad14aa",
+    "name": "Dopracowane twory",
+    "warband": "Ossiarch Bonereapers",
+    "cost": "double",
+    "description": "Wybierz widocznego sojuszniczego wojownika z runemarkiem frakcji Ossiarch Bonereapers i runemarkiem Fly w odległości 3\" od tego wojownika. Do końca rundy bitwy dodaj połowę wartości tej zdolności (zaokrąglając w górę) do cechy Ataki następnej akcji ataku wręcz wykonanej przez tego wojownika.",
+    "runemarks": [
+      "elite"
+    ],
+    "sourceName": "Refined Creations",
+    "sourceDescription": "Pick a visible friendly fighter with the Ossiarch Bonereapers faction runemark and the Fly runemark within 3\" of this fighter. Until the end of the battle round, add half the value of this ability (rounding up) to the Attacks characteristic of the next melee attack action made by that fighter."
+  },
+  {
+    "_id": "2eddaae2",
+    "name": "Szyk niezłamany buntem",
+    "warband": "Ossiarch Bonereapers",
+    "cost": "battletrait",
+    "description": "Jeśli sojuszniczy wojownik z tą cechą bitewną używa zdolności, która wymaga runemarku Ossiarch Bonereapers i ma zasięg, dodaj 1\" do zasięgu tej zdolności.",
+    "runemarks": [],
+    "sourceName": "Ranks Unbroken By Dissent",
+    "sourceDescription": "If a friendly fighter with this battle trait uses an ability that requires the Ossirach Bonereapers runemark and has a range, add 1\" to the range of the ability."
+  }
+]

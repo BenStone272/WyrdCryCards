@@ -1,0 +1,184 @@
+[
+  {
+    "_id": "45a57d8c",
+    "name": "Idź tam, gdzie poniesie wiatr",
+    "warband": "Lumineth Realm-lords",
+    "cost": "double",
+    "description": "Dodaj połowę wartości tej zdolności (zaokrąglając w górę) do cechy Ruch tego wojownika dla jego następnej akcji ruchu podczas tej aktywacji.",
+    "runemarks": [
+      "berserker"
+    ],
+    "sourceName": "Go Where the Wind Blows",
+    "sourceDescription": "Add half the value of this ability (rounding up) to this fighter's Move characteristic for their next move action in this activation."
+  },
+  {
+    "_id": "26d53a6b",
+    "name": "Samotny agent",
+    "warband": "Lumineth Realm-lords",
+    "cost": "double",
+    "description": "Wojownik może użyć tej zdolności tylko wtedy, gdy w odległości 6\" od tego wojownika nie ma żadnych innych sojuszniczych wojowników. Ten wojownik wykonuje dodatkową akcję ruchu.",
+    "runemarks": [
+      "hero",
+      "destroyer"
+    ],
+    "sourceName": "Lone Agent",
+    "sourceDescription": "A fighter can only use this ability if there are no other friendly fighters within 6\" of this fighter. This fighter makes a bonus move action."
+  },
+  {
+    "_id": "8232a785",
+    "name": "Fiolka księżycowego ognia",
+    "warband": "Lumineth Realm-lords",
+    "cost": "double",
+    "description": "Wybierz widocznego wrogiego wojownika w odległości 6\" od tego wojownika i rzuć 2 kośćmi. Za każdy wynik 4-5 przydziel temu wojownikowi 1 punkt obrażeń. Za każdy wynik 6 przydziel temu wojownikowi liczbę punktów obrażeń równą wartości tej zdolności.",
+    "runemarks": [
+      "hero",
+      "trapper"
+    ],
+    "sourceName": "Moonfire Flask",
+    "sourceDescription": "Pick a visible enemy fighter within 6\" of this fighter and roll 2 dice. For each roll of 4-5, allocate 1 damage point to that fighter. For each roll of 6, allocate a number of damage points equal to the value of this ability to that fighter."
+  },
+  {
+    "_id": "982850c8",
+    "name": "Postawa góry",
+    "warband": "Lumineth Realm-lords",
+    "cost": "double",
+    "description": "Do końca rundy bitwy odejmij 1 od punktów obrażeń przydzielanych przez każde trafienie i trafienie krytyczne (do minimum 1) z akcji ataku, których celem jest ten wojownik.",
+    "runemarks": [
+      "brute"
+    ],
+    "sourceName": "Mountain Stance",
+    "sourceDescription": "Until the end of the battle round, subtract 1 from the damage points allocated by each hit and critical hit (to a minimum of 1) from attack actions that target this fighter."
+  },
+  {
+    "_id": "ddf04ee7",
+    "name": "Bystrooki Scryhawk",
+    "warband": "Lumineth Realm-lords",
+    "cost": "triple",
+    "description": "Wybierz wrogiego wojownika w odległości 20\" od tego wojownika. Do końca rundy bitwy dodaj 1 do cechy Ataki akcji ataku, których celem jest ten wojownik.",
+    "runemarks": [
+      "hero",
+      "scout"
+    ],
+    "sourceName": "Sharp-eyed Scryhawk",
+    "sourceDescription": "Pick an enemy fighter within 20\" of this fighter. Until the end of the battle round, add 1 to the Attacks characteristic of attack actions that target that fighter."
+  },
+  {
+    "_id": "c0016767",
+    "name": "Lśniąca kompania",
+    "warband": "Lumineth Realm-lords",
+    "cost": "double",
+    "description": "Wojownik może użyć tej zdolności tylko wtedy, gdy w odległości 1\" od tego wojownika znajduje się 2 lub więcej innych sojuszniczych wojowników z runemarkiem frakcji Lumineth Realm-lords oraz runemarkiem Warrior. Do końca rundy bitwy odejmij 1 od cechy Ataki (do minimum 1) akcji ataku wykonywanych przez wrogich wojowników, gdy ich celem jest wojownik w odległości 1\" od tego wojownika.",
+    "runemarks": [
+      "warrior"
+    ],
+    "sourceName": "Shining Company",
+    "sourceDescription": "A fighter can only use this ability if there are 2 or more other friendly fighters with both the Lumineth Realm-lords faction runemark and the Warrior runemark within 1\" of this fighter. Until the end of the battle round, subtract 1 from the Attacks characteristic (to a minimum of 1) of attack actions made by enemy fighters while they target a fighter within 1\" of this fighter."
+  },
+  {
+    "_id": "81390092",
+    "name": "Przeniesienie emocji",
+    "warband": "Lumineth Realm-lords",
+    "cost": "triple",
+    "description": "Wybierz widocznego sojuszniczego wojownika z runemarkiem frakcji Lumineth Realm-lords, który ma przydzielony 1 lub więcej punktów obrażeń i znajduje się w odległości 12\" od tego wojownika. Następnie wybierz widocznego wrogiego wojownika w odległości 12\" od tego wojownika. Rzuć liczbą kości równą liczbie punktów obrażeń przydzielonych tamtemu sojuszniczemu wojownikowi. Za każdy wynik 4+ przydziel tamtemu wrogiemu wojownikowi 1 punkt obrażeń.",
+    "runemarks": [
+      "terrifying",
+      "hero"
+    ],
+    "sourceName": "Emotional Transference",
+    "sourceDescription": "Pick a visible friendly fighter with the Lumineth Realm-lords faction runemark that has 1 or more damage points allocated to them and that is within 12\" of this fighter. Then, pick a visible enemy fighter within 12\" of this fighter. Roll a number of dice equal to the number of damage points allocated to that friendly fighter. For each 4+, allocate 1 damage point to that enemy fighter."
+  },
+  {
+    "_id": "8c2e5b33",
+    "name": "Lance świtu",
+    "warband": "Lumineth Realm-lords",
+    "cost": "triple",
+    "description": "Do końca aktywacji tego wojownika, następnym razem gdy ten wojownik zakończy akcję ruchu w odległości 1\" od wrogiego wojownika, wybierz widocznego wrogiego wojownika w odległości 1\" od tego wojownika. Przydziel temu wojownikowi liczbę punktów obrażeń równą wartości tej zdolności.",
+    "runemarks": [
+      "mount"
+    ],
+    "sourceName": "Lances of the Dawn",
+    "sourceDescription": "Until the end of this fighter's activation, the next time this fighter finishes a move action within 1\" of an enemy fighter, pick a visible enemy fighter within 1\" of this fighter. Allocate a number of damage points equal to the value of this ability to that fighter."
+  },
+  {
+    "_id": "593efa51",
+    "name": "Poruszaj się jak wiatr",
+    "warband": "Lumineth Realm-lords",
+    "cost": "triple",
+    "description": "Do końca aktywacji tego wojownika ten wojownik może kończyć akcje wycofania w odległości 1\" od wrogich wojowników.",
+    "runemarks": [
+      "agile"
+    ],
+    "sourceName": "Move Like the Wind",
+    "sourceDescription": "Until the end of this fighter's activation, this fighter can finish disengage actions within 1\" of enemy fighters."
+  },
+  {
+    "_id": "273344b9",
+    "name": "Skryba królestw",
+    "warband": "Lumineth Realm-lords",
+    "cost": "double",
+    "description": "Wybierz punkt na polu bitwy w odległości 9\" od tego wojownika i umieść tam specjalny znacznik. Do końca rundy bitwy odejmij 1 od punktów obrażeń przydzielanych przez każde trafienie krytyczne z akcji ataku, których celem są sojuszniczy wojownicy, gdy znajdują się w odległości 6\" od środka tego znacznika.",
+    "runemarks": [
+      "hero",
+      "elite"
+    ],
+    "sourceName": "Realmscribe",
+    "sourceDescription": "Pick a point on the battlefield within 9\" of this fighter and place a special token there. Until the end of the battle round, subtract 1 from the damage points allocated by each critical hit from attack actions that target friendly fighters while they are within 6\" of the centre of that token."
+  },
+  {
+    "_id": "7aeeb3c3",
+    "name": "Grawitacyjne przekierowanie",
+    "warband": "Lumineth Realm-lords",
+    "cost": "quad",
+    "description": "Przydziel D3 punktów obrażeń wszystkim widocznym wrogim wojownikom w odległości 6\" od tego wojownika (rzucaj za każdego z nich). Dodatkowo do końca rundy bitwy zmniejsz o połowę cechę Ruch (zaokrąglając w górę) wszystkich wojowników, gdy wykonują akcję ruchu rozpoczynającą się w odległości 6\" od tego wojownika.",
+    "runemarks": [
+      "hero",
+      "mystic"
+    ],
+    "sourceName": "Gravitic Redirection",
+    "sourceDescription": "Allocate D3 damage points to all visible enemy fighters within 6\" of this fighter (roll for each). In addition, until the end of the battle round, halve the Move characteristic (rounding up) of all fighters while they make a move action that starts within 6\" of this fighter."
+  },
+  {
+    "_id": "2e4114a8",
+    "name": "Doskonały cios",
+    "warband": "Lumineth Realm-lords",
+    "cost": "quad",
+    "description": "Ten wojownik wykonuje dodatkową akcję ataku. Dodatkowo dodaj wartość tej zdolności do punktów obrażeń przydzielanych wrogim wojownikom przez każde trafienie krytyczne z tej akcji ataku.",
+    "runemarks": [
+      "frenzied"
+    ],
+    "sourceName": "Perfect Strike",
+    "sourceDescription": "This fighter makes a bonus attack action. In addition, add the value of this ability to the damage points allocated to enemy fighters by each critical hit from that attack action."
+  },
+  {
+    "_id": "f9a0b0b3",
+    "name": "Oślepiający blask",
+    "warband": "Lumineth Realm-lords",
+    "cost": "reaction",
+    "description": "Wojownik może wykonać tę reakcję po tym, jak stał się celem akcji ataku strzeleckiego, ale zanim wykonane zostaną rzuty na trafienie. Po wykonaniu rzutów na trafienie rzuć kością za każde trafienie krytyczne. Przy wyniku 4+ to trafienie krytyczne staje się zwykłym trafieniem.",
+    "runemarks": [],
+    "sourceName": "Blinding Brilliance",
+    "sourceDescription": "A fighter can make this reaction after they are targeted by a missile attack action but before the hit rolls are made. After the hit rolls have been made, roll a dice for each critical hit. On a roll of 4+, that critical hit becomes a hit instead."
+  },
+  {
+    "_id": "fa01e17f",
+    "name": "Rezerwy aetherquarcu",
+    "warband": "Lumineth Realm-lords",
+    "cost": "battletrait",
+    "description": "Na początku pierwszej rundy bitwy każdy gracz, którego drużyna bojowa ma tę cechę bitewną, może wybrać sojuszniczego wojownika. Ten wojownik ma rezerwę aetherquarcu. Raz na bitwę ten wojownik może użyć swojej rezerwy aetherquarcu. Gdy to zrobi, następnym razem, gdy ten wojownik użyje zdolności, możesz potraktować jedno posiadane przez siebie `[double]` jako `[triple]` albo jedno posiadane przez siebie `[triple]` jako `[quad]`.",
+    "runemarks": [],
+    "sourceName": "Aetherquartz Reserves",
+    "sourceDescription": "At the start of the first battle round, each player whose warband has this battle trait can pick a friendly fighter. That fighter has an aetherquartz reserve. Once per battle, that fighter can use their aetherquartz reserve. When they do so, the next time that fighter uses an ability, you can treat one [double] you have as a [triple], or one [triple] you have as a [quad]."
+  },
+  {
+    "_id": "927cb4b0",
+    "name": "Olśniewające światło",
+    "warband": "Myari's Purifiers",
+    "cost": "triple",
+    "description": "Do końca rundy bitwy odejmij 1 od cechy Ataki (do minimum 1) akcji ataku wykonywanych przez wrogich wojowników, gdy znajdują się w odległości 6\" od tego wojownika.",
+    "runemarks": [
+      "hero"
+    ],
+    "sourceName": "Dazzling Light",
+    "sourceDescription": "Until the end of the battle round, subtract 1 from the Attacks characteristic (to a minimum of 1) of attack actions made by enemy fighters while they are within 6\" of this fighter."
+  }
+]

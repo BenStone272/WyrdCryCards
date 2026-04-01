@@ -1,0 +1,153 @@
+[
+  {
+    "_id": "e5b4ec78",
+    "name": "Strumień zepsucia",
+    "warband": "Maggotkin of Nurgle: Rotbringers",
+    "cost": "triple",
+    "description": "Wybierz widocznego wrogiego wojownika w odległości 7\" od tego wojownika i rzuć 3 kośćmi. Za każdy wynik 5+ przydziel temu wojownikowi 1 punkt obrażeń i do końca rundy bitwy odejmij 1 od jego cechy Wytrzymałość (do minimum 1).",
+    "runemarks": [
+      "hero",
+      "mystic"
+    ],
+    "sourceName": "Stream of Corruption",
+    "sourceDescription": "Pick a visible enemy fighter within 7\" of this fighter and roll 3 dice. For each roll of 5+, allocate 1 damage point to that fighter and, until the end of the battle round, subtract 1 from that fighter's Toughness characteristic (to a minimum of 1)."
+  },
+  {
+    "_id": "07e66087",
+    "name": "Trzykroć dojrzała Głowa Śmierci",
+    "warband": "Maggotkin of Nurgle: Rotbringers",
+    "cost": "double",
+    "description": "Wybierz widocznego wrogiego wojownika w odległości 7\" od tego wojownika i rzuć 2 kośćmi. Za każdy wynik 4-5 przydziel temu wojownikowi 1 punkt obrażeń. Za każdy wynik 6 przydziel temu wojownikowi liczbę punktów obrażeń równą wartości tej zdolności.",
+    "runemarks": [
+      "bulwark",
+      "hero"
+    ],
+    "sourceName": "Thrice-ripened Death's Head",
+    "sourceDescription": "Pick a visible enemy fighter within 7\" of this fighter and roll 2 dice. For each roll of 4-5, allocate 1 damage point to that fighter. For each roll of 6, allocate a number of damage points to that fighter equal to the value of this ability."
+  },
+  {
+    "_id": "dc696c9b",
+    "name": "Bicie donośnego tocsinu",
+    "warband": "Maggotkin of Nurgle: Rotbringers",
+    "cost": "double",
+    "description": "Do końca rundy bitwy dodaj 1 do cechy Ruch sojuszniczych wojowników, gdy wykonują akcję ruchu rozpoczynającą się w odległości 7\" od tego wojownika.",
+    "runemarks": [
+      "champion"
+    ],
+    "sourceName": "Toll of the Sonorous Tocsin",
+    "sourceDescription": "Until the end of the battle round, add 1 to the Move characteristic of friendly fighters while they make a move action that starts within 7\" of this fighter."
+  },
+  {
+    "_id": "db96f167",
+    "name": "Jadowite żądło",
+    "warband": "Maggotkin of Nurgle: Rotbringers",
+    "cost": "double",
+    "description": "Wybierz widocznego wrogiego wojownika w odległości 1\" od tego wojownika i rzuć kością. Przy wyniku 2+ do końca tej rundy bitwy tamten wojownik nie może wykonywać akcji ruchu ani akcji wycofania.",
+    "runemarks": [
+      "destroyer"
+    ],
+    "sourceName": "Venomous Sting",
+    "sourceDescription": "Pick a visible enemy fighter within 1\" of this fighter and roll a dice. On a roll of 2+, until the end of this battle round, that fighter cannot make move actions or disengage actions."
+  },
+  {
+    "_id": "cad56a1d",
+    "name": "Tryskający śluz",
+    "warband": "Maggotkin of Nurgle: Rotbringers",
+    "cost": "double",
+    "description": "Do końca rundy bitwy za każdym razem, gdy temu wojownikowi zostanie przydzielony punkt obrażeń przez akcję ataku wręcz wykonaną przez wrogiego wojownika, rzuć kością. Przy wyniku 3+ przydziel temu wrogiemu wojownikowi 1 punkt obrażeń.",
+    "runemarks": [],
+    "sourceName": "Spurting Mucus",
+    "sourceDescription": "Until the end of the battle round, each time this fighter is allocated a damage point by a melee attack action made by an enemy fighter, roll a dice. On a 3+ allocate 1 damage point to that enemy fighter."
+  },
+  {
+    "_id": "77852703",
+    "name": "Skażona ikona",
+    "warband": "Maggotkin of Nurgle: Rotbringers",
+    "cost": "triple",
+    "description": "Do końca rundy bitwy dodaj 1 do cechy Wytrzymałość widocznych sojuszniczych wojowników, gdy znajdują się w odległości 7\" od tego wojownika.",
+    "runemarks": [
+      "icon-bearer"
+    ],
+    "sourceName": "Blighted Icon",
+    "sourceDescription": "Until the end of the battle round, add 1 to the Toughness characteristic of visible friendly fighters while they are within 7\" of this fighter."
+  },
+  {
+    "_id": "4ae93ad6",
+    "name": "Błogosławieństwo Dziadka",
+    "warband": "Maggotkin of Nurgle: Rotbringers",
+    "cost": "triple",
+    "description": "Do końca rundy bitwy dodaj 1 do cechy Siła akcji ataku wręcz wykonywanych przez widocznych sojuszniczych wojowników, gdy znajdują się w odległości 7\" od tego wojownika.",
+    "runemarks": [
+      "hero"
+    ],
+    "sourceName": "Grandfather's Blessing",
+    "sourceDescription": "Until the end of the battle round, add 1 to the Strength characteristic of melee attack actions made by visible friendly fighters while they are within 7\" of this fighter."
+  },
+  {
+    "_id": "43344368",
+    "name": "Pchnięcie zgniłym mieczem",
+    "warband": "Maggotkin of Nurgle: Rotbringers",
+    "cost": "triple",
+    "description": "Ten wojownik może wykonać dodatkową akcję ataku wręcz. Jeśli ta dodatkowa akcja ataku zada jakiekolwiek trafienia krytyczne, rzuć kością. Przy wyniku 4+ do końca bitwy odejmij 1 od cechy Ruch wojownika będącego celem (do minimum 1).",
+    "runemarks": [
+      "hero",
+      "terrifying"
+    ],
+    "sourceName": "Rotsword Stab",
+    "sourceDescription": "This fighter can make a bonus melee attack action. If that bonus attack action scores any critical hits, roll a dice. On a roll of 4+, until the end of the battle, subtract 1 from the Move characteristic (to a minimum of 1) of the target fighter."
+  },
+  {
+    "_id": "87f770a5",
+    "name": "Nienaturalna regeneracja",
+    "warband": "Maggotkin of Nurgle: Rotbringers",
+    "cost": "triple",
+    "description": "Wojownik może użyć tej zdolności tylko wtedy, gdy w odległości 1\" od tego wojownika nie ma żadnych wrogich wojowników. Usuń liczbę punktów obrażeń przydzielonych temu wojownikowi do podwójnej wartości tej zdolności.",
+    "runemarks": [],
+    "sourceName": "Unnatural Regeneration",
+    "sourceDescription": "A fighter can only use this ability if there are no enemy fighters within 1\" of this fighter. Remove a number of damage points allocated to this fighter up to double the value of this ability."
+  },
+  {
+    "_id": "3ae55ee5",
+    "name": "Niemożliwy do zranienia",
+    "warband": "Maggotkin of Nurgle: Rotbringers",
+    "cost": "reaction",
+    "description": "Wojownik może wykonać tę reakcję, gdy staje się celem akcji ataku wręcz, ale zanim wykonane zostaną rzuty na trafienie. Odejmij 1 od punktów obrażeń przydzielanych temu wojownikowi przez każde trafienie z tej akcji ataku (do minimum 1).",
+    "runemarks": [],
+    "sourceName": "Impossible to Wound",
+    "sourceDescription": "A fighter can make this reaction when they are targeted by a melee attack action but before the hit rolls are made. Subtract 1 from the damage points allocated to this fighter by each hit from that attack action (to a minimum of 1)."
+  },
+  {
+    "_id": "54617d11",
+    "name": "Bicie Dzwonu Zagłady",
+    "warband": "Maggotkin of Nurgle: Rotbringers",
+    "cost": "quad",
+    "description": "Do końca rundy bitwy wrodzy wojownicy nie mogą używać reakcji ani zdolności, gdy znajdują się w odległości 7\" od tego wojownika.",
+    "runemarks": [
+      "priest"
+    ],
+    "sourceName": "Toll of the Doom Bell",
+    "sourceDescription": "Until the end of the battle round, enemy fighters cannot use reactions or abilities while they are within 7\" of this fighter."
+  },
+  {
+    "_id": "7321b833",
+    "name": "Przesiąknięty chorobą",
+    "warband": "Maggotkin of Nurgle: Rotbringers",
+    "cost": "battletrait",
+    "description": "Na początku każdej rundy bitwy możesz wybrać jednego wrogiego wojownika w odległości 1\" od jednego lub większej liczby sojuszniczych wojowników i rzucić kością. Przy wyniku 5+ ten wojownik nie może używać zdolności ani reakcji w tej rundzie bitwy. Wrodzy wojownicy z tą cechą bitewną albo cechą bitewną 'Infection Vectors' nie mogą zostać objęci tym efektem.",
+    "runemarks": [],
+    "sourceName": "Disease-ridden",
+    "sourceDescription": "At the start of each battle round, you can pick one enemy fighter within 1\" of one or more friendly fighters and roll a dice. On a 5+, that fighter cannot use abilities or reactions this battle round. Enemy fighters with this battle trait or the 'Infection Vectors' battle trait cannot be affected."
+  },
+  {
+    "_id": "99104002",
+    "name": "Czerpnij z mocy Retchlinga",
+    "warband": "The Wurmspat",
+    "cost": "double",
+    "description": "Wojownik może użyć tej zdolności tylko raz na bitwę. Ten wojownik wykonuje dodatkową akcję ataku, która ma runemark Blast.",
+    "runemarks": [
+      "hero"
+    ],
+    "sourceName": "Draw Upon the Retchling's Power",
+    "sourceDescription": "A fighter can only use this ability once per battle.  This fighter makes a bonus attack action that has the Blast runemark."
+  }
+]

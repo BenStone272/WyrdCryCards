@@ -1,0 +1,165 @@
+[
+  {
+    "_id": "d1c3e90e",
+    "name": "Kwaśny ślad śluzu",
+    "warband": "Maggotkin of Nurgle: Daemons",
+    "cost": "double",
+    "description": "Wybierz widocznego wrogiego wojownika w odległości 1\" od tego wojownika. Ten wojownik wykonuje dodatkową akcję wycofania. Następnie przydziel tamtemu wojownikowi liczbę punktów obrażeń równą wartości tej zdolności.",
+    "runemarks": [
+      "ferocious"
+    ],
+    "sourceName": "Acidic Slime Trail",
+    "sourceDescription": "Pick a visible enemy fighter within 1\" of this fighter. This fighter makes a bonus disengage action. Then, allocate a number of damage points to that fighter equal to the value of this ability."
+  },
+  {
+    "_id": "7b88e541",
+    "name": "Radosne dudziarze",
+    "warband": "Maggotkin of Nurgle: Daemons",
+    "cost": "double",
+    "description": "Do końca rundy bitwy dodaj 1 do cechy Ruch sojuszniczych wojowników, gdy wykonują akcję ruchu rozpoczynającą się w odległości 7\" od tego wojownika.",
+    "runemarks": [
+      "hero",
+      "agile"
+    ],
+    "sourceName": "Jolly Gutpipes",
+    "sourceDescription": "Until the end of the battle round, add 1 to the Move characteristic of friendly fighters while they make a move action that starts within 7\" of this fighter."
+  },
+  {
+    "_id": "36191fb0",
+    "name": "Obrzydliwie odporny",
+    "warband": "Maggotkin of Nurgle: Daemons",
+    "cost": "double",
+    "description": "Rzuć liczbą kości równą wartości tej zdolności. Za każdy wynik 3+ usuń do 1 punktu obrażeń przydzielonego temu wojownikowi.",
+    "runemarks": [],
+    "sourceName": "Disgustingly Resilient",
+    "sourceDescription": "Roll a number of dice equal to the value of this ability. For each roll of 3+, remove up to 1 damage point allocated to this fighter."
+  },
+  {
+    "_id": "e4fcbd83",
+    "name": "Jadowite żądło",
+    "warband": "Maggotkin of Nurgle: Daemons",
+    "cost": "double",
+    "description": "Wybierz widocznego wrogiego wojownika w odległości 1\" od tego wojownika i rzuć kością. Przy wyniku 2+ do końca tej rundy bitwy tamten wojownik nie może wykonywać akcji ruchu ani akcji wycofania.",
+    "runemarks": [
+      "destroyer"
+    ],
+    "sourceName": "Venomous Sting",
+    "sourceDescription": "Pick a visible enemy fighter within 1\" of this fighter and roll a dice. On a roll of 2+, until the end of this battle round, that fighter cannot make move actions or disengage actions."
+  },
+  {
+    "_id": "4ba7bd21",
+    "name": "Chmura much",
+    "warband": "Maggotkin of Nurgle: Daemons",
+    "cost": "triple",
+    "description": "Do końca rundy bitwy odejmij 1 od cechy Ataki (do minimum 1) akcji ataku, których celem jest ten wojownik.",
+    "runemarks": [
+      "warrior"
+    ],
+    "sourceName": "Cloud of Flies",
+    "sourceDescription": "Until the end of the battle round, subtract 1 from the Attacks characteristic (to a minimum of 1) of attack actions that target this fighter."
+  },
+  {
+    "_id": "9efb5761",
+    "name": "Błogosławieństwo Dziadka",
+    "warband": "Maggotkin of Nurgle: Daemons",
+    "cost": "triple",
+    "description": "Do końca rundy bitwy dodaj 1 do cechy Siła akcji ataku wręcz wykonywanych przez widocznych sojuszniczych wojowników, gdy znajdują się w odległości 7\" od tego wojownika.",
+    "runemarks": [
+      "hero",
+      "champion"
+    ],
+    "sourceName": "Grandfather's Blessing",
+    "sourceDescription": "Until the end of the battle round, add 1 to the Strength characteristic of melee attack actions made by visible friendly fighters while they are within 7\" of this fighter."
+  },
+  {
+    "_id": "eb4c8d1f",
+    "name": "Groźny nadzorca",
+    "warband": "Maggotkin of Nurgle: Daemons",
+    "cost": "quad",
+    "description": "Do końca rundy bitwy dodaj 1 do cechy Ataki akcji ataku wręcz wykonywanych przez widocznych sojuszniczych wojowników, gdy znajdują się w odległości 9\" od tego wojownika.",
+    "runemarks": [
+      "hero"
+    ],
+    "sourceName": "Menacing Overseer",
+    "sourceDescription": "Until the end of the battle round, add 1 to the Attacks characteristic of melee attack actions made by visible friendly fighters while they are within 9\" of this fighter."
+  },
+  {
+    "_id": "bc938e66",
+    "name": "Obrzydliwe kichnięcie",
+    "warband": "Maggotkin of Nurgle: Daemons",
+    "cost": "triple",
+    "description": "Wybierz widocznego wrogiego wojownika w odległości 7\" od tego wojownika i rzuć liczbą kości równą wartości tej zdolności. Za każdy wynik 2+ przydziel temu wojownikowi 1 punkt obrażeń.",
+    "runemarks": [
+      "hero",
+      "champion"
+    ],
+    "sourceName": "Disgusting Sneeze",
+    "sourceDescription": "Pick a visible enemy fighter within 7\" of this fighter and roll a number of dice equal to the value of this ability. For each roll of 2+, allocate 1 damage point to that fighter."
+  },
+  {
+    "_id": "26f3ceec",
+    "name": "Niekończący się rój",
+    "warband": "Maggotkin of Nurgle: Daemons",
+    "cost": "quad",
+    "description": "Usuń liczbę punktów obrażeń przydzielonych temu wojownikowi do podwójnej wartości tej zdolności.",
+    "runemarks": [
+      "minion"
+    ],
+    "sourceName": "Endless Swarm",
+    "sourceDescription": "Remove a number of damage points allocated to this fighter up to double the value of this ability."
+  },
+  {
+    "_id": "7c142afa",
+    "name": "Niemożliwy do zranienia",
+    "warband": "Maggotkin of Nurgle: Daemons",
+    "cost": "reaction",
+    "description": "Wojownik może wykonać tę reakcję, gdy staje się celem akcji ataku wręcz, ale zanim wykonane zostaną rzuty na trafienie. Odejmij 1 od punktów obrażeń przydzielanych temu wojownikowi przez każde trafienie z tej akcji ataku (do minimum 1).",
+    "runemarks": [],
+    "sourceName": "Impossible to Wound",
+    "sourceDescription": "A fighter can make this reaction when they are targeted by a melee attack action but before the hit rolls are made. Subtract 1 from the damage points allocated to this fighter by each hit from that attack action (to a minimum of 1)."
+  },
+  {
+    "_id": "a2de23f6",
+    "name": "Wektory infekcji",
+    "warband": "Maggotkin of Nurgle: Daemons",
+    "cost": "battletrait",
+    "description": "Na początku każdej rundy bitwy rzuć kością za każdego wrogiego wojownika w odległości 1\" od jednego lub większej liczby sojuszniczych wojowników. Przy wyniku 5+ przydziel temu wojownikowi 1 punkt obrażeń. Wrodzy wojownicy z tą cechą bitewną albo cechą bitewną 'Disease-ridden' nie mogą zostać objęci tym efektem.",
+    "runemarks": [],
+    "sourceName": "Infection Vectors",
+    "sourceDescription": "At the start of each battle round, roll a dice for each enemy fighter within 1\" of one or more friendly fighters. On a roll of 5+, allocate 1 damage point to that fighter. Enemy fighters with this battle trait or the 'Disease-ridden' battle trait cannot be affected."
+  },
+  {
+    "_id": "b1cb3ec1",
+    "name": "Narastające infekcje",
+    "warband": "Grandfather's Gardeners",
+    "cost": "double",
+    "description": "Daj temu wojownikowi licznik cyklu i rzuć kością. Jeśli wynik jest równy lub mniejszy od wartości tej zdolności, odzyskujesz kości zdolności wydane na użycie tej zdolności, z tą samą wartością. Przez resztę rundy bitwy dodaj 1 do wartości obrażeń krytycznych broni wręcz tego wojownika za każdy posiadany przez niego licznik cyklu. Liczniki cyklu nie są odrzucane na końcu rundy bitwy.",
+    "runemarks": [],
+    "sourceName": "Growing Infections",
+    "sourceDescription": "Give this fighter a cycle counter and roll a dice. If the roll is equal to or less than the value of this ability, you gain the ability dice you spent to use this ability, at the same value. For the rest of the battle round, add 1 to the critical damage value of this fighter's melee weapon for each cycle counter they have. Cycle counters are not discarded at the end of the battle round."
+  },
+  {
+    "_id": "1f8ac0c8",
+    "name": "Ssąca trąbka",
+    "warband": "Grandfather's Gardeners",
+    "cost": "double",
+    "description": "Wybierz jako cel widocznego wrogiego wojownika w odległości 1\" od tego wojownika i rzuć kością. Przydziel celowi liczbę punktów obrażeń równą wynikowi rzutu. Jeśli przydzielisz celowi 5 lub więcej punktów obrażeń za pomocą tej zdolności, ten wojownik zostaje wyeliminowany.",
+    "runemarks": [
+      "beast"
+    ],
+    "sourceName": "Sucking Proboscis",
+    "sourceDescription": "Pick a visible enemy fighter within 1\" of this fighter to be the target and roll a dice. Allocate a number of damage points to the target equal to the roll. If you allocate 5 or more damage points to the target using this ability, this fighter is taken down."
+  },
+  {
+    "_id": "ee0bc964",
+    "name": "Wielki cykl rozkładu",
+    "warband": "Grandfather's Gardeners",
+    "cost": "triple",
+    "description": "Liczniki cyklu każdego sojuszniczego wojownika muszą zostać przekazane innemu sojuszniczemu wojownikowi na polu bitwy z runemarkiem Grandfather's Gardener's. Każdy wojownik może otrzymać liczniki cyklu tylko raz przy każdym użyciu tej zdolności.",
+    "runemarks": [
+      "hero"
+    ],
+    "sourceName": "The Grand Cycle of Decay",
+    "sourceDescription": "Each friendly fighter's cycle counters must be given to another friendly fighter on the battlefield with the Grandfather's Gardener's runemark. Each fighter may only be given cycle counters once each time this ability is used."
+  }
+]

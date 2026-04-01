@@ -1,0 +1,163 @@
+[
+  {
+    "_id": "46a4129f",
+    "name": "Zrządzenie losu",
+    "warband": "Disciples of Tzeentch: Daemons",
+    "cost": "reaction",
+    "description": "Wojownik może wykonać tę reakcję po tym, jak stał się celem akcji ataku, ale zanim wykonane zostaną rzuty na trafienie. Wybierz jeden z rzutów na trafienie i zmień wartość jednego ze swoich `[doubles]` na tę wartość.",
+    "runemarks": [],
+    "sourceName": "Twist of Fate",
+    "sourceDescription": "A fighter can make this reaction after they are targeted by an attack action but before the hit rolls are made. Pick one of the hit rolls, and change the value of one of your [doubles] to that value."
+  },
+  {
+    "_id": "02cd1655",
+    "name": "Niebieski ogień",
+    "warband": "Disciples of Tzeentch: Daemons",
+    "cost": "double",
+    "description": "Wybierz widocznego wrogiego wojownika w odległości 9\" od tego wojownika i rzuć 2 kośćmi. Za każdy wynik 4-5 przydziel temu wojownikowi 1 punkt obrażeń. Za każdy wynik 6 przydziel temu wojownikowi liczbę punktów obrażeń równą wartości tej zdolności.",
+    "runemarks": [
+      "hero"
+    ],
+    "sourceName": "Blue Fire",
+    "sourceDescription": "Pick a visible enemy fighter within 9\" of this fighter and roll 2 dice. For each roll of 4-5, allocate 1 damage point to that fighter. For each roll of 6, allocate a number of damage points to that fighter equal to the value of this ability."
+  },
+  {
+    "_id": "0252a1b5",
+    "name": "Ognisko czarostwa",
+    "warband": "Disciples of Tzeentch: Daemons",
+    "cost": "double",
+    "description": "Dodaj połowę wartości tej zdolności (zaokrąglając w górę) do cechy Siła następnej akcji ataku strzeleckiego wykonanej przez tego wojownika podczas tej aktywacji.",
+    "runemarks": [],
+    "sourceName": "Locus of Sorcery",
+    "sourceDescription": "Add half the value of this ability (rounding up) to the Strength characteristic of the next missile attack action made by this fighter in this activation."
+  },
+  {
+    "_id": "5e619423",
+    "name": "Zatrzaskujące ugryzienie",
+    "warband": "Disciples of Tzeentch: Daemons",
+    "cost": "triple",
+    "description": "Dodaj połowę wartości tej zdolności (zaokrąglając w górę) do cechy Siła następnej akcji ataku wykonanej przez tego wojownika podczas tej aktywacji. Dodatkowo do końca rundy bitwy wojownik będący celem nie może wykonywać akcji ruchu ani akcji wycofania.",
+    "runemarks": [
+      "agile"
+    ],
+    "sourceName": "Latching Bite",
+    "sourceDescription": "Add half the value of this ability (rounding up) to the Strength characteristic of the next attack action made by this fighter in this activation. In addition, until the end of the battle round, the target fighter cannot make move or disengage actions."
+  },
+  {
+    "_id": "b090be06",
+    "name": "Mistrz przeznaczenia",
+    "warband": "Disciples of Tzeentch: Daemons",
+    "cost": "triple",
+    "description": "Do końca rundy bitwy dodaj wartość tej zdolności do wartości innych zdolności (do maksimum 6) używanych przez sojuszniczych wojowników w odległości 12\" od tego wojownika.",
+    "runemarks": [
+      "hero"
+    ],
+    "sourceName": "Master of Destiny",
+    "sourceDescription": "Until the end of the battle round, add the value of this ability to the value of other abilities (to a maximum of 6) used by friendly fighters within 12\" of this fighter."
+  },
+  {
+    "_id": "5b81b0c2",
+    "name": "Różowy ogień",
+    "warband": "Disciples of Tzeentch: Daemons",
+    "cost": "triple",
+    "description": "Wybierz widocznego wrogiego wojownika w odległości 9\" od tego wojownika i rzuć 9 kośćmi. Za każdy wynik 4+ przydziel temu wojownikowi 1 punkt obrażeń.",
+    "runemarks": [
+      "hero",
+      "destroyer"
+    ],
+    "sourceName": "Pink Fire",
+    "sourceDescription": "Pick a visible enemy fighter within 9\" of this fighter and roll 9 dice. For each roll of 4+, allocate 1 damage point to that fighter."
+  },
+  {
+    "_id": "a2d51b1c",
+    "name": "Kapryśny płomień spaczenia",
+    "warband": "Disciples of Tzeentch: Daemons",
+    "cost": "quad",
+    "description": "Przydziel wszystkim widocznym wrogim wojownikom w odległości 3\" od tego wojownika liczbę punktów obrażeń równą wartości tej zdolności.",
+    "runemarks": [
+      "berserker"
+    ],
+    "sourceName": "Capricious Warpflame",
+    "sourceDescription": "Allocate a number of damage points equal to the value of this ability to all visible enemy fighters within 3\" of this fighter."
+  },
+  {
+    "_id": "82e794dc",
+    "name": "Rozszczep się",
+    "warband": "Disciples of Tzeentch: Daemons",
+    "cost": "reaction",
+    "description": "Wojownik może wykonać tę reakcję, gdy staje się celem akcji ataku, po zsumowaniu obrażeń, ale zanim zostaną one przydzielone temu wojownikowi. Wystaw 2 nowych wojowników z runemarkiem frakcji Disciples of Tzeentch: Daemons i runemarkiem Warrior na polu bitwy w odległości 3\" od tego wojownika. Następnie ten wojownik zostaje wyeliminowany. W bitwie kampanii nie wykonuj rzutu na obrażenia dla tego wojownika.",
+    "runemarks": [
+      "elite"
+    ],
+    "sourceName": "Split",
+    "sourceDescription": "A fighter can make this reaction when they are targeted by an attack action, after the damage is totalled but before it is allocated to this fighter. Set up 2 new fighters with the Disciples of Tzeentch: Daemons faction runemark and the Warrior runemark on the battlefield within 3\" of this fighter. Then, this fighter is taken down. In a campaign battle, do not make an injury roll for this fighter."
+  },
+  {
+    "_id": "5d939aff",
+    "name": "Rozszczep się ponownie",
+    "warband": "Disciples of Tzeentch: Daemons",
+    "cost": "reaction",
+    "description": "Wojownik może wykonać tę reakcję, gdy staje się celem akcji ataku, po zsumowaniu obrażeń, ale zanim zostaną one przydzielone temu wojownikowi. Wystaw 1 nowego wojownika z runemarkiem frakcji Disciples of Tzeentch: Daemons i runemarkiem Minion na polu bitwy w odległości 3\" od tego wojownika. Następnie ten wojownik zostaje wyeliminowany. W bitwie kampanii nie wykonuj rzutu na obrażenia dla tego wojownika.",
+    "runemarks": [
+      "warrior"
+    ],
+    "sourceName": "Split Again",
+    "sourceDescription": "A fighter can make this reaction when they are targeted by an attack action, after the damage is totalled but before it is allocated to this fighter. Set up 1 new fighter with the Disciples of Tzeentch: Daemons faction runemark and the Minion runemark on the battlefield within 3\" of this fighter. Then, this fighter is taken down. In a campaign battle, do not make an injury roll for this fighter."
+  },
+  {
+    "_id": "d405bcb7",
+    "name": "Wypaczone przeznaczenie",
+    "warband": "Disciples of Tzeentch: Daemons",
+    "cost": "battletrait",
+    "description": "Po fazie inicjatywy każdy gracz, którego drużyna bojowa ma tę cechę bitewną, może wybrać dowolne dwa posiadane przez siebie `[double]`, `[triple]` albo `[quad]`. Zamień miejscami wartości tych kości zdolności.",
+    "runemarks": [],
+    "sourceName": "Warp Destiny",
+    "sourceDescription": "After the initiative phase, each player whose warband has this battle trait can pick two any [double], [triple] or [quad] they have. Swap the values of those ability dice."
+  },
+  {
+    "_id": "1adaca07",
+    "name": "Zahipnotyzuj",
+    "warband": "Ephilim's Pandaemonium",
+    "cost": "double",
+    "description": "Wybierz wrogiego wojownika w odległości 6\" od tego wojownika. Tamten wrogi wojownik wykonuje akcję ruchu bezpośrednio w stronę tego wojownika, jak gdyby skakał, na odległość do liczby cali równej jego cesze Ruch.",
+    "runemarks": [
+      "fly"
+    ],
+    "sourceName": "Hypnotise",
+    "sourceDescription": "Pick an enemy fighter within 6\" of this fighter. That enemy fighter makes a move action directly towards this fighter, as if they were jumping, up to a number of inches equal to their Move characteristic."
+  },
+  {
+    "_id": "13d3aa59",
+    "name": "Nagły portal spaczenia",
+    "warband": "Ephilim's Pandaemonium",
+    "cost": "double",
+    "description": "Wybierz innego sojuszniczego wojownika z runemarkiem Ephilim's Pandaemonium w odległości 12\" od tego wojownika. Zanotuj położenie tamtego wojownika, następnie usuń go z pola bitwy i natychmiast wystaw w odległości 3\" od tego wojownika. Następnie usuń tego wojownika z pola bitwy i wystaw go w odległości 3\" od pierwotnego położenia tamtego sojuszniczego wojownika.",
+    "runemarks": [],
+    "sourceName": "Sudden Warp-portal",
+    "sourceDescription": "Pick another friendly fighter with the Ephilim's Pandaemonium runemark within 12\" ofthis fighter. Make a note of that fighter's location, then remove that fighter from the battlefield, and immediately set them up within 3\" of this fighter. Then remove this fighter from the battlefield, and set them up within 3\" of the other friendly fighter's original location."
+  },
+  {
+    "_id": "7449a726",
+    "name": "Pożerające ugryzienie",
+    "warband": "Ephilim's Pandaemonium",
+    "cost": "triple",
+    "description": "Dodaj 2 do cech Ataki i Siła następnej akcji ataku wręcz wykonanej przez tego wojownika podczas tej aktywacji. Dodatkowo dodaj 2 do punktów obrażeń przydzielanych wrogim wojownikom przez każde trafienie krytyczne z tej akcji ataku.",
+    "runemarks": [
+      "berserker"
+    ],
+    "sourceName": "Engulfing Bite",
+    "sourceDescription": "Add 2 to the Attacks and Strength characteristics of the next melee attack action made by this fighter in this activation. In addition, add 2 to the damage points allocated to enemy fighters by each critical hit from that attack action."
+  },
+  {
+    "_id": "5fad888f",
+    "name": "Przyzwane obrzydlistwo",
+    "warband": "Ephilim's Pandaemonium",
+    "cost": "quad",
+    "description": "Wybierz sojuszniczego wojownika z runemarkiem Ephilim's Pandaemonium, który został wyeliminowany. Wystaw tego wojownika na platformie lub podłodze pola bitwy, w całości w odległości 3\" od tego wojownika. Tamten wojownik przestaje liczyć się jako wyeliminowany i nie ma przydzielonych żadnych punktów obrażeń.",
+    "runemarks": [
+      "hero"
+    ],
+    "sourceName": "Summoned Abomination",
+    "sourceDescription": "Pick a friendly fighter with the Ephilim's Pandaemonium runemark that has been taken down. Set up that fighter on a platform or the battlefield floor, wholly within 3\" of this fighter. That fighter no longer counts as being taken down and has no damage points allocated to it."
+  }
+]
