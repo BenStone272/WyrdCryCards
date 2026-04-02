@@ -496,6 +496,13 @@
       "warbandSlug": "ydrilan_riverblades",
       "fightersPath": "/warcry_data/data/order/ydrilan_riverblades/ydrilan_riverblades_fighters.json",
       "abilitiesPath": "/warcry_data/data/order/ydrilan_riverblades/ydrilan_riverblades_abilities.json"
+    },
+    {
+      "key": "custom/custom",
+      "grandAlliance": "order",
+      "warbandSlug": "custom",
+      "fightersPath": "/warcry_data/data/custom/custom_fighters.json",
+      "abilitiesPath": "/warcry_data/data/custom/custom_abilities.json"
     }
   ]
 }

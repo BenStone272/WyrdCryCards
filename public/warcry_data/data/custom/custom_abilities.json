@@ -1,0 +1,20 @@
+[
+    {
+        "_id": "7fd8398d",
+        "name": "Encase in Molten Rock",
+        "warband": "Custom",
+        "cost": "double",
+        "description": "The next time this fighter makes an attack action in this activation, subtract half the value of this ability (rounding up) from the Move characteristic of the target fighter (to a minimum of 1) until the end of the battle round.",
+        "runemarks": [
+            "bulwark"
+        ]
+    },
+    {
+        "_id": "e8fe0845",
+        "name": "Fyresteel Throwing Axe",
+        "warband": "Custom",
+        "cost": "double",
+        "description": "Pick a visible enemy fighter within 6\" of this fighter and roll 2 dice. For each roll of 4-5, allocate 1 damage point to that fighter. For each roll of 6, allocate a number of damage points to that fighter equal to the value of this ability.",
+        "runemarks": []
+    }
+]
