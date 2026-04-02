@@ -116,6 +116,14 @@ function App() {
     const parsed = parseWarcrierRoster(inputText)
     const fighterNames = parsed.fighters.map((fighter) => fighter.name)
 
+    // Debug: log the import start and parsed data
+    // eslint-disable-next-line no-console
+    console.log('IMPORT DEBUG - importRoster called with input:', inputText)
+    // eslint-disable-next-line no-console
+    console.log('IMPORT DEBUG - parsed result:', parsed)
+    // eslint-disable-next-line no-console
+    console.log('IMPORT DEBUG - fighterNames:', fighterNames)
+
     if (fighterNames.length === 0) {
       setRosterName(null)
       setWarbandInfo(null)
@@ -158,9 +166,9 @@ function App() {
       // Debug: log parsed roster and warband entry to help diagnose matching issues
       // These logs are temporary — remove after debugging.
       // eslint-disable-next-line no-console
-      console.debug('IMPORT DEBUG - parsed roster:', parsed)
+      console.log('IMPORT DEBUG - parsed roster:', parsed)
       // eslint-disable-next-line no-console
-      console.debug('IMPORT DEBUG - manifest warbandEntry:', warbandEntry)
+      console.log('IMPORT DEBUG - manifest warbandEntry:', warbandEntry)
       let fighters: WarcryFighter[]
       let abilities: WarcryAbility[]
 
@@ -213,7 +221,7 @@ function App() {
 
               // Debug: show each custom fighter after weapon expansion
               // eslint-disable-next-line no-console
-              console.debug('IMPORT DEBUG - built custom fighter:', built._id, built.name, built.weapons)
+              console.log('IMPORT DEBUG - built custom fighter:', built._id, built.name, built.weapons)
 
               return built
             })
@@ -234,14 +242,14 @@ function App() {
 
       // Debug: log fighters count before attempting matches
       // eslint-disable-next-line no-console
-      console.debug('IMPORT DEBUG - fighters loaded count:', fighters.length)
+      console.log('IMPORT DEBUG - fighters loaded count:', fighters.length)
 
       const cards: ImportedCard[] = fighterNames.map((name) => {
         const fighter = findBestFighterMatch(fighters, name)
         if (!fighter) {
           // Debug: report unmatched name
           // eslint-disable-next-line no-console
-          console.debug('IMPORT DEBUG - no match for imported name:', name)
+          console.log('IMPORT DEBUG - no match for imported name:', name)
           return {
             importedName: name,
             fighter: null,

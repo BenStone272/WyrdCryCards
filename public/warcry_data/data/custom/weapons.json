@@ -1,0 +1,32 @@
+[
+  {
+    "Weapon": "Dagger",
+    "min_range": "0",
+    "max_range": "1",
+    "attacks": "3",
+    "dmg_hit": "1",
+    "dmg_crit": "3",
+    "Special": "",
+    "runemark": "axe"
+  },
+  {
+    "Weapon": "Warhammer",
+    "min_range": "0",
+    "max_range": "1",
+    "attacks": "3",
+    "dmg_hit": "2",
+    "dmg_crit": "3",
+    "Special": "Piercing 1",
+    "runemark": "axe"
+  },
+  {
+    "Weapon": "Spear",
+    "min_range": "0",
+    "max_range": "2",
+    "attacks": "3",
+    "dmg_hit": "2",
+    "dmg_crit": "3",
+    "Special": "Piercing 1",
+    "runemark": "axe"
+  }
+]
