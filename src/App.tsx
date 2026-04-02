@@ -7,7 +7,7 @@ import { parseWarcrierRoster } from './import/warcrierImport'
 import { isAbilityEligibleForFighter } from './integration/abilityEligibility'
 import { mergeAbilityTranslations, toAbilityTranslationPath, type WarcryAbilityTranslation } from './i18n/abilityLocalization'
 import { getUiText, type AppLocale } from './i18n/uiText'
-import type { WarcryAbility, WarcryFighter } from './types/warcry'
+import type { WarcryAbility, WarcryFighter, WarcryWeaponProfile } from './types/warcry'
 import type { ImportedCard, Manifest, WarbandHeaderInfo } from './types/cards'
 import { findBestFighterMatch, findWarbandEntry, sortAbilitiesByDice } from './utils/cardHelpers'
 import './App.css'
@@ -155,13 +155,19 @@ function App() {
         faction: warbandEntry.grandAlliance,
       })
 
+      // Debug: log parsed roster and warband entry to help diagnose matching issues
+      // These logs are temporary — remove after debugging.
+      // eslint-disable-next-line no-console
+      console.debug('IMPORT DEBUG - parsed roster:', parsed)
+      // eslint-disable-next-line no-console
+      console.debug('IMPORT DEBUG - manifest warbandEntry:', warbandEntry)
       let fighters: WarcryFighter[]
       let abilities: WarcryAbility[]
 
       const cachedFighters = fighterDataCache.current[warbandEntry.key]
       const cachedAbilities = abilityDataCache.current[`${locale}:${warbandEntry.abilitiesPath}`]
 
-      if (cachedFighters && cachedAbilities) {
+      if (cachedFighters && cachedAbilities && warbandEntry.warbandSlug !== 'custom') {
         fighters = cachedFighters
         abilities = cachedAbilities
       } else {
@@ -173,7 +179,47 @@ function App() {
             throw new Error(ui.warbandDataLoadError)
           }
 
-          fighters = (await fightersResponse.json()) as WarcryFighter[]
+          const rawFighters = await fightersResponse.json()
+          if (warbandEntry.warbandSlug === 'custom') {
+            const weaponsResponse = await fetch(withBasePath('warcry_data/data/custom/weapons.json'))
+            if (!weaponsResponse.ok) {
+              throw new Error('Failed to load custom weapons')
+            }
+            const weaponsData = await weaponsResponse.json() as any[]
+            fighters = rawFighters.map((f: any) => {
+              const fight = f.fight || 3
+              const weaponProfiles: WarcryWeaponProfile[] = []
+              if (f.weapons && typeof f.weapons === 'object' && !Array.isArray(f.weapons)) {
+                for (const key in f.weapons) {
+                  const weaponName = f.weapons[key]
+                  const weaponDef = weaponsData.find((w) => w.Weapon === weaponName)
+                  if (weaponDef) {
+                    weaponProfiles.push({
+                      runemark: weaponDef.runemark,
+                      attacks: parseInt(weaponDef.attacks),
+                      strength: fight,
+                      dmg_hit: parseInt(weaponDef.dmg_hit),
+                      dmg_crit: parseInt(weaponDef.dmg_crit),
+                      min_range: parseInt(weaponDef.min_range),
+                      max_range: parseInt(weaponDef.max_range),
+                    })
+                  }
+                }
+              }
+              const built = {
+                ...f,
+                weapons: weaponProfiles,
+              } as WarcryFighter
+
+              // Debug: show each custom fighter after weapon expansion
+              // eslint-disable-next-line no-console
+              console.debug('IMPORT DEBUG - built custom fighter:', built._id, built.name, built.weapons)
+
+              return built
+            })
+          } else {
+            fighters = rawFighters as WarcryFighter[]
+          }
           fighterDataCache.current[warbandEntry.key] = fighters
         }
 
@@ -186,9 +232,16 @@ function App() {
         ),
       )
 
+      // Debug: log fighters count before attempting matches
+      // eslint-disable-next-line no-console
+      console.debug('IMPORT DEBUG - fighters loaded count:', fighters.length)
+
       const cards: ImportedCard[] = fighterNames.map((name) => {
         const fighter = findBestFighterMatch(fighters, name)
         if (!fighter) {
+          // Debug: report unmatched name
+          // eslint-disable-next-line no-console
+          console.debug('IMPORT DEBUG - no match for imported name:', name)
           return {
             importedName: name,
             fighter: null,
