@@ -69,7 +69,7 @@ export function FighterCard({ card, runemarkPlacement, ui }: FighterCardProps) {
               </div>
               <div>
                 <dt>
-                  <img className="stat-icon" src={withBasePath('warcry_assets/runemarks/black/twists-psychology.svg')} alt={ui.braveLabel} />
+                  <img className="stat-icon" src={withBasePath('black_flag.svg')} alt={ui.braveLabel} />
                 </dt>
                 <dd>{card.fighter.brave ?? '-'}</dd>
               </div>
