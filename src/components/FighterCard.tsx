@@ -9,9 +9,10 @@ type FighterCardProps = {
   card: ImportedCard
   runemarkPlacement: 'under-name' | 'bottom'
   ui: UiText
+  onTogglePrintSide?: () => void
 }
 
-export function FighterCard({ card, runemarkPlacement, ui }: FighterCardProps) {
+export function FighterCard({ card, runemarkPlacement, ui, onTogglePrintSide }: FighterCardProps) {
   const fighterName = card.fighter?.name ?? card.importedName
 
   function renderRunemarksSection(extraClassName?: string) {
@@ -33,7 +34,19 @@ export function FighterCard({ card, runemarkPlacement, ui }: FighterCardProps) {
   }
 
   return (
-    <article className="fighter-card">
+    <article
+      className="fighter-card"
+      role="button"
+      tabIndex={0}
+      onClick={() => onTogglePrintSide?.()}
+      onKeyDown={(event) => {
+        if (event.key === 'Enter' || event.key === ' ') {
+          event.preventDefault()
+          onTogglePrintSide?.()
+        }
+      }}
+      aria-label={fighterName}
+    >
       <div className="fighter-card-header">
         <h2>{fighterName}</h2>
         {card.fighter && (
@@ -44,58 +57,59 @@ export function FighterCard({ card, runemarkPlacement, ui }: FighterCardProps) {
         )}
       </div>
 
-      {card.fighter ? (
-        <>
-          <div className="fighter-card-body">
-            <h3>{ui.statsHeading}</h3>
-            <dl className="stats-grid">
-              <div>
-                <dt>
-                  <img className="stat-icon" src={characteristicIconPath('move')} alt={ui.moveLabel} />
-                </dt>
-                <dd>{card.fighter.movement}</dd>
-              </div>
-              <div>
-                <dt>
-                  <img className="stat-icon" src={characteristicIconPath('toughness')} alt={ui.toughnessLabel} />
-                </dt>
-                <dd>{card.fighter.toughness}</dd>
-              </div>
-              <div>
-                <dt>
-                  <img className="stat-icon" src={characteristicIconPath('wounds')} alt={ui.woundsLabel} />
-                </dt>
-                <dd>{card.fighter.wounds}</dd>
-              </div>
-              <div>
-                <dt>
-                  <img className="stat-icon" src={withBasePath('black_flag.svg')} alt={ui.braveLabel} />
-                </dt>
-                <dd>{card.fighter.brave ?? '-'}</dd>
-              </div>
-            </dl>
+          {card.fighter ? (
+            <>
+              <div className="fighter-card-body">
+                <h3>{ui.statsHeading}</h3>
+                <dl className="stats-grid">
+                  <div>
+                    <dt>
+                      <img className="stat-icon" src={characteristicIconPath('move')} alt={ui.moveLabel} />
+                    </dt>
+                    <dd>{card.fighter.movement}</dd>
+                  </div>
+                  <div>
+                    <dt>
+                      <img className="stat-icon" src={characteristicIconPath('toughness')} alt={ui.toughnessLabel} />
+                    </dt>
+                    <dd>{card.fighter.toughness}</dd>
+                  </div>
+                  <div>
+                    <dt>
+                      <img className="stat-icon" src={characteristicIconPath('wounds')} alt={ui.woundsLabel} />
+                    </dt>
+                    <dd>{card.fighter.wounds}</dd>
+                  </div>
+                  <div>
+                    <dt>
+                      <img className="stat-icon" src={withBasePath('black_flag.svg')} alt={ui.braveLabel} />
+                    </dt>
+                    <dd>{card.fighter.brave ?? '-'}</dd>
+                  </div>
+                </dl>
 
-            <WeaponSection fighterId={card.fighter._id} weapons={card.fighter.weapons} ui={ui} />
+                <WeaponSection fighterId={card.fighter._id} weapons={card.fighter.weapons} ui={ui} />
 
-            <AbilitySection abilities={card.abilities} ui={ui} />
+                <AbilitySection abilities={card.abilities} ui={ui} />
 
-            <section className={runemarkPlacement === 'bottom' ? '' : 'reactions-section'}>
-              <h3>{ui.reactionsHeading}</h3>
-              <ul className="abilities-list">
-                {card.reactions.length === 0 ? (
-                  <li>{ui.noMatchingReactions}</li>
-                ) : (
-                  card.reactions.map((ability) => <li key={ability._id}>{ability.name}</li>)
-                )}
-              </ul>
-            </section>
+                <section className={runemarkPlacement === 'bottom' ? '' : 'reactions-section'}>
+                  <h3>{ui.reactionsHeading}</h3>
+                  <ul className="abilities-list">
+                    {card.reactions.length === 0 ? (
+                      <li>{ui.noMatchingReactions}</li>
+                    ) : (
+                      card.reactions.map((ability) => <li key={ability._id}>{ability.name}</li>)
+                    )}
+                  </ul>
+                </section>
 
-            {runemarkPlacement === 'bottom' && renderRunemarksSection('runemarks-bottom')}
-          </div>
-        </>
-      ) : (
-        <p className="unmatched">{ui.unmatchedFighter}</p>
-      )}
-    </article>
-  )
+                {runemarkPlacement === 'bottom' && renderRunemarksSection('runemarks-bottom')}
+              </div>
+            </>
+          ) : (
+            <p className="unmatched">{ui.unmatchedFighter}</p>
+          )}
+        </article>
+    )
 }
+

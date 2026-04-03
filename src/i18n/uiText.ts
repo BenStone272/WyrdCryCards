@@ -67,6 +67,7 @@ export type UiText = {
   moveLabel: string
   toughnessLabel: string
   woundsLabel: string
+  braveLabel: string
   rangeLabel: string
   attacksLabel: string
   strengthLabel: string
@@ -127,6 +128,7 @@ const uiText: Record<AppLocale, UiText> = {
     moveLabel: 'Move',
     toughnessLabel: 'Toughness',
     woundsLabel: 'Wounds',
+    braveLabel: 'Brave',
     rangeLabel: 'Range',
     attacksLabel: 'Attacks',
     strengthLabel: 'Strength',
@@ -185,6 +187,7 @@ const uiText: Record<AppLocale, UiText> = {
     moveLabel: 'Ruch',
     toughnessLabel: 'Wytrzymałość',
     woundsLabel: 'Rany',
+    braveLabel: 'Odwaga',
     rangeLabel: 'Zasięg',
     attacksLabel: 'Ataki',
     strengthLabel: 'Siła',

@@ -484,9 +484,20 @@ function App() {
         <section className={`cards-grid ${printSide === 'back' ? 'cards-grid-backs' : ''}`}>
           {importedCards.map((card, index) =>
             printSide === 'front' ? (
-              <FighterCard key={`${card.importedName}-${index}`} card={card} runemarkPlacement="under-name" ui={ui} />
+              <FighterCard
+                key={`${card.importedName}-${index}`}
+                card={card}
+                runemarkPlacement="under-name"
+                ui={ui}
+                onTogglePrintSide={() => setPrintSide('back')}
+              />
             ) : (
-              <CardBack key={`${card.importedName}-${index}`} card={card} ui={ui} />
+              <CardBack
+                key={`${card.importedName}-${index}`}
+                card={card}
+                ui={ui}
+                onTogglePrintSide={() => setPrintSide('front')}
+              />
             ),
           )}
         </section>

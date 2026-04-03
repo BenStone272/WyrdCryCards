@@ -7,9 +7,10 @@ import { getAbilityCostVisualWithLabels } from '../utils/cardHelpers'
 type CardBackProps = {
   card: ImportedCard
   ui: UiText
+  onTogglePrintSide?: () => void
 }
 
-export function CardBack({ card, ui }: CardBackProps) {
+export function CardBack({ card, ui, onTogglePrintSide }: CardBackProps) {
   const fighterName = card.fighter?.name ?? card.importedName
   const describedAbilities = [...card.abilities]
   const abilityCount = describedAbilities.length
@@ -21,7 +22,9 @@ export function CardBack({ card, ui }: CardBackProps) {
       return <span className="card-back-cost-text">{cost}</span>
     }
 
-    if (visual.isPassive) {
+    const isPassive = !!(visual && 'isPassive' in visual && visual.isPassive)
+
+    if (isPassive) {
       return (
         <span
           className="card-back-passive-badge"
@@ -43,7 +46,19 @@ export function CardBack({ card, ui }: CardBackProps) {
   }
 
   return (
-    <article className={`fighter-card fighter-card-back ${densityClass}`} aria-label={ui.cardBackAriaLabel(fighterName)}>
+    <article
+      className={`fighter-card fighter-card-back ${densityClass}`}
+      role="button"
+      tabIndex={0}
+      onClick={() => onTogglePrintSide?.()}
+      onKeyDown={(event) => {
+        if (event.key === 'Enter' || event.key === ' ') {
+          event.preventDefault()
+          onTogglePrintSide?.()
+        }
+      }}
+      aria-label={ui.cardBackAriaLabel(fighterName)}
+    >
       <div className="card-back-frame">
         {describedAbilities.length === 0 ? (
           <p className="card-back-note">{ui.noMatchingAbilitiesBack}</p>

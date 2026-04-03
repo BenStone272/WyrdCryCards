@@ -24,5 +24,16 @@
         "cost": "Trait",
         "description": "Enemy fighters must take a Panic test when making melee attack actions against this fighter.",
         "runemarks": ["bulwark"]
+    },
+        {
+        "_id": "f9471479",
+        "name": "Masterflame Rune",
+        "warband": "Custom",
+        "cost": "reaction",
+        "description": "A fighter can make this reaction when a friendly fighter is taken down. Until the end of the battle round, add 1 to the damage points allocated to enemy fighters by each hit and critical hit from melee attack actions made by friendly fighters while they are within 6\" of this fighter.",
+        "runemarks": [
+            "bulwark2"
+            
+        ]
     }
 ]

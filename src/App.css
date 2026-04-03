@@ -334,6 +334,7 @@
   height: var(--fighter-card-web-height);
 }
 
+
 .fighter-card-back {
   justify-content: stretch;
 }
