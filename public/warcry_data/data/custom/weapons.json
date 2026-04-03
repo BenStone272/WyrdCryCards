@@ -168,5 +168,65 @@
     "dmg_crit": "6",
     "Special": "Piercing 2, Reload, Blackpowder",
     "runemark": "ranged"
+  },
+  {
+    "Weapon": "Blunderbuss",
+    "min_range": "0",
+    "max_range": "6",
+    "attacks": "6",
+    "dmg_hit": "2",
+    "dmg_crit": "2",
+    "Special": "Blast, One-Shot",
+    "runemark": "ranged"
+  },
+  {
+    "Weapon": "Bite (Giant Rat)",
+    "min_range": "0",
+    "max_range": "1",
+    "attacks": "3",
+    "dmg_hit": "1",
+    "dmg_crit": "3",
+    "Special": "",
+    "runemark": "fangs"
+  },
+  {
+    "Weapon": "Fighting Claws",
+    "min_range": "0",
+    "max_range": "1",
+    "attacks": "4",
+    "dmg_hit": "2",
+    "dmg_crit": "4",
+    "Special": "Parry, Two-Handed",
+    "runemark": "claws"
+  },
+  {
+    "Weapon": "Weeping Blades",
+    "min_range": "0",
+    "max_range": "1",
+    "attacks": "4",
+    "dmg_hit": "3",
+    "dmg_crit": "5",
+    "Special": "Parry, Two-Handed",
+    "runemark": "dagger"
+  },
+  {
+    "Weapon": "Throwing Stars",
+    "min_range": "0",
+    "max_range": "6",
+    "attacks": "4",
+    "dmg_hit": "1",
+    "dmg_crit": "4",
+    "Special": "",
+    "runemark": "ranged"
+  },
+  {
+    "Weapon": "Warplock Pistol",
+    "min_range": "0",
+    "max_range": "6",
+    "attacks": "2",
+    "dmg_hit": "4",
+    "dmg_crit": "7",
+    "Special": "Pierce 2, Reload,\nBlackpowder",
+    "runemark": "ranged"
   }
 ]

@@ -30,25 +30,37 @@ function withBasePath(resourcePath: string): string {
   return `${base}${resourcePath.replace(/^\/+/, '')}`
 }
 
-const SAMPLE_ROSTER = `----------
-"My Skaven"
-Skaven
-995pts | 8 fighters | Valid ✓  
-
-- Warlock Engineer With Warplock Jezzail (205pts, Hero)
-- Rat Ogor (250pts)
-- Warplock Jezzail (150pts)
-- Stormvermin with Rusty Halberd (95pts)
-- Stormvermin with Rusty Halberd and Clanshield (80pts)
-- Packmaster (75pts)
-- Clanrat with Rusty Blade (70pts)
-- Clanrat with Rusty Blade (70pts)
-----------
-Generated on Warcrier.net`
+const SAMPLE_ROSTER = `Custom
+[
+  {
+    "Name": "Merc",
+    "movement": "5",
+    "toughness": "3",
+    "wounds": "10",
+    "fight": "3",
+    "shoot": "3",
+    "brave": "3",
+    "Weapon1": "Warhammer",
+    "Weapon2": "",
+    "runemarks": "Driven by Greed"
+  },
+  {
+    "Name": "Merc 2",
+    "movement": "5",
+    "toughness": "3",
+    "wounds": "10",
+    "fight": "3",
+    "shoot": "4",
+    "brave": "3",
+    "Weapon1": "Dagger",
+    "Weapon2": "Crossbow",
+    "runemarks": "Driven by Greed,Tough"
+  }
+]`
 
 const LOCALE_STORAGE_KEY = 'warcryfightercards.locale'
 const WARCRIER_WARBANDS_URL = 'https://www.warcrier.net/docs/warbands'
-const GITHUB_URL = 'https://github.com/michaltalaga/WarcryFighterCards'
+const GITHUB_URL = 'https://github.com/BenStone272/WyrdCryCards'
 const DATA_SOURCE_URL = 'https://github.com/krisling049/warcry_data'
 const CARD_ASSETS_URL = 'https://github.com/Stevrak/warcry_legions'
 
@@ -410,14 +422,7 @@ function App() {
           <div className="app-header-copy">
             <h1>{ui.appTitle}</h1>
             <p>{ui.appDescription}</p>
-            <a
-              className="app-header-link"
-              href={WARCRIER_WARBANDS_URL}
-              target="_blank"
-              rel="noreferrer"
-            >
-              {ui.appWarcrierLinkLabel}
-            </a>
+  
           </div>
 
           <div className="app-header-actions">

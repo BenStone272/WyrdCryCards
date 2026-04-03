@@ -87,7 +87,7 @@ export type UiText = {
 const uiText: Record<AppLocale, UiText> = {
   en: {
     appTitle: 'WyrdCry Fighter Cards',
-    appDescription: 'Paste a Warcrier roster export to generate printable fighter cards.',
+    appDescription: 'Paste a JSON roster to generate printable fighter cards.',
     appWarcrierLinkLabel: 'Create a band on Warcrier',
     languageLabel: 'Language',
     languagePickerAriaLabel: 'Language picker',
