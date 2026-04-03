@@ -1,0 +1,362 @@
+[
+  {
+    "_id": "Fearsome",
+    "name": "Fearsome",
+    "warband": "Custom",
+    "cost": "Trait",
+    "description": "Enemy fighters must take a Panic test when\nmaking melee attack actions against this\nfighter.",
+    "runemarks": ["Fearsome"]
+  },
+  {
+    "_id": "Oppressor",
+    "name": "Oppressor",
+    "warband": "Custom",
+    "cost": "Trait",
+    "description": "Once per battle round, when an enemy\nfighter makes the 'Retreat' action, this\nfighter can make the 'Cut Them Down'\nreaction without having to forfeit an action\nto do so.",
+    "runemarks": ["Oppressor"]
+  },
+  {
+    "_id": "Weapon Master",
+    "name": "Weapon Master",
+    "warband": "Custom",
+    "cost": "Trait",
+    "description": "Select a melee weapon type. When making\nattack actions with weapons of that type,\nincrease the critical damage characteristic\nby 1.",
+    "runemarks": ["Weapon Master"]
+  },
+  {
+    "_id": "Staggering Blows",
+    "name": "Staggering Blows",
+    "warband": "Custom",
+    "cost": "Double",
+    "description": "A fighter can use this ability after allocating\ndamage points to an enemy fighter with a\nmelee attack action. That enemy fighter\ncannot use reactions for the rest of the\nbattle round. In addition, if the melee\nattack action allocated damage points from\na critical hit, the target cannot use abilities\nfor the rest of the battle round.",
+    "runemarks": ["Staggering Blows"]
+  },
+  {
+    "_id": "Shield Bash",
+    "name": "Shield Bash",
+    "warband": "Custom",
+    "cost": "Double",
+    "description": "This ability requires the fighter being\nequipped with a shield. Select an enemy\nfighter within 1\"\" of this fighter. That fighter\nmakes a free retreat action directly away\nfrom this fighter. If it cannot move away\nfrom this fighter, allocate (X/2) damage\npoints to that fighter instead.",
+    "runemarks": ["Shield Bash"]
+  },
+  {
+    "_id": "Maintain Momentum",
+    "name": "Maintain Momentum",
+    "warband": "Custom",
+    "cost": "Triple",
+    "description": "A fighter can only use this ability if an\nenemy fighter has been taken down by an\nattack action made by them this activation.\nThis fighter makes a bonus move action or\na bonus attack action",
+    "runemarks": ["Maintain Momentum"]
+  },
+  {
+    "_id": "Indomitable",
+    "name": "Indomitable",
+    "warband": "Custom",
+    "cost": "Trait",
+    "description": "Each time this fighter is activated, you\ncan remove D3 damage points allocated\nto them.",
+    "runemarks": ["Indomitable"]
+  },
+  {
+    "_id": "Nine Lives",
+    "name": "Nine Lives",
+    "warband": "Custom",
+    "cost": "Trait",
+    "description": "When rolling for injuries, this fighter can\nre-roll a result of 11-12. In addition, there\nis no limit to the amount of permanent\ninjuries this fighter may have.",
+    "runemarks": ["Nine Lives"]
+  },
+  {
+    "_id": "Tough",
+    "name": "Tough",
+    "warband": "Custom",
+    "cost": "Trait",
+    "description": "Each time an attack action scores any\ncritical hits on this fighter, 1 of those critical\nhits becomes a hit instead.",
+    "runemarks": ["Tough"]
+  },
+  {
+    "_id": "Endure",
+    "name": "Endure",
+    "warband": "Custom",
+    "cost": "Reaction",
+    "description": "A fighter can make this reaction after they\nare targeted by an attack action but before\nthe hit rolls are made. Subtract 1 from the\ndamage points allocated by each hit and\ncritical hit (to a minimum of 1) from that\nattack action.",
+    "runemarks": ["Endure"]
+  },
+  {
+    "_id": "Shield Wall",
+    "name": "Shield Wall",
+    "warband": "Custom",
+    "cost": "Double",
+    "description": "Until the end of the battle round, add\n(X/2) to the Defense characteristic of all\nfriendly fighters within 1\" of this fighter\nwhen targeted by ranged attack actions.",
+    "runemarks": ["Shield Wall"]
+  },
+  {
+    "_id": "Bodyguard",
+    "name": "Bodyguard",
+    "warband": "Custom",
+    "cost": "Double",
+    "description": "Select a friendly Hero within 1\" of this\nfighter. Until the end of the battle round,\nthat Hero cannot be targeted while they are\nwithin 1\" of this fighter.",
+    "runemarks": ["Bodyguard"]
+  },
+  {
+    "_id": "Duelist",
+    "name": "Duelist",
+    "warband": "Custom",
+    "cost": "Trait",
+    "description": "Once per battle round, this fighter can make\nthe 'Counter' reaction without having to\nforfeit an action to do so.",
+    "runemarks": ["Duelist"]
+  },
+  {
+    "_id": "Infiltrator",
+    "name": "Infiltrator",
+    "warband": "Custom",
+    "cost": "Trait",
+    "description": "At the beginning of the first battle round,\nthis fighter can make a free move action.",
+    "runemarks": ["Infiltrator"]
+  },
+  {
+    "_id": "Stealthy",
+    "name": "Stealthy",
+    "warband": "Custom",
+    "cost": "Trait",
+    "description": "Whenever this fighter is targeted by an\nenemy fighter, it is considered to be in\ncover if both of the following are true:\n● It is more than 6\" from the enemy fighter.\n● It is within 1\" of an obstacle, or part of\nits base is underneath a vantage point.",
+    "runemarks": ["Stealthy"]
+  },
+  {
+    "_id": "Wall-Runner",
+    "name": "Wall-Runner",
+    "warband": "Custom",
+    "cost": "Trait",
+    "description": "This fighter may ignore the first 3\"\" moved\nvertically when making move actions.",
+    "runemarks": ["Wall-Runner"]
+  },
+  {
+    "_id": "Step-Aside",
+    "name": "Step-Aside",
+    "warband": "Custom",
+    "cost": "Reaction",
+    "description": "A fighter can make this reaction after they\nare targeted by a melee attack action but\nbefore any hit rolls are made. Roll 1 dice for\neach successful hit. On a 4+, that hit counts\nas a miss and is discarded.",
+    "runemarks": ["Step-Aside"]
+  },
+  {
+    "_id": "Disengage",
+    "name": "Disengage",
+    "warband": "Custom",
+    "cost": "Double",
+    "description": "A fighter can only use this ability if they are\nwithin 1\"\" of an enemy fighter. This fighter\nmakes a free Retreat action.",
+    "runemarks": ["Disengage"]
+  },
+  {
+    "_id": "Trip",
+    "name": "Trip",
+    "warband": "Custom",
+    "cost": "Double",
+    "description": "After this fighter's next melee attack action\nin this activation, if at least 1 hit roll from\nthat attack action results in a hit, the target\nmust forfeit 1 of their actions in this battle\nround. If the target has already activated\nor if they have no more actions to forfeit,\nallocate (X/2) damage points to the target\ninstead.",
+    "runemarks": ["Trip"]
+  },
+  {
+    "_id": "Quick Shot",
+    "name": "Quick Shot",
+    "warband": "Custom",
+    "cost": "Triple",
+    "description": "This fighter makes a free ranged attack\naction.",
+    "runemarks": ["Quick Shot"]
+  },
+  {
+    "_id": "Rapid Reload",
+    "name": "Rapid Reload",
+    "warband": "Custom",
+    "cost": "Trait",
+    "description": "At the end of this fighter's activation, you\nmay reload one of this fighter's weapons\nwith the Reload special rule.",
+    "runemarks": ["Rapid Reload"]
+  },
+  {
+    "_id": "Surgical Precision",
+    "name": "Surgical Precision",
+    "warband": "Custom",
+    "cost": "Trait",
+    "description": "Select a ranged weapon type. When making\nattack actions with weapons of that type,\nincrease the Critical Damage characteristic\nby 1.",
+    "runemarks": ["Surgical Precision"]
+  },
+  {
+    "_id": "Trick Shot",
+    "name": "Trick Shot",
+    "warband": "Custom",
+    "cost": "",
+    "description": "When this fighter makes a ranged attack\naction, the target does not count as being\nin cover.",
+    "runemarks": ["Trick Shot"]
+  },
+  {
+    "_id": "Patient Hunter",
+    "name": "Patient Hunter",
+    "warband": "Custom",
+    "cost": "Reaction",
+    "description": "When an enemy fighter ends a move action\nwhile visible to this fighter, this fighter can\ntarget that enemy fighter with a free ranged\nattack action.",
+    "runemarks": ["Patient Hunter"]
+  },
+  {
+    "_id": "Reckless Shot",
+    "name": "Reckless Shot",
+    "warband": "Custom",
+    "cost": "Double",
+    "description": "For this fighter's next ranged attack action,\nit may target enemy fighters within 1 of\nfriendly fighters.",
+    "runemarks": ["Reckless Shot"]
+  },
+  {
+    "_id": "Eagle Eyes",
+    "name": "Eagle Eyes",
+    "warband": "Custom",
+    "cost": "Trait",
+    "description": "When making an attack action using a bow,\ncrossbow or handgun, this fighter may\nignore the maximum range of the weapon,\nbut if they do, they must reduce their Shoot\ncharacteristic by 1.",
+    "runemarks": ["Eagle Eyes"]
+  },
+  {
+    "_id": "Arcane Attunement",
+    "name": "Arcane Attunement",
+    "warband": "Custom",
+    "cost": "Trait",
+    "description": "WIZARD only. Start each battle with one\nadditional Wyrd Dice.",
+    "runemarks": ["Arcane Attunement"]
+  },
+  {
+    "_id": "Tactician",
+    "name": "Tactician",
+    "warband": "Custom",
+    "cost": "Trait",
+    "description": "LEADER only. Start each battle with one\nadditional Wyrd Dice.",
+    "runemarks": ["Tactician"]
+  },
+  {
+    "_id": "Pious",
+    "name": "Pious",
+    "warband": "Custom",
+    "cost": "Trait",
+    "description": "PRIEST only. Start each battle with one\nadditional Wyrd Dice.",
+    "runemarks": ["Pious"]
+  },
+  {
+    "_id": "Charismatic",
+    "name": "Charismatic",
+    "warband": "Custom",
+    "cost": "Trait",
+    "description": "Once per battle, this fighter can use\nthe 'Inspiring Presence' ability without\nneeding or spending ability dice to do so.",
+    "runemarks": ["Charismatic"]
+  },
+  {
+    "_id": "Underground Contacts",
+    "name": "Underground Contacts",
+    "warband": "Custom",
+    "cost": "Trait",
+    "description": "When employing a hired sword, roll a d6.\nOn a 4+, you may reduce the hiring fee by\n50% (rounding up).",
+    "runemarks": ["Underground Contacts"]
+  },
+  {
+    "_id": "Maintain Momentum",
+    "name": "Maintain Momentum",
+    "warband": "Custom",
+    "cost": "Trait",
+    "description": "LEADER only. When seizing the initiative,\nif there is a tie, do not roll off. Instead the\nplayer controlling this fighter chooses\nwhich tied player has the initiative. If\nmultiple warbands have this talent, the\nplayers of those warbands roll off, and\nthe winner chooses which tied player\nhas the initiative.",
+    "runemarks": ["Maintain Momentum"]
+  },
+  {
+    "_id": "Fall Back!",
+    "name": "Fall Back!",
+    "warband": "Custom",
+    "cost": "Reaction",
+    "description": "A fighter can make this\nreaction after they have been\nallocated the total damage\npoints by a melee attack\naction. This fighter makes\na free Retreat action.",
+    "runemarks": ["Fall Back!"]
+  },
+  {
+    "_id": "Lead the charge",
+    "name": "Lead the charge",
+    "warband": "Custom",
+    "cost": "Triple",
+    "description": "A fighter can use this ability after ending a\nmove action within 1\" of an enemy fighter.\nUp to (X/2) Friendly fighters within 6\"\" of\nthis fighter can make a bonus move action,\nbut must end that move action closer to\nthis fighter.",
+    "runemarks": ["Lead the charge"]
+  },
+  {
+    "_id": "Warcry",
+    "name": "Warcry",
+    "warband": "Custom",
+    "cost": "Triple",
+    "description": "Friendly fighters within 6  of this fighter\nare no longer panicked, and does not have\nto take panic tests until the end of the\nbattleround.",
+    "runemarks": ["Warcry"]
+  },
+  {
+    "_id": "Strategize",
+    "name": "Strategize",
+    "warband": "Custom",
+    "cost": "Triple",
+    "description": "This ability can only be used once in each battle.\nDuring this activation, when this fighter makes a wait action, roll (X) dice.\nFor each roll of 4+, you may add 1 wyrd dice do your saved wyrd dice.",
+    "runemarks": ["Strategize"  ]
+  },
+  {
+    "_id": "Driven by Greed",
+    "name": "Driven by Greed",
+    "warband": "Custom",
+    "cost": "Double",
+    "description": "A fighter can only use this ability if it is\ncarrying, or is within 1 of a wyrdstone token or treasure token. Add 1 to the\nFight and Attacks characteristic of this fighter's next melee attack action.",
+    "runemarks": ["Driven by Greed"]
+  },
+  {
+    "_id": "Hunter's Eye",
+    "name": "Hunter's Eye",
+    "warband": "Custom",
+    "cost": "Double",
+    "description": "For this fighter's next ranged attack action, add 1 to\nthe damage points allocated to the target by each hit and critical hit.",
+    "runemarks": ["Hunter's Eye"]
+  },
+  {
+    "_id": "One with the Shadows",
+    "name": "One with the Shadows",
+    "warband": "Custom",
+    "cost": "Trait",
+    "description": "If this fighter is in cover from an enemy fighter, it is not visible to that\nfighter.",
+    "runemarks": ["One with the Shadows"]
+  },
+  {
+    "_id": "Slink Away",
+    "name": "Slink Away",
+    "warband": "Custom",
+    "cost": "Double",
+    "description": "This fighter makes a free retreat action.",
+    "runemarks": ["Slink Away"]
+  },
+  {
+    "_id": "Murder Stab",
+    "name": "Murder Stab",
+    "warband": "Custom",
+    "cost": "Triple",
+    "description": "Add half the value of this ability (rounding up) to the\nFight characteristic of this fighter's next melee attack action.In addition, if\nthis ability is used while this fighter is not visible to enemy fighters, add the\n1 to the damage points allocated by each hit and critical hit from that melee\nattack action.",
+    "runemarks": ["Murder Stab"]
+  },
+  {
+    "_id": "Pack Tactics",
+    "name": "Pack Tactics",
+    "warband": "Custom",
+    "cost": "Double",
+    "description": "For this fighter's next attack action, you may add\n1 to it's Fight characteristic for each friendly HENCHMAN within 1 of the\ntarget.",
+    "runemarks": ["Pack Tactics"]
+  },
+  {
+    "_id": "Skitterleap",
+    "name": "Skitterleap",
+    "warband": "Custom",
+    "cost": "Triple",
+    "description": "Magical ability. A fighter cannot use this ability while\nwithin 1\" of an enemy fighter or when carrying a token. Remove this\nfighter from the battlefield, then set it up on the battlefield floor or on a\nplatform, more than 6\" from all enemy warriors, objective markers and\nscenario tokens.",
+    "runemarks": ["Skitterleap"]
+  },
+  {
+    "_id": "Gnawdoom",
+    "name": "Gnawdoom",
+    "warband": "Custom",
+    "cost": "Triple",
+    "description": "Magical ability. Select an enemy fighter within 6\" and\nroll X d6. For each roll that exceeds the target's Defense characteristic,\nallocate 2 damage points to that enemy fighter.",
+    "runemarks": ["Gnawdoom"]
+  },
+  {
+    "_id": "Enshrouding Mist",
+    "name": "Enshrouding Mist",
+    "warband": "Custom",
+    "cost": "Triple",
+    "description": "Magical ability. Until the end of the\nbattleround, fighters within (X/2)\" of this fighter are not visible to other\nfighters.",
+    "runemarks": ["Enshrouding Mist"]
+  }
+]

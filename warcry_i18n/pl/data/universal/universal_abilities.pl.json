@@ -1,0 +1,150 @@
+[
+  {
+    "_id": "e9de24c7",
+    "name": "Zryw",
+    "warband": "universal",
+    "cost": "double",
+    "description": "Dodaj 1 do cechy Ruch tego wojownika do końca jego aktywacji.",
+    "runemarks": [],
+    "sourceName": "Rush",
+    "sourceDescription": "Add 1 to the Move characteristic of this fighter until the end of their activation."
+  },
+  {
+    "_id": "40099170",
+    "name": "Natarcie",
+    "warband": "universal",
+    "cost": "triple",
+    "description": "Dodaj 1 do cechy Ataki akcji ataku wręcz wykonywanych przez tego wojownika do końca jego aktywacji.",
+    "runemarks": [],
+    "sourceName": "Onslaught",
+    "sourceDescription": "Add 1 to the Attacks characteristic of melee attack actions made by this fighter until the end of their activation."
+  },
+  {
+    "_id": "04bd58bb",
+    "name": "Wytchnienie",
+    "warband": "universal",
+    "cost": "double",
+    "description": "Wojownik nie może użyć tej zdolności, jeśli znajduje się w odległości 1\" od jakichkolwiek wrogich wojowników. Usuń liczbę punktów obrażeń przydzielonych temu wojownikowi równą wartości tej zdolności.",
+    "runemarks": [],
+    "sourceName": "Respite",
+    "sourceDescription": "A fighter cannot use this ability if they are within 1\" of any enemy fighters. Remove a number of damage points allocated to this fighter equal to the value of this ability."
+  },
+  {
+    "_id": "d04e3a07",
+    "name": "Inspirująca obecność",
+    "warband": "universal",
+    "cost": "triple",
+    "description": "Wybierz widocznego sojuszniczego wojownika w odległości 6\" od tego wojownika, który jeszcze nie aktywował się w tej rundzie bitwy. Możesz aktywować tego wojownika natychmiast po zakończeniu aktywacji tego wojownika.",
+    "runemarks": [
+      "hero"
+    ],
+    "sourceName": "Inspiring Presence",
+    "sourceDescription": "Pick a visible friendly fighter within 6\" of this fighter that has not activated yet this battle round. You can activate that fighter immediately after this fighter's activation ends."
+  },
+  {
+    "_id": "8e7f9b93",
+    "name": "Rozliczenie",
+    "warband": "universal",
+    "cost": "quad",
+    "description": "Jeśli połowa lub więcej wojowników w twojej drużynie bojowej została wyeliminowana, ten wojownik może wykonać dodatkową akcję ruchu o liczbie cali do wartości tej zdolności. Następnie, jeśli znajduje się w odległości 1\" od jakichkolwiek wrogich wojowników, może wykonać dodatkową akcję ataku.",
+    "runemarks": [],
+    "sourceName": "Reckoning",
+    "sourceDescription": "If half or more of the fighters in your warband are taken down, this fighter can make a bonus move action of a number of inches up to the value of this ability. Then, if they are within 1\" of any enemy fighters, they can make a bonus attack action."
+  },
+  {
+    "_id": "fe2713fc",
+    "name": "Więzy",
+    "warband": "universal",
+    "cost": "double",
+    "description": "Wybierz wrogiego potwora w odległości 1\" od tego wojownika i rzuć liczbą kości równą wartości tej zdolności. Za każde 4+ odejmij 1 od cechy Ruch tego potwora (do minimum 3) do końca bitwy.",
+    "runemarks": [],
+    "sourceName": "Binding Ropes",
+    "sourceDescription": "Pick an enemy monster within 1\" of this fighter and roll a number of dice equal to the value of this ability. For each 4+, subtract 1 from the Move characteristic of that monster (to a minimum of 3) until the end of the battle."
+  },
+  {
+    "_id": "5c47cc25",
+    "name": "Celuj w oczy",
+    "warband": "universal",
+    "cost": "triple",
+    "description": "Jeśli następna akcja ataku wykonana przez tego wojownika podczas tej aktywacji, której celem jest wrogi potwór, zada jakiekolwiek trafienia krytyczne, odejmij 1 od cechy Ataki (do minimum 1) akcji ataku wykonywanych przez tego potwora do końca bitwy.",
+    "runemarks": [],
+    "sourceName": "Go for the Eyes",
+    "sourceDescription": "If the next attack action made by this fighter this activation that targets an enemy monster scores any critical hits, subtract 1 from the Attacks characteristic (to a minimum of 1) of attack actions made by that monster until the end of the battle."
+  },
+  {
+    "_id": "d53cedf3",
+    "name": "Prowokacja",
+    "warband": "universal",
+    "cost": "quad",
+    "description": "Wybierz widocznego wrogiego potwora w odległości 6\" od tego wojownika i rzuć liczbą kości równą wartości tej zdolności. Jeśli na którejkolwiek kości wypadnie 4+, to do końca rundy bitwy albo do chwili, gdy ten wojownik zostanie wyeliminowany, akcje ataku wykonywane przez tego potwora muszą wybierać tego wojownika jako cel.",
+    "runemarks": [],
+    "sourceName": "Taunt",
+    "sourceDescription": "Pick a visible enemy monster within 6\" of this fighter and roll a number of dice equal to the value of this ability. If a 4+ is rolled on any of the dice, then until the end of the battle round or until this fighter is taken down, attack actions made by that monster must target this fighter."
+  },
+  {
+    "_id": "68a583a2",
+    "name": "Kontra",
+    "warband": "universal",
+    "cost": "reaction",
+    "description": "Wojownik może wykonać tę reakcję po tym, jak stał się celem akcji ataku wręcz, ale zanim wykonane zostaną rzuty na trafienie. Jeśli występują jakiekolwiek niemodyfikowane rzuty na trafienie o wyniku 1, przydziel atakującemu wojownikowi 2 punkty obrażeń. Dodatkowo, jeśli 2 lub więcej rzutów na trafienie z tej akcji ataku okaże się pudłem, przydziel atakującemu wojownikowi 1 punkt obrażeń.",
+    "runemarks": [],
+    "sourceName": "Counter",
+    "sourceDescription": "A fighter can make this reaction after they are targeted by a melee attack action but before the hit rolls are made. If there are any unmodified hit rolls of 1, allocate 2 damage points to the attacking fighter. In addition, if there are 2 or more hit rolls from that attack action that miss, allocate 1 damage point to the attacking fighter."
+  },
+  {
+    "_id": "7095764c",
+    "name": "Kryj się",
+    "warband": "universal",
+    "cost": "reaction",
+    "description": "Wojownik znajdujący się w osłonie może wykonać tę reakcję po tym, jak stał się celem akcji ataku strzeleckiego, ale zanim wykonane zostaną rzuty na trafienie. Po wykonaniu rzutów na trafienie rzuć kością za każde trafienie krytyczne. Przy wyniku 4+ to trafienie krytyczne staje się zwykłym trafieniem. Wojownicy z runemarkiem Mount nie mogą wykonać tej reakcji.",
+    "runemarks": [],
+    "sourceName": "Take Cover",
+    "sourceDescription": "A fighter that is in cover can make this reaction after they are targeted by a missile attack action but before the hit rolls are made. After the hit rolls have been made, roll a dice for each critical hit. On a 4+, that critical hit becomes a hit instead. Fighters with the Mount runemark cannot make this reaction."
+  },
+  {
+    "_id": "fddbbcf5",
+    "name": "Powal ich",
+    "warband": "universal",
+    "cost": "reaction",
+    "description": "Wojownik może wykonać tę reakcję, gdy widoczny wrogi wojownik w odległości 1\" od niego wykonuje akcję wycofania, ale zanim ten wojownik się oddali. Rzuć kością. Przy wyniku 4+ przydziel tamtemu wrogiemu wojownikowi D6 punktów obrażeń.",
+    "runemarks": [],
+    "sourceName": "Strike Them Down",
+    "sourceDescription": "A fighter can make this reaction when a visible enemy fighter within 1\" of them makes a disengage action but before that fighter moves away. Roll a dice. On a 4+, allocate D6 damage points to that enemy fighter."
+  },
+  {
+    "_id": "7588a039",
+    "name": "Monstrualny zasięg",
+    "warband": "universal",
+    "cost": "double",
+    "description": "Do końca aktywacji tego potwora nie licz pionowej odległości podczas mierzenia zasięgu akcji ataku wykonywanych przez tego potwora.",
+    "runemarks": [
+      "monster"
+    ],
+    "sourceName": "Monstrous Reach",
+    "sourceDescription": "Until the end of this monster's activation, do not count the vertical distance when measuring the range for attack actions made by this monster."
+  },
+  {
+    "_id": "f6ddb62f",
+    "name": "Przyciągnij i rozszarp",
+    "warband": "universal",
+    "cost": "triple",
+    "description": "Wybierz widocznego wrogiego wojownika w odległości 6\" od tego potwora. Usuń tego wojownika z pola bitwy i wystaw go w odległości 1\" od tego potwora. Następnie rzuć liczbą kości równą wartości tej zdolności. Za każde 4+ przydziel temu wojownikowi 3 punkty obrażeń.",
+    "runemarks": [
+      "monster"
+    ],
+    "sourceName": "Drag and Maul",
+    "sourceDescription": "Pick a visible enemy fighter within 6\" of this monster. Remove that fighter from the battlefield and set them up within 1\" of this monster. Then, roll a number of dice equal to the value of this ability. For each 4+, allocate 3 damage points to that fighter."
+  },
+  {
+    "_id": "c382b2b8",
+    "name": "Niszczycielski szał",
+    "warband": "universal",
+    "cost": "quad",
+    "description": "Wybierz element terenu w odległości 1\" od tego potwora. W wybranej kolejności umieść każdy cel, znacznik skarbu i każdego wojownika znajdujących się na tym elemencie terenu oraz na każdym innym elemencie terenu znajdującym się na nim na podłodze pola bitwy, w wybranym przez siebie miejscu, możliwie najbliżej w poziomie ich obecnego położenia. Następnie, w wybranej kolejności, każdy wojownik umieszczony w ten sposób otrzymuje obrażenia od uderzenia. Na końcu usuń ten element lub elementy terenu.",
+    "runemarks": [
+      "monster"
+    ],
+    "sourceName": "Demolishing Rampage",
+    "sourceDescription": "Pick a terrain feature within 1\" of this monster. In an order of your choice, place each objective, treasure token and fighter that is on that terrain feature, and on any other terrain feature that is on that terrain feature, on the battlefield floor in a location of your choice as close as possible horizontally to its current location. Then, in an order of your choice, each fighter placed on the battlefield in this manner suffers impact damage. Then, remove the terrain feature(s)."
+  }
+]

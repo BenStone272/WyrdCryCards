@@ -1,0 +1,232 @@
+[
+  {
+    "Weapon": "Dagger",
+    "min_range": "0",
+    "max_range": "1",
+    "attacks": "3",
+    "dmg_hit": "1",
+    "dmg_crit": "3",
+    "Special": "",
+    "runemark": "dagger"
+  },
+  {
+    "Weapon": "Warhammer",
+    "min_range": "0",
+    "max_range": "1",
+    "attacks": "3",
+    "dmg_hit": "2",
+    "dmg_crit": "3",
+    "Special": "Piercing 1",
+    "runemark": "hammer"
+  },
+  {
+    "Weapon": "Spear",
+    "min_range": "0",
+    "max_range": "2",
+    "attacks": "3",
+    "dmg_hit": "2",
+    "dmg_crit": "3",
+    "Special": "Piercing 1",
+    "runemark": "spear"
+  },
+  {
+    "Weapon": "Club",
+    "min_range": "0",
+    "max_range": "1",
+    "attacks": "3",
+    "dmg_hit": "2",
+    "dmg_crit": "3",
+    "Special": "",
+    "runemark": "club"
+  },
+  {
+    "Weapon": "Morning Star",
+    "min_range": "0",
+    "max_range": "1",
+    "attacks": "3",
+    "dmg_hit": "2",
+    "dmg_crit": "3",
+    "Special": "Piercing 1",
+    "runemark": "hammer"
+  },
+  {
+    "Weapon": "Great Warhammer",
+    "min_range": "0",
+    "max_range": "1",
+    "attacks": "2",
+    "dmg_hit": "4",
+    "dmg_crit": "6",
+    "Special": "Piercing 2, Two-Handed",
+    "runemark": "axe"
+  },
+  {
+    "Weapon": "Axe",
+    "min_range": "0",
+    "max_range": "1",
+    "attacks": "3",
+    "dmg_hit": "2",
+    "dmg_crit": "4",
+    "Special": "",
+    "runemark": "axe"
+  },
+  {
+    "Weapon": "Sword",
+    "min_range": "0",
+    "max_range": "1",
+    "attacks": "3",
+    "dmg_hit": "2",
+    "dmg_crit": "3",
+    "Special": "Parry",
+    "runemark": "sword"
+  },
+  {
+    "Weapon": "Great Sword",
+    "min_range": "0",
+    "max_range": "1",
+    "attacks": "3",
+    "dmg_hit": "3",
+    "dmg_crit": "5",
+    "Special": "Piercing 1, Two-Handed",
+    "runemark": "sword"
+  },
+  {
+    "Weapon": "Halberd",
+    "min_range": "0",
+    "max_range": "2",
+    "attacks": "3",
+    "dmg_hit": "2",
+    "dmg_crit": "4",
+    "Special": "Two-Handed",
+    "runemark": "spear"
+  },
+  {
+    "Weapon": "Flail",
+    "min_range": "0",
+    "max_range": "2",
+    "attacks": "2",
+    "dmg_hit": "2",
+    "dmg_crit": "4",
+    "Special": "Piercing 1, Two Handed",
+    "runemark": "spear"
+  },
+  {
+    "Weapon": "Throwing Daggers",
+    "min_range": "0",
+    "max_range": "6",
+    "attacks": "3",
+    "dmg_hit": "1",
+    "dmg_crit": "3",
+    "Special": "",
+    "runemark": "ranged"
+  },
+  {
+    "Weapon": "Sling",
+    "min_range": "3",
+    "max_range": "12",
+    "attacks": "3",
+    "dmg_hit": "2",
+    "dmg_crit": "3",
+    "Special": "",
+    "runemark": "ranged"
+  },
+  {
+    "Weapon": "Bow",
+    "min_range": "3",
+    "max_range": "16",
+    "attacks": "3",
+    "dmg_hit": "2",
+    "dmg_crit": "3",
+    "Special": "",
+    "runemark": "ranged"
+  },
+  {
+    "Weapon": "Crossbow",
+    "min_range": "3",
+    "max_range": "24",
+    "attacks": "2",
+    "dmg_hit": "3",
+    "dmg_crit": "5",
+    "Special": "Piercing 1, Reload",
+    "runemark": "ranged"
+  },
+  {
+    "Weapon": "Pistol",
+    "min_range": "0",
+    "max_range": "6",
+    "attacks": "2",
+    "dmg_hit": "4",
+    "dmg_crit": "6",
+    "Special": "Piercing 2, Reload,Blackpowder",
+    "runemark": "ranged"
+  },
+  {
+    "Weapon": "Handgun",
+    "min_range": "3",
+    "max_range": "24",
+    "attacks": "2",
+    "dmg_hit": "4",
+    "dmg_crit": "6",
+    "Special": "Piercing 2, Reload, Blackpowder",
+    "runemark": "ranged"
+  },
+  {
+    "Weapon": "Blunderbuss",
+    "min_range": "0",
+    "max_range": "6",
+    "attacks": "6",
+    "dmg_hit": "2",
+    "dmg_crit": "2",
+    "Special": "Blast, One-Shot",
+    "runemark": "ranged"
+  },
+  {
+    "Weapon": "Bite (Giant Rat)",
+    "min_range": "0",
+    "max_range": "1",
+    "attacks": "3",
+    "dmg_hit": "1",
+    "dmg_crit": "3",
+    "Special": "",
+    "runemark": "fangs"
+  },
+  {
+    "Weapon": "Fighting Claws",
+    "min_range": "0",
+    "max_range": "1",
+    "attacks": "4",
+    "dmg_hit": "2",
+    "dmg_crit": "4",
+    "Special": "Parry, Two-Handed",
+    "runemark": "claws"
+  },
+  {
+    "Weapon": "Weeping Blades",
+    "min_range": "0",
+    "max_range": "1",
+    "attacks": "4",
+    "dmg_hit": "3",
+    "dmg_crit": "5",
+    "Special": "Parry, Two-Handed",
+    "runemark": "dagger"
+  },
+  {
+    "Weapon": "Throwing Stars",
+    "min_range": "0",
+    "max_range": "6",
+    "attacks": "4",
+    "dmg_hit": "1",
+    "dmg_crit": "4",
+    "Special": "",
+    "runemark": "ranged"
+  },
+  {
+    "Weapon": "Warplock Pistol",
+    "min_range": "0",
+    "max_range": "6",
+    "attacks": "2",
+    "dmg_hit": "4",
+    "dmg_crit": "7",
+    "Special": "Pierce 2, Reload,\nBlackpowder",
+    "runemark": "ranged"
+  }
+]

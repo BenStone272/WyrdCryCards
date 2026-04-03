@@ -1,0 +1,232 @@
+[
+  {
+    "_id": "dac75ae0",
+    "name": "Atak ptaka",
+    "warband": "Blackpowder's Buccaneers",
+    "cost": "double",
+    "description": "Wybierz widocznego sojuszniczego wojownika w odległości 6\" od tego wojownika, który ma runemarki Blackpowder's Buccaneers i Fly. Tamten wojownik może wykonać dodatkową akcję ruchu albo dodatkową akcję ataku.",
+    "runemarks": [
+      "hero"
+    ],
+    "sourceName": "Bird Strike",
+    "sourceDescription": "Pick a visible friendly fighter within 6\" of this fighter that has both the Blackpowder's Buccaneers and the Fly runemarks. That fighter can make a bonus move action or a bonus attack action."
+  },
+  {
+    "_id": "40159f70",
+    "name": "Poszczuj go",
+    "warband": "Blackpowder's Buccaneers",
+    "cost": "double",
+    "description": "Wybierz widocznego sojuszniczego wojownika w odległości 6\" od tego wojownika, który ma runemarki Blackpowder's Buccaneers i Frienzied. Tamten wojownik może wykonać dodatkową akcję ruchu albo dodatkową akcję ataku.",
+    "runemarks": [
+      "scout"
+    ],
+    "sourceName": "Sic 'Em",
+    "sourceDescription": "Pick a visible friendly fighter within 6\" of this fighter that has both the Blackpowder's Buccaneers and the Frienzied runemarks. That fighter can make a bonus move action or a bonus attack action."
+  },
+  {
+    "_id": "cafaa4d4",
+    "name": "Salwa burtowa",
+    "warband": "Blackpowder's Buccaneers",
+    "cost": "triple",
+    "description": "Dodaj 3 do cechy Ataki następnej akcji ataku wykonanej przez tego wojownika podczas tej aktywacji, jeśli jej celem jest wrogi wojownik oddalony o więcej niż 3\".",
+    "runemarks": [
+      "hero"
+    ],
+    "sourceName": "Broadside",
+    "sourceDescription": "Add 3 to the Attacks characteristic of the next attack action made by this fighter that targets an enemy fighter more than 3\" away in this activation."
+  },
+  {
+    "_id": "f700a7cf",
+    "name": "Zastaw sidła na ludzi",
+    "warband": "Hrothgorn's Mantrappers",
+    "cost": "double",
+    "description": "Wojownik może użyć tej zdolności tylko raz na bitwę. Wybierz punkt na platformie lub podłodze pola bitwy w odległości 3\" od tego wojownika, który znajduje się dalej niż 1\" od wszystkich wrogich wojowników, i wystaw znacznik Bushwakka's Trap. Przydziel 2D6 punktów obrażeń pierwszemu wrogiemu wojownikowi, który przemieści się w odległość 1\" od znacznika, a następnie usuń ten znacznik.",
+    "runemarks": [
+      "trapper"
+    ],
+    "sourceName": "Lay Mantrap",
+    "sourceDescription": "A fighter can only use this ability once per battle. Pick a point on a platform or the battlefield floor within 3\" of this fighter that is more than 1\" away from all enemy fighters and set up the Bushwakka's Trap marker. Allocate 2D6 damage points to the first enemy fighter to move within 1\" of the marker, then remove the marker."
+  },
+  {
+    "_id": "27400a51",
+    "name": "Proszę, szefie!",
+    "warband": "Hrothgorn's Mantrappers",
+    "cost": "triple",
+    "description": "Wojownik może użyć tej zdolności tylko wtedy, gdy znajduje się w odległości 2\" od sojuszniczego Hrothgorn Mantrappera. Tamten Hrothgorn Mantrapper wykonuje dodatkową akcję ataku, która ma runemark Ranged Weapon.",
+    "runemarks": [
+      "minion"
+    ],
+    "sourceName": "Here You Go, Boss!",
+    "sourceDescription": "A fighter can use this ability only if they are within 2\" of a friendly Hrothgorn Mantrapper. That Hrothgorn Mantrapper makes a bonus attack action that has a Ranged Weapon runemark."
+  },
+  {
+    "_id": "8e24e130",
+    "name": "Krwawa polewka",
+    "warband": "Ogor Mawtribes",
+    "cost": "double",
+    "description": "Usuń z tego wojownika liczbę punktów obrażeń do wartości tej zdolności.",
+    "runemarks": [
+      "mystic",
+      "hero"
+    ],
+    "sourceName": "Bloodgruel",
+    "sourceDescription": "Remove a number of damage points from this fighter up to the value of this ability."
+  },
+  {
+    "_id": "ac53eae6",
+    "name": "Susy",
+    "warband": "Ogor Mawtribes",
+    "cost": "double",
+    "description": "Wojownik może użyć tej zdolności tylko wtedy, gdy w odległości 6\" od niego znajduje się widoczny wrogi wojownik. Ten wojownik wykonuje dodatkową akcję ruchu i musi zakończyć ją bliżej najbliższego widocznego wrogiego wojownika niż znajdował się na początku tej akcji ruchu.",
+    "runemarks": [
+      "agile"
+    ],
+    "sourceName": "Bounding Leaps",
+    "sourceDescription": "A fighter can only use this ability if there is a visible enemy fighter within 6\" of them. This fighter makes a bonus move action and must finish closer to the closest visible enemy fighter than they were at the start of that move action."
+  },
+  {
+    "_id": "c45c8a49",
+    "name": "Żelazna pięść",
+    "warband": "Ogor Mawtribes",
+    "cost": "double",
+    "description": "Wybierz widocznego wrogiego wojownika w odległości 1\" od tego wojownika i rzuć 2 kośćmi. Za każdy wynik 3-5 przydziel temu wojownikowi 1 punkt obrażeń. Za każdy wynik 6 przydziel temu wojownikowi liczbę punktów obrażeń równą wartości tej zdolności.",
+    "runemarks": [
+      "bulwark"
+    ],
+    "sourceName": "Ironfist",
+    "sourceDescription": "Pick a visible enemy fighter within 1\" of this fighter and roll 2 dice. For each roll of 3-5, allocate 1 damage point to that fighter. For each roll of 6, allocate a number of damage points to that fighter equal to the value of this ability."
+  },
+  {
+    "_id": "4d1168cf",
+    "name": "Prowadź skal",
+    "warband": "Ogor Mawtribes",
+    "cost": "double",
+    "description": "Wybierz widocznego sojuszniczego wojownika z runemarkiem Beast w odległości 4\" od tego wojownika. Tamten sojuszniczy wojownik wykonuje dodatkową akcję ataku.",
+    "runemarks": [
+      "hero",
+      "scout"
+    ],
+    "sourceName": "Lead the Skal",
+    "sourceDescription": "Pick a visible friendly fighter with the Beast runemark within 4\" of this fighter. That friendly fighter makes a bonus attack action."
+  },
+  {
+    "_id": "0562672c",
+    "name": "Siła daje rację",
+    "warband": "Ogor Mawtribes",
+    "cost": "double",
+    "description": "Wojownik może użyć tej zdolności tylko wtedy, gdy wrogi wojownik został wyeliminowany przez akcję ataku wykonaną przez niego podczas tej aktywacji. Ten wojownik wykonuje dodatkową akcję ruchu albo dodatkową akcję ataku.",
+    "runemarks": [
+      "hero"
+    ],
+    "sourceName": "Might Makes Right",
+    "sourceDescription": "A fighter can only use this ability if an enemy fighter has been taken down by an attack action made by them this activation. This fighter makes a bonus move action or a bonus attack action."
+  },
+  {
+    "_id": "27d60586",
+    "name": "Na ścieżce Maw",
+    "warband": "Ogor Mawtribes",
+    "cost": "double",
+    "description": "Dodaj 3 do cechy Ruch tego wojownika dla jego następnej akcji ruchu podczas tej aktywacji.",
+    "runemarks": [
+      "brute"
+    ],
+    "sourceName": "On the Mawpath",
+    "sourceDescription": "Add 3 to this fighter's Move characteristic for their next move action in this activation."
+  },
+  {
+    "_id": "ee97ec8b",
+    "name": "Szarża byka",
+    "warband": "Ogor Mawtribes",
+    "cost": "triple",
+    "description": "Do końca aktywacji tego wojownika, następnym razem gdy ten wojownik zakończy akcję ruchu w odległości 1\" od wrogiego wojownika, wybierz widocznego wrogiego wojownika w odległości 1\" od tego wojownika. Przydziel temu wojownikowi liczbę punktów obrażeń równą wartości tej zdolności.",
+    "runemarks": [
+      "brute"
+    ],
+    "sourceName": "Bullcharge",
+    "sourceDescription": "Until the end of this fighter's activation, the next time this fighter finishes a move action within 1\" of an enemy fighter, pick a visible enemy fighter within 1\" of this fighter. Allocate a number of damage points to that fighter equal to the value of this ability."
+  },
+  {
+    "_id": "f908717e",
+    "name": "Bully pierwszego stopnia",
+    "warband": "Ogor Mawtribes",
+    "cost": "triple",
+    "description": "Wybierz widocznego sojuszniczego wojownika w odległości 2\" od tego wojownika. Przydziel temu sojuszniczemu wojownikowi liczbę punktów obrażeń równą połowie wartości tej zdolności (zaokrąglając w górę). Następnie tamten sojuszniczy wojownik wykonuje dodatkową akcję ruchu albo dodatkową akcję ataku.",
+    "runemarks": [
+      "hero",
+      "champion"
+    ],
+    "sourceName": "Bully of the First Degree",
+    "sourceDescription": "Pick a visible friendly fighter within 2\" of this fighter. Allocate a number of damage points to that friendly fighter equal to half the value of this ability (rounding up). Then, that friendly fighter makes a bonus move action or a bonus attack action."
+  },
+  {
+    "_id": "62590600",
+    "name": "Podstępne pułapki",
+    "warband": "Ogor Mawtribes",
+    "cost": "double",
+    "description": "Do końca rundy bitwy, za każdym razem gdy wrogi wojownik zakończy akcję ruchu w odległości 3\" od tego wojownika, ten wojownik otrzymuje obrażenia od uderzenia.",
+    "runemarks": [
+      "trapper"
+    ],
+    "sourceName": "Sneaky Traps",
+    "sourceDescription": "Until the end of the battle round, each time an enemy fighter finishes a move action within 3\" of this fighter, that fighter suffers impact damage."
+  },
+  {
+    "_id": "ef08e341",
+    "name": "Ognisty oddech",
+    "warband": "Ogor Mawtribes",
+    "cost": "quad",
+    "description": "Przydziel wszystkim widocznym wrogim wojownikom w odległości 3\" od tego wojownika liczbę punktów obrażeń równą wartości tej zdolności.",
+    "runemarks": [
+      "hero",
+      "frenzied"
+    ],
+    "sourceName": "Fire Breath",
+    "sourceDescription": "Allocate a number of damage points equal to the value of this ability to all visible enemy fighters within 3\" of this fighter."
+  },
+  {
+    "_id": "0fbe4c5b",
+    "name": "Gromki wybuch gorącego metalu",
+    "warband": "Ogor Mawtribes",
+    "cost": "quad",
+    "description": "Dodaj 3 do cech Ataki i Siła następnej akcji ataku strzeleckiego wykonanej przez tego wojownika podczas tej aktywacji.",
+    "runemarks": [
+      "destroyer"
+    ],
+    "sourceName": "Thunderous Blast of Hot Metal",
+    "sourceDescription": "Add 3 to the Attacks and Strength characteristics of the next missile attack action made by this fighter this activation."
+  },
+  {
+    "_id": "5021d08c",
+    "name": "Szybkie ugryzienie",
+    "warband": "Ogor Mawtribes",
+    "cost": "reaction",
+    "description": "Wojownik może wykonać tę reakcję po tym, jak stał się celem akcji ataku wręcz, ale zanim wykonane zostaną rzuty na trafienie. Jeśli żaden z rzutów na trafienie z tej akcji ataku nie daje trafienia krytycznego, przydziel atakującemu wojownikowi 3 punkty obrażeń i usuń z tego wojownika do 3 punktów obrażeń.",
+    "runemarks": [
+      "brute"
+    ],
+    "sourceName": "Quick Bite",
+    "sourceDescription": "A fighter can make this reaction after they are targeted by a melee attack action but before the hit rolls are made. If none of the hit rolls from that attack action result in a critical hit, allocate 3 damage points to the attacking fighter, and remove up to 3 damage points allocated to this fighter."
+  },
+  {
+    "_id": "ee876af0",
+    "name": "Przyciągnij ich",
+    "warband": "Ogor Mawtribes",
+    "cost": "triple",
+    "description": "Ten wojownik wykonuje dodatkową akcję ataku. Po tej akcji ataku cel tej akcji ataku wykonuje dodatkową akcję ruchu bezpośrednio w stronę tego wojownika, jak gdyby skakał, na odległość liczby cali równej wartości tej zdolności. W ten sposób może oddalić się od wrogich wojowników znajdujących się w odległości 1\" na początku tej akcji ruchu.",
+    "runemarks": [
+      "ferocious"
+    ],
+    "sourceName": "Haul 'Em In",
+    "sourceDescription": "This fighter makes a bonus attack action. After that attack action, the target of that attack action makes a bonus move action directly towards this fighter, as if they were jumping, a number of inches equal to the value of this ability. When doing so, they can move away from enemy fighters within 1\" at the start of that move action."
+  },
+  {
+    "_id": "cc988df4",
+    "name": "Ogor Mawtribes",
+    "warband": "Ogor Mawtribes",
+    "cost": "battletrait",
+    "description": "Sojuszniczy wojownicy z tą cechą bitewną oraz runemarkiem Brute albo Agile mogą wykonać następującą akcję: Pożeranie truchła: Wybierz wrogiego wojownika, który został wyeliminowany, i rzuć kością. Usuń z tego wojownika liczbę punktów obrażeń równą wynikowi rzutu. Wrogi wojownik nie może być wybrany jako cel tej akcji więcej niż raz na bitwę.",
+    "runemarks": [],
+    "sourceName": "Ogor Mawtribes",
+    "sourceDescription": "Friendly fighters with this battle trait and the Brute or Agile runemarks can make the following action:Devour Corpse:Pick an enemy fighter that is taken down and roll a dice. Remove a number of damage points from this fighter equal to the roll. An enemy fighter cannot be picked as the target of this action more than once per battle."
+  }
+]

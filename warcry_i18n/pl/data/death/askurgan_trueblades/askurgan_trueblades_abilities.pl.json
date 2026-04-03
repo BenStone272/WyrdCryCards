@@ -1,0 +1,92 @@
+[
+  {
+    "_id": "48f97b6e",
+    "name": "Moment dzikości",
+    "warband": "Askurgan Trueblades",
+    "cost": "double",
+    "description": "Wojownik może użyć tej zdolności tylko wtedy, gdy wrogi wojownik został wyeliminowany przez akcję ataku wykonaną przez niego podczas tej aktywacji. Ten wojownik wykonuje dodatkową akcję ruchu albo dodatkową akcję ataku.",
+    "runemarks": [],
+    "sourceName": "Moment of Savagery",
+    "sourceDescription": "A fighter can only use this ability if an enemy fighter has been taken down by an attack action made by them this activation.  This fighter makes a bonus move action or a bonus attack action."
+  },
+  {
+    "_id": "a9afcaaa",
+    "name": "Doskonały cios",
+    "warband": "Askurgan Trueblades",
+    "cost": "triple",
+    "description": "Do końca aktywacji tego wojownika akcje ataku wykonywane przez tego wojownika zadają trafienie krytyczne przy wyniku 5+.",
+    "runemarks": [
+      "destroyer"
+    ],
+    "sourceName": "Perfect Strike",
+    "sourceDescription": "Until the end of this fighter's activation, attack actions made by this fighter score a critical hit on a 5+."
+  },
+  {
+    "_id": "878a98e7",
+    "name": "Godni przeciwnicy",
+    "warband": "Askurgan Trueblades",
+    "cost": "quad",
+    "description": "Do końca aktywacji tego wojownika dodaj 2 do cechy Ruch tego wojownika oraz do cechy Ataki akcji ataku wręcz wykonywanych przez tego wojownika.",
+    "runemarks": [
+      "elite"
+    ],
+    "sourceName": "Worthy Foes",
+    "sourceDescription": "Until the end of this fighter's activation, add 2 to this fighter's Move characteristic and the Attacks characteristic of melee attack actions made by this fighter."
+  },
+  {
+    "_id": "f2a7365f",
+    "name": "Bestialski chowaniec",
+    "warband": "Askurgan Trueblades",
+    "cost": "double",
+    "description": "Wybierz wrogiego wojownika w odległości 20\" od tego wojownika. Do końca rundy bitwy tamten wojownik nie może wykonywać akcji wycofania.",
+    "runemarks": [
+      "scout"
+    ],
+    "sourceName": "Beast Familiar",
+    "sourceDescription": "Pick an enemy fighter within 20\" of this fighter.  Until the end of the battle round, that fighter cannot make disengage actions."
+  },
+  {
+    "_id": "309d7f51",
+    "name": "Przerażający skowyt",
+    "warband": "Askurgan Trueblades",
+    "cost": "double",
+    "description": "Do końca rundy bitwy wrodzy wojownicy w odległości 3\" od tego wojownika nie mogą wykonywać reakcji.",
+    "runemarks": [
+      "beast"
+    ],
+    "sourceName": "Terrifying Howl",
+    "sourceDescription": "Until the end of the battle round, enemy fighters within 3\" of this fighter cannot make reactions."
+  },
+  {
+    "_id": "401d92b1",
+    "name": "Dostojna postawa",
+    "warband": "Askurgan Trueblades",
+    "cost": "triple",
+    "description": "Wojownik może użyć tej zdolności tylko wtedy, gdy wrogi wojownik został wyeliminowany przez akcję ataku wykonaną przez niego podczas tej aktywacji. Do końca rundy bitwy dodaj 1 do cechy Ataki akcji ataku wręcz wykonywanych przez widocznych sojuszniczych wojowników, gdy znajdują się oni w odległości 8\" od tego wojownika.",
+    "runemarks": [
+      "hero"
+    ],
+    "sourceName": "Magisterial Poise",
+    "sourceDescription": "A fighter can only use this ability if an enemy fighter has been taken down by an attack action made by them this activation.  Until the end of the battle round, add 1 to the Attacks characteristic of melee attack actions made by visible friendly fighters while they are within 8\" of this fighter."
+  },
+  {
+    "_id": "ef244143",
+    "name": "Wyniosła pogarda",
+    "warband": "Askurgan Trueblades",
+    "cost": "reaction",
+    "description": "Wojownik może wykonać tę reakcję, gdy stanie się celem akcji ataku wręcz, ale przed wykonaniem rzutów na trafienie. Dodaj 1 do cechy Wytrzymałość tego wojownika podczas tej akcji ataku.",
+    "runemarks": [],
+    "sourceName": "Lofty Disdain",
+    "sourceDescription": "A fighter can make this reaction when they are targeted by a melee attack action but before the hit rolls are made.  Add 1 to this fighter's Toughness characteristic during that attack action."
+  },
+  {
+    "_id": "344f399f",
+    "name": "Godny haust",
+    "warband": "Askurgan Trueblades",
+    "cost": "battletrait",
+    "description": "Po tym, jak wrogi wojownik z runemarkiem Hero i/lub cechą Rany równą 20 lub większą zostanie wyeliminowany przez akcję ataku wręcz wykonaną przez sojuszniczego wojownika z tą cechą bitewną, usuń D6 punktów obrażeń przydzielonych tamtemu sojuszniczemu wojownikowi.",
+    "runemarks": [],
+    "sourceName": "Worthy Draught",
+    "sourceDescription": "After an enemy fighter with the Hero runemark and/or that has a Wounds characteristic of 20 or greater has been taken down by a melee attack action made by a friendly fighter with this battle trait, remove D6 damage points allocated to that friendly fighter."
+  }
+]

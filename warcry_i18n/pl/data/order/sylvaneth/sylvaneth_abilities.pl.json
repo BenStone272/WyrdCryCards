@@ -1,0 +1,226 @@
+[
+  {
+    "_id": "c29c2e03",
+    "name": "Potęga Kurnotha",
+    "warband": "Skaeth's Wild Hunt",
+    "cost": "triple",
+    "description": "Do końca rundy bitwy dodaj 1 do cechy Ataki akcji ataku o cesze Zasięg równej 3 lub mniejszej wykonywanych przez sojuszniczych wojowników, gdy znajdują się w odległości 6\" od tego wojownika.",
+    "runemarks": [
+      "bulwark"
+    ],
+    "sourceName": "Might of Kurnoth",
+    "sourceDescription": "Until the end of the battle round, add 1 to the Attacks characteristic of attack actions that have a Range characteristic of 3 or less made by friendly fighters while they are within 6\" of this fighter."
+  },
+  {
+    "_id": "7eef6cb9",
+    "name": "Czerp ze śpiewu duchów",
+    "warband": "Sylvaneth",
+    "cost": "double",
+    "description": "Usuń liczbę punktów obrażeń przydzielonych temu wojownikowi do wartości tej zdolności.",
+    "runemarks": [],
+    "sourceName": "Draw from the Spirit-song",
+    "sourceDescription": "Remove a number of damage points allocated to this fighter up to the value of this ability."
+  },
+  {
+    "_id": "20404631",
+    "name": "Krzyk grozy",
+    "warband": "Sylvaneth",
+    "cost": "double",
+    "description": "Wybierz widocznego wrogiego wojownika w liczbie cali od tego wojownika równej wartości tej zdolności i rzuć kością. Przy wyniku 3+ do końca rundy bitwy tamten wojownik nie może wykonywać akcji ruchu ani akcji wycofania.",
+    "runemarks": [
+      "terrifying"
+    ],
+    "sourceName": "Shrieking Terror",
+    "sourceDescription": "Pick a visible enemy fighter within a number of inches of this fighter equal to the value of this ability and roll a dice. On a roll of 3+, until the end of the battle round, that fighter cannot make move actions or disengage actions."
+  },
+  {
+    "_id": "e90fc819",
+    "name": "Rój złośliwych duszków",
+    "warband": "Sylvaneth",
+    "cost": "double",
+    "description": "Wybierz widocznego wrogiego wojownika w odległości 6\" od tego wojownika i rzuć liczbą kości równą wartości tej zdolności. Za każdy wynik 4+ przydziel temu wojownikowi 1 punkt obrażeń.",
+    "runemarks": [
+      "hero",
+      "mystic"
+    ],
+    "sourceName": "Swarm of Spites",
+    "sourceDescription": "Pick a visible enemy fighter within 6\" of this fighter and roll a number of dice equal to the value of this ability. For each roll of 4+, allocate 1 damage point to that fighter."
+  },
+  {
+    "_id": "6d4ff90b",
+    "name": "Ogonowe szczypce Zephyrspite'a",
+    "warband": "Sylvaneth",
+    "cost": "double",
+    "description": "Wybierz widocznego wrogiego wojownika w odległości 1\" od tego wojownika i rzuć kością. Przy wyniku 3+ przydziel temu wojownikowi 3 punkty obrażeń.",
+    "runemarks": [
+      "hero",
+      "destroyer"
+    ],
+    "sourceName": "Zephyrspite's Tail Pincers",
+    "sourceDescription": "Pick a visible enemy fighter within 1\" of this fighter and roll a dice. On a roll of 3+, allocate 3 damage points to that fighter."
+  },
+  {
+    "_id": "8d12cf45",
+    "name": "Błogosławieństwo lasu",
+    "warband": "Sylvaneth",
+    "cost": "triple",
+    "description": "Usuń do D3 punktów obrażeń przydzielonych każdemu sojuszniczemu wojownikowi w odległości 6\" od tego wojownika (rzucaj za każdego z nich).",
+    "runemarks": [
+      "hero",
+      "berserker"
+    ],
+    "sourceName": "Blessing of the Forest",
+    "sourceDescription": "Remove up to D3 damage points allocated to each friendly fighter within 6\" of this fighter (roll for each)."
+  },
+  {
+    "_id": "009640ab",
+    "name": "Zew do bitwy",
+    "warband": "Sylvaneth",
+    "cost": "triple",
+    "description": "Do końca rundy bitwy dodaj 1 do cechy Ataki akcji ataku wręcz wykonywanych przez widocznych sojuszniczych wojowników, gdy znajdują się w odległości 6\" od tego wojownika.",
+    "runemarks": [
+      "hero",
+      "destroyer"
+    ],
+    "sourceName": "Call to Battle",
+    "sourceDescription": "Until the end of the battle round, add 1 to the Attacks characteristic of melee attack actions made by visible friendly fighters while they are within 6\" of this fighter."
+  },
+  {
+    "_id": "4f3d198b",
+    "name": "Urzekająca pieśń",
+    "warband": "Sylvaneth",
+    "cost": "triple",
+    "description": "Wybierz widocznego wrogiego wojownika w liczbie cali od tego wojownika równej wartości tej zdolności. Do końca rundy bitwy dodaj 1 do cechy Ataki akcji ataku wykonywanych przez sojuszniczych wojowników z runemarkiem frakcji Sylvaneth i runemarkiem Scout, których celem jest ten wojownik.",
+    "runemarks": [
+      "scout"
+    ],
+    "sourceName": "Enrapturing Song",
+    "sourceDescription": "Pick a visible enemy fighter within a number of inches of this fighter equal to the value of this ability. Until the end of the battle round, add 1 to the Attacks characteristic of attack actions made by friendly fighters with both the Sylvaneth faction runemark and the Scout runemark that target that fighter."
+  },
+  {
+    "_id": "43d14552",
+    "name": "Krocz ścieżkami duchów",
+    "warband": "Sylvaneth",
+    "cost": "triple",
+    "description": "Usuń tego wojownika z pola bitwy i wystaw go gdziekolwiek na podłodze pola bitwy, w odległości większej niż 5\" od wszelkich wrogich wojowników.",
+    "runemarks": [
+      "warrior"
+    ],
+    "sourceName": "Walk the Spirit Paths",
+    "sourceDescription": "Remove this fighter from the battlefield and set them up anywhere on the battlefield floor more than 5\" from any enemy fighters."
+  },
+  {
+    "_id": "88c6da2f",
+    "name": "Posłaniec Wiecznej Królowej",
+    "warband": "Sylvaneth",
+    "cost": "quad",
+    "description": "Do końca rundy bitwy dodaj połowę wartości tej zdolności (zaokrąglając w górę) do cech Wytrzymałość i Siła sojuszniczych wojowników, gdy znajdują się w odległości 6\" od tego wojownika.",
+    "runemarks": [
+      "hero"
+    ],
+    "sourceName": "Envoy of the Everqueen",
+    "sourceDescription": "Until the end of the battle round, add half the value of this ability (rounding up) to the Toughness and Strength characteristics of friendly fighters while they are within 6\" of this fighter."
+  },
+  {
+    "_id": "ae21c6f1",
+    "name": "Larwalne pociski",
+    "warband": "Sylvaneth",
+    "cost": "double",
+    "description": "Dodaj połowę wartości tej zdolności (zaokrąglając w górę) do cechy Siła następnej akcji ataku strzeleckiego wykonanej przez tego wojownika podczas tej aktywacji.",
+    "runemarks": [
+      "trapper"
+    ],
+    "sourceName": "Larval Shafts",
+    "sourceDescription": "Add half the value of this ability (rounding up) to the Strength characteristic of the next missile attack action made by this fighter in this activation."
+  },
+  {
+    "_id": "9fb23a1b",
+    "name": "Tętniący życiem",
+    "warband": "Sylvaneth",
+    "cost": "quad",
+    "description": "Wojownik może użyć tej zdolności tylko wtedy, gdy wrogi wojownik został wyeliminowany przez akcję ataku wykonaną przez niego podczas tej aktywacji. Usuń do 10 punktów obrażeń przydzielonych temu wojownikowi.",
+    "runemarks": [
+      "sentience"
+    ],
+    "sourceName": "Thrumming with Life",
+    "sourceDescription": "A fighter can only use this ability if an enemy fighter has been taken down by an attack action made by them this activation. Remove up to 10 damage points allocated to this fighter."
+  },
+  {
+    "_id": "4f03b091",
+    "name": "Mściwe duszki",
+    "warband": "Sylvaneth",
+    "cost": "reaction",
+    "description": "Wojownik może wykonać tę reakcję po tym, jak stał się celem akcji ataku wręcz, ale zanim wykonane zostaną rzuty na trafienie. Za każdy trafiony rzut na trafienie z tej akcji ataku przydziel atakującemu wojownikowi 1 punkt obrażeń. Za każde trafienie krytyczne przydziel zamiast tego atakującemu wojownikowi 2 punkty obrażeń.",
+    "runemarks": [],
+    "sourceName": "Vengeful Spites",
+    "sourceDescription": "A fighter can make this reaction after they are targeted by a melee attack action but before the hit rolls are made. For each hit roll from that attack action that hits, allocate 1 damage point to the attacking fighter. For each critical hit, allocate 2 damage points to the attacking fighter instead."
+  },
+  {
+    "_id": "d37ba65e",
+    "name": "Ścieżki duchów",
+    "warband": "Sylvaneth",
+    "cost": "battletrait",
+    "description": "Raz na bitwę sojuszniczy wojownik z tą cechą bitewną może użyć zdolności 'Krocz ścieżkami duchów' bez potrzeby posiadania lub wydawania jakichkolwiek kości zdolności, a także może użyć tej zdolności tak, jakby miał runemark Warrior.",
+    "runemarks": [],
+    "sourceName": "Spirit Pathways",
+    "sourceDescription": "Once per battle, a friendly fighter with this battle trait can use the 'Walk The Spirit Paths' ability without needing or spending any ability dice, and can use this ability as if they had the Warrior runemark."
+  },
+  {
+    "_id": "39080dc4",
+    "name": "Wigor i gniew",
+    "warband": "Ylthari's Guardians",
+    "cost": "double",
+    "description": "Do końca aktywacji tego wojownika dodaj 1 do punktów obrażeń przydzielanych przez każde trafienie krytyczne z akcji ataku wykonywanych przez tego wojownika.",
+    "runemarks": [],
+    "sourceName": "Vigour and Wrath",
+    "sourceDescription": "Until the end of this fighter's activation, add 1 to the damage points allocated by each critical hit from attack actions made by this fighter."
+  },
+  {
+    "_id": "a78a0f6d",
+    "name": "Żniwo",
+    "warband": "Ylthari's Guardians",
+    "cost": "quad",
+    "description": "Rzuć kością za każdego widocznego wrogiego wojownika w odległości 6\" od tego wojownika. Przy wyniku 2+ przydziel wojownikowi, za którego wykonywany jest rzut, liczbę punktów obrażeń równą wartości tej zdolności.",
+    "runemarks": [
+      "hero"
+    ],
+    "sourceName": "The Reaping",
+    "sourceDescription": "Roll a dice for each visible enemy fighter within 6\" of this fighter.  On a 2+, allocate a number of damage points equal to the value of this ability to the fighter being rolled for."
+  },
+  {
+    "_id": "909ee7a4",
+    "name": "Niekończące się łowy",
+    "warband": "Heralds of Kurnoth",
+    "cost": "double",
+    "description": "Przez resztę rundy bitwy, jeśli ten wojownik wykonuje dodatkową akcję ruchu w wyniku zdolności 'Duma Herolda' albo 'Precyzyjna salwa', może przemieścić się o 6\" zamiast o 3\" i może przy tym przechodzić przez wrogich wojowników.",
+    "runemarks": [
+      "hero"
+    ],
+    "sourceName": "The Endless Hunt",
+    "sourceDescription": "For the rest of the battle round, if this fighter makes a bonus move action as a result of the 'Herald's Pride' or 'Precision Volley' ability, they can move 6\" instead of 3\" and they can pass through enemy fighters when they do so."
+  },
+  {
+    "_id": "79d3f3ff",
+    "name": "Duma Herolda",
+    "warband": "Heralds of Kurnoth",
+    "cost": "double",
+    "description": "Inny sojuszniczy wojownik z runemarkiem Heralds of Kurnoth może wykonać dodatkową akcję ruchu o 3\". Następnie, jeśli następna akcja ataku wręcz wykonana przez tego wojownika podczas tej aktywacji zada jakiekolwiek trafienia lub trafienia krytyczne, przydziel tamtemu wrogiemu wojownikowi liczbę punktów obrażeń równą wartości tej zdolności albo przydziel zamiast tego 6 punktów obrażeń, jeśli sojuszniczy wojownik z runemarkami Hero i Heralds of Kurnoth znajduje się w odległości 1\" od tego wrogiego wojownika.",
+    "runemarks": [
+      "brute"
+    ],
+    "sourceName": "Herald's Pride",
+    "sourceDescription": "Another friendly fighter with the Heralds of Kurnoth runemark can make a bonus move action of 3\". Then, if the next melee attack action made by this fighter this activation scores any hits or critical hits, allocate a number of damage points to that enemy fighter equal to the value of this ability, or allocate 6 damage points instead if a friendly fighter with the Hero and Heralds of Kurnoth runemarks is within 1\" of that enemy fighter."
+  },
+  {
+    "_id": "bedcec7d",
+    "name": "Precyzyjna salwa",
+    "warband": "Heralds of Kurnoth",
+    "cost": "double",
+    "description": "Inny sojuszniczy wojownik z runemarkiem Heralds of Kurnoth może wykonać bonusową akcję ruchu o 3\". Następnie dodaj 1 do cechy Ataki następnej akcji ataku strzeleckiego wykonanej przez tego wojownika w tej aktywacji; ta akcja może też wybierać jako cel wrogich wojowników w odległości 1\" od dowolnych sojuszniczych wojowników. Jeśli sojuszniczy wojownik z runemarkami Hero i Heralds of Kurnoth znajduje się w odległości 1\" od tego wrogiego wojownika, ta akcja zadaje trafienia krytyczne przy wyniku 5+.",
+    "runemarks": [
+      "scout"
+    ],
+    "sourceName": "Precision Volley",
+    "sourceDescription": "Another friendly fighter with the Heralds of Kurnoth runemark can make a bonus move action of 3\". Then, add 1 to the Attacks characteristic of the next missile attack action made by this fighter this activation and that attack action can target enemy fighters within 1\" of any friendly fighters. If a friendly fighter with the Hero and Heralds of Kurnoth runemarks is within 1\" of that enemy fighter, that attack action scores critical hits on a 5+."
+  }
+]

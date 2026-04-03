@@ -1,0 +1,88 @@
+[
+  {
+    "_id": "a5e1cbb7",
+    "name": "Kolczaste uderzenie",
+    "warband": "The Unmade",
+    "cost": "double",
+    "description": "Do końca aktywacji tego wojownika, jeśli akcja ataku wykonana przez tego wojownika uzyska jakiekolwiek trafienia lub trafienia krytyczne, odejmij 1 od cechy Wytrzymałość docelowego wojownika (do minimum 1) do końca rundy bitwy.",
+    "runemarks": [],
+    "sourceName": "Barbed Strike",
+    "sourceDescription": "Until the end of this fighter's activation, if an attack action made by this fighter scores any hits or critical hits, subtract 1 from the target fighter's Toughness characteristic (to a minimum of 1) until the end of the battle round."
+  },
+  {
+    "_id": "4343d81b",
+    "name": "Łańcuchowa garota",
+    "warband": "The Unmade",
+    "cost": "double",
+    "description": "Wybierz widocznego wrogiego wojownika w odległości 5\" od tego wojownika i rzuć kością. Przy wyniku 3-4 przydziel tamtemu wojownikowi 1 punkt obrażeń. Przy wyniku 5+ przydziel tamtemu wojownikowi liczbę punktów obrażeń równą wartości tej zdolności.",
+    "runemarks": [
+      "warrior"
+    ],
+    "sourceName": "Chain Garrotte",
+    "sourceDescription": "Pick a visible enemy fighter within 5\" of this fighter and roll a dice. On a roll of 3-4, allocate 1 damage point to that fighter. On a roll of 5+, allocate a number of damage points to that fighter equal to the value of this ability."
+  },
+  {
+    "_id": "4ef5e91c",
+    "name": "Koszmarne oblicze",
+    "warband": "The Unmade",
+    "cost": "double",
+    "description": "Wybierz wrogiego wojownika w odległości od tego wojownika równej wartości tej zdolności i rzuć kością. Przy wyniku 3+ do końca rundy bitwy tamten wojownik nie może wykonywać akcji ruchu ani akcji wycofania.",
+    "runemarks": [],
+    "sourceName": "Nightmarish Visage",
+    "sourceDescription": "Pick an enemy fighter within a number of inches of this fighter equal to the value of this ability and roll a dice. On a roll of 3+, until the end of the battle round, that fighter cannot make move actions or disengage actions."
+  },
+  {
+    "_id": "87158e67",
+    "name": "Furia obdzierania",
+    "warband": "The Unmade",
+    "cost": "triple",
+    "description": "Rzuć kością za każdego widocznego wrogiego wojownika w odległości 3\" od tego wojownika. Przy wyniku 3-4 przydziel wojownikowi, za którego wykonywany jest rzut, 1 punkt obrażeń. Przy wyniku 5+ przydziel wojownikowi, za którego wykonywany jest rzut, liczbę punktów obrażeń równą wartości tej zdolności.",
+    "runemarks": [
+      "destroyer"
+    ],
+    "sourceName": "Flaying Frenzy",
+    "sourceDescription": "Roll a dice for each visible enemy fighter within 3\" of this fighter. On a roll of 3-4, allocate 1 damage point to the fighter being rolled for. On a roll of 5+, allocate a number of damage points to the fighter being rolled for equal to the value of this ability."
+  },
+  {
+    "_id": "e1dc954d",
+    "name": "Naczynie męki",
+    "warband": "The Unmade",
+    "cost": "triple",
+    "description": "Wojownik może użyć tej zdolności tylko wtedy, gdy wrogi wojownik został wyeliminowany przez akcję ataku wykonaną przez niego podczas tej aktywacji. Ten wojownik może wykonać dodatkową akcję ruchu. Następnie ten wojownik może wykonać dodatkową akcję ataku.",
+    "runemarks": [
+      "hero"
+    ],
+    "sourceName": "Vessel of Torment",
+    "sourceDescription": "A fighter can only use this ability if an enemy fighter has been taken down by an attack action made by them this activation. This fighter can make a bonus move action. Then, this fighter can make a bonus attack action."
+  },
+  {
+    "_id": "7bf89ac5",
+    "name": "Dar agonii",
+    "warband": "The Unmade",
+    "cost": "quad",
+    "description": "Ten wojownik wykonuje dodatkową akcję ataku. Dodaj 3 do cech Siła i Ataki tej akcji ataku, jeśli temu wojownikowi przydzielono 1 lub więcej punktów obrażeń.",
+    "runemarks": [],
+    "sourceName": "Gift of Agony",
+    "sourceDescription": "This fighter makes a bonus attack action. Add 3 to the Strength and Attacks characteristics of that attack action if this fighter has 1 or more damage points allocated to them."
+  },
+  {
+    "_id": "07cf5c8a",
+    "name": "Współdzielony ból",
+    "warband": "The Unmade",
+    "cost": "reaction",
+    "description": "Wojownik może wykonać tę reakcję po tym, jak stał się celem akcji ataku wręcz, ale zanim wykonane zostaną rzuty na trafienie. Za każdy trafiony rzut na trafienie z tej akcji ataku przydziel atakującemu wojownikowi 1 punkt obrażeń. Za każde trafienie krytyczne przydziel zamiast tego atakującemu wojownikowi 2 punkty obrażeń.",
+    "runemarks": [],
+    "sourceName": "Shared Pain",
+    "sourceDescription": "A fighter can make this reaction after they are targeted by a melee attack action but before the hit rolls are made. For each hit roll from that attack action that hits, allocate 1 damage point to the attacking fighter. For each critical hit, allocate 2 damage points to the attacking fighter instead."
+  },
+  {
+    "_id": "d208fe19",
+    "name": "Współdzielona rozkosz",
+    "warband": "The Unmade",
+    "cost": "battletrait",
+    "description": "Raz na bitwę, po tym jak wrogi wojownik zostanie wyeliminowany przez punkty obrażeń przydzielone przez reakcję 'Współdzielony ból', rzuć kością. Przy wyniku 3+ otrzymujesz kość zdolności `[quad]` o wartości 1.",
+    "runemarks": [],
+    "sourceName": "Shared Bliss",
+    "sourceDescription": "Once per battle, after an enemy fighter is taken down by the damage points allocated by the 'Shared Pain' reaction, roll a dice. On a 3+, you gain a [quad] ability dice with a value of 1."
+  }
+]

@@ -1,0 +1,167 @@
+[
+  {
+    "_id": "1d23c490",
+    "name": "Miażdżący chwyt",
+    "warband": "Hedonites of Slaanesh: Daemons",
+    "cost": "double",
+    "description": "Wybierz widocznego wrogiego wojownika w odległości 1\" od tego wojownika i rzuć kością. Przy wyniku 2+ do końca rundy bitwy tamten wojownik nie może wykonywać akcji ruchu ani akcji wycofania.",
+    "runemarks": [
+      "agile"
+    ],
+    "sourceName": "Crushing Grip",
+    "sourceDescription": "Pick a visible enemy fighter within 1\" of this fighter and roll a dice. On a roll of 2+, until the end of the battle round, that fighter cannot make move actions or disengage actions."
+  },
+  {
+    "_id": "dad2c7a5",
+    "name": "Dysonansowe zakłócenie",
+    "warband": "Hedonites of Slaanesh: Daemons",
+    "cost": "double",
+    "description": "Do końca rundy bitwy odejmij 1 od cechy Ataki (do minimum 1) akcji ataku wykonywanych przez wrogich wojowników, gdy znajdują się w odległości 6\" od tego wojownika.",
+    "runemarks": [
+      "hero",
+      "mystic"
+    ],
+    "sourceName": "Discordant Disruption",
+    "sourceDescription": "Until the end of the battle round, subtract 1 from the Attacks characteristic (to a minimum of 1) of attack actions made by enemy fighters while they are within 6\" of this fighter."
+  },
+  {
+    "_id": "8a98ff14",
+    "name": "Smukły i szybki",
+    "warband": "Hedonites of Slaanesh: Daemons",
+    "cost": "double",
+    "description": "Dodaj 3 do cechy Ruch tego wojownika dla jego następnej akcji ruchu podczas tej aktywacji.",
+    "runemarks": [],
+    "sourceName": "Lithe and Swift",
+    "sourceDescription": "Add 3 to this fighter's Move characteristic for their next move action this activation."
+  },
+  {
+    "_id": "83678d74",
+    "name": "Sadyści-mordercy",
+    "warband": "Hedonites of Slaanesh: Daemons",
+    "cost": "double",
+    "description": "Do końca aktywacji tego wojownika dodaj 1 do punktów obrażeń przydzielanych wrogim wojownikom przez każde trafienie i trafienie krytyczne z akcji ataku wręcz wykonywanych przez tego wojownika.",
+    "runemarks": [
+      "warrior"
+    ],
+    "sourceName": "Sadistic Killers",
+    "sourceDescription": "Until the end of this fighter's activation, add 1 to the damage points allocated to enemy fighters by each hit and critical hit from melee attack actions made by this fighter."
+  },
+  {
+    "_id": "68315ec3",
+    "name": "Przebijające uderzenie",
+    "warband": "Hedonites of Slaanesh: Daemons",
+    "cost": "triple",
+    "description": "Do końca aktywacji tego wojownika, następnym razem gdy ten wojownik zakończy akcję ruchu w odległości 1\" od wrogiego wojownika, wybierz widocznego wrogiego wojownika w odległości 1\" od tego wojownika. Przydziel temu wojownikowi liczbę punktów obrażeń równą wartości tej zdolności.",
+    "runemarks": [
+      "destroyer"
+    ],
+    "sourceName": "Impaling Strike",
+    "sourceDescription": "Until the end of this fighter's activation, the next time this fighter finishes a move action within 1\" of an enemy fighter, pick a visible enemy fighter within 1\" of this fighter. Allocate a number of damage points to that fighter equal to the value of this ability."
+  },
+  {
+    "_id": "416b283a",
+    "name": "Ognisko udręki",
+    "warband": "Hedonites of Slaanesh: Daemons",
+    "cost": "triple",
+    "description": "Do końca rundy bitwy dodaj 1 do cechy Siła akcji ataku wręcz wykonywanych przez widocznych sojuszniczych wojowników, gdy znajdują się w odległości 6\" od tego wojownika.",
+    "runemarks": [
+      "hero"
+    ],
+    "sourceName": "Locus of Excruciation",
+    "sourceDescription": "Until the end of the battle round, add 1 to the Strength characteristic of melee attack actions made by visible friendly fighters while they are within 6\" of this fighter."
+  },
+  {
+    "_id": "672c6343",
+    "name": "Lustro pochłonięcia",
+    "warband": "Hedonites of Slaanesh: Daemons",
+    "cost": "quad",
+    "description": "Wybierz widocznego wrogiego wojownika w odległości 9\" od tego wojownika. Ten wojownik nie może aktywować się ani wykonywać reakcji w tej rundzie bitwy.",
+    "runemarks": [
+      "terrifying",
+      "hero"
+    ],
+    "sourceName": "Mirror of Absorption",
+    "sourceDescription": "Pick a visible enemy fighter within 9\" of this fighter. That fighter cannot activate or make reactions in this battle round."
+  },
+  {
+    "_id": "c3cace86",
+    "name": "Zabójczy jad",
+    "warband": "Hedonites of Slaanesh: Daemons",
+    "cost": "triple",
+    "description": "Dodaj połowę wartości tej zdolności (zaokrąglając w górę) do punktów obrażeń przydzielanych wrogim wojownikom przez każde trafienie i trafienie krytyczne z następnej akcji ataku wręcz wykonanej przez tego wojownika podczas tej aktywacji.",
+    "runemarks": [
+      "agile"
+    ],
+    "sourceName": "Deadly Venom",
+    "sourceDescription": "Add half the value of this ability (rounding up) to the damage points allocated to enemy fighters by each hit and critical hit from the next melee attack action made by this fighter in this activation."
+  },
+  {
+    "_id": "c981e213",
+    "name": "Współdzielony ból",
+    "warband": "Hedonites of Slaanesh: Daemons",
+    "cost": "reaction",
+    "description": "Wojownik może wykonać tę reakcję po tym, jak stał się celem akcji ataku wręcz, ale zanim wykonane zostaną rzuty na trafienie. Za każdy trafiony rzut na trafienie z tej akcji ataku przydziel atakującemu wojownikowi 1 punkt obrażeń. Za każde trafienie krytyczne przydziel zamiast tego atakującemu wojownikowi 2 punkty obrażeń.",
+    "runemarks": [],
+    "sourceName": "Shared Pain",
+    "sourceDescription": "A fighter can make this reaction after they are targeted by a melee attack action but before the hit rolls are made. For each hit roll from that attack action that hits, allocate 1 damage point to the attacking fighter. For each critical hit, allocate 2 damage points to the attacking fighter instead."
+  },
+  {
+    "_id": "77b23b24",
+    "name": "Powab Nieobecnego Boga",
+    "warband": "Hedonites of Slaanesh: Daemons",
+    "cost": "battletrait",
+    "description": "Po fazie inicjatywy możesz wybrać wrogiego wojownika w odległości 1\" od jednego lub większej liczby sojuszniczych wojowników z tą cechą bitewną, a następnie rzucić kością. Przy wyniku 3+ do końca rundy bitwy tamten wojownik nie może wykonywać akcji wycofania.",
+    "runemarks": [],
+    "sourceName": "Lure of the Missing God",
+    "sourceDescription": "After the initiative phase,  you can pick an enemy fighter within 1\" of one of more friendly fighters with this battle trait and then roll a dice. On a roll of 3+, until the end of the battle round, that fighter cannot make disengage actions."
+  },
+  {
+    "_id": "43a7aafc",
+    "name": "Triumfalny chichot",
+    "warband": "Thricefold Discord",
+    "cost": "reaction",
+    "description": "Wojownik może wykonać tę reakcję bez utraty jednej ze swoich akcji w tej rundzie bitwy i może wykonać tę reakcję nawet wtedy, gdy już aktywował się w tej rundzie bitwy. Wojownik może wykonać tę reakcję po tym, jak inny sojuszniczy wojownik z runemarkiem Thricefold Discord zostanie zabity. Ten wojownik wykonuje dodatkową akcję ruchu albo dodatkową akcję ataku.",
+    "runemarks": [],
+    "sourceName": "Triumphant Tittering",
+    "sourceDescription": "A fighter can make this reaction without forfeiting one of their actions in that battle round, and can make this reaction even if they already activated this battle round. A fighter can make this reaction after another friendly fighter with the Thricefold Discord runemark is slain. This fighter makes a bonus move action or a bonus attack action."
+  },
+  {
+    "_id": "33e89464",
+    "name": "Skręcony bicz",
+    "warband": "Thricefold Discord",
+    "cost": "double",
+    "description": "Do końca rundy bitwy wrodzy wojownicy nie mogą wykonywać akcji wycofania, gdy znajdują się w odległości 1\" od tego wojownika. Na końcu rundy bitwy przydziel każdemu widocznemu wrogiemu wojownikowi w odległości 1\" od tego wojownika liczbę punktów obrażeń równą połowie wartości tej zdolności (zaokrąglając w górę).",
+    "runemarks": [
+      "hero",
+      "mystic"
+    ],
+    "sourceName": "The Coiled Lash",
+    "sourceDescription": "Until the end of the battle round, enemy fighters cannot make disengage actions while within 1\" of this fighter. At the end of the battle round, allocate a number of damage points equal to half the value of this ability (rounded up) to each visible enemy fighter within 1\" of this fighter."
+  },
+  {
+    "_id": "fb09bc82",
+    "name": "Ostrzaste błogosławieństwo",
+    "warband": "Thricefold Discord",
+    "cost": "triple",
+    "description": "Ten wojownik wykonuje dodatkową akcję ataku wręcz. Odejmij 5 od cechy Wytrzymałość celu tej akcji ataku, do minimum 1, dla tej akcji ataku.",
+    "runemarks": [
+      "hero",
+      "frenzied"
+    ],
+    "sourceName": "The Bladed Blessing",
+    "sourceDescription": "This fighter makes a bonus melee attack action. Subtract 5 from the Toughness characteristic of the target of that attack action, to a minimum of 1, for that attack action."
+  },
+  {
+    "_id": "e3d1a85a",
+    "name": "Niegodny wysiłek",
+    "warband": "Thricefold Discord",
+    "cost": "quad",
+    "description": "Dodaj 2 do cechy Ataki następnej akcji ataku wręcz wykonanej przez tego wojownika podczas tej aktywacji.",
+    "runemarks": [
+      "hero",
+      "brute"
+    ],
+    "sourceName": "Undignified Effort",
+    "sourceDescription": "Add 2 to the Attacks characteristic of the next melee attack action made by this fighter in this activation."
+  }
+]

@@ -1,0 +1,92 @@
+[
+  {
+    "_id": "6ae16d7b",
+    "name": "Nakarm ogary",
+    "warband": "Royal Beastflayers",
+    "cost": "double",
+    "description": "Wojownik może użyć tej zdolności tylko wtedy, gdy wrogi wojownik został wyeliminowany przez akcję ataku wykonaną przez niego podczas tej aktywacji. Usuń od każdego innego sojuszniczego wojownika w odległości 3\" od tego wojownika liczbę punktów obrażeń do wartości tej zdolności.",
+    "runemarks": [],
+    "sourceName": "Feed the Hounds",
+    "sourceDescription": "A fighter can only use this ability if an enemy fighter was taken down by an attack action made by them this activation.  Remove a number of damage points from each other friendly fighter within 3\" of this fighter, up  to the value of this ability."
+  },
+  {
+    "_id": "bd62865f",
+    "name": "Sygnał do łowów",
+    "warband": "Royal Beastflayers",
+    "cost": "double",
+    "description": "Wybierz liczbę widocznych sojuszniczych wojowników równą połowie wartości tej zdolności (zaokrąglając w górę), którzy znajdują się w odległości 3\" od tego wojownika. Każdy z tych wojowników może wykonać dodatkową akcję ruchu na liczbę cali równą wartości tej zdolności.",
+    "runemarks": [
+      "brute"
+    ],
+    "sourceName": "Sound the Hunt",
+    "sourceDescription": "Pick a number of visible friendly fighters equal to half the value of this ability (rounding up) that are within 3\" of this fighter.  Those fighters can each make a bonus move action of a number of inches equal to the value of this ability."
+  },
+  {
+    "_id": "a11bf441",
+    "name": "Taktyka sfory",
+    "warband": "Royal Beastflayers",
+    "cost": "triple",
+    "description": "Wybierz wrogiego wojownika, który jest widoczny dla tego wojownika. Przydziel tamtemu wrogiemu wojownikowi liczbę punktów obrażeń równą podwojonej liczbie sojuszniczych wojowników z runemarkiem Royal Beastflayers w odległości 3\" od niego.",
+    "runemarks": [
+      "hero"
+    ],
+    "sourceName": "Pack Tactics",
+    "sourceDescription": "Choose an enemy fighter that is visible to this fighter. Allocate a number of damage points to that enemy fighter equal to twice the number of friendly fighters with the Royal Beastflayers runemark within 3\" of them."
+  },
+  {
+    "_id": "cc051723",
+    "name": "Spuść ogary",
+    "warband": "Royal Beastflayers",
+    "cost": "triple",
+    "description": "Do końca rundy bitwy dodaj połowę wartości tej zdolności (zaokrąglając w górę) do cechy Ruch sojuszniczych wojowników z runemarkiem Royal Beastflayers, gdy wykonują akcję ruchu rozpoczynającą się w odległości 3\" od tego wojownika.",
+    "runemarks": [
+      "champion"
+    ],
+    "sourceName": "Unleash the Hounds",
+    "sourceDescription": "Until the end of the battle round, add half the value of this ability (rounding up)  to the move characteristic of friendly fighters with the Royal Beastflayers runemark while they make a move action that starts wtihin 3\" of this fighter."
+  },
+  {
+    "_id": "98fdc691",
+    "name": "Wdrapujące się maszkary",
+    "warband": "Royal Beastflayers",
+    "cost": "double",
+    "description": "Do końca aktywacji tego wojownika nie licz pionowego dystansu pokonanego przez tego wojownika podczas wspinaczki.",
+    "runemarks": [
+      "beast"
+    ],
+    "sourceName": "Clambering Horrors",
+    "sourceDescription": "Until the end of this fighter's activation, do not count the vertical distance moved when this fighter is climbing."
+  },
+  {
+    "_id": "ade2c4fa",
+    "name": "Nie ma wytchnienia, póki nasza misja nie będzie wykonana",
+    "warband": "Royal Beastflayers",
+    "cost": "quad",
+    "description": "Do końca rundy bitwy dodaj 2 do cechy Siła akcji ataku wręcz wykonywanych przez widocznych sojuszniczych wojowników, gdy znajdują się oni w odległości 6\" od tego wojownika.",
+    "runemarks": [
+      "hero"
+    ],
+    "sourceName": "No Rest till our Quest is Done",
+    "sourceDescription": "Until the end of the battle round, add 2 to the Strength characteric of melee attack actions made by visible friendly fighters while they are within 6\" of this fighter."
+  },
+  {
+    "_id": "210d401d",
+    "name": "Nieustępliwi łowcy",
+    "warband": "Royal Beastflayers",
+    "cost": "reaction",
+    "description": "Po tym, jak widoczny wrogi wojownik w odległości 1\" od tego wojownika wykona akcję wycofania, przydziel tamtemu wojownikowi D3 punktów obrażeń.",
+    "runemarks": [],
+    "sourceName": "Tenacious Hunters",
+    "sourceDescription": "After a visible enemy fighter within 1\" of this fighter makes a disengage action, allocate D3 damage points to that fighter."
+  },
+  {
+    "_id": "3bd91588",
+    "name": "Ujadanie ogarów",
+    "warband": "Royal Beastflayers",
+    "cost": "battletrait",
+    "description": "Po tym, jak wrogi wojownik zostanie wyeliminowany przez akcję ataku wręcz wykonaną przez sojuszniczego wojownika z tą cechą bitewną i runemarkiem Beast, wybierz innego wojownika w swojej drużynie bojowej. Tamten wojownik może wykonać dodatkową akcję ruchu do 3\".",
+    "runemarks": [],
+    "sourceName": "The Hounds Bay",
+    "sourceDescription": "After an enemy fighter has been taken down by a melee attack action made by a friendly fighter with this battle trait that has the Beast runemark, pick another fighter in your warband. That fighter can make a bonus move action of up to 3\"."
+  }
+]

@@ -1,0 +1,152 @@
+[
+  {
+    "_id": "e20d873a",
+    "name": "Taniec zawodzącego ostrza",
+    "warband": "Hedonites of Slaanesh: Sybarites",
+    "cost": "double",
+    "description": "Do końca aktywacji tego wojownika dodaj 1 do punktów obrażeń przydzielanych wrogim wojownikom przez każde trafienie i trafienie krytyczne z akcji ataku wręcz wykonywanych przez tego wojownika.",
+    "runemarks": [
+      "warrior"
+    ],
+    "sourceName": "Dance of the Wailing Blade",
+    "sourceDescription": "Until the end of this fighter's activation, add 1 to the damage points allocated to enemy fighters by each hit and critical hit from melee attack actions made by this fighter."
+  },
+  {
+    "_id": "982a97f2",
+    "name": "Niewolnicy impulsu",
+    "warband": "Hedonites of Slaanesh: Sybarites",
+    "cost": "double",
+    "description": "Wojownik może użyć tej zdolności tylko wtedy, gdy w odległości 6\" od niego znajduje się widoczny wrogi wojownik. Ten wojownik wykonuje dodatkową akcję ruchu i musi zakończyć ją bliżej najbliższego widocznego wrogiego wojownika niż znajdował się na początku tej akcji ruchu.",
+    "runemarks": [
+      "ferocious"
+    ],
+    "sourceName": "Slaves to Impulse",
+    "sourceDescription": "A fighter can only use this ability if there is a visible enemy fighter within 6\" of them. This fighter makes a bonus move action and must finish closer to the closest visible enemy fighter than they were at the start of that move action."
+  },
+  {
+    "_id": "25ae4b3e",
+    "name": "Niezrównana prędkość",
+    "warband": "Hedonites of Slaanesh: Sybarites",
+    "cost": "double",
+    "description": "Dodaj 3 do cechy Ruch tego wojownika dla jego następnej akcji ruchu podczas tej aktywacji.",
+    "runemarks": [],
+    "sourceName": "Unrivalled Velocity",
+    "sourceDescription": "Add 3 to this fighter's Move characteristic for their next move action in this activation."
+  },
+  {
+    "_id": "96b6782c",
+    "name": "Przemoc i przesyt",
+    "warband": "Hedonites of Slaanesh: Sybarites",
+    "cost": "double",
+    "description": "Wojownik może użyć tej zdolności tylko wtedy, gdy wrogi wojownik został wyeliminowany przez akcję ataku wykonaną przez niego podczas tej aktywacji. Ten wojownik wykonuje dodatkową akcję ruchu albo dodatkową akcję ataku.",
+    "runemarks": [
+      "hero"
+    ],
+    "sourceName": "Violence and Excess",
+    "sourceDescription": "A fighter can only use this ability if an enemy fighter has been taken down by an attack action made by them this activation. This fighter makes a bonus move action or a bonus attack action."
+  },
+  {
+    "_id": "2e0f4291",
+    "name": "Przebijające uderzenie",
+    "warband": "Hedonites of Slaanesh: Sybarites",
+    "cost": "triple",
+    "description": "Do końca aktywacji tego wojownika, następnym razem gdy ten wojownik zakończy akcję ruchu w odległości 1\" od wrogiego wojownika, wybierz widocznego wrogiego wojownika w odległości 1\" od tego wojownika. Przydziel temu wojownikowi liczbę punktów obrażeń równą wartości tej zdolności.",
+    "runemarks": [
+      "destroyer"
+    ],
+    "sourceName": "Impaling Strike",
+    "sourceDescription": "Until the end of this fighter's activation, the next time this fighter finishes a move action within 1\" of an enemy fighter, pick a visible enemy fighter within 1\" of this fighter. Allocate a number of damage points to that fighter equal to the value of this ability."
+  },
+  {
+    "_id": "94ed80a4",
+    "name": "Paragon deprawacji",
+    "warband": "Hedonites of Slaanesh: Sybarites",
+    "cost": "quad",
+    "description": "Do końca rundy bitwy dodaj wartość tej zdolności do cechy Siła akcji ataku wręcz wykonywanych przez widocznych sojuszniczych wojowników, gdy znajdują się w odległości 6\" od tego wojownika.",
+    "runemarks": [
+      "champion",
+      "hero"
+    ],
+    "sourceName": "Paragon of Depravity",
+    "sourceDescription": "Until the end of the battle round, add the value of this ability to the Strength characteristic of melee attack actions made by visible friendly fighters while they are within 6\" of this fighter."
+  },
+  {
+    "_id": "e7fd1214",
+    "name": "Macki nienaturalnego dymu",
+    "warband": "Hedonites of Slaanesh: Sybarites",
+    "cost": "triple",
+    "description": "Do końca rundy bitwy odejmij 1 od cechy Ataki (do minimum 1) akcji ataku wykonywanych przez wrogich wojowników, gdy znajdują się w odległości 6\" od tego wojownika.",
+    "runemarks": [
+      "hero",
+      "mystic"
+    ],
+    "sourceName": "Tendrils of Unnatural Smoke",
+    "sourceDescription": "Until the end of the battle round, subtract 1 from the Attacks characteristic (to a minimum of 1) of attack actions made by enemy fighters while they are within 6\" of this fighter."
+  },
+  {
+    "_id": "260bfd0f",
+    "name": "Salwa rozdzierających ostrzy",
+    "warband": "Hedonites of Slaanesh: Sybarites",
+    "cost": "triple",
+    "description": "Dodaj 2 do cechy Ataki następnej akcji ataku strzeleckiego wykonanej przez tego wojownika podczas tej aktywacji. Dodatkowo dodaj 1 do cechy Siła tej akcji, gdy ten wojownik znajduje się w odległości 3\" od sojuszniczego wojownika z runemarkiem frakcji Hedonites of Slaanesh: Sybarites oraz runemarkiem Priest.",
+    "runemarks": [
+      "minion"
+    ],
+    "sourceName": "Volley of Tearing Blades",
+    "sourceDescription": "Add 2 to the Attacks characteristic of the next missile attack action made by this fighter in this activation. In addition, add 1 to the Strength characteristic of that action while this fighter is within 3\" of a friendly fighter with the Hedonites of Slaanesh: Sybarites faction runemark and the Priest runemark."
+  },
+  {
+    "_id": "a8b8d908",
+    "name": "Nadmiar napędzany ego",
+    "warband": "Hedonites of Slaanesh: Sybarites",
+    "cost": "quad",
+    "description": "Ten wojownik może wykonać dodatkową akcję ruchu albo dodatkową akcję ataku. Dodatkowo za każdym razem, gdy wojownik zostanie wyeliminowany przez akcję ataku wykonaną przez tego wojownika podczas tej aktywacji, ten wojownik może wykonać kolejną dodatkową akcję ruchu albo dodatkową akcję ataku.",
+    "runemarks": [
+      "berserker"
+    ],
+    "sourceName": "Ego-driven Excess",
+    "sourceDescription": "This fighter can make a bonus move action or a bonus attack action. In addition, each time a fighter is taken down by an attack action made by this fighter this activation, this fighter can make a further bonus move action or bonus attack action."
+  },
+  {
+    "_id": "d9e17b86",
+    "name": "Współdzielony ból",
+    "warband": "Hedonites of Slaanesh: Sybarites",
+    "cost": "reaction",
+    "description": "Wojownik może wykonać tę reakcję po tym, jak stał się celem akcji ataku wręcz, ale zanim wykonane zostaną rzuty na trafienie. Za każdy trafiony rzut na trafienie z tej akcji ataku przydziel atakującemu wojownikowi 1 punkt obrażeń. Za każde trafienie krytyczne przydziel zamiast tego atakującemu wojownikowi 2 punkty obrażeń.",
+    "runemarks": [],
+    "sourceName": "Shared Pain",
+    "sourceDescription": "A fighter can make this reaction after they are targeted by a melee attack action but before the hit rolls are made. For each hit roll from that attack action that hits, allocate 1 damage point to the attacking fighter. For each critical hit, allocate 2 damage points to the attacking fighter instead."
+  },
+  {
+    "_id": "d001e554",
+    "name": "Ty pierwszy, nalegam",
+    "warband": "Hedonites of Slaanesh: Sybarites",
+    "cost": "double",
+    "description": "Wybierz widocznego wrogiego wojownika w odległości 1\" od tego wojownika. Tamten wrogi wojownik wykonuje dodatkową akcję ataku, której celem jest ten wojownik. Do końca aktywacji tego wojownika dodaj 2 do cech Ataki i Siła akcji ataku wręcz wykonywanych przez tego wojownika, których celem jest tamten wrogi wojownik. Dodatkowo dodaj 3 do punktów obrażeń przydzielanych przez każde trafienie krytyczne z akcji ataku wręcz wykonywanych przez tego wojownika, których celem jest tamten wrogi wojownik.",
+    "runemarks": [
+      "bulwark"
+    ],
+    "sourceName": "You First, I Insist",
+    "sourceDescription": "Pick a visible enemy fighter within 1\" of this fighter. That enemy fighter makes a bonus attack action targeting this fighter. Until the end of this fighter's activation: \n- Add 2 to the Attacks and Strength characteristics of melee attack actions made by this fighter that target that enemy fighter.\n- Add 3 to the damage points allocated by each critical hit from melee attack actions made by this fighter that target that enemy fighter."
+  },
+  {
+    "_id": "4d682138",
+    "name": "Rozkosz napędzana bólem",
+    "warband": "Hedonites of Slaanesh: Sybarites",
+    "cost": "battletrait",
+    "description": "Po tym, jak sojuszniczemu wojownikowi z tą cechą bitewną zostanie przydzielony 1 lub więcej punktów obrażeń przez akcję ataku albo reakcję, możesz wybrać, by ten wojownik popadł w rozkosz napędzaną bólem. Jeśli tak się stanie, przydziel temu sojuszniczemu wojownikowi 3 punkty obrażeń, a następnie dodaj 2 do cechy Ataki następnej akcji ataku wykonanej przez tego wojownika w tej rundzie bitwy.",
+    "runemarks": [],
+    "sourceName": "Pain-fuelled Rapture",
+    "sourceDescription": "After a friendly fighter with this  battle trait is allocated one or more damage points by an attack action or reaction, you can choose for that fighter to enter a pain-fuelled rapture. If they do so, allocate 3 damage points to that friendly fighter, and then add 2 to the Attacks characteristic of the next attack action made by this fighter in this battle round."
+  },
+  {
+    "_id": "60eaf064",
+    "name": "Kawalkada szaleństwa",
+    "warband": "The Dread Pageant",
+    "cost": "quad",
+    "description": "Ten wojownik wykonuje dodatkową akcję ataku. Dodatkowo, jeśli ten wojownik albo cel ataku ma przydzielone jakiekolwiek punkty obrażeń, dodaj 1 do cechy Ataki tej dodatkowej akcji ataku. Jeśli zarówno ten wojownik, jak i wojownik będący celem mają przydzielone jakiekolwiek punkty obrażeń, dodaj zamiast tego 3 do cechy Ataki tej dodatkowej akcji ataku.",
+    "runemarks": [],
+    "sourceName": "Cavalcade of Madness",
+    "sourceDescription": "This fighter makes a bonus attack action. In addition, if either this fighter or the target of the attack has any damage points allocated to them, add 1 to the Attacks characteristic of that bonus attack action. If both this fighter and the target fighter have any damage points allocated to them, add 3 to the Attacks characteristic of that bonus attack action instead."
+  }
+]

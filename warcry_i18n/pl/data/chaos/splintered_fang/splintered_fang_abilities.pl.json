@@ -1,0 +1,90 @@
+[
+  {
+    "_id": "aac239ca",
+    "name": "Pętająca sieć",
+    "warband": "Splintered Fang",
+    "cost": "double",
+    "description": "Wybierz widocznego wrogiego wojownika w odległości 3\" od tego wojownika. Do końca rundy bitwy tamten wrogi wojownik nie może wykonywać akcji ruchu ani akcji wycofania.",
+    "runemarks": [
+      "hero"
+    ],
+    "sourceName": "Ensnaring Net",
+    "sourceDescription": "Pick a visible enemy fighter within 3\" of this fighter. Until the end of the battle round, that enemy fighter cannot make move actions or disengage actions."
+  },
+  {
+    "_id": "798e3939",
+    "name": "Puklerz z kłami",
+    "warband": "Splintered Fang",
+    "cost": "double",
+    "description": "Wybierz widocznego wrogiego wojownika w odległości 1\" od tego wojownika i rzuć kością. Przy wyniku 3+ przydziel tamtemu wojownikowi 3 punkty obrażeń.",
+    "runemarks": [
+      "bulwark"
+    ],
+    "sourceName": "Fanged Buckler",
+    "sourceDescription": "Pick a visible enemy fighter within 1\" of this fighter and roll a dice. On a roll of 3+, allocate 3 damage points to that fighter."
+  },
+  {
+    "_id": "5557403e",
+    "name": "Zatrute ataki",
+    "warband": "Splintered Fang",
+    "cost": "double",
+    "description": "Do końca aktywacji tego wojownika cecha Siła akcji ataku wykonywanych przez tego wojownika jest liczona tak, jakby była wyższa niż cecha Wytrzymałość celu.",
+    "runemarks": [],
+    "sourceName": "Poisoned Attacks",
+    "sourceDescription": "Until the end of this fighter's activation, the Strength characteristic of attack actions made by this fighter count as being higher than the target's Toughness characteristic."
+  },
+  {
+    "_id": "523cf1af",
+    "name": "Nieustanny szturm",
+    "warband": "Splintered Fang",
+    "cost": "triple",
+    "description": "Wojownik może użyć tej zdolności tylko wtedy, gdy wrogi wojownik został wyeliminowany przez akcję ataku wykonaną przez niego podczas tej aktywacji. Ten wojownik wykonuje dodatkową akcję ruchu. Następnie może wykonać dodatkową akcję ataku.",
+    "runemarks": [
+      "brute"
+    ],
+    "sourceName": "Relentless Assault",
+    "sourceDescription": "A fighter can only use this ability if an enemy fighter has been taken down by an attack action made by them this activation. This fighter makes a bonus move action. Then, they can make a bonus attack action."
+  },
+  {
+    "_id": "3bb90969",
+    "name": "Zaklinacz węży",
+    "warband": "Splintered Fang",
+    "cost": "triple",
+    "description": "Wybierz sojuszniczego wojownika z runemarkiem Beast w odległości 4\" od tego wojownika. Tamten wojownik wykonuje dodatkową akcję ataku.",
+    "runemarks": [
+      "mystic"
+    ],
+    "sourceName": "Snake Charmer",
+    "sourceDescription": "Pick a friendly fighter with the Beast runemark within 4\" of this fighter. That fighter makes a bonus attack action."
+  },
+  {
+    "_id": "2dc0b5df",
+    "name": "Paraliżujący jad",
+    "warband": "Splintered Fang",
+    "cost": "quad",
+    "description": "Do końca aktywacji tego wojownika dodaj wartość tej zdolności do punktów obrażeń przydzielanych wrogim wojownikom przez każde trafienie krytyczne z akcji ataku wykonywanych przez tego wojownika. Dodatkowo do końca aktywacji tego wojownika po każdej akcji ataku wykonanej przez tego wojownika rzuć kością. Przy wyniku 5+ do końca tej rundy bitwy docelowy wojownik nie może wykonywać akcji ruchu ani akcji wycofania.",
+    "runemarks": [],
+    "sourceName": "Paralysing Venom",
+    "sourceDescription": "Until the end of this fighter's activation, add the value of this ability to the damage points allocated to enemy fighters by each critical hit from attack actions made by this fighter. In addition, until the end of this fighter's activation, after each attack action made by this fighter, roll a dice. On a roll of 5+, until the end of this battle round, the target fighter cannot make move actions or disengage actions."
+  },
+  {
+    "_id": "7c1b88d5",
+    "name": "Zajadła riposta",
+    "warband": "Splintered Fang",
+    "cost": "reaction",
+    "description": "Wojownik może wykonać tę reakcję po tym, jak stanie się celem akcji ataku wręcz, ale przed wykonaniem rzutów na trafienie. Za każdy rzut na trafienie 1 lub 2 z tej akcji ataku przydziel atakującemu wojownikowi 2 punkty obrażeń.",
+    "runemarks": [],
+    "sourceName": "Vicious Riposte",
+    "sourceDescription": "A fighter can make this reaction after they are targeted by a melee attack action but before the hit rolls are made. For each hit roll of 1 or 2 from that attack action, allocate 2 damage points to the attacking fighter."
+  },
+  {
+    "_id": "e7ec1fba",
+    "name": "Broń ociekająca jadem",
+    "warband": "Splintered Fang",
+    "cost": "battletrait",
+    "description": "Raz na rundę bitwy sojuszniczy wojownik z tą cechą bitewną może użyć zdolności 'Zatrute ataki' bez potrzeby posiadania ani wydawania jakichkolwiek kości zdolności. Traktuj wartość tej zdolności jak 6.",
+    "runemarks": [],
+    "sourceName": "Weapons Dripping with Poison",
+    "sourceDescription": "Once per battle round, a friendly fighter with this battle trait can use the 'Poisoned Attacks' ability without needing or spending any ability dice. Tread the value of that ability as 6."
+  }
+]

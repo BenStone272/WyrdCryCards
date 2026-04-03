@@ -1,0 +1,189 @@
+[
+  {
+    "_id": "f0625e61",
+    "name": "Błyskawiczne ciosy",
+    "warband": "Stormcast Eternals Vanguard Auxiliary Chamber",
+    "cost": "double",
+    "description": "Dodaj połowę wartości tej zdolności (zaokrąglając w górę) do cechy Ataki następnej akcji ataku wręcz wykonanej przez tego wojownika podczas tej aktywacji.",
+    "runemarks": [
+      "hero",
+      "frenzied"
+    ],
+    "sourceName": "Lightning-fast Strikes",
+    "sourceDescription": "Add half the value of this ability (rounding up) to the Attacks characteristic of the next melee attack action made by this fighter this activation."
+  },
+  {
+    "_id": "be5f2527",
+    "name": "Sprawiedliwa aura",
+    "warband": "Stormcast Eternals Vanguard Auxiliary Chamber",
+    "cost": "double",
+    "description": "Do końca rundy bitwy dodaj 1 do cechy Wytrzymałość sojuszniczych wojowników, gdy znajdują się w odległości 6\" od tego wojownika.",
+    "runemarks": [
+      "hero"
+    ],
+    "sourceName": "Righteous Aura",
+    "sourceDescription": "Until the end of the battle round, add 1 to the Toughness characteristic of friendly fighters while they are within 6\" of this fighter."
+  },
+  {
+    "_id": "c5955d4a",
+    "name": "Niestrudzeni łowcy",
+    "warband": "Stormcast Eternals Vanguard Auxiliary Chamber",
+    "cost": "double",
+    "description": "Dodaj 3 do cechy Ruch tego wojownika dla jego następnej akcji ruchu podczas tej aktywacji.",
+    "runemarks": [],
+    "sourceName": "Tireless Hunters",
+    "sourceDescription": "Add 3 to this fighter's Move characteristic for their next move action in this activation."
+  },
+  {
+    "_id": "fdd57def",
+    "name": "Błyskawiczny atak",
+    "warband": "Stormcast Eternals Vanguard Auxiliary Chamber",
+    "cost": "triple",
+    "description": "Ten wojownik wykonuje dodatkową akcję ataku. Następnie może wykonać dodatkową akcję wycofania.",
+    "runemarks": [
+      "beast"
+    ],
+    "sourceName": "Darting Attack",
+    "sourceDescription": "This fighter makes a bonus attack action. Then, they can make a bonus disengage action."
+  },
+  {
+    "_id": "7adc00f3",
+    "name": "Szybki ogień",
+    "warband": "Stormcast Eternals Vanguard Auxiliary Chamber",
+    "cost": "triple",
+    "description": "Dodaj 2 do cechy Ataki następnej akcji ataku strzeleckiego wykonanej przez tego wojownika podczas tej aktywacji.",
+    "runemarks": [
+      "bulwark"
+    ],
+    "sourceName": "Rapid Fire",
+    "sourceDescription": "Add 2 to the Attacks characteristic of the next missile attack action made by this fighter this activation."
+  },
+  {
+    "_id": "86a90c64",
+    "name": "Pomknij na eterycznych wiatrach",
+    "warband": "Stormcast Eternals Vanguard Auxiliary Chamber",
+    "cost": "double",
+    "description": "Ten wojownik wykonuje dodatkową akcję ruchu do liczby cali równej wartości tej zdolności.",
+    "runemarks": [
+      "mount"
+    ],
+    "sourceName": "Ride the Winds Aetheric",
+    "sourceDescription": "This fighter makes a bonus move action up to a number of inches equal to the value of this ability."
+  },
+  {
+    "_id": "f57e8928",
+    "name": "Strzała przeznaczenia gwiazd",
+    "warband": "Stormcast Eternals Vanguard Auxiliary Chamber",
+    "cost": "triple",
+    "description": "Wybierz widocznego wrogiego wojownika w odległości 20\" od tego wojownika i rzuć kością. Przy wyniku 3-4 przydziel temu wojownikowi 3 punkty obrażeń. Przy wyniku 5 przydziel temu wojownikowi 6 punktów obrażeń. Przy wyniku 6 przydziel temu wojownikowi 10 punktów obrażeń.",
+    "runemarks": [
+      "hero",
+      "trapper"
+    ],
+    "sourceName": "Star-fated Arrow",
+    "sourceDescription": "Pick a visible enemy fighter within 20\" of this fighter and roll a dice. On a roll of 3-4, allocate 3 damage points to that fighter. On a roll of 5, allocate 6 damage points to that fighter. On a roll of 6, allocate 10 damage points to that fighter."
+  },
+  {
+    "_id": "fded2018",
+    "name": "Wymierzony cios",
+    "warband": "Stormcast Eternals Vanguard Auxiliary Chamber",
+    "cost": "quad",
+    "description": "Do końca aktywacji tego wojownika dodaj wartość tej zdolności do punktów obrażeń przydzielanych wrogim wojownikom przez każde trafienie i trafienie krytyczne z akcji ataku wykonywanych przez tego wojownika.",
+    "runemarks": [
+      "elite"
+    ],
+    "sourceName": "Aimed Strike",
+    "sourceDescription": "Until the end of this fighter's activation, add the value of this ability to the damage points allocated to enemy fighters by each hit and critical hit from attack actions made by this fighter."
+  },
+  {
+    "_id": "6908dc7d",
+    "name": "Światło Sigmara",
+    "warband": "Stormcast Eternals Vanguard Auxiliary Chamber",
+    "cost": "quad",
+    "description": "Przydziel wszystkim widocznym wrogim wojownikom w odległości 3\" od tego wojownika liczbę punktów obrażeń równą wartości tej zdolności.",
+    "runemarks": [
+      "hero",
+      "berserker"
+    ],
+    "sourceName": "The Light of Sigmar",
+    "sourceDescription": "Allocate a number of damage points equal to the value of this ability to all visible enemy fighters within 3\" of this fighter."
+  },
+  {
+    "_id": "5b61673d",
+    "name": "Ostrzegawczy okrzyk",
+    "warband": "Stormcast Eternals Vanguard Auxiliary Chamber",
+    "cost": "reaction",
+    "description": "Wojownik może wykonać tę reakcję po tym, jak wrogi wojownik zakończy widoczną dla niego akcję ruchu w odległości 6\" od niego. Do końca rundy bitwy możesz przerzucić 1 kość podczas akcji ataku wykonywanych przez sojuszniczych wojowników, których celem jest tamten wojownik.",
+    "runemarks": [
+      "scout"
+    ],
+    "sourceName": "Warning Cry",
+    "sourceDescription": "A fighter can make this reaction after an enemy fighter finishes a move action visible to this fighter and within 6\" of this fighter. Until the end of the battle round, you can re-roll 1 dice during attack actions made by friendly fighters that target that fighter."
+  },
+  {
+    "_id": "90f154cc",
+    "name": "Gromowe odejście",
+    "warband": "Stormcast Eternals Vanguard Auxiliary Chamber",
+    "cost": "reaction",
+    "description": "Wojownik może wykonać tę reakcję, gdy staje się celem akcji ataku wręcz, po zsumowaniu obrażeń, ale zanim zostaną one przydzielone temu wojownikowi, jeśli wystarczą, by ten wojownik został wyeliminowany. Przydziel D6 punktów obrażeń jego atakującemu. Wojownicy z runemarkiem Beast albo z runemarkami Scout i Fly nie mogą wykonać tej reakcji.",
+    "runemarks": [],
+    "sourceName": "Thunderous Departure",
+    "sourceDescription": "A fighter can make this reaction when they are targeted by a melee attack action, after the damage is totalled but before it is allocated to this fighter, if it is enough for this fighter to be taken down. Allocate D6 damage points to their attacker. Fighters with the Beast runemark or both the Scout and Fly runemarks cannot make this reaction."
+  },
+  {
+    "_id": "f29b1feb",
+    "name": "Potomkowie Burzy",
+    "warband": "Stormcast Eternals Vanguard Auxiliary Chamber",
+    "cost": "battletrait",
+    "description": "Po rozstawieniu możesz wybrać sojuszniczego wojownika z tą cechą bitewną. Jeśli ten wojownik znajduje się na polu bitwy, usuń go z pola bitwy. Od początku drugiej rundy bitwy, zaczynając od atakującego, możesz ustawić tego wojownika na polu bitwy w odległości większej niż 5\" od każdego wrogiego wojownika oraz większej niż 3\" od każdego celu i znacznika skarbu.",
+    "runemarks": [],
+    "sourceName": "Scions of the Storm",
+    "sourceDescription": "After deployment, you can pick a friendly fighter with this battle trait. If that fighter is on the battlefield, remove them from the battlefield. At the start of the second battle round onwards, starting with the attacker, you can place that fighter on the battlefield more than 5\" from each enemy fighter and more than 3\" from each objective and treasure token."
+  },
+  {
+    "_id": "6a8cfa78",
+    "name": "Prowadzeni przez astralny kompas",
+    "warband": "The Farstriders",
+    "cost": "triple",
+    "description": "Każdy sojuszniczy wojownik z runemarkiem The Farstriders w odległości 6\" od tego wojownika, gdy ten wojownik używa tej zdolności, może wykonać dodatkową akcję ruchu.",
+    "runemarks": [
+      "hero"
+    ],
+    "sourceName": "Guided by the Astral Compass",
+    "sourceDescription": "Each friendly fighter with the The Farstriders runemark within 6\" of this fighter when this fighter uses this ability can make a bonus move action."
+  },
+  {
+    "_id": "c53fbea1",
+    "name": "Kołczan sztuczek",
+    "warband": "The Emberwatch",
+    "cost": "double",
+    "description": "Wybierz 1 z następujących efektów. Wybierz widocznego wrogiego wojownika w odległości 12\" od tego wojownika. Odejmij 1 od cechy Ruch tego wojownika przez resztę rundy bitwy. Wybierz cel w odległości 12\" od tego wojownika. Za pierwszym razem w tej rundzie bitwy, gdy wrogi wojownik zakończy akcję ruchu w odległości 3\" od tego celu, przydziel mu D3 punktów obrażeń jako reakcję.",
+    "runemarks": [
+      "destroyer"
+    ],
+    "sourceName": "Quiver of Tricks",
+    "sourceDescription": "Pick 1 of the following effects: Pick a visible enemy fighter within 12\" of this fighter. Subtract 1 from that fighter’s Move characteristic for the rest of the battle round. Pick an objective within 12\" of this fighter. The first time this battle round that an enemy fighter ends a move action within 3\" of that objective, allocate D3 damage points to them as a reaction."
+  },
+  {
+    "_id": "f996f21b",
+    "name": "Twój obowiązek wciąż nie został wypełniony, Farasa!",
+    "warband": "The Emberwatch",
+    "cost": "triple",
+    "description": "Wybierz sojuszniczego wojownika z runemarkami Emberwatch i Champion, który został wyeliminowany, a następnie rzuć liczbą kości równą wartości tej zdolności. Za każdy wynik 3+ wystaw tego wojownika na platformie lub podłodze pola bitwy, w odległości większej niż 6\" od wszystkich wrogich wojowników. Wojownik wystawiony na polu bitwy przestaje liczyć się jako wyeliminowany. Usuń liczbę punktów obrażeń przydzielonych temu wojownikowi równą liczbie uzyskanych wyników 3+.",
+    "runemarks": [
+      "hero"
+    ],
+    "sourceName": "Your Duty Remains Undone, Farasa!",
+    "sourceDescription": "Pick a friendly fighter with the Emberwatch and Champion runemarks that has been taken down, then roll a number of dice equal to the value of this ability. On any rolls of 3+:\n\n• Set up that fighter on a platform or the battlefield floor, more than 6\" from all enemy fighters. The fighter set up on the battlefield no longer counts as being taken down. Remove a number of damage points allocated to that fighter equal to the number of rolls of 3+ that were made."
+  },
+  {
+    "_id": "c1c6dd4d",
+    "name": "Raptory Sigmara",
+    "warband": "The Emberwatch",
+    "cost": "quad",
+    "description": "Wybierz jako cel widocznego wrogiego wojownika w odległości 1\" od tego wojownika. Rzuć D6 za każdy punkt obrażeń przydzielony temu celowi. Za każdy wynik 3+ przydziel celowi 1 punkt obrażeń. Dodaj 1 do każdego rzutu, jeśli ten wojownik ma runemark Hero.",
+    "runemarks": [],
+    "sourceName": "The Raptors of Sigmar",
+    "sourceDescription": "Pick a visible enemy fighter within 1\" of this fighter to be the target. Roll a D6 for each damage point allocated to that target. For each roll of 3+, allocate 1 damage point to the target. Add 1 to each roll if this fighter has the Hero runemark."
+  }
+]
