@@ -210,6 +210,7 @@ function App() {
         fighters = parsed.customWarbandData.map((entryRaw) => {
           const entry = entryRaw as CustomFighterEntry
           const fight = Number(entry.fight ?? entry.Fight ?? 3)
+          const shoot = Number(entry.shoot ?? entry.Shoot ?? 3)
           const warband = parsed.warband ?? 'custom'
           const runemarksRaw = String(entry.runemarks ?? entry.runemark ?? '').trim()
           const runemarks = runemarksRaw.length ? runemarksRaw.split(/\s*,\s*/g) : []
@@ -224,14 +225,16 @@ function App() {
             }
             const weaponDef = weaponsData.find((w) => String(w.Weapon).toLowerCase() === String(weaponName).toLowerCase())
             if (weaponDef) {
+              const maxRange = Number(weaponDef.max_range ?? 0)
+              const strength = maxRange >= 3 ? shoot : fight
               weaponProfiles.push({
-                runemark: String(weaponDef.runemark ?? weaponDef.Runemark ?? '').trim(),
-                attacks: Number(weaponDef.attacks ?? weaponDef.Attacks ?? 0),
-                strength: fight,
-                dmg_hit: Number(weaponDef.dmg_hit ?? weaponDef.Dmg_Hit ?? 0),
-                dmg_crit: Number(weaponDef.dmg_crit ?? weaponDef.Dmg_Crit ?? 0),
-                min_range: Number(weaponDef.min_range ?? weaponDef.Min_Range ?? 0),
-                max_range: Number(weaponDef.max_range ?? weaponDef.Max_Range ?? 0),
+                runemark: String(weaponDef.runemark ?? '').trim(),
+                attacks: Number(weaponDef.attacks ?? 0),
+                strength,
+                dmg_hit: Number(weaponDef.dmg_hit ?? 0),
+                dmg_crit: Number(weaponDef.dmg_crit ?? 0),
+                min_range: Number(weaponDef.min_range ?? 0),
+                max_range: maxRange,
               })
             }
           })

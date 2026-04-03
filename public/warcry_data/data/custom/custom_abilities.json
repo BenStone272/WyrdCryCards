@@ -17,6 +17,14 @@
         "description": "Pick a visible enemy fighter within 6\" of this fighter and roll 2 dice. For each roll of 4-5, allocate 1 damage point to that fighter. For each roll of 6, allocate a number of damage points to that fighter equal to the value of this ability.",
         "runemarks": ["bulwark2"]
     },
+     {
+        "_id": "test2",
+        "name": "Quick Shot",
+        "warband": "Custom",
+        "cost": "Triple",
+        "description": "This fighter makes a free ranged attack action.",
+        "runemarks": ["bulwark2"]
+    },
     {
         "_id": "test1",
         "name": "Fearsome",
