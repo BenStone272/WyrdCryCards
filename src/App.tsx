@@ -59,7 +59,6 @@ const SAMPLE_ROSTER = `Custom
 ]`
 
 const LOCALE_STORAGE_KEY = 'warcryfightercards.locale'
-const WARCRIER_WARBANDS_URL = 'https://www.warcrier.net/docs/warbands'
 const GITHUB_URL = 'https://github.com/BenStone272/WyrdCryCards'
 const DATA_SOURCE_URL = 'https://github.com/krisling049/warcry_data'
 const CARD_ASSETS_URL = 'https://github.com/Stevrak/warcry_legions'
