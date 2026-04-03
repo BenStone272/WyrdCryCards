@@ -18,6 +18,8 @@ const targetDataDir = path.join(targetRootDir, 'data')
 const sourceRepoUrl = process.env.WARCRY_DATA_REPO_URL ?? 'https://github.com/krisling049/warcry_data.git'
 const assetsRepoDir = path.join(root, '_warcry_card_creator_source')
 const assetsTargetRootDir = path.join(root, 'public', 'warcry_assets')
+const customDataDir = path.join(targetDataDir, 'custom')
+const customDataBackupDir = path.join(root, '.tmp_custom_data_backup')
 const assetsRepoUrl =
   process.env.WARCRY_CARD_CREATOR_REPO_URL ?? 'https://github.com/barrysheppard/warcry-card-creator.git'
 const assetsSubdirs = ['runemarks']
@@ -156,8 +158,19 @@ async function main(): Promise<void> {
     throw new Error(`Source data directory not found: ${sourceDataDir}`)
   }
 
+  // Preserve local custom data between sync runs.
+  await fs.rm(customDataBackupDir, { recursive: true, force: true })
+  if (await exists(customDataDir)) {
+    await copyDirectory(customDataDir, customDataBackupDir)
+  }
+
   await fs.rm(targetRootDir, { recursive: true, force: true })
   await copyDirectory(sourceDataDir, targetDataDir)
+
+  if (await exists(customDataBackupDir)) {
+    await copyDirectory(customDataBackupDir, customDataDir)
+    await fs.rm(customDataBackupDir, { recursive: true, force: true })
+  }
 
   const warbands = await collectWarbandEntries(sourceDataDir)
   warbands.sort((a, b) => a.key.localeCompare(b.key))
