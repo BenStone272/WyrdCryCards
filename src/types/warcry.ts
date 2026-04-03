@@ -6,6 +6,8 @@ export type WarcryWeaponProfile = {
   min_range: number
   runemark: string
   strength: number
+  name?: string
+  special?: string
 }
 
 // Matches entries from data/*/*/*_fighters.json in warcry_data.

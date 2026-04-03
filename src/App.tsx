@@ -228,6 +228,7 @@ function App() {
               const maxRange = Number(weaponDef.max_range ?? 0)
               const strength = maxRange >= 3 ? shoot : fight
               weaponProfiles.push({
+                name: String(weaponName).trim(),
                 runemark: String(weaponDef.runemark ?? '').trim(),
                 attacks: Number(weaponDef.attacks ?? 0),
                 strength,
@@ -235,6 +236,7 @@ function App() {
                 dmg_crit: Number(weaponDef.dmg_crit ?? 0),
                 min_range: Number(weaponDef.min_range ?? 0),
                 max_range: maxRange,
+                special: String(weaponDef.Special ?? '').trim(),
               })
             }
           })
@@ -283,22 +285,26 @@ function App() {
               }
               const weaponsData = await weaponsResponse.json() as CustomWeapon[]
               fighters = rawFighters.map((rawFighter) => {
-                const f = rawFighter as { fight?: number; weapons?: Record<string, string> }
+                const f = rawFighter as { fight?: number; shoot?: number; weapons?: Record<string, string> }
                 const fight = f.fight ?? 3
+                const shoot = f.shoot ?? 3
                 const weaponProfiles: WarcryWeaponProfile[] = []
                 if (f.weapons && typeof f.weapons === 'object' && !Array.isArray(f.weapons)) {
                   for (const key in f.weapons) {
                     const weaponName = f.weapons[key]
                     const weaponDef = weaponsData.find((w) => w.Weapon === weaponName)
                     if (weaponDef) {
+                      const maxRange = parseInt(weaponDef.max_range)
                       weaponProfiles.push({
+                        name: String(weaponName).trim(),
                         runemark: weaponDef.runemark,
                         attacks: parseInt(weaponDef.attacks),
-                        strength: fight,
+                        strength: maxRange >= 3 ? shoot : fight,
                         dmg_hit: parseInt(weaponDef.dmg_hit),
                         dmg_crit: parseInt(weaponDef.dmg_crit),
                         min_range: parseInt(weaponDef.min_range),
-                        max_range: parseInt(weaponDef.max_range),
+                        max_range: maxRange,
+                        special: String(weaponDef.Special ?? '').trim(),
                       })
                     }
                   }
