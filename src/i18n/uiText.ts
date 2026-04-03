@@ -76,6 +76,7 @@ export type UiText = {
     triple: string
     quad: string
     passive: string
+    trait: string
   }
   matchedStatus: (matchedCount: number, totalCount: number) => string
   pointsAriaLabel: (points: number) => string
@@ -84,7 +85,7 @@ export type UiText = {
 
 const uiText: Record<AppLocale, UiText> = {
   en: {
-    appTitle: 'Warcry Fighter Cards',
+    appTitle: 'WyrdCry Fighter Cards',
     appDescription: 'Paste a Warcrier roster export to generate printable fighter cards.',
     appWarcrierLinkLabel: 'Create a band on Warcrier',
     languageLabel: 'Language',
@@ -135,6 +136,7 @@ const uiText: Record<AppLocale, UiText> = {
       triple: 'Triple',
       quad: 'Quad',
       passive: 'Passive',
+      trait: 'Trait',
     },
     matchedStatus: (matchedCount, totalCount) => `Roster imported: matched ${matchedCount}/${totalCount}`,
     pointsAriaLabel: (points) => `${points} points`,
@@ -191,8 +193,7 @@ const uiText: Record<AppLocale, UiText> = {
       double: 'Dublet',
       triple: 'Tryplet',
       quad: 'Kwadruplet',
-      passive: 'Pasywna',
-    },
+      passive: 'Pasywna',      trait: 'Cecha',    },
     matchedStatus: (matchedCount, totalCount) => `Zaimportowano rozpiskę: dopasowano ${matchedCount}/${totalCount}`,
     pointsAriaLabel: (points) => `${points} punktów`,
     cardBackAriaLabel: (fighterName) => `Tył karty ${fighterName}`,

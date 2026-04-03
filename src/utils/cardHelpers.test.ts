@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest'
 import type { WarcryAbility, WarcryWeaponProfile } from '../types/warcry'
-import { formatWeaponRange, sortAbilitiesByDice } from './cardHelpers'
+import { formatWeaponRange, getAbilityCostVisual, sortAbilitiesByDice } from './cardHelpers'
 
 function makeAbility(name: string, cost: string, id: string): WarcryAbility {
   return {
@@ -59,6 +59,16 @@ describe('sortAbilitiesByDice', () => {
     sortAbilitiesByDice(abilities)
 
     expect(abilities.map((ability) => ability.name)).toEqual(['B', 'A'])
+  })
+})
+
+describe('getAbilityCostVisual', () => {
+  it('returns trait marker for trait cost', () => {
+    expect(getAbilityCostVisual('trait')).toEqual({ diceCount: 0, label: 'Trait', isTrait: true })
+  })
+
+  it('returns passive marker for passive cost', () => {
+    expect(getAbilityCostVisual('passive')).toEqual({ diceCount: 0, label: 'Passive', isPassive: true })
   })
 })
 

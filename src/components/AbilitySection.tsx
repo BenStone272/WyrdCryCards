@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faDiceD6, faStar } from '@fortawesome/free-solid-svg-icons'
+import { faDiceD6, faMinus, faStar } from '@fortawesome/free-solid-svg-icons'
 import type { UiText } from '../i18n/uiText'
 import type { WarcryAbility } from '../types/warcry'
 import { getAbilityCostVisualWithLabels } from '../utils/cardHelpers'
@@ -19,17 +19,28 @@ export function AbilitySection({ abilities, ui }: AbilitySectionProps) {
         ) : (
           abilities.map((ability) => {
             const costVisual = getAbilityCostVisualWithLabels(ability.cost, ui.abilityCostLabels)
+            const isTrait = !!(costVisual && 'isTrait' in costVisual && costVisual.isTrait)
+            const isPassive = !!(costVisual && 'isPassive' in costVisual && costVisual.isPassive)
             return (
               <li key={ability._id} className="ability-line">
                 <span className="ability-cost-slot">
-                  {costVisual && !costVisual.isPassive && (
+                  {isTrait && (
+                    <span
+                      className="trait-badge"
+                      aria-label={costVisual?.label}
+                      title={costVisual?.label}
+                    >
+                      <FontAwesomeIcon icon={faMinus} className="trait-icon" />
+                    </span>
+                  )}
+                  {costVisual && !isPassive && !isTrait && (
                     <span className="dice-group" aria-label={costVisual.label} title={costVisual.label}>
                       {Array.from({ length: costVisual.diceCount }).map((_, index) => (
                         <FontAwesomeIcon key={index} icon={faDiceD6} className="dice-icon" />
                       ))}
                     </span>
                   )}
-                  {costVisual?.isPassive && (
+                  {isPassive && (
                     <span
                       className="passive-badge"
                       aria-label={ui.abilityCostLabels.passive}

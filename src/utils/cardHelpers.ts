@@ -174,6 +174,7 @@ export type AbilityCostLabels = {
   triple: string
   quad: string
   passive: string
+  trait: string
 }
 
 const defaultAbilityCostLabels: AbilityCostLabels = {
@@ -181,11 +182,13 @@ const defaultAbilityCostLabels: AbilityCostLabels = {
   triple: 'Triple',
   quad: 'Quad',
   passive: 'Passive',
+  trait: 'Trait',
 }
 
 export function getAbilityCostVisual(cost: string):
-  | { diceCount: number; label: string; isPassive?: false }
+  | { diceCount: number; label: string; isPassive?: false; isTrait?: false }
   | { diceCount: 0; label: string; isPassive: true }
+  | { diceCount: 0; label: string; isTrait: true }
   | null {
   return getAbilityCostVisualWithLabels(cost, defaultAbilityCostLabels)
 }
@@ -194,8 +197,9 @@ export function getAbilityCostVisualWithLabels(
   cost: string,
   labels: AbilityCostLabels,
 ):
-  | { diceCount: number; label: string; isPassive?: false }
+  | { diceCount: number; label: string; isPassive?: false; isTrait?: false }
   | { diceCount: 0; label: string; isPassive: true }
+  | { diceCount: 0; label: string; isTrait: true }
   | null {
   switch (cost.trim().toLowerCase()) {
     case 'double':
@@ -206,6 +210,8 @@ export function getAbilityCostVisualWithLabels(
       return { diceCount: 4, label: labels.quad }
     case 'passive':
       return { diceCount: 0, label: labels.passive, isPassive: true }
+    case 'trait':
+      return { diceCount: 0, label: labels.trait, isTrait: true }
     default:
       return null
   }
@@ -213,14 +219,16 @@ export function getAbilityCostVisualWithLabels(
 
 function abilityDiceOrder(cost: string): number {
   switch (cost.trim().toLowerCase()) {
+    case 'trait':
+      return 0
+    case 'passive':
+      return 1
     case 'double':
       return 2
     case 'triple':
       return 3
     case 'quad':
       return 4
-    case 'passive':
-      return 1
     default:
       return 99
   }
