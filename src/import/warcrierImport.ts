@@ -6,6 +6,7 @@ export type ImportedRoster = {
   rosterName: string | null
   warband: string | null
   fighters: ImportedFighter[]
+  customWarbandData?: unknown[]
 }
 
 export function extractDelimitedContent(input: string): string {
@@ -27,14 +28,6 @@ export function extractDelimitedContent(input: string): string {
   return lines.slice(start, end).join('\n')
 }
 
-function cleanLines(input: string): string[] {
-  const content = extractDelimitedContent(input)
-  return content
-    .split(/\r?\n/)
-    .map((line) => line.trim())
-    .filter((line) => line.length > 0)
-}
-
 function parseFighterLine(line: string): ImportedFighter | null {
   if (!line.startsWith('- ')) {
     return null
@@ -51,7 +44,40 @@ function parseFighterLine(line: string): ImportedFighter | null {
 }
 
 export function parseWarcrierRoster(input: string): ImportedRoster {
-  const lines = cleanLines(input)
+  const content = extractDelimitedContent(input).trim()
+  const lines = content
+    .split(/\r?\n/)
+    .map((line) => line.trim())
+    .filter((line) => line.length > 0)
+
+  // Custom format: warband name, then JSON array of fighter definitions
+  if (lines.length >= 2 && lines[1] === '[') {
+    const warband = lines[0]
+    const jsonStart = content.indexOf('[')
+    if (jsonStart !== -1) {
+      try {
+        const payload = JSON.parse(content.substring(jsonStart))
+        if (Array.isArray(payload)) {
+          const fighters = payload
+            .map((entryRaw) => {
+              const entry = entryRaw as Record<string, unknown>
+              const name = String(entry.Name ?? entry.name ?? '').trim()
+              return name ? { name } : null
+            })
+            .filter((item): item is ImportedFighter => item !== null)
+
+          return {
+            rosterName: null,
+            warband,
+            fighters,
+            customWarbandData: payload,
+          }
+        }
+      } catch {
+        // fall through to standard parser if invalid JSON
+      }
+    }
+  }
 
   let rosterName: string | null = null
   let warband: string | null = null

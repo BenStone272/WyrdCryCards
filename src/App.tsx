@@ -9,6 +9,19 @@ import { mergeAbilityTranslations, toAbilityTranslationPath, type WarcryAbilityT
 import { getUiText, type AppLocale } from './i18n/uiText'
 import type { WarcryAbility, WarcryFighter, WarcryWeaponProfile } from './types/warcry'
 import type { ImportedCard, Manifest, WarbandHeaderInfo } from './types/cards'
+
+type CustomWeapon = {
+  Weapon: string
+  min_range: string
+  max_range: string
+  attacks: string
+  dmg_hit: string
+  dmg_crit: string
+  Special?: string
+  runemark: string
+}
+
+type CustomFighterEntry = Record<string, unknown>
 import { findBestFighterMatch, findWarbandEntry, sortAbilitiesByDice } from './utils/cardHelpers'
 import './App.css'
 
@@ -117,11 +130,8 @@ function App() {
     const fighterNames = parsed.fighters.map((fighter) => fighter.name)
 
     // Debug: log the import start and parsed data
-    // eslint-disable-next-line no-console
     console.log('IMPORT DEBUG - importRoster called with input:', inputText)
-    // eslint-disable-next-line no-console
     console.log('IMPORT DEBUG - parsed result:', parsed)
-    // eslint-disable-next-line no-console
     console.log('IMPORT DEBUG - fighterNames:', fighterNames)
 
     if (fighterNames.length === 0) {
@@ -145,7 +155,15 @@ function App() {
 
       const manifest = (await manifestResponse.json()) as Manifest
       const warbandEntry = findWarbandEntry(manifest, parsed.warband)
-      if (!warbandEntry) {
+
+      // Custom JSON warband import path (new format): "WarbandName" + JSON array body.
+      if (parsed.customWarbandData) {
+        setWarbandInfo({
+          warbandName: parsed.warband ?? 'custom',
+          warbandSlug: (parsed.warband ?? 'custom').toLowerCase(),
+          faction: 'custom',
+        })
+      } else if (!warbandEntry) {
         const unmatchedCards = fighterNames.map((name) => ({
           importedName: name,
           fighter: null,
@@ -155,83 +173,141 @@ function App() {
         setImportedCards(unmatchedCards)
         setImportStatus(ui.datasetNotFoundStatus)
         return
+      } else {
+        setWarbandInfo({
+          warbandName: parsed.warband ?? warbandEntry.warbandSlug,
+          warbandSlug: warbandEntry.warbandSlug,
+          faction: warbandEntry.grandAlliance,
+        })
       }
-
-      setWarbandInfo({
-        warbandName: parsed.warband ?? warbandEntry.warbandSlug,
-        warbandSlug: warbandEntry.warbandSlug,
-        faction: warbandEntry.grandAlliance,
-      })
 
       // Debug: log parsed roster and warband entry to help diagnose matching issues
       // These logs are temporary — remove after debugging.
-      // eslint-disable-next-line no-console
       console.log('IMPORT DEBUG - parsed roster:', parsed)
-      // eslint-disable-next-line no-console
       console.log('IMPORT DEBUG - manifest warbandEntry:', warbandEntry)
       let fighters: WarcryFighter[]
       let abilities: WarcryAbility[]
 
-      const cachedFighters = fighterDataCache.current[warbandEntry.key]
-      const cachedAbilities = abilityDataCache.current[`${locale}:${warbandEntry.abilitiesPath}`]
+      if (parsed.customWarbandData) {
+        abilities = []
+        setBattleTraits([])
 
-      if (cachedFighters && cachedAbilities && warbandEntry.warbandSlug !== 'custom') {
-        fighters = cachedFighters
-        abilities = cachedAbilities
-      } else {
-        if (cachedFighters) {
-          fighters = cachedFighters
-        } else {
-          const fightersResponse = await fetch(withBasePath(warbandEntry.fightersPath))
-          if (!fightersResponse.ok) {
-            throw new Error(ui.warbandDataLoadError)
+        const weaponsResponse = await fetch(withBasePath('warcry_data/data/custom/weapons.json'))
+        if (!weaponsResponse.ok) {
+          throw new Error('Failed to load custom weapons')
+        }
+        const weaponsData = (await weaponsResponse.json()) as CustomWeapon[]
+
+        fighters = parsed.customWarbandData.map((entryRaw) => {
+          const entry = entryRaw as CustomFighterEntry
+          const fight = Number(entry.fight ?? entry.Fight ?? 3)
+          const warband = parsed.warband ?? 'custom'
+          const runemarksRaw = String(entry.runemarks ?? entry.runemark ?? '').trim()
+          const runemarks = runemarksRaw.length ? runemarksRaw.split(/\s*,\s*/g) : []
+
+          const weaponSpecs = ['Weapon1', 'Weapon2', 'Weapon3']
+          const weaponProfiles: WarcryWeaponProfile[] = []
+
+          weaponSpecs.forEach((key) => {
+            const weaponName = entry[key]
+            if (!weaponName || String(weaponName).trim().length === 0) {
+              return
+            }
+            const weaponDef = weaponsData.find((w) => String(w.Weapon).toLowerCase() === String(weaponName).toLowerCase())
+            if (weaponDef) {
+              weaponProfiles.push({
+                runemark: String(weaponDef.runemark ?? weaponDef.Runemark ?? '').trim(),
+                attacks: Number(weaponDef.attacks ?? weaponDef.Attacks ?? 0),
+                strength: fight,
+                dmg_hit: Number(weaponDef.dmg_hit ?? weaponDef.Dmg_Hit ?? 0),
+                dmg_crit: Number(weaponDef.dmg_crit ?? weaponDef.Dmg_Crit ?? 0),
+                min_range: Number(weaponDef.min_range ?? weaponDef.Min_Range ?? 0),
+                max_range: Number(weaponDef.max_range ?? weaponDef.Max_Range ?? 0),
+              })
+            }
+          })
+
+          const built: WarcryFighter = {
+            _id: String(entry._id ?? entry.Name ?? entry.name ?? '').trim().toLowerCase().replace(/\s+/g, '_'),
+            name: String(entry.Name ?? entry.name ?? '').trim(),
+            warband,
+            subfaction: String(entry.subfaction ?? entry.subFaction ?? '').trim(),
+            grand_alliance: String(entry.grand_alliance ?? entry.grandAlliance ?? parsed.warband ?? 'custom').toLowerCase(),
+            movement: Number(entry.movement ?? entry.Movement ?? 0),
+            toughness: Number(entry.toughness ?? entry.Toughness ?? 0),
+            wounds: Number(entry.wounds ?? entry.Wounds ?? 0),
+            points: Number(entry.points ?? entry.Points ?? 0),
+            runemarks,
+            weapons: weaponProfiles,
           }
 
-          const rawFighters = await fightersResponse.json()
-          if (warbandEntry.warbandSlug === 'custom') {
-            const weaponsResponse = await fetch(withBasePath('warcry_data/data/custom/weapons.json'))
-            if (!weaponsResponse.ok) {
-              throw new Error('Failed to load custom weapons')
+          // Debug: show each custom fighter after weapon expansion
+          console.log('IMPORT DEBUG - built custom fighter:', built._id, built.name, built.weapons)
+
+          return built
+        })
+      } else {
+        const cachedFighters = fighterDataCache.current[warbandEntry!.key]
+        const cachedAbilities = abilityDataCache.current[`${locale}:${warbandEntry!.abilitiesPath}`]
+
+        if (cachedFighters && cachedAbilities && warbandEntry!.warbandSlug !== 'custom') {
+          fighters = cachedFighters
+          abilities = cachedAbilities
+        } else {
+          if (cachedFighters) {
+            fighters = cachedFighters
+          } else {
+            const fightersResponse = await fetch(withBasePath(warbandEntry!.fightersPath))
+            if (!fightersResponse.ok) {
+              throw new Error(ui.warbandDataLoadError)
             }
-            const weaponsData = await weaponsResponse.json() as any[]
-            fighters = rawFighters.map((f: any) => {
-              const fight = f.fight || 3
-              const weaponProfiles: WarcryWeaponProfile[] = []
-              if (f.weapons && typeof f.weapons === 'object' && !Array.isArray(f.weapons)) {
-                for (const key in f.weapons) {
-                  const weaponName = f.weapons[key]
-                  const weaponDef = weaponsData.find((w) => w.Weapon === weaponName)
-                  if (weaponDef) {
-                    weaponProfiles.push({
-                      runemark: weaponDef.runemark,
-                      attacks: parseInt(weaponDef.attacks),
-                      strength: fight,
-                      dmg_hit: parseInt(weaponDef.dmg_hit),
-                      dmg_crit: parseInt(weaponDef.dmg_crit),
-                      min_range: parseInt(weaponDef.min_range),
-                      max_range: parseInt(weaponDef.max_range),
-                    })
+
+            const rawFighters = (await fightersResponse.json()) as unknown[]
+            if (warbandEntry!.warbandSlug === 'custom') {
+              const weaponsResponse = await fetch(withBasePath('warcry_data/data/custom/weapons.json'))
+              if (!weaponsResponse.ok) {
+                throw new Error('Failed to load custom weapons')
+              }
+              const weaponsData = await weaponsResponse.json() as CustomWeapon[]
+              fighters = rawFighters.map((rawFighter) => {
+                const f = rawFighter as { fight?: number; weapons?: Record<string, string> }
+                const fight = f.fight ?? 3
+                const weaponProfiles: WarcryWeaponProfile[] = []
+                if (f.weapons && typeof f.weapons === 'object' && !Array.isArray(f.weapons)) {
+                  for (const key in f.weapons) {
+                    const weaponName = f.weapons[key]
+                    const weaponDef = weaponsData.find((w) => w.Weapon === weaponName)
+                    if (weaponDef) {
+                      weaponProfiles.push({
+                        runemark: weaponDef.runemark,
+                        attacks: parseInt(weaponDef.attacks),
+                        strength: fight,
+                        dmg_hit: parseInt(weaponDef.dmg_hit),
+                        dmg_crit: parseInt(weaponDef.dmg_crit),
+                        min_range: parseInt(weaponDef.min_range),
+                        max_range: parseInt(weaponDef.max_range),
+                      })
+                    }
                   }
                 }
-              }
-              const built = {
-                ...f,
-                weapons: weaponProfiles,
-              } as WarcryFighter
+                const built = {
+                  ...f,
+                  weapons: weaponProfiles,
+                } as WarcryFighter
 
-              // Debug: show each custom fighter after weapon expansion
-              // eslint-disable-next-line no-console
-              console.log('IMPORT DEBUG - built custom fighter:', built._id, built.name, built.weapons)
+                // Debug: show each custom fighter after weapon expansion
+                console.log('IMPORT DEBUG - built custom fighter:', built._id, built.name, built.weapons)
 
-              return built
-            })
-          } else {
-            fighters = rawFighters as WarcryFighter[]
+                return built
+              })
+            } else {
+              fighters = rawFighters as WarcryFighter[]
+            }
+            fighterDataCache.current[warbandEntry!.key] = fighters
           }
-          fighterDataCache.current[warbandEntry.key] = fighters
-        }
 
-        abilities = cachedAbilities ?? (await loadLocalizedAbilities(warbandEntry.abilitiesPath))
+          abilities = cachedAbilities ?? (await loadLocalizedAbilities(warbandEntry!.abilitiesPath))
+        }
       }
 
       setBattleTraits(
@@ -241,14 +317,12 @@ function App() {
       )
 
       // Debug: log fighters count before attempting matches
-      // eslint-disable-next-line no-console
       console.log('IMPORT DEBUG - fighters loaded count:', fighters.length)
 
       const cards: ImportedCard[] = fighterNames.map((name) => {
         const fighter = findBestFighterMatch(fighters, name)
         if (!fighter) {
           // Debug: report unmatched name
-          // eslint-disable-next-line no-console
           console.log('IMPORT DEBUG - no match for imported name:', name)
           return {
             importedName: name,
