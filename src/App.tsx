@@ -245,6 +245,7 @@ function App() {
             movement: Number(entry.movement ?? entry.Movement ?? 0),
             toughness: Number(entry.toughness ?? entry.Toughness ?? 0),
             wounds: Number(entry.wounds ?? entry.Wounds ?? 0),
+            brave: Number(entry.brave ?? entry.Brave ?? 0),
             points: Number(entry.points ?? entry.Points ?? 0),
             runemarks,
             weapons: weaponProfiles,

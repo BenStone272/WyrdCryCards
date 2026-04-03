@@ -18,6 +18,7 @@ export type WarcryFighter = {
   movement: number
   toughness: number
   wounds: number
+  brave?: number
   points: number
   runemarks: string[]
   weapons: WarcryWeaponProfile[]

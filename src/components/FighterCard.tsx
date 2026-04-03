@@ -47,8 +47,6 @@ export function FighterCard({ card, runemarkPlacement, ui }: FighterCardProps) {
       {card.fighter ? (
         <>
           <div className="fighter-card-body">
-            {runemarkPlacement === 'under-name' && renderRunemarksSection('runemarks-under-name')}
-
             <h3>{ui.statsHeading}</h3>
             <dl className="stats-grid">
               <div>
@@ -68,6 +66,12 @@ export function FighterCard({ card, runemarkPlacement, ui }: FighterCardProps) {
                   <img className="stat-icon" src={characteristicIconPath('wounds')} alt={ui.woundsLabel} />
                 </dt>
                 <dd>{card.fighter.wounds}</dd>
+              </div>
+              <div>
+                <dt>
+                  <img className="stat-icon" src={characteristicIconPath('twists-psychology')} alt={ui.braveLabel} />
+                </dt>
+                <dd>{card.fighter.brave ?? '-'}</dd>
               </div>
             </dl>
 
