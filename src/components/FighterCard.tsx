@@ -1,6 +1,6 @@
 import type { UiText } from '../i18n/uiText'
 import type { ImportedCard } from '../types/cards'
-import { characteristicIconPath } from '../utils/cardHelpers'
+import { characteristicIconPath, withBasePath } from '../utils/cardHelpers'
 import { FighterRunemarkBadge } from './FighterRunemarkBadge'
 import { WeaponSection } from './WeaponSection'
 import { AbilitySection } from './AbilitySection'
@@ -69,7 +69,7 @@ export function FighterCard({ card, runemarkPlacement, ui }: FighterCardProps) {
               </div>
               <div>
                 <dt>
-                  <img className="stat-icon" src={characteristicIconPath('twists-psychology')} alt={ui.braveLabel} />
+                  <img className="stat-icon" src={withBasePath('warcry_assets/runemarks/black/twists-psychology.svg')} alt={ui.braveLabel} />
                 </dt>
                 <dd>{card.fighter.brave ?? '-'}</dd>
               </div>

@@ -1,7 +1,7 @@
 import type { WarcryAbility, WarcryFighter, WarcryWeaponProfile } from '../types/warcry'
 import type { Manifest, WarbandHeaderInfo, WarbandManifest } from '../types/cards'
 
-function withBasePath(resourcePath: string): string {
+export function withBasePath(resourcePath: string): string {
   const base = import.meta.env.BASE_URL ?? '/'
   return `${base}${resourcePath.replace(/^\/+/, '')}`
 }
