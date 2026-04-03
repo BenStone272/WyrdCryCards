@@ -189,14 +189,23 @@ function App() {
       let abilities: WarcryAbility[]
 
       if (parsed.customWarbandData) {
-        abilities = []
-        setBattleTraits([])
-
         const weaponsResponse = await fetch(withBasePath('warcry_data/data/custom/weapons.json'))
         if (!weaponsResponse.ok) {
           throw new Error('Failed to load custom weapons')
         }
         const weaponsData = (await weaponsResponse.json()) as CustomWeapon[]
+
+        const abilitiesResponse = await fetch(withBasePath('warcry_data/data/custom/custom_abilities.json'))
+        abilities = []
+        if (abilitiesResponse.ok) {
+          abilities = (await abilitiesResponse.json()) as WarcryAbility[]
+        }
+
+        setBattleTraits(
+          sortAbilitiesByDice(
+            abilities.filter((ability) => ability.cost.trim().toLowerCase() === 'battletrait'),
+          ),
+        )
 
         fighters = parsed.customWarbandData.map((entryRaw) => {
           const entry = entryRaw as CustomFighterEntry
