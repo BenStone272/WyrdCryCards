@@ -1,0 +1,520 @@
+[
+	{
+		"_id": "Captain Sword, Pistol",
+		"name": "Captain Sword, Pistol",
+		"warband": "mercenaries",
+		"subfaction": "",
+		"grand_alliance": "order",
+		"movement": 4,
+		"toughness": 4,
+		"wounds": 20,
+		"weapons": [
+			{
+				"attacks": 4,
+				"dmg_crit": 4,
+				"dmg_hit": 2,
+				"max_range": 1,
+				"min_range": 0,
+				"runemark": "sword",
+				"strength": 4
+			},
+			{
+				"attacks": 2,
+				"dmg_crit": 4,
+				"dmg_hit": 2,
+				"max_range": 8,
+				"min_range": 0,
+				"runemark": "pistol",
+				"strength": 4
+			}
+		],
+		"runemarks": ["Hero", "Scout"],
+		"points": 170
+	},
+	{
+		"_id": "Captain Great Sword",
+		"name": "Captain Great Sword",
+		"warband": "mercenaries",
+		"subfaction": "",
+		"grand_alliance": "order",
+		"movement": 4,
+		"toughness": 4,
+		"wounds": 20,
+		"weapons": [
+			{
+				"attacks": 3,
+				"dmg_crit": 5,
+				"dmg_hit": 3,
+				"max_range": 1,
+				"min_range": 0,
+				"runemark": "great sword",
+				"strength": 5
+			}
+		],
+		"runemarks": ["Hero", "Destroyer"],
+		"points": 165
+	},
+	{
+		"_id": "Captain Halberd",
+		"name": "Captain Halberd",
+		"warband": "mercenaries",
+		"subfaction": "",
+		"grand_alliance": "order",
+		"movement": 4,
+		"toughness": 4,
+		"wounds": 20,
+		"weapons": [
+			{
+				"attacks": 3,
+				"dmg_crit": 5,
+				"dmg_hit": 2,
+				"max_range": 2,
+				"min_range": 0,
+				"runemark": "halberd",
+				"strength": 5
+			}
+		],
+		"runemarks": ["Hero", "Destroyer"],
+		"points": 160
+	},
+	{
+		"_id": "Captain Sword, Shield",
+		"name": "Captain Sword, Shield",
+		"warband": "mercenaries",
+		"subfaction": "",
+		"grand_alliance": "order",
+		"movement": 4,
+		"toughness": 5,
+		"wounds": 20,
+		"weapons": [
+			{
+				"attacks": 4,
+				"dmg_crit": 4,
+				"dmg_hit": 2,
+				"max_range": 1,
+				"min_range": 0,
+				"runemark": "sword",
+				"strength": 4
+			}
+		],
+		"runemarks": ["Hero", "Bulwark"],
+		"points": 155
+	},
+	{
+		"_id": "Sergeant Sword, Pistol",
+		"name": "Sergeant Sword, Pistol",
+		"warband": "mercenaries",
+		"subfaction": "",
+		"grand_alliance": "order",
+		"movement": 4,
+		"toughness": 4,
+		"wounds": 15,
+		"weapons": [
+			{
+				"attacks": 4,
+				"dmg_crit": 4,
+				"dmg_hit": 2,
+				"max_range": 1,
+				"min_range": 0,
+				"runemark": "sword",
+				"strength": 4
+			},
+			{
+				"attacks": 2,
+				"dmg_crit": 4,
+				"dmg_hit": 2,
+				"max_range": 8,
+				"min_range": 0,
+				"runemark": "pistol",
+				"strength": 4
+			}
+		],
+		"runemarks": ["Scout"],
+		"points": 135
+	},
+	{
+		"_id": "Sergeant Great Sword",
+		"name": "Sergeant Great Sword",
+		"warband": "mercenaries",
+		"subfaction": "",
+		"grand_alliance": "order",
+		"movement": 4,
+		"toughness": 4,
+		"wounds": 15,
+		"weapons": [
+			{
+				"attacks": 3,
+				"dmg_crit": 5,
+				"dmg_hit": 3,
+				"max_range": 1,
+				"min_range": 0,
+				"runemark": "great sword",
+				"strength": 5
+			}
+		],
+		"runemarks": ["Destroyer"],
+		"points": 130
+	},
+	{
+		"_id": "Sergeant Halberd",
+		"name": "Sergeant Halberd",
+		"warband": "mercenaries",
+		"subfaction": "",
+		"grand_alliance": "order",
+		"movement": 4,
+		"toughness": 4,
+		"wounds": 15,
+		"weapons": [
+			{
+				"attacks": 3,
+				"dmg_crit": 5,
+				"dmg_hit": 2,
+				"max_range": 2,
+				"min_range": 0,
+				"runemark": "halberd",
+				"strength": 5
+			}
+		],
+		"runemarks": ["Destroyer"],
+		"points": 125
+	},
+	{
+		"_id": "Sergeant Sword, Shield",
+		"name": "Sergeant Sword, Shield",
+		"warband": "mercenaries",
+		"subfaction": "",
+		"grand_alliance": "order",
+		"movement": 4,
+		"toughness": 5,
+		"wounds": 15,
+		"weapons": [
+			{
+				"attacks": 4,
+				"dmg_crit": 4,
+				"dmg_hit": 2,
+				"max_range": 1,
+				"min_range": 0,
+				"runemark": "sword",
+				"strength": 4
+			}
+		],
+		"runemarks": ["Bulwark"],
+		"points": 120
+	},
+	{
+		"_id": "Greatsword Great Sword",
+		"name": "Greatsword",
+		"warband": "mercenaries",
+		"subfaction": "",
+		"grand_alliance": "order",
+		"movement": 4,
+		"toughness": 4,
+		"wounds": 12,
+		"weapons": [
+			{
+				"attacks": 3,
+				"dmg_crit": 4,
+				"dmg_hit": 2,
+				"max_range": 1,
+				"min_range": 0,
+				"runemark": "great sword",
+				"strength": 4
+			}
+		],
+		"runemarks": ["Destroyer"],
+		"points": 100
+	},
+	{
+		"_id": "Trooper Sword, Shield",
+		"name": "Trooper Sword, Shield",
+		"warband": "mercenaries",
+		"subfaction": "",
+		"grand_alliance": "order",
+		"movement": 4,
+		"toughness": 4,
+		"wounds": 10,
+		"weapons": [
+			{
+				"attacks": 3,
+				"dmg_crit": 3,
+				"dmg_hit": 1,
+				"max_range": 1,
+				"min_range": 0,
+				"runemark": "sword",
+				"strength": 3
+			}
+		],
+		"runemarks": ["Bulwark"],
+		"points": 60
+	},
+	{
+		"_id": "Trooper Spear, Shield",
+		"name": "Trooper Spear, Shield",
+		"warband": "mercenaries",
+		"subfaction": "",
+		"grand_alliance": "order",
+		"movement": 4,
+		"toughness": 4,
+		"wounds": 10,
+		"weapons": [
+			{
+				"attacks": 2,
+				"dmg_crit": 4,
+				"dmg_hit": 1,
+				"max_range": 2,
+				"min_range": 0,
+				"runemark": "spear",
+				"strength": 3
+			}
+		],
+		"runemarks": ["Bulwark"],
+		"points": 60
+	},
+	{
+		"_id": "Trooper Halberd",
+		"name": "Trooper Halberd",
+		"warband": "mercenaries",
+		"subfaction": "",
+		"grand_alliance": "order",
+		"movement": 4,
+		"toughness": 3,
+		"wounds": 10,
+		"weapons": [
+			{
+				"attacks": 2,
+				"dmg_crit": 4,
+				"dmg_hit": 1,
+				"max_range": 2,
+				"min_range": 0,
+				"runemark": "halberd",
+				"strength": 4
+			}
+		],
+		"runemarks": [],
+		"points": 65
+	},
+	{
+		"_id": "Marksman Bow",
+		"name": "Marksman Bow",
+		"warband": "mercenaries",
+		"subfaction": "",
+		"grand_alliance": "order",
+		"movement": 4,
+		"toughness": 3,
+		"wounds": 10,
+		"weapons": [
+			{
+				"attacks": 2,
+				"dmg_crit": 3,
+				"dmg_hit": 1,
+				"max_range": 1,
+				"min_range": 0,
+				"runemark": "dagger",
+				"strength": 3
+			},
+			{
+				"attacks": 2,
+				"dmg_crit": 3,
+				"dmg_hit": 1,
+				"max_range": 15,
+				"min_range": 3,
+				"runemark": "bow",
+				"strength": 3
+			}
+		],
+		"runemarks": ["Scout"],
+		"points": 85
+	},
+	{
+		"_id": "Marksman Long Bow",
+		"name": "Marksman Long Bow",
+		"warband": "mercenaries",
+		"subfaction": "",
+		"grand_alliance": "order",
+		"movement": 4,
+		"toughness": 3,
+		"wounds": 10,
+		"weapons": [
+			{
+				"attacks": 2,
+				"dmg_crit": 3,
+				"dmg_hit": 1,
+				"max_range": 1,
+				"min_range": 0,
+				"runemark": "dagger",
+				"strength": 3
+			},
+			{
+				"attacks": 2,
+				"dmg_crit": 3,
+				"dmg_hit": 1,
+				"max_range": 18,
+				"min_range": 3,
+				"runemark": "long bow",
+				"strength": 3
+			}
+		],
+		"runemarks": ["Scout"],
+		"points": 90
+	},
+	{
+		"_id": "Marksman Crossbow",
+		"name": "Marksman Crossbow",
+		"warband": "mercenaries",
+		"subfaction": "",
+		"grand_alliance": "order",
+		"movement": 4,
+		"toughness": 3,
+		"wounds": 10,
+		"weapons": [
+			{
+				"attacks": 2,
+				"dmg_crit": 3,
+				"dmg_hit": 1,
+				"max_range": 1,
+				"min_range": 0,
+				"runemark": "dagger",
+				"strength": 3
+			},
+			{
+				"attacks": 2,
+				"dmg_crit": 3,
+				"dmg_hit": 1,
+				"max_range": 15,
+				"min_range": 3,
+				"runemark": "crossbow",
+				"strength": 4
+			}
+		],
+		"runemarks": ["Scout"],
+		"points": 95
+	},
+	{
+		"_id": "Marksman Blunderbuss",
+		"name": "Marksman Blunderbuss",
+		"warband": "mercenaries",
+		"subfaction": "",
+		"grand_alliance": "order",
+		"movement": 4,
+		"toughness": 3,
+		"wounds": 10,
+		"weapons": [
+			{
+				"attacks": 2,
+				"dmg_crit": 3,
+				"dmg_hit": 1,
+				"max_range": 1,
+				"min_range": 0,
+				"runemark": "dagger",
+				"strength": 3
+			},
+			{
+				"attacks": 4,
+				"dmg_crit": 2,
+				"dmg_hit": 1,
+				"max_range": 8,
+				"min_range": 0,
+				"runemark": "blunderbuss",
+				"strength": 3
+			}
+		],
+		"runemarks": [],
+		"points": 90
+	},
+	{
+		"_id": "Marksman Handgun",
+		"name": "Marksman Handgun",
+		"warband": "mercenaries",
+		"subfaction": "",
+		"grand_alliance": "order",
+		"movement": 4,
+		"toughness": 3,
+		"wounds": 10,
+		"weapons": [
+			{
+				"attacks": 2,
+				"dmg_crit": 3,
+				"dmg_hit": 1,
+				"max_range": 1,
+				"min_range": 0,
+				"runemark": "dagger",
+				"strength": 3
+			},
+			{
+				"attacks": 2,
+				"dmg_crit": 4,
+				"dmg_hit": 1,
+				"max_range": 12,
+				"min_range": 3,
+				"runemark": "handgun",
+				"strength": 5
+			}
+		],
+		"runemarks": ["Scout"],
+		"points": 105
+	},
+	{
+		"_id": "Marksman Long Rifle",
+		"name": "Marksman Long Rifle",
+		"warband": "mercenaries",
+		"subfaction": "",
+		"grand_alliance": "order",
+		"movement": 4,
+		"toughness": 3,
+		"wounds": 10,
+		"weapons": [
+			{
+				"attacks": 2,
+				"dmg_crit": 3,
+				"dmg_hit": 1,
+				"max_range": 1,
+				"min_range": 0,
+				"runemark": "dagger",
+				"strength": 3
+			},
+			{
+				"attacks": 2,
+				"dmg_crit": 5,
+				"dmg_hit": 2,
+				"max_range": 20,
+				"min_range": 6,
+				"runemark": "long rifle",
+				"strength": 5
+			}
+		],
+		"runemarks": ["Scout"],
+		"points": 130
+	},
+{
+		"_id": "Warlock",
+		"name": "Warlock",
+		"warband": "mercenaries",
+		"subfaction": "",
+		"grand_alliance": "order",
+		"movement": 4,
+		"toughness": 3,
+		"wounds": 15,
+		"weapons": [
+			{
+				"attacks": 3,
+				"dmg_crit": 4,
+				"dmg_hit": 1,
+				"max_range": 2,
+				"min_range": 0,
+				"runemark": "staff",
+				"strength": 3
+			},
+			{
+				"attacks": 2,
+				"dmg_crit": 6,
+				"dmg_hit": 3,
+				"max_range": 7,
+				"min_range": 3,
+				"runemark": "blast",
+				"strength": 3
+			}
+		],
+		"runemarks": ["Ally","Mystic"],
+		"points": 115
+	}
+]
