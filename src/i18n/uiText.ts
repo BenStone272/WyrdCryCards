@@ -76,6 +76,7 @@ export type UiText = {
   noRunemarks: string
   unmatchedFighter: string
   runemarkLabel: string
+  totalPointsLabel: (points: number) => string
   pointsUnit: string
   moveLabel: string
   toughnessLabel: string
@@ -150,6 +151,7 @@ const uiText: Record<AppLocale, UiText> = {
     noRunemarks: 'No runemarks',
     unmatchedFighter: 'No fighter data match found in detected warband.',
     runemarkLabel: 'runemark',
+    totalPointsLabel: (points) => `Total points: ${points}`,
     pointsUnit: 'pts',
     moveLabel: 'Move',
     toughnessLabel: 'Toughness',
@@ -222,6 +224,7 @@ const uiText: Record<AppLocale, UiText> = {
     noRunemarks: 'Brak runemarków',
     unmatchedFighter: 'Nie znaleziono danych wojownika w wykrytym warbandzie.',
     runemarkLabel: 'runemark',
+    totalPointsLabel: (points) => `Suma punktów: ${points}`,
     pointsUnit: 'pkt',
     moveLabel: 'Ruch',
     toughnessLabel: 'Wytrzymałość',

@@ -1,7 +1,7 @@
 [
 	{
 		"_id": "Captain Sword, Pistol",
-		"name": "Captain",
+		"name": "Captain Sword, Pistol",
 		"warband": "mercenaries",
 		"subfaction": "",
 		"grand_alliance": "order",
@@ -33,7 +33,7 @@
 	},
 	{
 		"_id": "Captain Great Sword",
-		"name": "Captain",
+		"name": "Captain Great Sword",
 		"warband": "mercenaries",
 		"subfaction": "",
 		"grand_alliance": "order",
@@ -56,7 +56,7 @@
 	},
 	{
 		"_id": "Captain Halberd",
-		"name": "Captain",
+		"name": "Captain Halberd",
 		"warband": "mercenaries",
 		"subfaction": "",
 		"grand_alliance": "order",
@@ -79,7 +79,7 @@
 	},
 	{
 		"_id": "Captain Sword, Shield",
-		"name": "Captain",
+		"name": "Captain Sword, Shield",
 		"warband": "mercenaries",
 		"subfaction": "",
 		"grand_alliance": "order",
@@ -102,7 +102,7 @@
 	},
 	{
 		"_id": "Sergeant Sword, Pistol",
-		"name": "Sergeant",
+		"name": "Sergeant Sword, Pistol",
 		"warband": "mercenaries",
 		"subfaction": "",
 		"grand_alliance": "order",
@@ -134,7 +134,7 @@
 	},
 	{
 		"_id": "Sergeant Great Sword",
-		"name": "Sergeant",
+		"name": "Sergeant Great Sword",
 		"warband": "mercenaries",
 		"subfaction": "",
 		"grand_alliance": "order",
@@ -157,7 +157,7 @@
 	},
 	{
 		"_id": "Sergeant Halberd",
-		"name": "Sergeant",
+		"name": "Sergeant Halberd",
 		"warband": "mercenaries",
 		"subfaction": "",
 		"grand_alliance": "order",
@@ -180,7 +180,7 @@
 	},
 	{
 		"_id": "Sergeant Sword, Shield",
-		"name": "Sergeant",
+		"name": "Sergeant Sword, Shield",
 		"warband": "mercenaries",
 		"subfaction": "",
 		"grand_alliance": "order",
@@ -226,7 +226,7 @@
 	},
 	{
 		"_id": "Trooper Sword, Shield",
-		"name": "Trooper",
+		"name": "Trooper Sword, Shield",
 		"warband": "mercenaries",
 		"subfaction": "",
 		"grand_alliance": "order",
@@ -249,7 +249,7 @@
 	},
 	{
 		"_id": "Trooper Spear, Shield",
-		"name": "Trooper",
+		"name": "Trooper Spear, Shield",
 		"warband": "mercenaries",
 		"subfaction": "",
 		"grand_alliance": "order",
@@ -272,7 +272,7 @@
 	},
 	{
 		"_id": "Trooper Halberd",
-		"name": "Trooper",
+		"name": "Trooper Halberd",
 		"warband": "mercenaries",
 		"subfaction": "",
 		"grand_alliance": "order",
@@ -295,7 +295,7 @@
 	},
 	{
 		"_id": "Marksman Bow",
-		"name": "Marksman",
+		"name": "Marksman Bow",
 		"warband": "mercenaries",
 		"subfaction": "",
 		"grand_alliance": "order",
@@ -327,7 +327,7 @@
 	},
 	{
 		"_id": "Marksman Long Bow",
-		"name": "Marksman",
+		"name": "Marksman Long Bow",
 		"warband": "mercenaries",
 		"subfaction": "",
 		"grand_alliance": "order",
@@ -359,7 +359,7 @@
 	},
 	{
 		"_id": "Marksman Crossbow",
-		"name": "Marksman",
+		"name": "Marksman Crossbow",
 		"warband": "mercenaries",
 		"subfaction": "",
 		"grand_alliance": "order",
@@ -391,7 +391,7 @@
 	},
 	{
 		"_id": "Marksman Blunderbuss",
-		"name": "Marksman",
+		"name": "Marksman Blunderbuss",
 		"warband": "mercenaries",
 		"subfaction": "",
 		"grand_alliance": "order",
@@ -423,7 +423,7 @@
 	},
 	{
 		"_id": "Marksman Handgun",
-		"name": "Marksman",
+		"name": "Marksman Handgun",
 		"warband": "mercenaries",
 		"subfaction": "",
 		"grand_alliance": "order",
@@ -455,7 +455,7 @@
 	},
 	{
 		"_id": "Marksman Long Rifle",
-		"name": "Marksman",
+		"name": "Marksman Long Rifle",
 		"warband": "mercenaries",
 		"subfaction": "",
 		"grand_alliance": "order",

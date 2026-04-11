@@ -9,11 +9,12 @@ type WarbandHeaderProps = {
   rosterName: string | null
   warbandInfo: WarbandHeaderInfo | null
   battleTraits: WarcryAbility[]
+  totalPoints: number
   locale: AppLocale
   ui: UiText
 }
 
-export function WarbandHeader({ rosterName, warbandInfo, battleTraits, locale, ui }: WarbandHeaderProps) {
+export function WarbandHeader({ rosterName, warbandInfo, battleTraits, totalPoints, locale, ui }: WarbandHeaderProps) {
   const runemarkCandidates = useMemo(
     () => (warbandInfo ? buildFactionRunemarkCandidates(warbandInfo) : []),
     [warbandInfo],
@@ -33,6 +34,7 @@ export function WarbandHeader({ rosterName, warbandInfo, battleTraits, locale, u
               {warbandInfo.warbandName} | {formatGrandAllianceLabel(warbandInfo.faction, locale)}
             </p>
           )}
+          <p>{ui.totalPointsLabel(totalPoints)}</p>
         </div>
         {warbandInfo && (
           <IconWithFallback

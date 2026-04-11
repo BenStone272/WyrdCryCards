@@ -563,6 +563,8 @@ function App() {
       })
     : []
 
+  const importedTotalPoints = importedCards.reduce((total, card) => total + (card.fighter?.points ?? 0), 0)
+
   function addSelectedBuilderFighter() {
     if (!selectedWarband || !selectedBuilderFighterId) {
       return
@@ -680,7 +682,7 @@ function App() {
                 ) : (
                   builderFighters.map((fighter) => (
                     <option key={fighter._id} value={fighter._id}>
-                      {fighter.name === fighter._id ? fighter.name : `${fighter.name} (${fighter._id})`}
+                      {`${fighter.name} (${fighter.points} ${ui.pointsUnit})`}
                     </option>
                   ))
                 )}
@@ -782,7 +784,14 @@ function App() {
 
       {(rosterName || warbandInfo) && (
         <section className="cards-grid">
-          <WarbandHeader rosterName={rosterName} warbandInfo={warbandInfo} battleTraits={battleTraits} locale={locale} ui={ui} />
+          <WarbandHeader
+            rosterName={rosterName}
+            warbandInfo={warbandInfo}
+            battleTraits={battleTraits}
+            totalPoints={importedTotalPoints}
+            locale={locale}
+            ui={ui}
+          />
         </section>
       )}
 
