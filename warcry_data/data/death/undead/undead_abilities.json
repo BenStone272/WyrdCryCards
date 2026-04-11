@@ -1,0 +1,129 @@
+[
+ 
+    {
+        "_id": "Unfeeling Flesh ",
+        "name": "Unfeeling Flesh ",
+        "warband": "undead",
+        "cost": "reaction",
+        "description": " A fighter can make this reaction when targeted by an Attack action, but before the hit rolls are made.  Subtract 1 from the Damage allocated to this fighter from each hit and critical hit from that Attack action, to a minimum of 1. ",
+        "runemarks": []
+    },
+    {
+        "_id": "Aura of Dred",
+        "name": "Aura of Dred",
+        "warband": "undead",
+        "cost": "double",
+        "description": " A fighter cannot use this ability if he has the Trapper runemark.  Roll a dice. On a 2+, until the end of the battle round, enemies within 3” of this fighter cannot make reactions. ",
+        "runemarks": []
+    },
+    {
+        "_id": "Shambling Horde",
+        "name": "Shambling Horde",
+        "warband": "undead",
+        "cost": "double",
+        "description": " Use only if this fighter is within 6” of a visible friendly fighter with the Hero runemark.  This warrior may make a bonus Move action equal to the value of this ability. ",
+        "runemarks": [
+            "Minion"
+        ]
+    },
+        {
+        "_id": "Scrappy Strike",
+        "name": "Scrappy Strike",
+        "warband": "undead",
+        "cost": "double",
+        "description": "Add 1 to the Damage of hits and critical hits caused by this fighter’s next Attack action this activation that targets an enemy that had Damage allocated to them prior to that Attack action.",
+        "runemarks": [
+            "Trapper"
+        ]
+    },
+        {
+        "_id": "Debilitating Talons",
+        "name": "Debilitating Talons",
+        "warband": "undead",
+        "cost": "triple",
+        "description": " Choose an enemy fighter that was allocated Damage by an Attack action from this fighter this activation.   Until the end of the battle round, treat critical hits caused by that fighter as normal hits instead.",
+        "runemarks": [
+            "Destroyer"
+        ]
+    },
+        {
+        "_id": "Cursed Weapon ",
+        "name": "Cursed Weapon ",
+        "warband": "undead",
+        "cost": "triple",
+        "description": "Until the end of this fighter's activation, Attack actions made by this fighter score critical hits on 5+.",
+        "runemarks": [
+            "Elite"
+        ]
+    },
+        {
+        "_id": "Chosen Champion",
+        "name": "Chosen Champion",
+        "warband": "undead",
+        "cost": "quad",
+        "description": " Use only if this fighter is within 6” of another visible friendly fighter with the Hero runemark.  Until the end of this fighter’s activation, add 3 to Attacks of Attack actions made by this fighter. ",
+        "runemarks": ["Elite"          
+        ]
+    },
+        {
+        "_id": "Sleepless Sentinel",
+        "name": "Sleepless Sentinel",
+        "warband": "undead",
+        "cost": "double",
+        "description": "Add half the value of this ability (rounded up) to the Move characteristic of this fighter for the next Move action they make this activation. ",
+        "runemarks": [
+            "Hero","Elite"
+        ]
+    },
+        {
+        "_id": "Necrotic Syphon",
+        "name": "Necrotic Syphon",
+        "warband": "undead",
+        "cost": "double",
+        "description": " Pick a visible friendly fighter with the Undead and Minion runemarks within 6\" of this fighter.   Allocate Damage equal to the value of this ability to that fighter.   Then, remove a number of Damage from this fighter up to double the value of this ability. ",
+        "runemarks": [
+            "Hero","Mystic"
+        ]
+    },
+        {
+        "_id": "Call of Vanhel",
+        "name": "Call of Vanhel",
+        "warband": "undead",
+        "cost": "double",
+        "description": " Pick a number of visible friendly fighters with the Undead and Minion runemarks equal to half the value of this ability (rounding up) that are each within 3\" of this fighter.  Those fighters can each make a bonus Move action of a number of inches equal to the value of this ability. ",
+        "runemarks": [
+            "Hero","Mystic"
+        ]
+    },
+        {
+        "_id": "Call the Crimson Feast",
+        "name": "Call the Crimson Feast",
+        "warband": "undead",
+        "cost": "triple",
+        "description": "Until the end of the battle round, add 1 to the Attacks characteristic of melee attack actions made by visible friendly fighters while they are within 6\" of this fighter. ",
+        "runemarks": [
+            "Hero","Destroyer"
+        ]
+    },
+        {
+        "_id": "Re-Animation",
+        "name": "Re-Animation",
+        "warband": "undead",
+        "cost": "triple",
+        "description": " Choose a friendly fighter with the Minion runemark that has been taken down.  Place that fighter anywhere within 3” of this fighter.   If that fighter has the Elite runemark, remove Damage from that fighter equal to the value of this ability.  Otherwise, that fighter has no Damage allocated to it.  That fighter no longer counts as taken down. ",
+        "runemarks": [
+            "Hero"
+        ]
+    },
+        {
+        "_id": " Vanhel’s Danse Macabre",
+        "name": "Vanhel’s Danse Macabre",
+        "warband": "undead",
+        "cost": "quad",
+        "description": " Pick a number of visible friendly fighters with the Undead and Minion runemarks up to equal to the value of this ability that are each within 9\" of this warrior.  Each of these fighters may make a bonus Move action or a bonus Attack action (some can make Move and some can make Attack actions). ",
+        "runemarks": [
+            "Hero","Mystic"
+        ]
+    }
+
+]

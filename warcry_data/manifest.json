@@ -8,6 +8,13 @@
       "abilitiesPath": "/warcry_data/data/chaos/beasts_of_chaos/beasts_of_chaos_abilities.json"
     },
     {
+      "key": "chaos/cult_of_possessed",
+      "grandAlliance": "chaos",
+      "warbandSlug": "cult_of_possessed",
+      "fightersPath": "/warcry_data/data/chaos/cult_of_possessed/cult_of_possessed_fighters.json",
+      "abilitiesPath": "/warcry_data/data/chaos/cult_of_possessed/cult_of_possessed_abilities.json"
+    },
+    {
       "key": "chaos/blades_of_khorne_bloodbound",
       "grandAlliance": "chaos",
       "warbandSlug": "blades_of_khorne_bloodbound",
@@ -216,6 +223,13 @@
       "warbandSlug": "death",
       "fightersPath": "/warcry_data/data/death/death/death_fighters.json",
       "abilitiesPath": "/warcry_data/data/death/death/death_abilities.json"
+    },
+    {
+      "key": "death/undead",
+      "grandAlliance": "death",
+      "warbandSlug": "undead",
+      "fightersPath": "/warcry_data/data/death/undead/undead_fighters.json",
+      "abilitiesPath": "/warcry_data/data/death/undead/undead_abilities.json"
     },
     {
       "key": "death/flesh-eater_courts",

@@ -1,0 +1,130 @@
+[
+ 
+    {
+        "_id": "Blackblood",
+        "name": "Blackblood",
+        "warband": "cult of possessed",
+        "cost": "reaction",
+        "description": " A fighter can make this reaction when they are targeted by a melee Attack action.   After the Damage is totaled, but before it is allocated to this fighter, roll a dice for each critical hit scored from that Attack action.   For each 3+, allocate 3 Damage to the fighter who made that Attack action. ",
+        "runemarks": []
+    },
+    {
+        "_id": "Eye of God",
+        "name": "Eye of God",
+        "warband": "cult of possessed",
+        "cost": "double",
+        "description": "Until the end of the battle round, each time an enemy is taken down by an Attack action made by this fighter, increase this fighter’s Toughness by 1, or the Strength or Attacks of one weapon available to this fighter (chosen by you) by 1, until the end of the battle.",
+        "runemarks": ["Minion"]
+    },
+    {
+        "_id": "Nightmarish Visage",
+        "name": "Nightmarish Visage",
+        "warband": "cult of possessed",
+        "cost": "double",
+        "description": " Pick a visible enemy fighter within a number of inches of this fighter equal to the value of this ability and roll a dice.  On a 3+, until the end of the battle round, that fighter cannot make Move or Disengage actions this round. ",
+        "runemarks": [
+            "Terrifying"
+        ]
+    },
+        {
+        "_id": "Brayherd Ambush",
+        "name": "Brayherd Ambush",
+        "warband": "cult of possessed",
+        "cost": "double",
+        "description": "Until the end of this fighter’s activation:  Add 1 to this fighter’s Movement for their next Move action.  And 1 this fighter’s Attacks for their next melee Attack action. ",
+        "runemarks": [
+            "Trapper"
+        ]
+    },
+        {
+        "_id": "Vision of Torment",
+        "name": "Vision of Torment",
+        "warband": "cult of possessed",
+        "cost": "triple",
+        "description": "Until the end of this fighter’s activation:  Add 1 to this fighter’s Movement for their next Move action.  And 1 this fighter’s Attacks for their next melee Attack action. ",
+        "runemarks": [
+            "Trapper"
+        ]
+    },
+        {
+        "_id": "Maniacal Rage",
+        "name": "Maniacal Rage",
+        "warband": "cult of possessed",
+        "cost": "triple",
+        "description": " Roll a dice for each visible enemy within 3” of this fighter.  On 3-4, allocate 1 Damage to the enemy being rolled for.  On 5-6 allocate Damage equal to the value of this ability to the enemy being rolled for.",
+        "runemarks": [
+            "Destroyer"
+        ]
+    },
+        {
+        "_id": "Wrath of the Shadowlord",
+        "name": "Wrath of the Shadowlord",
+        "warband": "cult of possessed",
+        "cost": "quad",
+        "description": " This fighter makes a bonus attack action.   In addition, a number of normal hits scored by that attack action, equal to half the value of this ability (rounding up), become critical hits instead. ",
+        "runemarks": [
+            
+        ]
+    },
+        {
+        "_id": "Raging Frenzy",
+        "name": "Raging Frenzy",
+        "warband": "cult of possessed",
+        "cost": "double",
+        "description": " Use only if an enemy has been taken down by an Attack action by this warrior this activation.   This warrior may make a bonus Move action or a bonus Attack action. ",
+        "runemarks": [
+            "Hero","Brute"
+        ]
+    },
+        {
+        "_id": "Dark Blood",
+        "name": "Dark Blood",
+        "warband": "cult of possessed",
+        "cost": "double",
+        "description": " Roll dice equal to the value of this ability.  For each roll of 1, allocate 1 Damage to this fighter.  For each 4-5, add 1 to the Damage of hits and critical hits of the next shooting Attack action made by this fighter this activation.  For each 6, instead add 1 to the Attacks of the next shooting Attack action made by this fighter this activation.",
+        "runemarks": [
+            "Hero","Mystic"
+        ]
+    },
+        {
+        "_id": "Lure of Chaos",
+        "name": "Lure of Chaos",
+        "warband": "cult of possessed",
+        "cost": "double",
+        "description": " Pick a visible enemy fighter within 6” of this fighter.   That enemy makes a bonus Move action directly toward this fighter, as if they were jumping.  That enemy moves a number of inches equal to the value of this ability.  The enemy makes this Move action even if there are hostile fighters within 1” of them. ",
+        "runemarks": [
+            "Hero","Mystic"
+        ]
+    },
+        {
+        "_id": "Gristly Trophy",
+        "name": "Gristly Trophy",
+        "warband": "cult of possessed",
+        "cost": "triple",
+        "description": " Use only if an enemy was taken down by an Attack action by this fighter this activation.   Until the end of the battle round, add 1 to the Attacks characteristic of melee attack actions made by visible friendly fighters while they are within 9\" of this fighter.",
+        "runemarks": [
+            "Hero","Trapper"
+        ]
+    },
+        {
+        "_id": "Wings of Darkness",
+        "name": "Wings of Darkness",
+        "warband": "cult of possessed",
+        "cost": "triple",
+        "description": " Until the end of the battle round, this fighter can fly when making Move actions.  In addition, until the end of the battle round, friendly fighters with the Possessed runemark can also fly when starting Move actions within 6” of this warrior.",
+        "runemarks": [
+            "Hero","Mystic"
+        ]
+    },
+        {
+        "_id": "Bestial Stampede",
+        "name": "Bestial Stampede",
+        "warband": "cult of possessed",
+        "cost": "quad",
+        "description": " Pick a number of visible friendly fighters with the Possessed and Trapper runemarks equal to the value of this ability that are each within 9\" of this warrior.  Each of these fighters may make a bonus Move action or a bonus Attack action (they do not all have to make the same action). ",
+        "runemarks": [
+            "Hero","Trapper"
+        ]
+    }
+
+]

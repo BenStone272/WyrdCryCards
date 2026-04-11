@@ -1,0 +1,430 @@
+[
+    {
+        "_id": "Possessed Great Claw",
+        "name": "Possessed Great Claw",
+        "warband": "cult of possessed",
+        "subfaction": "",
+        "grand_alliance": "chaos",
+        "movement": 5,
+        "toughness": 4,
+        "wounds": 22,
+        "weapons": [
+            {
+                "attacks": 3,
+                "dmg_crit": 6,
+                "dmg_hit": 3,
+                "max_range": 1,
+                "min_range": 0,
+                "runemark": "claws",
+                "strength": 5
+            }
+        ],
+        "runemarks": ["Hero", "Brute", "Terrifying"],
+        "points": 185
+    },
+    {
+        "_id": "Possessed Tentacles",
+        "name": "Possessed Tentacles",
+        "warband": "cult of possessed",
+        "subfaction": "",
+        "grand_alliance": "chaos",
+        "movement": 5,
+        "toughness": 4,
+        "wounds": 22,
+        "weapons": [
+            {
+                "attacks": 4,
+                "dmg_crit": 4,
+                "dmg_hit": 2,
+                "max_range": 2,
+                "min_range": 0,
+                "runemark": "tentacles",
+                "strength": 5
+            }
+        ],
+        "runemarks": ["Hero", "Brute", "Terrifying"],
+        "points": 180
+    },
+    {
+        "_id": "Master Magister Dagger, Blast",
+        "name": "Master Magister",
+        "warband": "cult of possessed",
+        "subfaction": "",
+        "grand_alliance": "chaos",
+        "movement": 4,
+        "toughness": 3,
+        "wounds": 18,
+        "weapons": [
+            {
+                "attacks": 4,
+                "dmg_crit": 4,
+                "dmg_hit": 1,
+                "max_range": 1,
+                "min_range": 0,
+                "runemark": "dagger",
+                "strength": 3
+            },
+            {
+                "attacks": 2,
+                "dmg_crit": 6,
+                "dmg_hit": 3,
+                "max_range": 7,
+                "min_range": 3,
+                "runemark": "blast",
+                "strength": 3
+            }
+        ],
+        "runemarks": ["Hero", "Mystic", "Minion"],
+        "points": 125
+    },
+    {
+        "_id": "Foe-Render Axe, Shield",
+        "name": "Foe-Render",
+        "warband": "cult of possessed",
+        "subfaction": "",
+        "grand_alliance": "chaos",
+        "movement": 5,
+        "toughness": 5,
+        "wounds": 20,
+        "weapons": [
+            {
+                "attacks": 4,
+                "dmg_crit": 4,
+                "dmg_hit": 2,
+                "max_range": 1,
+                "min_range": 0,
+                "runemark": "axe",
+                "strength": 4
+            }
+        ],
+        "runemarks": ["Hero", "Brute", "Trapper"],
+        "points": 165
+    },
+    {
+        "_id": "Darksoul Flail",
+        "name": "Darksoul Flail",
+        "warband": "cult of possessed",
+        "subfaction": "",
+        "grand_alliance": "chaos",
+        "movement": 4,
+        "toughness": 4,
+        "wounds": 15,
+        "weapons": [
+            {
+                "attacks": 3,
+                "dmg_crit": 3,
+                "dmg_hit": 2,
+                "max_range": 1,
+                "min_range": 0,
+                "runemark": "flail",
+                "strength": 4
+            }
+        ],
+        "runemarks": ["Destroyer", "Minion"],
+        "points": 125
+    },
+    {
+        "_id": "Darksoul Great Axe",
+        "name": "Darksoul Great Axe",
+        "warband": "cult of possessed",
+        "subfaction": "",
+        "grand_alliance": "chaos",
+        "movement": 4,
+        "toughness": 4,
+        "wounds": 15,
+        "weapons": [
+            {
+                "attacks": 3,
+                "dmg_crit": 6,
+                "dmg_hit": 2,
+                "max_range": 1,
+                "min_range": 0,
+                "runemark": "great axe",
+                "strength": 5
+            }
+        ],
+        "runemarks": ["Destroyer", "Minion"],
+        "points": 125
+    },
+    {
+        "_id": "Mutant Great Claw",
+        "name": "Mutant Great Claw",
+        "warband": "cult of possessed",
+        "subfaction": "",
+        "grand_alliance": "chaos",
+        "movement": 4,
+        "toughness": 4,
+        "wounds": 12,
+        "weapons": [
+            {
+                "attacks": 3,
+                "dmg_crit": 4,
+                "dmg_hit": 2,
+                "max_range": 1,
+                "min_range": 0,
+                "runemark": "great claw",
+                "strength": 4
+            }
+        ],
+        "runemarks": ["Terrifying"],
+        "points": 100
+    },
+    {
+        "_id": "Mutant Tentacles",
+        "name": "Mutant Tentacles",
+        "warband": "cult of possessed",
+        "subfaction": "",
+        "grand_alliance": "chaos",
+        "movement": 4,
+        "toughness": 4,
+        "wounds": 12,
+        "weapons": [
+            {
+                "attacks": 3,
+                "dmg_crit": 3,
+                "dmg_hit": 2,
+                "max_range": 2,
+                "min_range": 0,
+                "runemark": "tentacles",
+                "strength": 3
+            }
+        ],
+        "runemarks": ["Terrifying"],
+        "points": 90
+    },
+    {
+        "_id": "Gor Swords",
+        "name": "Gor Swords",
+        "warband": "cult of possessed",
+        "subfaction": "",
+        "grand_alliance": "chaos",
+        "movement": 5,
+        "toughness": 3,
+        "wounds": 12,
+        "weapons": [
+            {
+                "attacks": 4,
+                "dmg_crit": 3,
+                "dmg_hit": 1,
+                "max_range": 1,
+                "min_range": 0,
+                "runemark": "swords",
+                "strength": 3
+            }
+        ],
+        "runemarks": ["Trapper"],
+        "points": 80
+    },
+    {
+        "_id": "Gor Sword, Shield",
+        "name": "Gor Sword, Shield",
+        "warband": "cult of possessed",
+        "subfaction": "",
+        "grand_alliance": "chaos",
+        "movement": 5,
+        "toughness": 4,
+        "wounds": 12,
+        "weapons": [
+            {
+                "attacks": 3,
+                "dmg_crit": 3,
+                "dmg_hit": 1,
+                "max_range": 1,
+                "min_range": 0,
+                "runemark": "sword",
+                "strength": 3
+            }
+        ],
+        "runemarks": ["Trapper"],
+        "points": 75
+    },
+    {
+        "_id": "Ungor Dagger, Spear",
+        "name": "Ungor Dagger, Spear",
+        "warband": "cult of possessed",
+        "subfaction": "",
+        "grand_alliance": "chaos",
+        "movement": 5,
+        "toughness": 3,
+        "wounds": 8,
+        "weapons": [
+            {
+                "attacks": 3,
+                "dmg_crit": 3,
+                "dmg_hit": 1,
+                "max_range": 1,
+                "min_range": 0,
+                "runemark": "dagger",
+                "strength": 3
+            },
+            {
+                "attacks": 2,
+                "dmg_crit": 4,
+                "dmg_hit": 1,
+                "max_range": 2,
+                "min_range": 0,
+                "runemark": "spear",
+                "strength": 3
+            }
+        ],
+        "runemarks": ["Trapper"],
+        "points": 60
+    },
+    {
+        "_id": "Ungor Short Bow",
+        "name": "Ungor Short Bow",
+        "warband": "cult of possessed",
+        "subfaction": "",
+        "grand_alliance": "chaos",
+        "movement": 5,
+        "toughness": 3,
+        "wounds": 8,
+        "weapons": [
+            {
+                "attacks": 2,
+                "dmg_crit": 3,
+                "dmg_hit": 1,
+                "max_range": 1,
+                "min_range": 0,
+                "runemark": "dagger",
+                "strength": 3
+            },
+            {
+                "attacks": 2,
+                "dmg_crit": 3,
+                "dmg_hit": 1,
+                "max_range": 12,
+                "min_range": 3,
+                "runemark": "short bow",
+                "strength": 3
+            }
+        ],
+        "runemarks": ["Trapper"],
+        "points": 85
+    },
+
+    {
+        "_id": "Fury Claws",
+        "name": "Fury",
+        "warband": "cult of possessed",
+        "subfaction": "",
+        "grand_alliance": "chaos",
+        "movement": 8,
+        "toughness": 3,
+        "wounds": 8,
+        "weapons": [
+            {
+                "attacks": 3,
+                "dmg_crit": 2,
+                "dmg_hit": 1,
+                "max_range": 1,
+                "min_range": 0,
+                "runemark": "claws",
+                "strength": 3
+            }
+        ],
+        "runemarks": ["Beast"],
+        "points": 95
+    },
+    {
+        "_id": "C. Hound Jaws",
+        "name": "C. Hound",
+        "warband": "cult of possessed",
+        "subfaction": "",
+        "grand_alliance": "chaos",
+        "movement": 8,
+        "toughness": 3,
+        "wounds": 8,
+        "weapons": [
+            {
+                "attacks": 3,
+                "dmg_crit": 3,
+                "dmg_hit": 1,
+                "max_range": 1,
+                "min_range": 0,
+                "runemark": "jaws",
+                "strength": 3
+            }
+        ],
+        "runemarks": ["Beast"],
+        "points": 85
+    },
+    {
+        "_id": "Cultist Club, Shield",
+        "name": "Cultist Club, Shield",
+        "warband": "cult of possessed",
+        "subfaction": "",
+        "grand_alliance": "chaos",
+        "movement": 4,
+        "toughness": 4,
+        "wounds": 8,
+        "weapons": [
+            {
+                "attacks": 3,
+                "dmg_crit": 3,
+                "dmg_hit": 1,
+                "max_range": 1,
+                "min_range": 0,
+                "runemark": "club",
+                "strength": 3
+            }
+        ],
+        "runemarks": ["Minion"],
+        "points": 55
+    },
+    {
+        "_id": "Cultist Spear, Shield",
+        "name": "Cultist Spear, Shield",
+        "warband": "cult of possessed",
+        "subfaction": "",
+        "grand_alliance": "chaos",
+        "movement": 4,
+        "toughness": 4,
+        "wounds": 8,
+        "weapons": [
+            {
+                "attacks": 2,
+                "dmg_crit": 4,
+                "dmg_hit": 1,
+                "max_range": 2,
+                "min_range": 0,
+                "runemark": "spear",
+                "strength": 3
+            }
+        ],
+        "runemarks": ["Minion"],
+        "points": 55
+    },
+    {
+        "_id": "Cultist Bow",
+        "name": "Cultist Bow",
+        "warband": "cult of possessed",
+        "subfaction": "",
+        "grand_alliance": "chaos",
+        "movement": 4,
+        "toughness": 3,
+        "wounds": 8,
+        "weapons": [
+            {
+                "attacks": 2,
+                "dmg_crit": 3,
+                "dmg_hit": 1,
+                "max_range": 1,
+                "min_range": 0,
+                "runemark": "dagger",
+                "strength": 3
+            },
+            {
+                "attacks": 2,
+                "dmg_crit": 3,
+                "dmg_hit": 1,
+                "max_range": 15,
+                "min_range": 3,
+                "runemark": "bow",
+                "strength": 3
+            }
+        ],
+        "runemarks": ["Minion"],
+        "points": 80
+    }
+]
