@@ -48,4 +48,27 @@ describe('parseWarcrierRoster', () => {
       ],
     })
   })
+
+  it('parses generated roster lines that include explicit fighter ids', () => {
+    const parsed = parseWarcrierRoster(`
+Undead
+- Dreg {id:Dreg Bow}
+- Skeleton {id:Skeleton Spear, Shield}
+`)
+
+    expect(parsed).toEqual({
+      rosterName: null,
+      warband: 'Undead',
+      fighters: [
+        {
+          name: 'Dreg',
+          fighterId: 'Dreg Bow',
+        },
+        {
+          name: 'Skeleton',
+          fighterId: 'Skeleton Spear, Shield',
+        },
+      ],
+    })
+  })
 })

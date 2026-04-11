@@ -6,9 +6,9 @@ import { LanguagePicker } from './components/LanguagePicker'
 import { parseWarcrierRoster } from './import/warcrierImport'
 import { isAbilityEligibleForFighter } from './integration/abilityEligibility'
 import { mergeAbilityTranslations, toAbilityTranslationPath, type WarcryAbilityTranslation } from './i18n/abilityLocalization'
-import { getUiText, type AppLocale } from './i18n/uiText'
+import { formatGrandAllianceLabel, getUiText, type AppLocale } from './i18n/uiText'
 import type { WarcryAbility, WarcryFighter, WarcryWeaponProfile } from './types/warcry'
-import type { ImportedCard, Manifest, WarbandHeaderInfo } from './types/cards'
+import type { ImportedCard, Manifest, WarbandHeaderInfo, WarbandManifest } from './types/cards'
 
 type CustomWeapon = {
   Weapon: string
@@ -24,6 +24,12 @@ type CustomWeapon = {
 type CustomFighterEntry = Record<string, unknown>
 import { findBestFighterMatch, findWarbandEntry, sortAbilitiesByDice } from './utils/cardHelpers'
 import './App.css'
+
+type BuilderSelection = {
+  key: number
+  fighterId: string
+  fighterName: string
+}
 
 function withBasePath(resourcePath: string): string {
   const base = import.meta.env.BASE_URL ?? '/'
@@ -72,6 +78,23 @@ function getInitialLocale(): AppLocale {
   return storedLocale === 'pl' ? 'pl' : 'en'
 }
 
+function formatWarbandOptionLabel(warband: WarbandManifest, locale: AppLocale): string {
+  const warbandName = warband.warbandSlug
+    .split(/[_-]+/)
+    .map((part) => part.charAt(0).toUpperCase() + part.slice(1))
+    .join(' ')
+  return `${formatGrandAllianceLabel(warband.grandAlliance, locale)} / ${warbandName}`
+}
+
+function buildGeneratedRosterText(warband: WarbandManifest, fighters: BuilderSelection[]): string {
+  if (fighters.length === 0) {
+    return ''
+  }
+
+  const fighterLines = fighters.map((fighter) => `- ${fighter.fighterName} {id:${fighter.fighterId}}`)
+  return [warband.warbandSlug, ...fighterLines].join('\n')
+}
+
 function App() {
   const [locale, setLocale] = useState<AppLocale>(getInitialLocale)
   const [printSide, setPrintSide] = useState<'front' | 'back'>('front')
@@ -82,16 +105,139 @@ function App() {
   const [battleTraits, setBattleTraits] = useState<WarcryAbility[]>([])
   const [importedCards, setImportedCards] = useState<ImportedCard[]>([])
   const [importStatus, setImportStatus] = useState('')
+  const [manifest, setManifest] = useState<Manifest | null>(null)
+  const [selectedWarbandKey, setSelectedWarbandKey] = useState('')
+  const [builderFighters, setBuilderFighters] = useState<WarcryFighter[]>([])
+  const [selectedBuilderFighterId, setSelectedBuilderFighterId] = useState('')
+  const [builderSelections, setBuilderSelections] = useState<BuilderSelection[]>([])
+  const [builderStatus, setBuilderStatus] = useState('')
   const ui = getUiText(locale)
   const previousLocale = useRef(locale)
   const fighterDataCache = useRef<Record<string, WarcryFighter[]>>({})
   const abilityDataCache = useRef<Record<string, WarcryAbility[]>>({})
+  const builderSelectionCounter = useRef(0)
+
+  const selectedWarband = manifest?.warbands.find((warband) => warband.key === selectedWarbandKey) ?? null
+
+  async function loadManifestData(): Promise<Manifest> {
+    if (manifest) {
+      return manifest
+    }
+
+    const manifestResponse = await fetch(withBasePath('warcry_data/manifest.json'))
+    if (!manifestResponse.ok) {
+      throw new Error(ui.manifestLoadError)
+    }
+
+    const loadedManifest = (await manifestResponse.json()) as Manifest
+    setManifest(loadedManifest)
+    return loadedManifest
+  }
+
+  async function loadWarbandFighters(warbandEntry: WarbandManifest): Promise<WarcryFighter[]> {
+    const cachedFighters = fighterDataCache.current[warbandEntry.key]
+    if (cachedFighters) {
+      return cachedFighters
+    }
+
+    const fightersResponse = await fetch(withBasePath(warbandEntry.fightersPath))
+    if (!fightersResponse.ok) {
+      throw new Error(ui.warbandDataLoadError)
+    }
+
+    const fighters = (await fightersResponse.json()) as WarcryFighter[]
+    fighterDataCache.current[warbandEntry.key] = fighters
+    return fighters
+  }
+
+  function syncBuilderRoster(warbandEntry: WarbandManifest | null, nextSelections: BuilderSelection[]) {
+    setBuilderSelections(nextSelections)
+
+    if (!warbandEntry || nextSelections.length === 0) {
+      setRosterText('')
+      return
+    }
+
+    setRosterText(buildGeneratedRosterText(warbandEntry, nextSelections))
+  }
 
   useEffect(() => {
     window.localStorage.setItem(LOCALE_STORAGE_KEY, locale)
   }, [locale])
 
+  useEffect(() => {
+    let cancelled = false
+
+    void (async () => {
+      try {
+        const loadedManifest = await loadManifestData()
+        if (cancelled) {
+          return
+        }
+
+        if (!selectedWarbandKey && loadedManifest.warbands.length > 0) {
+          const sortedWarbands = [...loadedManifest.warbands].sort((a, b) => a.warbandSlug.localeCompare(b.warbandSlug))
+          setSelectedWarbandKey(sortedWarbands[0].key)
+        }
+      } catch (error) {
+        if (!cancelled) {
+          setBuilderStatus(error instanceof Error ? error.message : ui.manifestLoadError)
+        }
+      }
+    })()
+
+    return () => {
+      cancelled = true
+    }
+  }, [manifest, selectedWarbandKey, ui.manifestLoadError])
+
+  useEffect(() => {
+    if (!selectedWarband) {
+      setBuilderFighters([])
+      setSelectedBuilderFighterId('')
+      return
+    }
+
+    let cancelled = false
+    setBuilderStatus(ui.loadingWarbandFighters)
+    setBuilderSelections([])
+    setRosterText('')
+
+    void (async () => {
+      try {
+        const fighters = await loadWarbandFighters(selectedWarband)
+        if (cancelled) {
+          return
+        }
+
+        const sortedFighters = [...fighters].sort((a, b) => {
+          if (a.name === b.name) {
+            return a._id.localeCompare(b._id)
+          }
+
+          return a.name.localeCompare(b.name)
+        })
+
+        setBuilderFighters(sortedFighters)
+        setSelectedBuilderFighterId(sortedFighters[0]?._id ?? '')
+        setBuilderStatus('')
+      } catch (error) {
+        if (!cancelled) {
+          setBuilderFighters([])
+          setSelectedBuilderFighterId('')
+          setBuilderStatus(error instanceof Error ? error.message : ui.builderLoadFailed)
+        }
+      }
+    })()
+
+    return () => {
+      cancelled = true
+    }
+  }, [selectedWarband, ui.builderLoadFailed, ui.loadingWarbandFighters])
+
   function useSample() {
+    setBuilderSelections([])
+    setBuilderStatus('')
     setRosterText(SAMPLE_ROSTER)
   }
 
@@ -159,13 +305,8 @@ function App() {
     setBattleTraits([])
 
     try {
-      const manifestResponse = await fetch(withBasePath('warcry_data/manifest.json'))
-      if (!manifestResponse.ok) {
-        throw new Error(ui.manifestLoadError)
-      }
-
-      const manifest = (await manifestResponse.json()) as Manifest
-      const warbandEntry = findWarbandEntry(manifest, parsed.warband)
+      const loadedManifest = await loadManifestData()
+      const warbandEntry = findWarbandEntry(loadedManifest, parsed.warband)
 
       // Custom JSON warband import path (new format): "WarbandName" + JSON array body.
       if (parsed.customWarbandData) {
@@ -283,12 +424,7 @@ function App() {
           if (cachedFighters) {
             fighters = cachedFighters
           } else {
-            const fightersResponse = await fetch(withBasePath(warbandEntry!.fightersPath))
-            if (!fightersResponse.ok) {
-              throw new Error(ui.warbandDataLoadError)
-            }
-
-            const rawFighters = (await fightersResponse.json()) as unknown[]
+            const rawFighters = (await loadWarbandFighters(warbandEntry!)) as unknown[]
             if (warbandEntry!.warbandSlug === 'custom') {
               const weaponsResponse = await fetch(withBasePath('warcry_data/data/custom/weapons.json'))
               if (!weaponsResponse.ok) {
@@ -349,13 +485,15 @@ function App() {
       // Debug: log fighters count before attempting matches
       console.log('IMPORT DEBUG - fighters loaded count:', fighters.length)
 
-      const cards: ImportedCard[] = fighterNames.map((name) => {
-        const fighter = findBestFighterMatch(fighters, name)
+      const cards: ImportedCard[] = parsed.fighters.map((rosterFighter) => {
+        const fighter = rosterFighter.fighterId
+          ? fighters.find((candidate) => candidate._id === rosterFighter.fighterId) ?? findBestFighterMatch(fighters, rosterFighter.name)
+          : findBestFighterMatch(fighters, rosterFighter.name)
         if (!fighter) {
           // Debug: report unmatched name
-          console.log('IMPORT DEBUG - no match for imported name:', name)
+          console.log('IMPORT DEBUG - no match for imported name:', rosterFighter.name)
           return {
-            importedName: name,
+            importedName: rosterFighter.name,
             fighter: null,
             abilities: [],
             reactions: [],
@@ -374,7 +512,7 @@ function App() {
         )
 
         return {
-          importedName: name,
+          importedName: rosterFighter.name,
           fighter,
           abilities: fighterAbilities,
           reactions,
@@ -414,6 +552,66 @@ function App() {
     void rerunLastImport()
   }, [lastImportedRosterText, locale])
 
+  const sortedWarbands = manifest
+    ? [...manifest.warbands].sort((a, b) => {
+        const allianceCompare = a.grandAlliance.localeCompare(b.grandAlliance)
+        if (allianceCompare !== 0) {
+          return allianceCompare
+        }
+
+        return a.warbandSlug.localeCompare(b.warbandSlug)
+      })
+    : []
+
+  function addSelectedBuilderFighter() {
+    if (!selectedWarband || !selectedBuilderFighterId) {
+      return
+    }
+
+    const fighter = builderFighters.find((candidate) => candidate._id === selectedBuilderFighterId)
+    if (!fighter) {
+      return
+    }
+
+    builderSelectionCounter.current += 1
+    const nextSelections = [
+      ...builderSelections,
+      {
+        key: builderSelectionCounter.current,
+        fighterId: fighter._id,
+        fighterName: fighter.name,
+      },
+    ]
+
+    syncBuilderRoster(selectedWarband, nextSelections)
+    void importRoster(buildGeneratedRosterText(selectedWarband, nextSelections))
+  }
+
+  function removeBuilderFighter(selectionKey: number) {
+    const nextSelections = builderSelections.filter((selection) => selection.key !== selectionKey)
+    syncBuilderRoster(selectedWarband, nextSelections)
+
+    if (selectedWarband && nextSelections.length > 0) {
+      void importRoster(buildGeneratedRosterText(selectedWarband, nextSelections))
+      return
+    }
+
+    setImportedCards([])
+    setRosterName(null)
+    setWarbandInfo(null)
+    setBattleTraits([])
+    setImportStatus('')
+  }
+
+  function clearBuilderFighters() {
+    syncBuilderRoster(selectedWarband, [])
+    setImportedCards([])
+    setRosterName(null)
+    setWarbandInfo(null)
+    setBattleTraits([])
+    setImportStatus('')
+  }
+
   return (
     <main className="app-shell">
       <header className="app-header">
@@ -444,6 +642,101 @@ function App() {
 
       <section className="roster-import">
         <p className="roster-title">{ui.rosterTitle}</p>
+        <div className="roster-builder">
+          <div className="roster-builder-header">
+            <p className="roster-builder-title">{ui.rosterBuilderTitle}</p>
+            <p className="roster-builder-description">{ui.rosterBuilderDescription}</p>
+          </div>
+          <div className="roster-builder-grid">
+            <label className="roster-builder-field">
+              <span className="roster-builder-label">{ui.warbandSelectLabel}</span>
+              <select
+                className="roster-builder-select"
+                value={selectedWarbandKey}
+                onChange={(event) => setSelectedWarbandKey(event.target.value)}
+              >
+                {sortedWarbands.length === 0 ? (
+                  <option value="">{ui.warbandSelectPlaceholder}</option>
+                ) : (
+                  sortedWarbands.map((warband) => (
+                    <option key={warband.key} value={warband.key}>
+                      {formatWarbandOptionLabel(warband, locale)}
+                    </option>
+                  ))
+                )}
+              </select>
+            </label>
+
+            <label className="roster-builder-field">
+              <span className="roster-builder-label">{ui.fighterSelectLabel}</span>
+              <select
+                className="roster-builder-select"
+                value={selectedBuilderFighterId}
+                onChange={(event) => setSelectedBuilderFighterId(event.target.value)}
+                disabled={builderFighters.length === 0 || Boolean(builderStatus)}
+              >
+                {builderFighters.length === 0 ? (
+                  <option value="">{ui.fighterSelectPlaceholder}</option>
+                ) : (
+                  builderFighters.map((fighter) => (
+                    <option key={fighter._id} value={fighter._id}>
+                      {fighter.name === fighter._id ? fighter.name : `${fighter.name} (${fighter._id})`}
+                    </option>
+                  ))
+                )}
+              </select>
+            </label>
+          </div>
+
+          <div className="roster-builder-actions">
+            <button type="button" className="roster-action-button" onClick={addSelectedBuilderFighter} disabled={!selectedBuilderFighterId || Boolean(builderStatus)}>
+              {ui.addSelectedFighterButton}
+            </button>
+            <button
+              type="button"
+              className="roster-action-button roster-action-button-secondary"
+              onClick={() => {
+                if (selectedWarband && builderSelections.length > 0) {
+                  void importRoster(buildGeneratedRosterText(selectedWarband, builderSelections))
+                }
+              }}
+              disabled={!selectedWarband || builderSelections.length === 0}
+            >
+              {ui.importSelectedFightersButton}
+            </button>
+            <button
+              type="button"
+              className="roster-action-button roster-action-button-secondary"
+              onClick={clearBuilderFighters}
+              disabled={builderSelections.length === 0}
+            >
+              {ui.clearSelectedFightersButton}
+            </button>
+          </div>
+
+          <div className="roster-builder-selected">
+            <p className="roster-builder-selected-title">{ui.selectedFightersLabel}</p>
+            {builderSelections.length === 0 ? (
+              <p className="roster-builder-empty">{builderStatus || ui.noSelectedFighters}</p>
+            ) : (
+              <ul className="roster-builder-selected-list">
+                {builderSelections.map((selection) => (
+                  <li key={selection.key} className="roster-builder-selected-item">
+                    <span className="roster-builder-selected-name">{selection.fighterName}</span>
+                    <button
+                      type="button"
+                      className="roster-builder-remove"
+                      onClick={() => removeBuilderFighter(selection.key)}
+                      aria-label={`Remove ${selection.fighterName}`}
+                    >
+                      ×
+                    </button>
+                  </li>
+                ))}
+              </ul>
+            )}
+          </div>
+        </div>
         <div className="roster-input-shell">
           <textarea
             rows={10}

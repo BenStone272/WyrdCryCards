@@ -34,6 +34,19 @@ export type UiText = {
   englishLabel: string
   polishLabel: string
   rosterTitle: string
+  rosterBuilderTitle: string
+  rosterBuilderDescription: string
+  warbandSelectLabel: string
+  warbandSelectPlaceholder: string
+  fighterSelectLabel: string
+  fighterSelectPlaceholder: string
+  addSelectedFighterButton: string
+  clearSelectedFightersButton: string
+  importSelectedFightersButton: string
+  selectedFightersLabel: string
+  noSelectedFighters: string
+  loadingWarbandFighters: string
+  builderLoadFailed: string
   rosterPlaceholder: string
   importRosterButton: string
   useSampleButton: string
@@ -95,6 +108,19 @@ const uiText: Record<AppLocale, UiText> = {
     englishLabel: 'English',
     polishLabel: 'Polski',
     rosterTitle: 'Roster Text',
+    rosterBuilderTitle: 'Roster Builder',
+    rosterBuilderDescription: 'Pick a warband, add fighters, and generate cards without pasting roster text.',
+    warbandSelectLabel: 'Warband',
+    warbandSelectPlaceholder: 'Select a warband',
+    fighterSelectLabel: 'Fighter',
+    fighterSelectPlaceholder: 'Select a fighter',
+    addSelectedFighterButton: 'Add fighter',
+    clearSelectedFightersButton: 'Clear fighters',
+    importSelectedFightersButton: 'Import selected fighters',
+    selectedFightersLabel: 'Selected fighters',
+    noSelectedFighters: 'No fighters selected yet.',
+    loadingWarbandFighters: 'Loading fighters…',
+    builderLoadFailed: 'Failed to load fighters for the selected warband.',
     rosterPlaceholder: 'Paste full roster export text here',
     importRosterButton: 'Import roster',
     useSampleButton: 'Use Sample',
@@ -154,6 +180,19 @@ const uiText: Record<AppLocale, UiText> = {
     englishLabel: 'English',
     polishLabel: 'Polski',
     rosterTitle: 'Tekst rozpiski',
+    rosterBuilderTitle: 'Konstruktor rozpiski',
+    rosterBuilderDescription: 'Wybierz warband, dodaj wojowników i wygeneruj karty bez wklejania eksportu.',
+    warbandSelectLabel: 'Warband',
+    warbandSelectPlaceholder: 'Wybierz warband',
+    fighterSelectLabel: 'Wojownik',
+    fighterSelectPlaceholder: 'Wybierz wojownika',
+    addSelectedFighterButton: 'Dodaj wojownika',
+    clearSelectedFightersButton: 'Wyczyść wojowników',
+    importSelectedFightersButton: 'Importuj wybranych wojowników',
+    selectedFightersLabel: 'Wybrani wojownicy',
+    noSelectedFighters: 'Nie wybrano jeszcze żadnych wojowników.',
+    loadingWarbandFighters: 'Wczytywanie wojowników…',
+    builderLoadFailed: 'Nie udało się wczytać wojowników dla wybranego warbandu.',
     rosterPlaceholder: 'Wklej pełny eksport rozpiski tutaj',
     importRosterButton: 'Importuj rozpiskę',
     useSampleButton: 'Użyj przykładu',

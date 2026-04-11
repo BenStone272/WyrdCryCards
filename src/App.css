@@ -190,6 +190,116 @@
   gap: var(--space-2);
 }
 
+.roster-builder {
+  border: 1px solid #d8ceb9;
+  border-radius: 10px;
+  background: #fbf8f0;
+  padding: 0.85rem;
+  display: grid;
+  gap: 0.75rem;
+}
+
+.roster-builder-header {
+  display: grid;
+  gap: 0.2rem;
+}
+
+.roster-builder-title {
+  margin: 0;
+  font-weight: 700;
+}
+
+.roster-builder-description {
+  margin: 0;
+  font-size: 0.88rem;
+  color: #5a5040;
+}
+
+.roster-builder-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+  gap: 0.75rem;
+}
+
+.roster-builder-field {
+  display: grid;
+  gap: 0.35rem;
+}
+
+.roster-builder-label {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #22343b;
+}
+
+.roster-builder-select {
+  width: 100%;
+  border: 1px solid #bfb39b;
+  border-radius: 8px;
+  background: #fffdf7;
+  color: #0f2a35;
+  padding: 0.55rem 0.7rem;
+  font-size: 0.92rem;
+}
+
+.roster-builder-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+.roster-builder-selected {
+  display: grid;
+  gap: 0.45rem;
+}
+
+.roster-builder-selected-title {
+  margin: 0;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #22343b;
+}
+
+.roster-builder-selected-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.roster-builder-selected-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  border: 1px solid #d2c8b2;
+  border-radius: 999px;
+  background: #f2ebd8;
+  padding: 0.28rem 0.45rem 0.28rem 0.65rem;
+}
+
+.roster-builder-selected-name {
+  font-size: 0.82rem;
+}
+
+.roster-builder-remove {
+  border: 1px solid #9b8c71;
+  border-radius: 999px;
+  background: #fffdf7;
+  color: #0f2a35;
+  padding: 0.1rem 0.42rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.roster-builder-empty,
+.roster-builder-status {
+  margin: 0;
+  font-size: 0.85rem;
+  color: #5a5040;
+}
+
 .roster-title {
   margin: 0;
   font-weight: 700;
@@ -235,6 +345,18 @@
 .roster-action-button-secondary {
   background: #f2ebd8;
   color: #0f2a35;
+}
+
+@media (max-width: 700px) {
+  .roster-input-actions,
+  .roster-builder-actions {
+    position: static;
+    justify-content: stretch;
+  }
+
+  .roster-import textarea {
+    padding-bottom: 0.6rem;
+  }
 }
 
 .status {

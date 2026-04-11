@@ -1,5 +1,6 @@
 export type ImportedFighter = {
   name: string
+  fighterId?: string
 }
 
 export type ImportedRoster = {
@@ -34,13 +35,18 @@ function parseFighterLine(line: string): ImportedFighter | null {
   }
 
   const withoutBullet = line.replace(/^[-]\s+/, '')
-  const match = withoutBullet.match(/^(.+?)(?:\s+\([^)]*\))?$/)
+  const fighterIdMatch = withoutBullet.match(/\s+\{id:([^}]+)\}$/)
+  const fighterId = fighterIdMatch?.[1]?.trim()
+  const lineWithoutId = fighterIdMatch
+    ? withoutBullet.slice(0, Math.max(0, fighterIdMatch.index ?? withoutBullet.length)).trimEnd()
+    : withoutBullet
+  const match = lineWithoutId.match(/^(.+?)(?:\s+\([^)]*\))?$/)
   if (!match) {
     return null
   }
 
   const name = match[1].trim()
-  return { name }
+  return fighterId ? { name, fighterId } : { name }
 }
 
 export function parseWarcrierRoster(input: string): ImportedRoster {

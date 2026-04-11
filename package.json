@@ -8,7 +8,7 @@
     "translations:missing": "tsx scripts/list-missing-ability-translations.ts",
     "translations:missing-file": "tsx scripts/show-missing-ability-translations-for-file.ts",
     "dev": "vite",
-    "build": "npm run sync-data && tsc -b && vite build",
+    "build": "tsc -b && vite build",
     "test": "vitest run",
     "lint": "eslint .",
     "preview": "vite preview",
