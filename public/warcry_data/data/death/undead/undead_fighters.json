@@ -1,0 +1,434 @@
+[
+	{
+		"_id": "Vampire Sword",
+		"name": "Vampire",
+		"warband": "undead",
+		"subfaction": "",
+		"grand_alliance": "death",
+		"movement": 5,
+		"toughness": 5,
+		"wounds": 25,
+		"weapons": [
+			{
+				"attacks": 4,
+				"dmg_crit": 5,
+				"dmg_hit": 2,
+				"max_range": 1,
+				"min_range": 0,
+				"runemark": "sword",
+				"strength": 4
+			}
+		],
+		"runemarks": ["Hero", "Fly", "Destroyer"],
+		"points": 215
+	},
+	{
+		"_id": "Necromancer Staff, Blast",
+		"name": "Necrom.",
+		"warband": "undead",
+		"subfaction": "",
+		"grand_alliance": "death",
+		"movement": 4,
+		"toughness": 3,
+		"wounds": 18,
+		"weapons": [
+			{
+				"attacks": 3,
+				"dmg_crit": 4,
+				"dmg_hit": 1,
+				"max_range": 2,
+				"min_range": 0,
+				"runemark": "staff",
+				"strength": 3
+			},
+			{
+				"attacks": 2,
+				"dmg_crit": 6,
+				"dmg_hit": 3,
+				"max_range": 7,
+				"min_range": 3,
+				"runemark": "blast",
+				"strength": 3
+			}
+		],
+		"runemarks": ["Hero", "Mystic"],
+		"points": 120
+	},
+	{
+		"_id": "Ghoul King Claws",
+		"name": "Ghoul King",
+		"warband": "undead",
+		"subfaction": "",
+		"grand_alliance": "death",
+		"movement": 5,
+		"toughness": 4,
+		"wounds": 22,
+		"weapons": [
+			{
+				"attacks": 4,
+				"dmg_crit": 4,
+				"dmg_hit": 2,
+				"max_range": 1,
+				"min_range": 0,
+				"runemark": "claws",
+				"strength": 4
+			}
+		],
+		"runemarks": ["Hero", "Destroyer"],
+		"points": 155
+	},
+	{
+		"_id": "Wight King Sword, Shield",
+		"name": "Wight King Sword, Shield",
+		"warband": "undead",
+		"subfaction": "",
+		"grand_alliance": "death",
+		"movement": 3,
+		"toughness": 5,
+		"wounds": 25,
+		"weapons": [
+			{
+				"attacks": 4,
+				"dmg_crit": 5,
+				"dmg_hit": 2,
+				"max_range": 1,
+				"min_range": 0,
+				"runemark": "sword",
+				"strength": 4
+			}
+		],
+		"runemarks": ["Hero", "Elite"],
+		"points": 165
+	},
+	{
+		"_id": "Wight Great Sword",
+		"name": "Wight Great Sword",
+		"warband": "undead",
+		"subfaction": "",
+		"grand_alliance": "death",
+		"movement": 3,
+		"toughness": 4,
+		"wounds": 15,
+		"weapons": [
+			{
+				"attacks": 3,
+				"dmg_crit": 5,
+				"dmg_hit": 3,
+				"max_range": 1,
+				"min_range": 0,
+				"runemark": "great sword",
+				"strength": 5
+			}
+		],
+		"runemarks": ["Elite", "Minion"],
+		"points": 120
+	},
+	{
+		"_id": "Wight Halberd",
+		"name": "Wight Halberd",
+		"warband": "undead",
+		"subfaction": "",
+		"grand_alliance": "death",
+		"movement": 3,
+		"toughness": 4,
+		"wounds": 15,
+		"weapons": [
+			{
+				"attacks": 3,
+				"dmg_crit": 5,
+				"dmg_hit": 2,
+				"max_range": 2,
+				"min_range": 0,
+				"runemark": "halberd",
+				"strength": 5
+			}
+		],
+		"runemarks": ["Elite", "Minion"],
+		"points": 115
+	},
+	{
+		"_id": "Wight Sword, Shield",
+		"name": "Wight Sword, Shield",
+		"warband": "undead",
+		"subfaction": "",
+		"grand_alliance": "death",
+		"movement": 3,
+		"toughness": 5,
+		"wounds": 15,
+		"weapons": [
+			{
+				"attacks": 3,
+				"dmg_crit": 4,
+				"dmg_hit": 2,
+				"max_range": 1,
+				"min_range": 0,
+				"runemark": "sword",
+				"strength": 4
+			}
+		],
+		"runemarks": ["Elite", "Minion"],
+		"points": 110
+	},
+	{
+		"_id": "Skeleton Halberd",
+		"name": "Skeleton Halberd",
+		"warband": "undead",
+		"subfaction": "",
+		"grand_alliance": "death",
+		"movement": 3,
+		"toughness": 3,
+		"wounds": 10,
+		"weapons": [
+			{
+				"attacks": 2,
+				"dmg_crit": 4,
+				"dmg_hit": 1,
+				"max_range": 1,
+				"min_range": 0,
+				"runemark": "halberd",
+				"strength": 4
+			}
+		],
+		"runemarks": ["Minion"],
+		"points": 60
+	},
+	{
+		"_id": "Skeleton Sword, Shield",
+		"name": "Skeleton Sword, Shield",
+		"warband": "undead",
+		"subfaction": "",
+		"grand_alliance": "death",
+		"movement": 3,
+		"toughness": 4,
+		"wounds": 10,
+		"weapons": [
+			{
+				"attacks": 3,
+				"dmg_crit": 3,
+				"dmg_hit": 1,
+				"max_range": 1,
+				"min_range": 0,
+				"runemark": "sword",
+				"strength": 3
+			}
+		],
+		"runemarks": ["Minion"],
+		"points": 55
+	},
+	{
+		"_id": "Skeleton Spear, Shield",
+		"name": "Skeleton Spear, Shield",
+		"warband": "undead",
+		"subfaction": "",
+		"grand_alliance": "death",
+		"movement": 3,
+		"toughness": 4,
+		"wounds": 10,
+		"weapons": [
+			{
+				"attacks": 2,
+				"dmg_crit": 4,
+				"dmg_hit": 1,
+				"max_range": 2,
+				"min_range": 0,
+				"runemark": "spear",
+				"strength": 3
+			}
+		],
+		"runemarks": ["Minion"],
+		"points": 55
+	},
+	{
+		"_id": "Zombie Claws",
+		"name": "Zombie",
+		"warband": "undead",
+		"subfaction": "",
+		"grand_alliance": "death",
+		"movement": 3,
+		"toughness": 3,
+		"wounds": 10,
+		"weapons": [
+			{
+				"attacks": 2,
+				"dmg_crit": 3,
+				"dmg_hit": 1,
+				"max_range": 1,
+				"min_range": 0,
+				"runemark": "claws",
+				"strength": 3
+			}
+		],
+		"runemarks": ["Minion"],
+		"points": 40
+	},
+	{
+		"_id": "Ghoul Claws",
+		"name": "Ghoul",
+		"warband": "undead",
+		"subfaction": "",
+		"grand_alliance": "death",
+		"movement": 5,
+		"toughness": 3,
+		"wounds": 8,
+		"weapons": [
+			{
+				"attacks": 3,
+				"dmg_crit": 3,
+				"dmg_hit": 1,
+				"max_range": 1,
+				"min_range": 0,
+				"runemark": "claws",
+				"strength": 3
+			}
+		],
+		"runemarks": ["Destroyer"],
+		"points": 60
+	},
+	{
+		"_id": "Dreg Great Club",
+		"name": "Dreg Great Club",
+		"warband": "undead",
+		"subfaction": "",
+		"grand_alliance": "death",
+		"movement": 4,
+		"toughness": 3,
+		"wounds": 8,
+		"weapons": [
+			{
+				"attacks": 3,
+				"dmg_crit": 4,
+				"dmg_hit": 1,
+				"max_range": 1,
+				"min_range": 0,
+				"runemark": "great club",
+				"strength": 4
+			}
+		],
+		"runemarks": ["Trapper"],
+		"points": 60
+	},
+	{
+		"_id": "Dreg Halberd",
+		"name": "Dreg Halberd",
+		"warband": "undead",
+		"subfaction": "",
+		"grand_alliance": "death",
+		"movement": 4,
+		"toughness": 3,
+		"wounds": 8,
+		"weapons": [
+			{
+				"attacks": 2,
+				"dmg_crit": 4,
+				"dmg_hit": 1,
+				"max_range": 2,
+				"min_range": 0,
+				"runemark": "halberd",
+				"strength": 4
+			}
+		],
+		"runemarks": ["Trapper"],
+		"points": 60
+	},
+	{
+		"_id": "Dreg Club, Shield",
+		"name": "Dreg Club, Shield",
+		"warband": "undead",
+		"subfaction": "",
+		"grand_alliance": "death",
+		"movement": 4,
+		"toughness": 4,
+		"wounds": 8,
+		"weapons": [
+			{
+				"attacks": 3,
+				"dmg_crit": 3,
+				"dmg_hit": 1,
+				"max_range": 1,
+				"min_range": 0,
+				"runemark": "club",
+				"strength": 3
+			}
+		],
+		"runemarks": ["Trapper"],
+		"points": 55
+	},
+	{
+		"_id": "Dreg Spear, Shield",
+		"name": "Dreg Spear, Shield",
+		"warband": "undead",
+		"subfaction": "",
+		"grand_alliance": "death",
+		"movement": 4,
+		"toughness": 4,
+		"wounds": 8,
+		"weapons": [
+			{
+				"attacks": 2,
+				"dmg_crit": 4,
+				"dmg_hit": 1,
+				"max_range": 2,
+				"min_range": 0,
+				"runemark": "spear",
+				"strength": 3
+			}
+		],
+		"runemarks": ["Trapper"],
+		"points": 55
+	},
+	{
+		"_id": "Dreg Bow",
+		"name": "Dreg Bow",
+		"warband": "undead",
+		"subfaction": "",
+		"grand_alliance": "death",
+		"movement": 4,
+		"toughness": 3,
+		"wounds": 8,
+		"weapons": [
+			{
+				"attacks": 2,
+				"dmg_crit": 3,
+				"dmg_hit": 1,
+				"max_range": 1,
+				"min_range": 0,
+				"runemark": "dagger",
+				"strength": 3
+			},
+			{
+				"attacks": 2,
+				"dmg_crit": 3,
+				"dmg_hit": 1,
+				"max_range": 15,
+				"min_range": 3,
+				"runemark": "bow",
+				"strength": 3
+			}
+		],
+		"runemarks": ["Trapper"],
+		"points": 80
+	},
+	{
+		"_id": "D. Wolf Jaws",
+		"name": "D. Wolf",
+		"warband": "undead",
+		"subfaction": "",
+		"grand_alliance": "death",
+		"movement": 8,
+		"toughness": 3,
+		"wounds": 10,
+		"weapons": [
+			{
+				"attacks": 3,
+				"dmg_crit": 3,
+				"dmg_hit": 1,
+				"max_range": 1,
+				"min_range": 0,
+				"runemark": "jaws",
+				"strength": 3
+			}
+		],
+		"runemarks": ["Minion", "Beast"],
+		"points": 85
+	}
+]
