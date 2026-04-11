@@ -1,0 +1,128 @@
+[
+ 
+    {
+        "_id": "Bravery and Loyalty",
+        "name": "Bravery and Loyalty",
+        "warband": "mercenaries",
+        "cost": "reaction",
+        "description": " A fighter can make this reaction after an enemy finishes a Move action visible to this fighter and within 3” of this fighter.  Pick another friendly fighter with the Mercenaries runemark who is within 3” of this fighter.  The chosen fighter makes a bonus melee Attack action that must target the enemy who made that Move action.",
+        "runemarks": []
+    },
+    {
+        "_id": "Martial Discipline",
+        "name": "Martial Discipline",
+        "warband": "mercenaries",
+        "cost": "double",
+        "description": "Count one miss from the next melee Attack action made by this fighter this activation as a normal hit instead.",
+        "runemarks": []
+    },
+    {
+        "_id": "Aimed Shot",
+        "name": "Aimed Shot",
+        "warband": "mercenaries",
+        "cost": "double",
+        "description": " Use only if this fighter has not yet made a Move action this battle round.  The next shooting Attack action this fighter makes this activation scores critical hits on 5+.",
+        "runemarks": [
+            "Scout"
+        ]
+    },
+        {
+        "_id": "Form Shieldwall",
+        "name": "Form Shieldwall",
+        "warband": "mercenaries",
+        "cost": "double",
+        "description": "Until the end of the battle round, add 1 to the Toughness of this fighter, and friendly fighters with the Mercenaries and Bulwark runemarks as long as they are within 1” of this fighter. ",
+        "runemarks": [
+            "Bulwark"
+        ]
+    },
+        {
+        "_id": "Wide Sweeping Blow",
+        "name": "Wide Sweeping Blow",
+        "warband": "mercenaries",
+        "cost": "triple",
+        "description": " Roll a dice for each visible enemy within 3” of this fighter.  On 3-4, allocate 1 Damage to the enemy being rolled for.  On 5-6 allocate Damage equal to the value of this ability to the enemy being rolled for. ",
+        "runemarks": [
+            "Destroyer"
+        ]
+    },
+        {
+        "_id": "Take Aim!",
+        "name": "Take Aim!",
+        "warband": "mercenaries",
+        "cost": "triple",
+        "description": "Until the end of the battle round, add 1 to the Damage of critical hits (but not normal hits) from ranged Attack actions made by visible friendly fighters with the Mercenaries and Scout runemarks while they are within 6\" of this fighter. ",
+        "runemarks": [
+            "hero"
+        ]
+    },
+        {
+        "_id": "Flow of Battle",
+        "name": "Flow of Battle",
+        "warband": "mercenaries",
+        "cost": "quad",
+        "description": " Pick a number of visible friendly fighters up to the value of this ability that are each within 6\" of this fighter.  Each of these fighters may make a bonus Move or Disengage action (some can make Move and some can make Disengage actions).",
+        "runemarks": ["hero"          
+        ]
+    },
+        {
+        "_id": "Honest Steel",
+        "name": "Honest Steel",
+        "warband": "mercenaries",
+        "cost": "double",
+        "description": "Add 1 to Attacks and Strength of this fighter’s next melee Attack action this activation.",
+        "runemarks": [
+            "Hero"
+        ]
+    },
+        {
+        "_id": " Inspiring Officer",
+        "name": "Inspiring Officer",
+        "warband": "mercenaries",
+        "cost": "double",
+        "description": " Pick a visible friendly fighter within 6” of this fighter who has not been activated this battle round, has the Mercenaries runemark, and a points value of 85 or less.  Activate that fighter immediately after this fighter’s activation ends.",
+        "runemarks": [
+            "Hero"
+        ]
+    },
+        {
+        "_id": "Tactical Supremacy",
+        "name": "Tactical Supremacy",
+        "warband": "mercenaries",
+        "cost": "double",
+        "description": " Roll a dice.  On a 3+, add one Wild Dice to your saved Wild Dice. ",
+        "runemarks": [
+            "Hero"
+        ]
+    },
+        {
+        "_id": "Dred of Aramar",
+        "name": "Dred of Aramar",
+        "warband": "mercenaries",
+        "cost": "double",
+        "description": " Pick a visible enemy fighter within a number of inches of this fighter equal to the value of this ability and roll a dice.  On a 3+, until the end of the battle round, that fighter cannot make Move or Disengage actions this round.",
+        "runemarks": [
+            "Ally","Mystic"
+        ]
+    },
+        {
+        "_id": " Silver Arrows of Arha",
+        "name": "Silver Arrows of Arha",
+        "warband": "mercenaries",
+        "cost": "double",
+        "description": "This fighter has access to the following attack profile for their next shooting Attack action this activation:  Attacks: *  Strength: 3  Damage on hit: 1  Damage on crit: 2  Range: 3-15”",
+        "runemarks": [
+            "Ally","Mystic"
+        ]
+    },
+        {
+        "_id": "Luck of Shemtek",
+        "name": "Luck of Shemtek",
+        "warband": "mercenaries",
+        "cost": "double",
+        "description": " Roll dice equal to the value of this ability.  For each 5+, add one Wild Dice to your saved Wild Dice.",
+        "runemarks": [
+            "Ally","Mystic"
+        ]
+    }
+]

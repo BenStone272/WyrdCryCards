@@ -14,6 +14,14 @@
       "fightersPath": "/warcry_data/data/chaos/cult_of_possessed/cult_of_possessed_fighters.json",
       "abilitiesPath": "/warcry_data/data/chaos/cult_of_possessed/cult_of_possessed_abilities.json"
     },
+   {
+      "key": "order/mercenaries",
+      "grandAlliance": "order",
+      "warbandSlug": "mercenaries",
+      "fightersPath": "/warcry_data/data/order/mercenaries/mercenaries_fighters.json",
+      "abilitiesPath": "/warcry_data/data/order/mercenaries/mercenaries_abilities.json"
+    },
+    
     {
       "key": "chaos/blades_of_khorne_bloodbound",
       "grandAlliance": "chaos",
