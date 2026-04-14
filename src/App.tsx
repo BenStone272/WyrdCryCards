@@ -65,6 +65,7 @@ const SAMPLE_ROSTER = `Custom
 ]`
 
 const LOCALE_STORAGE_KEY = 'warcryfightercards.locale'
+const SAVED_ROSTER_STORAGE_KEY = 'warcryfightercards.savedRoster'
 const GITHUB_URL = 'https://github.com/BenStone272/WyrdCryCards'
 const DATA_SOURCE_URL = 'https://github.com/krisling049/warcry_data'
 const CARD_ASSETS_URL = 'https://github.com/Stevrak/warcry_legions'
@@ -307,6 +308,7 @@ function App() {
     try {
       const loadedManifest = await loadManifestData()
       const warbandEntry = findWarbandEntry(loadedManifest, parsed.warband)
+      const rosterKeyPrefix = `${parsed.warband ?? 'unknown'}|${parsed.rosterName ?? 'roster'}`.toLowerCase()
 
       // Custom JSON warband import path (new format): "WarbandName" + JSON array body.
       if (parsed.customWarbandData) {
@@ -316,7 +318,8 @@ function App() {
           faction: 'custom',
         })
       } else if (!warbandEntry) {
-        const unmatchedCards = fighterNames.map((name) => ({
+        const unmatchedCards = fighterNames.map((name, index) => ({
+          cardKey: `${rosterKeyPrefix}|${index + 1}|${name.trim().toLowerCase()}`,
           importedName: name,
           fighter: null,
           abilities: [],
@@ -485,7 +488,8 @@ function App() {
       // Debug: log fighters count before attempting matches
       console.log('IMPORT DEBUG - fighters loaded count:', fighters.length)
 
-      const cards: ImportedCard[] = parsed.fighters.map((rosterFighter) => {
+      const cards: ImportedCard[] = parsed.fighters.map((rosterFighter, index) => {
+        const cardKey = `${rosterKeyPrefix}|${index + 1}|${(rosterFighter.fighterId ?? rosterFighter.name).trim().toLowerCase()}`
         const fighter = rosterFighter.fighterId
           ? fighters.find((candidate) => candidate._id === rosterFighter.fighterId) ?? findBestFighterMatch(fighters, rosterFighter.name)
           : findBestFighterMatch(fighters, rosterFighter.name)
@@ -493,6 +497,7 @@ function App() {
           // Debug: report unmatched name
           console.log('IMPORT DEBUG - no match for imported name:', rosterFighter.name)
           return {
+            cardKey,
             importedName: rosterFighter.name,
             fighter: null,
             abilities: [],
@@ -512,6 +517,7 @@ function App() {
         )
 
         return {
+          cardKey,
           importedName: rosterFighter.name,
           fighter,
           abilities: fighterAbilities,
@@ -612,6 +618,28 @@ function App() {
     setWarbandInfo(null)
     setBattleTraits([])
     setImportStatus('')
+  }
+
+  function saveCurrentRoster() {
+    const rosterToSave = (lastImportedRosterText ?? rosterText).trim()
+    if (!rosterToSave) {
+      setImportStatus(ui.noFighterLinesStatus)
+      return
+    }
+
+    window.localStorage.setItem(SAVED_ROSTER_STORAGE_KEY, rosterToSave)
+    setImportStatus(ui.rosterSavedStatus)
+  }
+
+  async function loadSavedRoster() {
+    const savedRoster = window.localStorage.getItem(SAVED_ROSTER_STORAGE_KEY)
+    if (!savedRoster) {
+      setImportStatus(ui.noSavedRosterStatus)
+      return
+    }
+
+    setRosterText(savedRoster)
+    await importRoster(savedRoster)
   }
 
   return (
@@ -749,6 +777,12 @@ function App() {
           <div className="roster-input-actions">
             <button type="button" className="roster-action-button" onClick={() => void importRoster(rosterText)}>
               {ui.importRosterButton}
+            </button>
+            <button type="button" className="roster-action-button roster-action-button-secondary" onClick={saveCurrentRoster}>
+              {ui.saveRosterButton}
+            </button>
+            <button type="button" className="roster-action-button roster-action-button-secondary" onClick={() => void loadSavedRoster()}>
+              {ui.loadRosterButton}
             </button>
             <button type="button" className="roster-action-button roster-action-button-secondary" onClick={useSample}>
               {ui.useSampleButton}

@@ -49,6 +49,8 @@ export type UiText = {
   builderLoadFailed: string
   rosterPlaceholder: string
   importRosterButton: string
+  saveRosterButton: string
+  loadRosterButton: string
   useSampleButton: string
   printControlsAriaLabel: string
   printSideLabel: string
@@ -61,6 +63,8 @@ export type UiText = {
   datasetNotFoundStatus: string
   warbandDataLoadError: string
   importFailedStatus: string
+  rosterSavedStatus: string
+  noSavedRosterStatus: string
   importedRosterFallback: string
   battleTraitsHeading: string
   noBattleTraits: string
@@ -124,6 +128,8 @@ const uiText: Record<AppLocale, UiText> = {
     builderLoadFailed: 'Failed to load fighters for the selected warband.',
     rosterPlaceholder: 'Paste full roster export text here',
     importRosterButton: 'Import roster',
+    saveRosterButton: 'Save roster',
+    loadRosterButton: 'Load roster',
     useSampleButton: 'Use Sample',
     printControlsAriaLabel: 'Print controls',
     printSideLabel: 'Print side:',
@@ -136,6 +142,8 @@ const uiText: Record<AppLocale, UiText> = {
     datasetNotFoundStatus: 'Roster imported, but warband data was not found in local dataset.',
     warbandDataLoadError: 'Failed to load fighters/abilities for detected warband',
     importFailedStatus: 'Import failed',
+    rosterSavedStatus: 'Roster saved locally.',
+    noSavedRosterStatus: 'No saved roster found on this device.',
     importedRosterFallback: 'Imported Roster',
     battleTraitsHeading: 'Battle Traits',
     noBattleTraits: 'No battle traits',
@@ -197,6 +205,8 @@ const uiText: Record<AppLocale, UiText> = {
     builderLoadFailed: 'Nie udało się wczytać wojowników dla wybranego warbandu.',
     rosterPlaceholder: 'Wklej pełny eksport rozpiski tutaj',
     importRosterButton: 'Importuj rozpiskę',
+    saveRosterButton: 'Zapisz rozpiskę',
+    loadRosterButton: 'Wczytaj rozpiskę',
     useSampleButton: 'Użyj przykładu',
     printControlsAriaLabel: 'Ustawienia wydruku',
     printSideLabel: 'Strona wydruku:',
@@ -209,6 +219,8 @@ const uiText: Record<AppLocale, UiText> = {
     datasetNotFoundStatus: 'Rozpiska została zaimportowana, ale nie znaleziono danych warbandu w lokalnym zbiorze.',
     warbandDataLoadError: 'Nie udało się wczytać wojowników i zdolności dla wykrytego warbandu.',
     importFailedStatus: 'Import nie powiódł się',
+    rosterSavedStatus: 'Rozpiska zapisana lokalnie.',
+    noSavedRosterStatus: 'Brak zapisanej rozpiski na tym urządzeniu.',
     importedRosterFallback: 'Zaimportowana rozpiska',
     battleTraitsHeading: 'Cechy bitewne',
     noBattleTraits: 'Brak cech bitewnych',

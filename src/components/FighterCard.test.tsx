@@ -5,6 +5,7 @@ import { getUiText } from '../i18n/uiText'
 import type { ImportedCard } from '../types/cards'
 
 const card: ImportedCard = {
+  cardKey: 'sample-card-1',
   importedName: 'Sample Fighter',
   fighter: {
     _id: 'fighter-1',

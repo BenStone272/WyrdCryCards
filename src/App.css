@@ -8,8 +8,9 @@
   --icon-card-md: 0.9rem;
   --ability-cost-justify: flex-end;
   --ability-dice-x-offset: 3px;
-  --fighter-card-web-height: 27.5rem;
+  --fighter-card-web-height: 35rem;
   --fighter-card-web-top-padding: 0.28rem;
+  --fighter-card-photo-height: 9.75rem;
   --fighter-card-web-body-start-gap: 0;
   --card-heading-top-gap: 0.1rem;
   --card-heading-content-gap: 0.04rem;
@@ -456,6 +457,70 @@
   height: var(--fighter-card-web-height);
 }
 
+/* ── Photo area ─────────────────────────────────────────── */
+.fighter-card-photo-area {
+  position: relative;
+  width: 100%;
+  height: var(--fighter-card-photo-height);
+  border-radius: 8px;
+  overflow: hidden;
+  flex: 0 0 auto;
+  margin-bottom: 0.35rem;
+  background: #ddd8cc;
+}
+
+.fighter-card-photo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.fighter-card-photo-placeholder {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, #ddd8cc 0%, #c8c2b4 100%);
+}
+
+.fighter-card-photo-controls {
+  position: absolute;
+  bottom: 0.4rem;
+  right: 0.4rem;
+  display: flex;
+  gap: 0.3rem;
+}
+
+.photo-upload-btn,
+.photo-remove-btn {
+  width: 1.9rem;
+  height: 1.9rem;
+  border: 1px solid rgba(255,255,255,0.45);
+  border-radius: 999px;
+  background: rgba(15, 42, 53, 0.78);
+  color: #fff;
+  font-size: 1rem;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  backdrop-filter: blur(3px);
+  transition: background 120ms ease;
+}
+
+.photo-upload-btn:hover,
+.photo-remove-btn:hover {
+  background: rgba(15, 42, 53, 0.95);
+}
+
+.photo-file-input {
+  display: none;
+}
+
+.no-print {
+  /* hidden at print time via @media print below */
+}
+
 
 .fighter-card-back {
   justify-content: stretch;
@@ -748,6 +813,11 @@
 }
 
 .fighter-card .reactions-section {
+  margin-top: auto;
+  padding-top: var(--card-heading-content-gap);
+}
+
+.fighter-card .abilities-bottom {
   margin-top: auto;
   padding-top: var(--card-heading-content-gap);
 }
@@ -1051,6 +1121,10 @@
     margin: 0 auto;
   }
 
+  .no-print {
+    display: none !important;
+  }
+
   .fighter-card {
     box-sizing: border-box;
     width: 63.5mm;
@@ -1062,6 +1136,13 @@
     border-radius: 2.5mm;
     gap: 0;
     overflow: hidden;
+  }
+
+  .fighter-card-photo-area {
+    height: 31mm;
+    border-radius: 1.5mm;
+    margin-bottom: 0.4mm;
+    --fighter-card-photo-height: 31mm;
   }
 
   .cards-grid-backs .fighter-card {
@@ -1307,6 +1388,11 @@
   }
 
   .fighter-card .reactions-section {
+    margin-top: auto;
+    padding-top: 0;
+  }
+
+  .fighter-card .abilities-bottom {
     margin-top: auto;
     padding-top: 0;
   }

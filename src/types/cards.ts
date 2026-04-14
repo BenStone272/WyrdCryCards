@@ -13,6 +13,7 @@ export type Manifest = {
 }
 
 export type ImportedCard = {
+  cardKey: string
   importedName: string
   fighter: WarcryFighter | null
   abilities: WarcryAbility[]

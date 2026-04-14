@@ -12,7 +12,7 @@ type CardBackProps = {
 
 export function CardBack({ card, ui, onTogglePrintSide }: CardBackProps) {
   const fighterName = card.fighter?.name ?? card.importedName
-  const describedAbilities = [...card.abilities]
+  const describedAbilities = [...card.abilities, ...card.reactions]
   const abilityCount = describedAbilities.length
   const densityClass = abilityCount >= 6 ? 'density-compact' : abilityCount >= 4 ? 'density-medium' : 'density-roomy'
 
@@ -64,8 +64,8 @@ export function CardBack({ card, ui, onTogglePrintSide }: CardBackProps) {
           <p className="card-back-note">{ui.noMatchingAbilitiesBack}</p>
         ) : (
           <ul className="card-back-ability-list">
-            {describedAbilities.map((ability) => (
-              <li key={ability._id} className="card-back-ability-item">
+            {describedAbilities.map((ability, index) => (
+              <li key={`${ability._id}-${index}`} className="card-back-ability-item">
                 <p className="card-back-ability-heading">
                   <span className="card-back-ability-name">{ability.name}</span>
                   <span className="card-back-ability-cost">{renderAbilityCost(ability.cost)}</span>
