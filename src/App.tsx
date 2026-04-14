@@ -2,7 +2,6 @@ import { useEffect, useEffectEvent, useRef, useState } from 'react'
 import { WarbandHeader } from './components/WarbandHeader'
 import { FighterCard } from './components/FighterCard'
 import { CardBack } from './components/CardBack'
-import { LanguagePicker } from './components/LanguagePicker'
 import { parseWarcrierRoster } from './import/warcrierImport'
 import { isAbilityEligibleForFighter } from './integration/abilityEligibility'
 import { mergeAbilityTranslations, toAbilityTranslationPath, type WarcryAbilityTranslation } from './i18n/abilityLocalization'
@@ -22,7 +21,7 @@ type CustomWeapon = {
 }
 
 type CustomFighterEntry = Record<string, unknown>
-import { findBestFighterMatch, findWarbandEntry, sortAbilitiesByDice } from './utils/cardHelpers'
+import { type CardScale, findBestFighterMatch, findWarbandEntry, sortAbilitiesByDice } from './utils/cardHelpers'
 import './App.css'
 
 type BuilderSelection = {
@@ -65,6 +64,7 @@ const SAMPLE_ROSTER = `Custom
 ]`
 
 const LOCALE_STORAGE_KEY = 'warcryfightercards.locale'
+const SCALE_STORAGE_KEY = 'warcryfightercards.scale'
 const SAVED_ROSTER_STORAGE_KEY = 'warcryfightercards.savedRoster'
 const GITHUB_URL = 'https://github.com/BenStone272/WyrdCryCards'
 const DATA_SOURCE_URL = 'https://github.com/krisling049/warcry_data'
@@ -77,6 +77,15 @@ function getInitialLocale(): AppLocale {
 
   const storedLocale = window.localStorage.getItem(LOCALE_STORAGE_KEY)
   return storedLocale === 'pl' ? 'pl' : 'en'
+}
+
+function getInitialScale(): CardScale {
+  if (typeof window === 'undefined') {
+    return '28mm'
+  }
+
+  const storedScale = window.localStorage.getItem(SCALE_STORAGE_KEY)
+  return storedScale === '15mm' ? '15mm' : '28mm'
 }
 
 function formatWarbandOptionLabel(warband: WarbandManifest, locale: AppLocale): string {
@@ -97,7 +106,8 @@ function buildGeneratedRosterText(warband: WarbandManifest, fighters: BuilderSel
 }
 
 function App() {
-  const [locale, setLocale] = useState<AppLocale>(getInitialLocale)
+  const [locale] = useState<AppLocale>(getInitialLocale)
+  const [cardScale, setCardScale] = useState<CardScale>(getInitialScale)
   const [printSide, setPrintSide] = useState<'front' | 'back'>('front')
   const [isEditMode, setIsEditMode] = useState(true)
   const [rosterText, setRosterText] = useState('')
@@ -166,6 +176,10 @@ function App() {
   useEffect(() => {
     window.localStorage.setItem(LOCALE_STORAGE_KEY, locale)
   }, [locale])
+
+  useEffect(() => {
+    window.localStorage.setItem(SCALE_STORAGE_KEY, cardScale)
+  }, [cardScale])
 
   useEffect(() => {
     let cancelled = false
@@ -666,7 +680,23 @@ function App() {
               </svg>
               GitHub
             </a>
-            <LanguagePicker locale={locale} onSelect={setLocale} ui={ui} />
+            <div className="language-picker">
+              <label className="language-picker-label" htmlFor="scale-picker-select">
+                {ui.scaleLabel}
+              </label>
+              <div className="language-picker-select-wrap">
+                <select
+                  id="scale-picker-select"
+                  className="language-picker-select"
+                  aria-label={ui.scalePickerAriaLabel}
+                  value={cardScale}
+                  onChange={(event) => setCardScale(event.target.value as CardScale)}
+                >
+                  <option value="28mm">28mm</option>
+                  <option value="15mm">15mm</option>
+                </select>
+              </div>
+            </div>
           </div>
         </div>
       </header>
@@ -849,6 +879,7 @@ function App() {
                 card={card}
                 runemarkPlacement="under-name"
                 ui={ui}
+                scale={cardScale}
                 isEditMode={isEditMode}
                 onTogglePrintSide={() => setPrintSide('back')}
               />

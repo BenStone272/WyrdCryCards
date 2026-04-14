@@ -31,6 +31,8 @@ export type UiText = {
   languageLabel: string
   languagePickerAriaLabel: string
   languageHelpText: string
+  scaleLabel: string
+  scalePickerAriaLabel: string
   englishLabel: string
   polishLabel: string
   rosterTitle: string
@@ -112,6 +114,8 @@ const uiText: Record<AppLocale, UiText> = {
     languageLabel: 'Language',
     languagePickerAriaLabel: 'Language picker',
     languageHelpText: 'Changes the interface and ability text.',
+    scaleLabel: 'Scale',
+    scalePickerAriaLabel: 'Card scale',
     englishLabel: 'English',
     polishLabel: 'Polski',
     rosterTitle: 'Roster Text',
@@ -191,6 +195,8 @@ const uiText: Record<AppLocale, UiText> = {
     languageLabel: 'Język',
     languagePickerAriaLabel: 'Wybór języka',
     languageHelpText: 'Zmienia interfejs i tekst zdolności.',
+    scaleLabel: 'Skala',
+    scalePickerAriaLabel: 'Skala kart',
     englishLabel: 'English',
     polishLabel: 'Polski',
     rosterTitle: 'Tekst rozpiski',

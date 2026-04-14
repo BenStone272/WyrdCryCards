@@ -26,7 +26,7 @@ const card: ImportedCard = {
 
 describe('FighterCard runemark rendering', () => {
   it('removes runemarks from the top of the card and drops the runemark header text', () => {
-    const markup = renderToStaticMarkup(<FighterCard card={card} runemarkPlacement="under-name" ui={getUiText('en')} />)
+    const markup = renderToStaticMarkup(<FighterCard card={card} runemarkPlacement="under-name" ui={getUiText('en')} scale="28mm" />)
 
     expect(markup).not.toContain('Runemarks')
     expect(markup).not.toContain('Hero')

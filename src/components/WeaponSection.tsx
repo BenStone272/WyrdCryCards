@@ -1,6 +1,7 @@
 import type { UiText } from '../i18n/uiText'
 import type { WarcryWeaponProfile } from '../types/warcry'
 import {
+  type CardScale,
   buildWeaponRunemarkCandidates,
   characteristicIconPath,
   formatRunemarkLabel,
@@ -12,10 +13,11 @@ import { IconWithFallback } from './IconWithFallback'
 type WeaponSectionProps = {
   fighterId: string
   weapons: WarcryWeaponProfile[]
+  scale: CardScale
   ui: UiText
 }
 
-export function WeaponSection({ fighterId, weapons, ui }: WeaponSectionProps) {
+export function WeaponSection({ fighterId, weapons, scale, ui }: WeaponSectionProps) {
   return (
     <section>
       <h3>{ui.weaponsHeading}</h3>
@@ -38,7 +40,7 @@ export function WeaponSection({ fighterId, weapons, ui }: WeaponSectionProps) {
 
                 <div className="weapon-cell">
                   <img className="weapon-stat-icon" src={characteristicIconPath('range')} alt={ui.rangeLabel} />
-                  <span className="weapon-stat-value">{formatWeaponRange(weapon)}</span>
+                  <span className="weapon-stat-value">{formatWeaponRange(weapon, scale)}</span>
                 </div>
 
                 <div className="weapon-cell">

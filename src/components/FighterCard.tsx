@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import type { UiText } from '../i18n/uiText'
 import type { ImportedCard } from '../types/cards'
-import { characteristicIconPath, withBasePath } from '../utils/cardHelpers'
+import { type CardScale, characteristicIconPath, scaleStatForCard, withBasePath } from '../utils/cardHelpers'
 import { AbilitySection } from './AbilitySection'
 import { WeaponSection } from './WeaponSection'
 import { deletePhoto, loadPhoto, savePhoto, savePhotoOffset } from '../utils/photoStore'
@@ -10,11 +10,12 @@ type FighterCardProps = {
   card: ImportedCard
   runemarkPlacement: 'under-name' | 'bottom'
   ui: UiText
+  scale: CardScale
   isEditMode?: boolean
   onTogglePrintSide?: () => void
 }
 
-export function FighterCard({ card, ui, isEditMode = true, onTogglePrintSide }: FighterCardProps) {
+export function FighterCard({ card, ui, scale, isEditMode = true, onTogglePrintSide }: FighterCardProps) {
   const fighterName = card.fighter?.name ?? card.importedName
   const photoKey = card.cardKey
 
@@ -175,7 +176,7 @@ export function FighterCard({ card, ui, isEditMode = true, onTogglePrintSide }: 
               <dt>
                 <img className="stat-icon" src={characteristicIconPath('move')} alt={ui.moveLabel} />
               </dt>
-              <dd>{card.fighter.movement}</dd>
+              <dd>{scaleStatForCard(card.fighter.movement, scale)}</dd>
             </div>
             <div>
               <dt>
@@ -197,7 +198,7 @@ export function FighterCard({ card, ui, isEditMode = true, onTogglePrintSide }: 
             </div>
           </dl>
 
-          <WeaponSection fighterId={card.fighter._id} weapons={card.fighter.weapons} ui={ui} />
+          <WeaponSection fighterId={card.fighter._id} weapons={card.fighter.weapons} scale={scale} ui={ui} />
 
           <section className="abilities-bottom">
             <AbilitySection abilities={card.abilities} ui={ui} />

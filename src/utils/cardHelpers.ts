@@ -1,6 +1,8 @@
 import type { WarcryAbility, WarcryFighter, WarcryWeaponProfile } from '../types/warcry'
 import type { Manifest, WarbandHeaderInfo, WarbandManifest } from '../types/cards'
 
+export type CardScale = '28mm' | '15mm'
+
 export function withBasePath(resourcePath: string): string {
   const base = import.meta.env.BASE_URL ?? '/'
   return `${base}${resourcePath.replace(/^\/+/, '')}`
@@ -249,16 +251,24 @@ export function sortAbilitiesByDice(abilities: WarcryAbility[]): WarcryAbility[]
     .map(({ ability }) => ability)
 }
 
-export function formatWeaponRange(weapon: WarcryWeaponProfile): string {
-  const min = Math.max(weapon.min_range, 0)
-  const max = Math.max(weapon.max_range, 0)
+export function scaleStatForCard(value: number, scale: CardScale): number {
+  return scale === '15mm' ? value / 2 : value
+}
+
+function formatScaledValue(value: number): string {
+  return Number.isInteger(value) ? `${value}` : `${value.toFixed(1)}`.replace(/\.0$/, '')
+}
+
+export function formatWeaponRange(weapon: WarcryWeaponProfile, scale: CardScale = '28mm'): string {
+  const min = Math.max(scaleStatForCard(weapon.min_range, scale), 0)
+  const max = Math.max(scaleStatForCard(weapon.max_range, scale), 0)
   if (min <= 1 && max <= 1) {
-    return '1'
+    return formatScaledValue(max)
   }
   if (min <= 0) {
-    return `${max}`
+    return formatScaledValue(max)
   }
-  return `${min}-${max}`
+  return `${formatScaledValue(min)}-${formatScaledValue(max)}`
 }
 
 export function formatWeaponDamage(weapon: WarcryWeaponProfile): string {
