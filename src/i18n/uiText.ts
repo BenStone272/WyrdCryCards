@@ -56,6 +56,8 @@ export type UiText = {
   printSideLabel: string
   frontsLabel: string
   backsLabel: string
+  editModeOnLabel: string
+  editModeOffLabel: string
   printFrontsButton: string
   printBacksButton: string
   noFighterLinesStatus: string
@@ -135,6 +137,8 @@ const uiText: Record<AppLocale, UiText> = {
     printSideLabel: 'Print side:',
     frontsLabel: 'Fronts',
     backsLabel: 'Backs',
+    editModeOnLabel: 'Edit mode: On',
+    editModeOffLabel: 'Edit mode: Off',
     printFrontsButton: 'Print fronts',
     printBacksButton: 'Print backs',
     noFighterLinesStatus: 'No fighter lines found. Paste the full roster export block.',
@@ -212,6 +216,8 @@ const uiText: Record<AppLocale, UiText> = {
     printSideLabel: 'Strona wydruku:',
     frontsLabel: 'Przody',
     backsLabel: 'Tyły',
+    editModeOnLabel: 'Tryb edycji: Włączony',
+    editModeOffLabel: 'Tryb edycji: Wyłączony',
     printFrontsButton: 'Drukuj przody',
     printBacksButton: 'Drukuj tyły',
     noFighterLinesStatus: 'Nie znaleziono linii wojowników. Wklej pełny blok eksportu.',

@@ -4,20 +4,22 @@ import type { ImportedCard } from '../types/cards'
 import { characteristicIconPath, withBasePath } from '../utils/cardHelpers'
 import { AbilitySection } from './AbilitySection'
 import { WeaponSection } from './WeaponSection'
-import { deletePhoto, loadPhoto, savePhoto } from '../utils/photoStore'
+import { deletePhoto, loadPhoto, savePhoto, savePhotoOffset } from '../utils/photoStore'
 
 type FighterCardProps = {
   card: ImportedCard
   runemarkPlacement: 'under-name' | 'bottom'
   ui: UiText
+  isEditMode?: boolean
   onTogglePrintSide?: () => void
 }
 
-export function FighterCard({ card, ui, onTogglePrintSide }: FighterCardProps) {
+export function FighterCard({ card, ui, isEditMode = true, onTogglePrintSide }: FighterCardProps) {
   const fighterName = card.fighter?.name ?? card.importedName
   const photoKey = card.cardKey
 
   const [photoUrl, setPhotoUrl] = useState<string | null>(null)
+  const [photoOffsetY, setPhotoOffsetY] = useState(50)
   const fileInputRef = useRef<HTMLInputElement>(null)
   const displayedUrlRef = useRef<string | null>(null)
 
@@ -26,13 +28,14 @@ export function FighterCard({ card, ui, onTogglePrintSide }: FighterCardProps) {
     let cancelled = false
 
     void loadPhoto(photoKey)
-      .then((url) => {
+      .then((loadedPhoto) => {
         if (cancelled) {
-          if (url) URL.revokeObjectURL(url)
+          if (loadedPhoto.url) URL.revokeObjectURL(loadedPhoto.url)
           return
         }
-        displayedUrlRef.current = url
-        setPhotoUrl(url)
+        displayedUrlRef.current = loadedPhoto.url
+        setPhotoUrl(loadedPhoto.url)
+        setPhotoOffsetY(loadedPhoto.offsetY)
       })
       .catch(() => {})
 
@@ -54,7 +57,7 @@ export function FighterCard({ card, ui, onTogglePrintSide }: FighterCardProps) {
     const file = event.target.files?.[0]
     if (!file || !photoKey) return
     try {
-      const url = await savePhoto(photoKey, file)
+      const url = await savePhoto(photoKey, file, photoOffsetY)
       if (displayedUrlRef.current) URL.revokeObjectURL(displayedUrlRef.current)
       displayedUrlRef.current = url
       setPhotoUrl(url)
@@ -70,6 +73,18 @@ export function FighterCard({ card, ui, onTogglePrintSide }: FighterCardProps) {
     if (displayedUrlRef.current) URL.revokeObjectURL(displayedUrlRef.current)
     displayedUrlRef.current = null
     setPhotoUrl(null)
+    setPhotoOffsetY(50)
+  }
+
+  function handleOffsetChange(event: React.ChangeEvent<HTMLInputElement>) {
+    const nextOffset = Number(event.target.value)
+    setPhotoOffsetY(nextOffset)
+
+    if (photoUrl && photoKey) {
+      void savePhotoOffset(photoKey, nextOffset).catch((err) => {
+        console.warn('Failed to save photo framing', err)
+      })
+    }
   }
 
   return (
@@ -88,44 +103,59 @@ export function FighterCard({ card, ui, onTogglePrintSide }: FighterCardProps) {
     >
       <div className="fighter-card-photo-area">
         {photoUrl ? (
-          <img className="fighter-card-photo-img" src={photoUrl} alt={fighterName} />
+          <img className="fighter-card-photo-img" src={photoUrl} alt={fighterName} style={{ objectPosition: `50% ${photoOffsetY}%` }} />
         ) : (
           <div className="fighter-card-photo-placeholder" />
         )}
-        <div className="fighter-card-photo-controls no-print">
-          <button
-            type="button"
-            className="photo-upload-btn"
-            onClick={(e) => {
-              e.stopPropagation()
-              fileInputRef.current?.click()
-            }}
-            aria-label={`Upload photo for ${fighterName}`}
-          >
-            {photoUrl ? '↺' : '+'}
-          </button>
-          {photoUrl && (
+        {photoUrl && isEditMode && (
+          <div className="photo-frame-slider-wrap no-print" onClick={(e) => e.stopPropagation()}>
+            <input
+              type="range"
+              min={0}
+              max={100}
+              value={photoOffsetY}
+              onChange={handleOffsetChange}
+              aria-label={`Adjust vertical framing for ${fighterName}`}
+              className="photo-frame-slider"
+            />
+          </div>
+        )}
+        {isEditMode && (
+          <div className="fighter-card-photo-controls no-print">
             <button
               type="button"
-              className="photo-remove-btn"
+              className="photo-upload-btn"
               onClick={(e) => {
                 e.stopPropagation()
-                void handleRemovePhoto()
+                fileInputRef.current?.click()
               }}
-              aria-label={`Remove photo for ${fighterName}`}
+              aria-label={`Upload photo for ${fighterName}`}
             >
-              ✕
+              {photoUrl ? '↺' : '+'}
             </button>
-          )}
-          <input
-            ref={fileInputRef}
-            type="file"
-            accept="image/*"
-            className="photo-file-input"
-            onChange={handleFileChange}
-            onClick={(e) => e.stopPropagation()}
-          />
-        </div>
+            {photoUrl && (
+              <button
+                type="button"
+                className="photo-remove-btn"
+                onClick={(e) => {
+                  e.stopPropagation()
+                  void handleRemovePhoto()
+                }}
+                aria-label={`Remove photo for ${fighterName}`}
+              >
+                ✕
+              </button>
+            )}
+            <input
+              ref={fileInputRef}
+              type="file"
+              accept="image/*"
+              className="photo-file-input"
+              onChange={handleFileChange}
+              onClick={(e) => e.stopPropagation()}
+            />
+          </div>
+        )}
       </div>
 
       <div className="fighter-card-header">

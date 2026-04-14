@@ -1,6 +1,35 @@
 const DB_NAME = 'warcry-fighter-photos'
 const STORE_NAME = 'photos'
 const DB_VERSION = 1
+const DEFAULT_OFFSET_Y = 50
+
+type StoredPhotoRecord = {
+  blob: Blob
+  offsetY: number
+}
+
+type LoadedPhoto = {
+  url: string | null
+  offsetY: number
+}
+
+function normalizeStoredPhoto(value: unknown): StoredPhotoRecord | null {
+  if (value instanceof Blob) {
+    return { blob: value, offsetY: DEFAULT_OFFSET_Y }
+  }
+
+  if (!value || typeof value !== 'object') {
+    return null
+  }
+
+  const candidate = value as { blob?: unknown; offsetY?: unknown }
+  if (!(candidate.blob instanceof Blob)) {
+    return null
+  }
+
+  const offsetY = typeof candidate.offsetY === 'number' ? candidate.offsetY : DEFAULT_OFFSET_Y
+  return { blob: candidate.blob, offsetY }
+}
 
 function openDB(): Promise<IDBDatabase> {
   if (typeof indexedDB === 'undefined') {
@@ -60,13 +89,13 @@ function resizeImage(file: File, maxWidth: number): Promise<Blob> {
   })
 }
 
-export async function savePhoto(fighterId: string, file: File): Promise<string> {
+export async function savePhoto(fighterId: string, file: File, offsetY: number = DEFAULT_OFFSET_Y): Promise<string> {
   const blob = await resizeImage(file, 800)
   const db = await openDB()
 
   return new Promise((resolve, reject) => {
     const tx = db.transaction(STORE_NAME, 'readwrite')
-    tx.objectStore(STORE_NAME).put(blob, fighterId)
+    tx.objectStore(STORE_NAME).put({ blob, offsetY }, fighterId)
 
     tx.oncomplete = () => {
       db.close()
@@ -80,7 +109,7 @@ export async function savePhoto(fighterId: string, file: File): Promise<string> 
   })
 }
 
-export async function loadPhoto(fighterId: string): Promise<string | null> {
+export async function loadPhoto(fighterId: string): Promise<LoadedPhoto> {
   const db = await openDB()
 
   return new Promise((resolve, reject) => {
@@ -89,13 +118,52 @@ export async function loadPhoto(fighterId: string): Promise<string | null> {
 
     req.onsuccess = () => {
       db.close()
-      const blob = req.result as Blob | undefined
-      resolve(blob ? URL.createObjectURL(blob) : null)
+      const record = normalizeStoredPhoto(req.result)
+      if (!record) {
+        resolve({ url: null, offsetY: DEFAULT_OFFSET_Y })
+        return
+      }
+
+      resolve({ url: URL.createObjectURL(record.blob), offsetY: record.offsetY })
     }
 
     req.onerror = () => {
       db.close()
       reject(req.error)
+    }
+  })
+}
+
+export async function savePhotoOffset(fighterId: string, offsetY: number): Promise<void> {
+  const db = await openDB()
+
+  return new Promise((resolve, reject) => {
+    const tx = db.transaction(STORE_NAME, 'readwrite')
+    const store = tx.objectStore(STORE_NAME)
+    const getReq = store.get(fighterId)
+
+    getReq.onsuccess = () => {
+      const record = normalizeStoredPhoto(getReq.result)
+      if (!record) {
+        return
+      }
+
+      store.put({ blob: record.blob, offsetY }, fighterId)
+    }
+
+    getReq.onerror = () => {
+      db.close()
+      reject(getReq.error)
+    }
+
+    tx.oncomplete = () => {
+      db.close()
+      resolve()
+    }
+
+    tx.onerror = () => {
+      db.close()
+      reject(tx.error)
     }
   })
 }

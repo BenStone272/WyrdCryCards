@@ -402,6 +402,10 @@
   color: #fff;
 }
 
+.print-controls-edit-row {
+  flex-basis: 100%;
+}
+
 .cards-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
@@ -488,6 +492,24 @@
   right: 0.4rem;
   display: flex;
   gap: 0.3rem;
+}
+
+.photo-frame-slider-wrap {
+  position: absolute;
+  left: 0.45rem;
+  right: 4.6rem;
+  bottom: 0.58rem;
+  background: rgba(15, 42, 53, 0.55);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 999px;
+  padding: 0.2rem 0.45rem;
+  backdrop-filter: blur(2px);
+}
+
+.photo-frame-slider {
+  width: 100%;
+  margin: 0;
+  accent-color: #f2ebd8;
 }
 
 .photo-upload-btn,

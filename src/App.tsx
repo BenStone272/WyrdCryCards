@@ -99,6 +99,7 @@ function buildGeneratedRosterText(warband: WarbandManifest, fighters: BuilderSel
 function App() {
   const [locale, setLocale] = useState<AppLocale>(getInitialLocale)
   const [printSide, setPrintSide] = useState<'front' | 'back'>('front')
+  const [isEditMode, setIsEditMode] = useState(true)
   const [rosterText, setRosterText] = useState('')
   const [lastImportedRosterText, setLastImportedRosterText] = useState<string | null>(null)
   const [rosterName, setRosterName] = useState<string | null>(null)
@@ -811,6 +812,16 @@ function App() {
             <button type="button" className="print-now-button" onClick={printCurrentSide}>
               {printSide === 'front' ? ui.printFrontsButton : ui.printBacksButton}
             </button>
+            <div className="print-controls-edit-row">
+              <button
+                type="button"
+                className={`print-mode-toggle ${isEditMode ? 'is-active' : ''}`}
+                onClick={() => setIsEditMode((value) => !value)}
+                aria-pressed={isEditMode}
+              >
+                {isEditMode ? ui.editModeOnLabel : ui.editModeOffLabel}
+              </button>
+            </div>
           </div>
         )}
         {importStatus && <p className="status">{importStatus}</p>}
@@ -838,6 +849,7 @@ function App() {
                 card={card}
                 runemarkPlacement="under-name"
                 ui={ui}
+                isEditMode={isEditMode}
                 onTogglePrintSide={() => setPrintSide('back')}
               />
             ) : (
